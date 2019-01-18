@@ -1,0 +1,99 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Bb]uilds
+[Ll]ibrary/
+sysinfo.txt
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# ===================================== # 
+# Unity3D generated meta files
+# ===================================== #
+#*.pidb.meta
+#*.pidb.meta
+#*.OBJ.meta
+#*.meta
+
+# ===================================== #
+# Unity3D Generated File On Crash Reports
+# ===================================== #
+sysinfo.txt
+
+# ================ #
+# Unity additional #
+# ================ #
+
+#/ProjectSettings/ProjectSettings.asset
+/ProjectSettings/QualitySettings.asset
+
+# Lightmaps
+
+*.exr
+*.exr.meta
+LightmapSnapshot.asset
+LightmapSnapshot.asset.meta
+Assets/Scenes/*/LightingData.asset
+Assets/Scenes/*/LightingData.asset.meta
+
+
+# ============= #
+# WWISE Generated #
+# ============= #
+
+.cache/
+*.akd
+*.validationcache
+*.wem
+
+# ============= #
+# Git Generated #
+# ============= #
+
+*.orig
+*.orig.meta
+
+# ============= #
+# RAIN Generated #
+# ============= #
+
+*BTEditorWindowState.asset
+*BTEditorWindowState.asset.meta
+*RAINProjectState.asset
+*RAINProjectState.asset.meta
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+#Icon?
+ehthumbs.db
+[Tt]humbs.db
+*.stackdump
+.vs/
