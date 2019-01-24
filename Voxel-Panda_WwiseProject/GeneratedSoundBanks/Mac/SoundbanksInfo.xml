@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+	<RootPaths>
+		<ProjectRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
