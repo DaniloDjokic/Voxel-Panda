@@ -1,16 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.ProcGen.Elements;
 
-public class PickupPooler : MonoBehaviour {
+namespace VoxelPanda.ProcGen.Poolers
+{
+	public class PickupPooler : IPooling
+	{
+		public void CreatePoolables()
+		{
+			throw new System.NotImplementedException();
+		}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		public ISpawnable GetPoolable()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void ReturnPoolable(ISpawnable poolable)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void SetPoolable(ISpawnable poolable)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void SetSubPooling(IPooling pooling)
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }
+

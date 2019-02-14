@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.ProcGen.Poolers;
 
-public class PickupMapper : MonoBehaviour {
+namespace VoxelPanda.ProcGen.Mappers
+{
+	public class PickupMapper : IMapping
+	{
+		public IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int length)
+		{
+			throw new System.NotImplementedException();
+		}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		public void SetPooler(IPooling pooler)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void SetSubMapper(IMapping mapper)
+		{
+			throw new System.NotImplementedException();
+		}
 	}
 }

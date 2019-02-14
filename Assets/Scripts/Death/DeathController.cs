@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Score;
 
-public class DeathController : MonoBehaviour {
+namespace VoxelPanda.Flow
+{
+	public class DeathController
+	{
+		private ScoreCalculator scoreCalculator;
 
-	// Use this for initialization
-	void Start () {
-		
+		public DeathController(ScoreCalculator scoreCalculator)
+		{
+			this.scoreCalculator = scoreCalculator;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
