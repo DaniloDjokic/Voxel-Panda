@@ -33,6 +33,12 @@ public class CamBehaviour : MonoBehaviour
 			FollowObject();
 		}
 
+		public void Rebind(Transform followTarget, Transform stopTarget)
+		{
+			this.followTarget = followTarget;
+			this.stopTarget = stopTarget;
+		}
+
 		private void FollowObject()
 		{
 			this.transform.position = CalcCamPosition();

@@ -5,21 +5,7 @@ using VoxelPanda.ProcGen.Poolers;
 
 namespace VoxelPanda.ProcGen.Mappers
 {
-	public class PathMapper : IMapping
+	public class PathMapper : Mapper
 	{
-		public IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int length)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void SetPooler(IPooling pooler)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void SetSubMapper(IMapping mapper)
-		{
-			throw new System.NotImplementedException();
-		}
 	}
 }

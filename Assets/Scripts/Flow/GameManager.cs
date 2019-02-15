@@ -1,16 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Player.Input;
 
-public class GameManager : MonoBehaviour {
+namespace VoxelPanda.Flow
+{
+	public class GameManager
+	{
+		public GameState gameState = GameState.Running;
 
-	// Use this for initialization
-	void Start () {
-		
+		private RawInput rawInput;
+		private DeathController deathController;
+
+		public GameManager(RawInput rawInput, DeathController deathController)
+		{
+			this.rawInput = rawInput;
+			this.deathController = deathController;
+		}
+
+		public void StartLevel()
+		{
+			rawInput.SetDetectingInput(true);
+			ChangeState(GameState.Start);
+		}
+
+		public void StartRunning()
+		{
+			ChangeState(GameState.Running);
+		}
+
+		public void PauseLevel()
+		{
+			ChangeState(GameState.Paused);
+		}
+
+		public void EndRun()
+		{
+			deathController.RaiseScreen();
+			rawInput.SetDetectingInput(false);
+			ChangeState(GameState.Stopped);
+		}
+
+		private void ChangeState(GameState newState)
+		{
+			gameState = newState;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public enum GameState { Start, Running, Paused, Stopped }
 }
+

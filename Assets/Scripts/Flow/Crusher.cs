@@ -2,10 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
+using VoxelPanda.Flow;
 
-namespace VoxelPanda.Assets.Scripts.Flow
+namespace VoxelPanda.Flow
 {
-	class Crusher
+	public class Crusher : MonoBehaviour
 	{
+		private GameManager gameManager;
+
+		public void Bind(GameManager gameManager)
+		{
+			this.gameManager = gameManager;
+		}
+
+		private void PlayerTouched()
+		{
+			gameManager.EndRun();
+		}
 	}
 }

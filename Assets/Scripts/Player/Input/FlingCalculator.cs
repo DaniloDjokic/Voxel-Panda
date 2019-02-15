@@ -6,16 +6,17 @@ using VoxelPanda.Player.Events;
 namespace VoxelPanda.Player.Input
 {
 
-	public class FlingCalculator : MonoBehaviour
+	public class FlingCalculator : InputCalculator
 	{
 		private List<IFlingListener> listeners = new List<IFlingListener>();
 
-		public void AddListener(IFlingListener listener)
+		public FlingCalculator(RawInput rawInput, ConstMoveData constMoveData, DynamicMoveData dynMoveData) : base(rawInput, constMoveData, dynMoveData)
 		{
-			if (!listeners.Contains(listener))
-			{
-				listeners.Add(listener);
-			}
+		}
+
+		public void Subscribe(IFlingListener listener)
+		{
+			listeners.Add(listener);
 		}
 
 		public void RemoveListener(IFlingListener listener)

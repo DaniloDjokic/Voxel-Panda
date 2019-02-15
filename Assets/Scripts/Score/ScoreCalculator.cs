@@ -5,9 +5,14 @@ using VoxelPanda.Player.Events;
 
 namespace VoxelPanda.Score
 {
-	public class ScoreCalculator : MonoBehaviour, IMoveListener
+	public class ScoreCalculator : IMoveListener
 	{
 		private List<IScoreListener> listeners = new List<IScoreListener>();
+
+		public ScoreCalculator(MoveEvents moveEvents)
+		{
+			moveEvents.Subscribe(this);
+		}
 
 		public void OnPositionChanged(Vector3 position)
 		{

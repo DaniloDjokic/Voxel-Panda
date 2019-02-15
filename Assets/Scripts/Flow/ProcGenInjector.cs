@@ -57,7 +57,7 @@ namespace VoxelPanda.Flow
 		{
 			for (var i = 0; i < spawnables.Count; i++)
 			{
-				pooler.SetPoolable(spawnables[i]);
+				pooler.SetSpawnable(spawnables[i]);
 			}
 			mapper.SetPooler(pooler);
 		}

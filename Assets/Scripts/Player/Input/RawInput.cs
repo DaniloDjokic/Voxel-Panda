@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RawInput : MonoBehaviour {
+namespace VoxelPanda.Player.Input
+{
+	public class RawInput : MonoBehaviour
+	{
+		private List<IInputListener> listeners = new List<IInputListener>();
+		private bool detectingInput;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		public void Subscribe(IInputListener listener)
+		{
+			listeners.Add(listener);
+		}
+
+		public void SetDetectingInput(bool active)
+		{
+			detectingInput = active;
+		}
 	}
 }
