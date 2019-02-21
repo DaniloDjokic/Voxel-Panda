@@ -121,7 +121,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 186762357}
-  - component: {fileID: 186762359}
   - component: {fileID: 186762358}
   m_Layer: 0
   m_Name: Mechanics
@@ -152,17 +151,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9744a512a2f81f24696ab716dcf3966c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &186762359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 186762356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 284827bcfb1a6514aae94342c1f3dec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &223733536
@@ -632,7 +620,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 629081852}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 705041094}
+        m_MethodName: StartAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &629081852
@@ -767,6 +766,7 @@ GameObject:
   - component: {fileID: 685307780}
   - component: {fileID: 685307779}
   - component: {fileID: 685307783}
+  - component: {fileID: 685307784}
   m_Layer: 0
   m_Name: PHPlayer
   m_TagString: Player
@@ -857,6 +857,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &685307784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 685307778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284827bcfb1a6514aae94342c1f3dec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705041092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1041,6 @@ MonoBehaviour:
   scoreUI: {fileID: 1902346562}
   deathUI: {fileID: 705041094}
   playerElements: {fileID: 1902346560}
-  player: {fileID: 685307778}
   crusher: {fileID: 393683764}
 --- !u!1 &1293455729
 GameObject:
@@ -1402,8 +1412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2a81f8342b81c4f9338b0853997ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 186762357}
-  physicsApplier: {fileID: 186762359}
+  playerTransform: {fileID: 685307782}
+  physicsApplier: {fileID: 685307784}
   rawInput: {fileID: 186762358}
   animationManager: {fileID: 2124015886}
   arrowUI: {fileID: 2124015885}
