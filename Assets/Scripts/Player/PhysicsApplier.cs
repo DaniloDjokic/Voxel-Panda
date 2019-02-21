@@ -7,12 +7,31 @@ using VoxelPanda.Player.Events;
 public class PhysicsApplier : MonoBehaviour, IFlingListener, ICurveListener
 {
 	private DynamicMoveData dynMoveData;
+	private Vector3 startingPosition;
 
 	public void Bind(DynamicMoveData dynMoveData)
 	{
 		this.dynMoveData = dynMoveData;
 	}
+	
 
+	// Use this for initialization
+	void Awake () {
+		startingPosition = this.transform.position;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void ResetPosition()
+	{
+		this.transform.position = startingPosition;
+	}
+
+
+	#region EventCallbacks
 	public void OnCurveChanged(CurveData curveData)
 	{
 		throw new System.NotImplementedException();
@@ -32,14 +51,5 @@ public class PhysicsApplier : MonoBehaviour, IFlingListener, ICurveListener
 	{
 		throw new System.NotImplementedException();
 	}
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	#endregion
 }

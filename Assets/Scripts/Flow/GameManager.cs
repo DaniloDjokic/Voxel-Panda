@@ -9,28 +9,38 @@ namespace VoxelPanda.Flow
 	{
 		public GameState gameState = GameState.Running;
 
+		private PhysicsApplier player;
 		private RawInput rawInput;
 		private DeathController deathController;
+		private Crusher crusher;
 
-		public GameManager(RawInput rawInput, DeathController deathController)
+		public GameManager(PhysicsApplier player, RawInput rawInput, DeathController deathController, Crusher crusher)
 		{
+			this.player = player;
 			this.rawInput = rawInput;
 			this.deathController = deathController;
+			this.crusher = crusher;
+			deathController.gameManager = this;
 		}
 
 		public void StartLevel()
 		{
+			crusher.ResetPosition();
+			player.ResetPosition();
 			rawInput.SetDetectingInput(true);
 			ChangeState(GameState.Start);
 		}
 
 		public void StartRunning()
 		{
+			crusher.SetShouldMove(true);
 			ChangeState(GameState.Running);
 		}
 
 		public void PauseLevel()
 		{
+			rawInput.SetDetectingInput(false);
+			crusher.SetShouldMove(false);
 			ChangeState(GameState.Paused);
 		}
 
@@ -38,6 +48,7 @@ namespace VoxelPanda.Flow
 		{
 			deathController.RaiseScreen();
 			rawInput.SetDetectingInput(false);
+			crusher.SetShouldMove(false);
 			ChangeState(GameState.Stopped);
 		}
 

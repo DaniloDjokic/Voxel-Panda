@@ -1,16 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Flow;
 
-public class DeathUI : MonoBehaviour {
+namespace VoxelPanda.Flow
+{
+	public class DeathUI : MonoBehaviour
+	{
+		public GameObject deathScreen;
+		private DeathController deathController;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		public void Bind(DeathController deathController)
+		{
+			this.deathController = deathController;
+		}
+
+		public void RaiseScreen()
+		{
+			deathScreen.SetActive(true);
+		}
+		public void LowerScreen()
+		{
+			deathScreen.SetActive(false);
+		}
+
+		public void StartAgain()
+		{
+			deathController.StartAgain();
+		}
 	}
 }
+

@@ -7,6 +7,7 @@ namespace VoxelPanda.Flow
 {
 	public class DeathController
 	{
+		public GameManager gameManager;
 		private ScoreCalculator scoreCalculator;
 		private DeathUI deathUI;
 
@@ -14,11 +15,21 @@ namespace VoxelPanda.Flow
 		{
 			this.scoreCalculator = scoreCalculator;
 			this.deathUI = deathUI;
+			deathUI.Bind(this);
 		}
 
 		public void RaiseScreen()
 		{
-
+			deathUI.RaiseScreen();
+		}
+		public void LowerScreen()
+		{
+			deathUI.LowerScreen();
+		}
+		public void StartAgain()
+		{
+			LowerScreen();
+			gameManager.StartLevel();
 		}
 	}
 

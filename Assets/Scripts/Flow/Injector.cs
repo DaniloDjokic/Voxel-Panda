@@ -14,7 +14,6 @@ namespace VoxelPanda.Flow
 		public ScoreUI scoreUI;
 		public DeathUI deathUI;
 		public PlayerElements playerElements;
-
 		public Crusher crusher;
 
 		private MoveEvents moveEvents;
@@ -39,8 +38,8 @@ namespace VoxelPanda.Flow
 			scoreCalculator = new ScoreCalculator(moveEvents);
 			scoreCalculator.Subscribe(scoreUI);
 			deathController = new DeathController(scoreCalculator, deathUI);
-			gameManager = new GameManager(playerElements.rawInput, deathController);
-			crusher.Bind(gameManager);
+			gameManager = new GameManager(playerElements.physicsApplier, playerElements.rawInput, deathController, crusher);
+			crusher.Bind(gameManager, playerElements.physicsApplier.transform);
 
 			InputInjector inputInjector = new InputInjector(constMoveData, moveEvents, playerElements, crusher);
 
