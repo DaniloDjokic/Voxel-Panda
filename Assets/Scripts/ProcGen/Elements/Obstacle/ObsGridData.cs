@@ -6,6 +6,8 @@ namespace VoxelPanda.ProcGen.Elements
 {
 	public class ObsGridData : MonoBehaviour, ISpawnable
 	{
+		public ObsGridMatrix obsGridMatrix = new ObsGridMatrix();
+
 		public void Despawn()
 		{
 			throw new System.NotImplementedException();
@@ -20,5 +22,6 @@ namespace VoxelPanda.ProcGen.Elements
 		{
 			throw new System.NotImplementedException();
 		}
+
 	}
 }
