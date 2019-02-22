@@ -8,7 +8,7 @@ public class SpawnData : MonoBehaviour
 	[SerializeField]
 	private List<Pickup> pickups;
 	[SerializeField]
-	private List<ObsGridData> obstacles;
+	private List<GridData> obstacles;
 	[SerializeField]
 	private List<Path> paths;
 	[SerializeField]

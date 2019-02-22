@@ -6,7 +6,7 @@ namespace VoxelPanda.ProcGen.Elements
 {
 	public class ObsBehaviour : MonoBehaviour
 	{
-		public ObsGridData gridData;
+		public GridData gridData;
 		
 	}
 }

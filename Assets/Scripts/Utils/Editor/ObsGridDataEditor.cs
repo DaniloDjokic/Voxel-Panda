@@ -4,18 +4,20 @@ using UnityEditor;
 using UnityEngine;
 using VoxelPanda.ProcGen.Elements;
 
-[CustomEditor(typeof(ObsGridData))]
+[CustomEditor(typeof(GridMatrix))]
 public class ObsGridDataEditor : Editor {
 	private int curWidth, curHeight;
-	private ObsGridData obsGridData;
+	private GridMatrix obsGridMatrix;
 
 	private static Color passableOccState = new Color(0.61f, 0.84f, 0.91f);
 	private static Color noneOccState = new Color(1f, 1f, 1f);
 	private static Color blockedOccState = new Color(0f, 0.75f, 0.95f);
-	private static Color dangerousRiskState = new Color(1f, 0.68f, 0f);
+	private static Color dangerousRiskState = new Color(0.68f, 0f , 0f );
 	private static Color riskyRiskState = new Color(1f, 0.68f, 0f);
 	private static Color noneRiskState = new Color(1f, 1f, 1f);
+	private static Color rootObjBorderColor = new Color(0.98f, 0.4f, 0.79f);
 	private static string buttonContent;
+	private Dictionary<NodeOccupiedState, Dictionary<NodeRiskState, GUIStyle>> stylesDict = new Dictionary<NodeOccupiedState, Dictionary<NodeRiskState, GUIStyle>>();
 
 	private void OnEnable()
 	{
@@ -25,16 +27,15 @@ public class ObsGridDataEditor : Editor {
 
 	public override void OnInspectorGUI()
 	{
-		obsGridData = (ObsGridData)target;
-		
+		obsGridMatrix = (GridMatrix)target;		
 		serializedObject.Update();
 		EditorGUILayout.BeginVertical();
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.BeginVertical();
-		curWidth = EditorGUILayout.IntField(obsGridData.obsGridMatrix.width);
+		curWidth = EditorGUILayout.IntField(obsGridMatrix.width);
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.BeginVertical();
-		curHeight = EditorGUILayout.IntField(obsGridData.obsGridMatrix.height);
+		curHeight = EditorGUILayout.IntField(obsGridMatrix.height);
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.EndHorizontal();
 		RenderMatrix();
@@ -46,73 +47,78 @@ public class ObsGridDataEditor : Editor {
 	private void CheckForWidthHeightChanges()
 	{
 		bool isDirty = false;
-		if(curWidth != obsGridData.obsGridMatrix.width)
+		if(curWidth != obsGridMatrix.width)
 		{
-			obsGridData.obsGridMatrix.width = curWidth;
+			obsGridMatrix.width = curWidth;
 			isDirty = true;
 		}
-		if(curHeight != obsGridData.obsGridMatrix.height)
+		if(curHeight != obsGridMatrix.height)
 		{
-			obsGridData.obsGridMatrix.height = curHeight;
+			obsGridMatrix.height = curHeight;
 			isDirty = true;
 		}
 		if (isDirty)
 		{
-			obsGridData.obsGridMatrix.CreateMatrix();
+			obsGridMatrix.CreateMatrix();
 		}
 
 	}
 
 	public void RenderMatrix()
 	{
-		for (int i = 0; i < obsGridData.obsGridMatrix.ObstacleMatrix.Length; i++)
-		{
+		if (obsGridMatrix.width != 0 && obsGridMatrix.height != 0) {
+			for (int i = obsGridMatrix.ObstacleMatrix.Count - 1; i >= 0 ; i--)
+			{
 
-			EditorGUILayout.BeginHorizontal();
-			RenderRowOfBoxes(ref obsGridData.obsGridMatrix.ObstacleMatrix[i]);
-			EditorGUILayout.EndHorizontal();
+				EditorGUILayout.BeginHorizontal();
+				RenderRowOfBoxes(obsGridMatrix.ObstacleMatrix[i]);
+				EditorGUILayout.EndHorizontal();
+			}
 		}
 	}
-	public void RenderRowOfBoxes(ref ObsGridNode[] nodeArray)
+	public void RenderRowOfBoxes(NodeList nodeList)
 	{
-		var standardBkgClr = GUI.backgroundColor;
-		for(int i = 0; i < nodeArray.Length; i++)
+		List<GridNode> nodes = nodeList.nodes;
+		for(int i = 0; i < nodes.Count; i++)
 		{
 			EditorGUILayout.BeginVertical();
-			GUI.backgroundColor = GetColorByOccupiedState(nodeArray[i].occupiedState);
-			GUI.color = GetColorByRiskState(nodeArray[i].riskState);
-			if (GUILayout.Button(buttonContent))
+			var guiStyle = GetGUIStyle(nodes[i].occupiedState, nodes[i].riskState, nodes[i].objectRoot);
+			if (GUILayout.Button(buttonContent, guiStyle))
 			{
 				var e = Event.current;
 				if  (e.button == 0)
 				{
-					ChangeOccupiedState(ref nodeArray[i]);
+					ChangeOccupiedState(nodes[i]);
 				} else if(e.button == 1)
 				{
-					ChangeRiskState(ref nodeArray[i]);
+					ChangeRiskState(nodes[i]);
+				} else if (e.button == 2)
+				{
+					obsGridMatrix.SetObjectRoot(nodes[i]);
 				}
 
 			}
-			GUI.backgroundColor = standardBkgClr;
+
 			EditorGUILayout.EndVertical();
-			GUILayout.FlexibleSpace();
-			/*EditorGUILayout.BeginVertical();
-			if(GUILayout.Button(nodeArray[i].riskState.ToString()))
-			{
-				ChangeRiskState(ref nodeArray[i]);
-				Debug.Log(nodeArray[i].occupiedState);
-			}
-			EditorGUILayout.EndVertical();*/
+			//GUILayout.FlexibleSpace();
 		}
 	}
 
-	public void ChangeOccupiedState(ref ObsGridNode node)
+	public void ChangeOccupiedState(GridNode node)
 	{
-		node.occupiedState = (node.occupiedState >= NodeOccupiedState.Blocked) ? NodeOccupiedState.None : node.occupiedState + 1;		
+		node.occupiedState++;
+		if (node.occupiedState > NodeOccupiedState.Blocked)
+		{
+			node.occupiedState = NodeOccupiedState.None;
+		}	
 	}
-	public void ChangeRiskState(ref ObsGridNode node)
+	public void ChangeRiskState(GridNode node)
 	{
-		node.riskState = (node.riskState >= NodeRiskState.Dangerous) ? NodeRiskState.None : node.riskState + 1;
+		node.riskState++;
+		if (node.riskState >= NodeRiskState.Critical)
+		{
+			node.riskState = NodeRiskState.None;
+		}
 	}
 
 	public Color GetColorByOccupiedState(NodeOccupiedState state)
@@ -145,9 +151,68 @@ public class ObsGridDataEditor : Editor {
 			return Color.black;
 		}
 	}
+	private GUIStyle GetGUIStyle(NodeOccupiedState occState, NodeRiskState riskState, bool isObjectRoot)
+	{
+		if (!stylesDict.ContainsKey(occState))
+		{
+			stylesDict.Add(occState, new Dictionary<NodeRiskState, GUIStyle>());
+		}
+		if (!stylesDict[occState].ContainsKey(riskState))
+		{
+			GUIStyle style = new GUIStyle(GUI.skin.button);
+			style.normal.background = MakeTex(2, 2, GetColorByOccupiedState(occState));
+			style.normal.textColor = GetColorByRiskState(riskState);
+			style.fontSize = 36;
+			style.padding = new RectOffset(4,2,0,4);
+			stylesDict[occState].Add(riskState, style);
+		}
+		if (isObjectRoot)
+		{
+			GUIStyle borderedStyle = new GUIStyle(stylesDict[occState][riskState]);
+			borderedStyle.normal.background = MakeBorderedTex(7, 7, GetColorByOccupiedState(occState), rootObjBorderColor, 3);
+			borderedStyle.border = new RectOffset(3, 3, 3, 3);
+			return borderedStyle;
+		} else
+		{
+			return stylesDict[occState][riskState];
+		}
 
-	private void RecreateMatrix(ref ObsGridData obsGridData)
+	}
+
+	private void RecreateMatrix(ref GridData obsGridData)
 	{
 		
+	}
+
+	private Texture2D MakeTex(int width, int height, Color col)
+	{
+		Color[] pix = new Color[width * height];
+		for(int i = 0; i < pix.Length; ++i)
+		{
+			pix[i] = col;
+		}
+		Texture2D result = new Texture2D(width, height);
+		result.SetPixels(pix);
+		result.Apply();
+		return result;
+	}
+
+	private Texture2D MakeBorderedTex(int width, int height, Color inner, Color outer, int borderWidth)
+	{
+		Color[] pix = new Color[width * height];
+		for(int i = 0; i < pix.Length; ++i)
+		{
+			if (i < width * borderWidth || i % height < borderWidth || i % height > (height - borderWidth) || i >= (width * (height - borderWidth)))
+			{
+				pix[i] = outer;
+			} else
+			{
+				pix[i] = inner;
+			}
+		}
+		Texture2D result = new Texture2D(width, height);
+		result.SetPixels(pix);
+		result.Apply();
+		return result;
 	}
 }

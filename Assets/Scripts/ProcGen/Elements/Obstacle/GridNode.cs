@@ -2,21 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace VoxelPanda.ProcGen.Elements
 {
 	public enum NodeOccupiedState { None, Passable, Blocked };
 	public enum NodeRiskState { None, Risky, Dangerous, Critical  }
-	public class ObsGridNode
+	[System.Serializable]
+	public class GridNode
 	{
+		[SerializeField]
 		public NodeOccupiedState occupiedState = NodeOccupiedState.None;
+		[SerializeField]
 		public NodeRiskState riskState = NodeRiskState.None;
+		[SerializeField]
+		public bool objectRoot;
 
-		public ObsGridNode()
+		public GridNode()
 		{
 
 		}
-		public ObsGridNode(NodeOccupiedState occupiedState, NodeRiskState riskState)
+		public GridNode(NodeOccupiedState occupiedState, NodeRiskState riskState)
 		{
 			this.occupiedState = occupiedState;
 			this.riskState = riskState;

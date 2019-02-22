@@ -9,5 +9,9 @@ namespace VoxelPanda.ProcGen.Elements
 		void Spawn(Transform transform);
 		void Despawn();
 		Vector2 GetDimensions();
+		int GetWeight();
+		GridMatrix GetMatrix();
+
+		bool IsAvailableToSpawn();
 	}
 }

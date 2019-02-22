@@ -23,6 +23,11 @@ namespace VoxelPanda.Flow
 			deathController.gameManager = this;
 		}
 
+		public void SetRandomSeed(string seed)
+		{
+			Random.InitState(seed.GetHashCode());
+		}
+
 		public void StartLevel()
 		{
 			crusher.ResetPosition();

@@ -7,10 +7,10 @@ namespace VoxelPanda.ProcGen.Poolers
 {
 	public interface IPooling
 	{
-		void SetSubPooling(IPooling pooling);
 		void SetSpawnable(ISpawnable spawnable);
 		ISpawnable GetSpawnable();
 		void CreateSpawnables(int size);
-		void ReturnSpawnable(ISpawnable spawnable);
+		int GetAvailableWeightSum();
+		int CurrentlyAvailable();
 	}
 }
