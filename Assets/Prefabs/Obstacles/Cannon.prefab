@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4913327216214052}
   - component: {fileID: 65731086697312734}
+  - component: {fileID: 114827938099151856}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Obstacle
@@ -51,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1267984823686296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 231, y: 0, z: 23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4993643309257064}
@@ -125,3 +126,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114827938099151856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1267984823686296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  gridMatrix: {fileID: 11400000, guid: 495d1c189f8562147bab8077817a96a8, type: 2}

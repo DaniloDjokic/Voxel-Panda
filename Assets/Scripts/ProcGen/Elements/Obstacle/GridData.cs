@@ -32,11 +32,11 @@ namespace VoxelPanda.ProcGen.Elements
 			return weight;
 		}
 
-		public void Spawn(Transform transform)
+		public void Spawn(Vector3 position)
 		{
 			isAvailableToSpawn = false;
 			gameObject.SetActive(true);
-			this.transform.position = transform.position;
+			this.transform.position = position;
 		}
 
 	}

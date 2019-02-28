@@ -28,9 +28,17 @@ namespace VoxelPanda.Flow
 			var pickupMapper = new CoinMapper();
 
 			//Obstacles
-			var obstaclePooler = new ObsPooler();
 			var obstacleRandomizer = new ObsRandomizer();
+			foreach (var gridData in spawnData.Obstacles)
+			{
+				var obstaclePooler = new ObsPooler();
+				obstaclePooler.SetSpawnable(gridData);
+				obstaclePooler.CreateSpawnables(spawnData.obstaclePoolSize);
+				obstacleRandomizer.SetSubPooling(obstaclePooler);
+			}
+
 			var obstacleMapper = new ObsMapper();
+			//var obstacleSpawner = new TestSpawnPrinter();
 			var obstacleSpawner = new ObsSpawner();
 
 			//Path
@@ -45,26 +53,40 @@ namespace VoxelPanda.Flow
 
 			//Binding Subs
 			obstacleMapper.SetSubMapper(pickupMapper);
-			obstacleRandomizer.SetSubPooling(obstaclePooler);
 			
 			this.Bind(spawnData.Pickups, pickupPooler, pickupMapper);
-			this.Bind(spawnData.Obstacles, obstacleRandomizer, obstacleMapper, obstacleSpawner);
+			this.Bind(obstacleRandomizer, obstacleMapper);
+			this.Bind(obstacleMapper, obstacleSpawner);
 			this.Bind(spawnData.Paths, pathPooler, pathMapper, pathSpawner);
 			this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
+			obstacleSpawner.SpawnGrid(10, 120);
 		}
 
 		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper)
 		{
-			for (var i = 0; i < spawnables.Count; i++)
-			{
-				pooler.SetSpawnable(spawnables[i]);
-			}
-			mapper.SetPooler(pooler);
+			Bind(spawnables, pooler);
+			Bind(pooler, mapper);
 		}
-
 		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper, ISpawning spawning)
 		{
 			Bind(spawnables, pooler, mapper);
+			Bind(mapper, spawning);
+		}
+		private void Bind(IList<ISpawnable> spawnables, IPooling pooler)
+		{
+			for(var i = 0; i < spawnables.Count; i++)
+			{
+				pooler.SetSpawnable(spawnables[i]);
+			}
+
+		}
+		private void Bind(IPooling pooler, IMapping mapper)
+		{
+			mapper.SetPooler(pooler);
+
+		}
+		private void Bind(IMapping mapper, ISpawning spawning)
+		{
 			spawning.SetMapper(mapper);
 			this.procEvents.AddSpawningListener(spawning);
 		}

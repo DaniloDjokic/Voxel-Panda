@@ -11,5 +11,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee004099300bda49957b0e957744202, type: 3}
   m_Name: Wall 1
   m_EditorClassIdentifier: 
-  width: 0
-  height: 0
+  width: 3
+  height: 3
+  obstacleMatrix:
+  - nodes:
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+  - nodes:
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 2
+      riskState: 0
+      objectRoot: 1
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+  - nodes:
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0

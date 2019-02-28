@@ -11,12 +11,14 @@ namespace VoxelPanda.ProcGen.Elements
 	[System.Serializable]
 	public class GridNode
 	{
+		public static GridNode Empty = new GridNode(NodeOccupiedState.None, NodeRiskState.None);
+
 		[SerializeField]
 		public NodeOccupiedState occupiedState = NodeOccupiedState.None;
 		[SerializeField]
 		public NodeRiskState riskState = NodeRiskState.None;
 		[SerializeField]
-		public bool objectRoot;
+		public bool objectRoot = false;
 
 		public GridNode()
 		{

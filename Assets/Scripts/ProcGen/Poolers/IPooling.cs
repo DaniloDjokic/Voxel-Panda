@@ -8,9 +8,9 @@ namespace VoxelPanda.ProcGen.Poolers
 	public interface IPooling
 	{
 		void SetSpawnable(ISpawnable spawnable);
-		ISpawnable GetSpawnable();
+		ISpawnable GetSpawnable(int maxWidth, int maxHeight);
 		void CreateSpawnables(int size);
-		int GetAvailableWeightSum();
-		int CurrentlyAvailable();
+		int GetAvailableWeightSum(int maxWidth, int maxHeight);
+		int CurrentlyAvailable(int maxWidth, int maxHeight);
 	}
 }

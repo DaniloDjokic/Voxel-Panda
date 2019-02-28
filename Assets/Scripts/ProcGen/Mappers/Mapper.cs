@@ -18,48 +18,58 @@ namespace VoxelPanda.ProcGen.Mappers
 		public float chanceIncrementPerIteration = 0.1f;
 		public float chanceDecrementPerSpawn = 0.5f;
 
-		public IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int length)
+		public IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int height)
 		{
-			MapperNode[][] nodeMatrix = new MapperNode[length][];
+			MapperNode[][] nodeMatrix = new MapperNode[height][];
 			//Going through rows
-			float randomChance = Random.Range(0, maxChanceToSpawn);
-			for (var j = 0; j < length; j++)
+			float randomChance = Random.Range(minChanceToSpawn, maxChanceToSpawn);
+			for (var j = 0; j < height; j++)
 			{
 				nodeMatrix[j] = new MapperNode[width];
 				for (int i = 0; i < width; i++)
 				{
 					if (randomChance > chanceToSpawn) {
-						ISpawnable spawnable = pooler.GetSpawnable();
-						InsertToMatrix(nodeMatrix, spawnable, i, j);
-						DecrementChance();
-						i = 0;
-						j += spawnable.GetMatrix().height;
-						break;
+						ISpawnable spawnable = pooler.GetSpawnable(width - i, height - j);
+						if(spawnable != null) {
+							InsertToMatrix(nodeMatrix, spawnable, i, j, width);
+							DecreaseChance();
+							i = 0;
+							j += spawnable.GetMatrix().height - 1;
+							break;
+						} else
+						{
+							nodeMatrix[j][i] = MapperNode.Empty;
+							IncreaseChance();
+						}
 					} else
 					{
-						nodeMatrix[i][j] = new MapperNode();
-						IncrementChance();
+						nodeMatrix[j][i] = MapperNode.Empty;
+						IncreaseChance();
 					}
 				}
 			}
 			return nodeMatrix;
 		}
 
-		private void InsertToMatrix(MapperNode[][] matrix, ISpawnable spawnable, int startX, int startZ)
+		private void InsertToMatrix(MapperNode[][] matrix, ISpawnable spawnable, int startX, int startZ, int matrixWidth)
 		{
 			GridMatrix objectMatrix = spawnable.GetMatrix();
 			int width = objectMatrix.width;
 			int height = objectMatrix.height;
-			for (int j = 0; j < height; j++)
+			for (int j = startZ; j < startZ + height; j++)
 			{
-				for(int i = 0; i < width; i++)
+				if(matrix[j] == null)
 				{
-					if(i >= startX)
+					matrix[j] = new MapperNode[matrixWidth];
+				}
+				for (int i = 0; i < matrix[j].Length; i++)
+				{
+					if (i >= startX && i < (startX + width))
 					{
-						matrix[startX + i][startZ + j] = new MapperNode(objectMatrix.GetNode(i, j));
+						matrix[j][i] = new MapperNode(objectMatrix.GetNode(j - startZ, i - startX), spawnable);
 					} else
 					{
-						matrix[startX + i][startZ + j] = new MapperNode();
+						matrix[j][i] = MapperNode.Empty;
 					}
 				}
 			}
@@ -77,13 +87,13 @@ namespace VoxelPanda.ProcGen.Mappers
 		}
 
 		//Chance
-		private void IncrementChance()
+		private void DecreaseChance()
 		{
-			chanceToSpawn = Mathf.Clamp(chanceToSpawn + chanceIncrementPerIteration, minChanceToSpawn, maxChanceToSpawn);
+			chanceToSpawn = Mathf.Clamp(chanceToSpawn + chanceIncrementPerIteration, 0, maxChanceToSpawn);
 		}
-		private void DecrementChance()
+		private void IncreaseChance()
 		{
-			chanceToSpawn = Mathf.Clamp(chanceToSpawn - chanceDecrementPerSpawn, minChanceToSpawn, maxChanceToSpawn);
+			chanceToSpawn = Mathf.Clamp(chanceToSpawn - chanceDecrementPerSpawn, 0, maxChanceToSpawn);
 		}
 	}
 }

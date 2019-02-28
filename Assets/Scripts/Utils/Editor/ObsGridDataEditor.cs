@@ -42,6 +42,7 @@ public class ObsGridDataEditor : Editor {
 		EditorGUILayout.EndVertical();
 		CheckForWidthHeightChanges();
 		serializedObject.ApplyModifiedProperties();
+		EditorUtility.SetDirty(serializedObject.targetObject);
 	}
 
 	private void CheckForWidthHeightChanges()

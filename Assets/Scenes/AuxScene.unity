@@ -551,6 +551,7 @@ MonoBehaviour:
   deathUI: {fileID: 705041094}
   playerElements: {fileID: 1902346560}
   crusher: {fileID: 393683764}
+  randomSeed: 
 --- !u!1001 &897399034
 Prefab:
   m_ObjectHideFlags: 0
@@ -911,7 +912,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickups: []
-  obstacles: []
+  obstacles:
+  - {fileID: 114827938099151856, guid: d51dba74df13b2247ae0507350a3e929, type: 2}
+  - {fileID: 114271322130863934, guid: 09fa95d6cfb6b20438e6bdc609856c61, type: 2}
+  - {fileID: 114477417487849216, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+  - {fileID: 114895505485010346, guid: b0aec70ff2f06b241b983fc3fcf15079, type: 2}
+  - {fileID: 114697213162171274, guid: 7d7bdcc079811c9478d25f8f1c90c29c, type: 2}
+  - {fileID: 114610349627322622, guid: 20b88b5974102ab4fa257a3f457c9d30, type: 2}
+  - {fileID: 114911349801827280, guid: 056cf2f7a9c39de4caeb322c606e936b, type: 2}
+  - {fileID: 114284398148146730, guid: 19dba0fc4001bb846b69713c70da3a24, type: 2}
+  - {fileID: 114491535170004540, guid: ac6f3b90bd9876c4abc32c6849010d0d, type: 2}
   paths: []
   backdrops: []
 --- !u!114 &1902346564

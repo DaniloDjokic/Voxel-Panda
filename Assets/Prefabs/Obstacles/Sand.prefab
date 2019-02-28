@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4662049170411726}
   - component: {fileID: 33456812841579954}
   - component: {fileID: 65036259212126526}
+  - component: {fileID: 114895505485010346}
   m_Layer: 0
   m_Name: Sand
   m_TagString: Obstacle
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1454240585833892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 40, y: 0, z: 4}
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children:
   - {fileID: 4437166259560570}
@@ -133,3 +134,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114895505485010346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454240585833892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  gridMatrix: {fileID: 11400000, guid: 5a83240ed9c3c62488467a09d6842e38, type: 2}

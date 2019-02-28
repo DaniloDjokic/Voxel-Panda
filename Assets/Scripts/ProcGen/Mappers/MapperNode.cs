@@ -7,11 +7,22 @@ namespace VoxelPanda.ProcGen.Mappers
 {
 	public struct MapperNode
 	{
+		public static MapperNode Empty = new MapperNode(GridNode.Empty, null);
 		private GridNode node;
+		private ISpawnable spawnable;
 
-		public MapperNode(GridNode node)
+		public MapperNode(GridNode gridNode, ISpawnable spawnable)
 		{
-			this.node = node;
+			node = gridNode;
+			this.spawnable = spawnable;
+		}
+		public GridNode GetGridNode()
+		{
+			return node;
+		}
+		public ISpawnable GetSpawnable()
+		{
+			return spawnable;
 		}
 	}
 }

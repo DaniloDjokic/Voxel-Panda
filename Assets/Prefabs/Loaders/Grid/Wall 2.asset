@@ -12,41 +12,44 @@ MonoBehaviour:
   m_Name: Wall 2
   m_EditorClassIdentifier: 
   width: 4
-  height: 4
+  height: 3
   obstacleMatrix:
   - nodes:
     - occupiedState: 0
       riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
     - occupiedState: 0
       riskState: 0
+      objectRoot: 0
+  - nodes:
     - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 2
       riskState: 0
+      objectRoot: 1
+    - occupiedState: 2
+      riskState: 0
+      objectRoot: 0
     - occupiedState: 0
-      riskState: 0
+      riskState: 1
+      objectRoot: 0
   - nodes:
     - occupiedState: 0
       riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
     - occupiedState: 0
       riskState: 0
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
-  - nodes:
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
-  - nodes:
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
-    - occupiedState: 0
-      riskState: 0
+      objectRoot: 0
