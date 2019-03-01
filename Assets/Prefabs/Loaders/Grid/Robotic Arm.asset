@@ -17,7 +17,7 @@ MonoBehaviour:
   - nodes:
     - occupiedState: 0
       riskState: 0
-      objectRoot: 0
+      objectRoot: 1
     - occupiedState: 0
       riskState: 0
       objectRoot: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
       objectRoot: 0
     - occupiedState: 2
       riskState: 0
-      objectRoot: 1
+      objectRoot: 0
     - occupiedState: 0
       riskState: 2
       objectRoot: 0
@@ -168,3 +168,5 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 0
       objectRoot: 0
+  concreteObjectWidth: 7
+  concreteObjectHeight: 7

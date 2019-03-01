@@ -924,6 +924,7 @@ MonoBehaviour:
   - {fileID: 114491535170004540, guid: ac6f3b90bd9876c4abc32c6849010d0d, type: 2}
   paths: []
   backdrops: []
+  obstaclePoolSize: 10
 --- !u!114 &1902346564
 MonoBehaviour:
   m_ObjectHideFlags: 0

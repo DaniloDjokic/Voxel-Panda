@@ -24,27 +24,29 @@ namespace VoxelPanda.ProcGen.Poolers
 			}
 		}
 
-		public int GetAvailableWeightSum(int maxWidth, int maxHeight)
+		public int GetAvailableWeightSum(int maxHeight)
 		{
-			return CurrentlyAvailable(maxWidth, maxHeight) * spawnableModel.GetWeight();
+			return CurrentlyAvailable(maxHeight) * spawnableModel.GetWeight();
 		}
-		public int CurrentlyAvailable(int maxWidth, int maxHeight)
+		public int CurrentlyAvailable(int maxHeight)
 		{
-			return spawnables.Count(i => IsAvailableToSpawnAndInDimensions(i, maxWidth, maxHeight));
+			return spawnables.Count(i => IsAvailableToSpawnAndInDimensions(i, maxHeight));
 		}
 
-		public ISpawnable GetSpawnable(int maxWidth, int maxHeight)
+		public ISpawnable GetSpawnable(int maxHeight)
 		{
-			return spawnables.First(i => IsAvailableToSpawnAndInDimensions(i, maxWidth, maxHeight));
+			ISpawnable spawnable = spawnables.First(i => IsAvailableToSpawnAndInDimensions(i, maxHeight));
+			spawnable.ReserveForSpawning();
+			return spawnable;
 		}
 
 		public void SetSpawnable(ISpawnable spawnable)
 		{
 			spawnableModel = (GridData) spawnable;
 		}
-		private bool IsAvailableToSpawnAndInDimensions(ISpawnable i, int maxWidth, int maxHeight)
+		private bool IsAvailableToSpawnAndInDimensions(ISpawnable i, int maxHeight)
 		{
-			return i.IsAvailableToSpawn() && i.GetDimensions().x <= maxWidth && i.GetDimensions().y <= maxHeight;
+			return i.IsAvailableToSpawn() && i.GetConcreteDimensions().y <= maxHeight;
 		}
 	}
 }

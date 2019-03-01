@@ -21,7 +21,7 @@ namespace VoxelPanda.ProcGen.Spawners
 		{
 
 			StreamWriter writer = new StreamWriter(path, true);
-			IEnumerable<IEnumerable<MapperNode>> grid = mapper.GetNodeMap(width, length);
+			IList<IList<MapperNode>> grid = mapper.GetNodeMap(width, length);
 
 			foreach (var col in grid)
 			{

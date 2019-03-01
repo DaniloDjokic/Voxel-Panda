@@ -17,63 +17,69 @@ namespace VoxelPanda.ProcGen.Mappers
 		public float chanceToSpawn = 1;
 		public float chanceIncrementPerIteration = 0.1f;
 		public float chanceDecrementPerSpawn = 0.5f;
+		//Map
+		public int minMapX = 0, maxMapX = 9;
+		public int minMapY = 0, maxMapY = 119;
+		//static
+		private static IList<IList<MapperNode>> BlankMap;
 
-		public IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int height)
+
+		public IList<IList<MapperNode>> GetNodeMap(int width, int height)
 		{
-			MapperNode[][] nodeMatrix = new MapperNode[height][];
-			//Going through rows
+			maxMapX = width - 1; 
+			maxMapY = height - 1;
+			IList<IList<MapperNode>> nodeMatrix = GetBlankMap(width, height);
 			float randomChance = Random.Range(minChanceToSpawn, maxChanceToSpawn);
-			for (var j = 0; j < height; j++)
+			int heightLeft = height;
+			for (int i = 0; i < height; i++)
 			{
-				nodeMatrix[j] = new MapperNode[width];
-				for (int i = 0; i < width; i++)
+				heightLeft = height - i;
+				if (randomChance > chanceToSpawn)
 				{
-					if (randomChance > chanceToSpawn) {
-						ISpawnable spawnable = pooler.GetSpawnable(width - i, height - j);
-						if(spawnable != null) {
-							InsertToMatrix(nodeMatrix, spawnable, i, j, width);
-							DecreaseChance();
-							i = 0;
-							j += spawnable.GetMatrix().height - 1;
-							break;
-						} else
-						{
-							nodeMatrix[j][i] = MapperNode.Empty;
-							IncreaseChance();
-						}
-					} else
+					ISpawnable spawnable = pooler.GetSpawnable(heightLeft);
+					if (spawnable != null)
 					{
-						nodeMatrix[j][i] = MapperNode.Empty;
-						IncreaseChance();
+						InsertToMatrix(nodeMatrix, spawnable, width, i);
+						DecreaseChance();
+						i += (int)spawnable.GetFullDimensions().y - 1;
 					}
+
+				} else
+				{
+					IncreaseChance();
 				}
 			}
 			return nodeMatrix;
 		}
 
-		private void InsertToMatrix(MapperNode[][] matrix, ISpawnable spawnable, int startX, int startZ, int matrixWidth)
+		private void InsertToMatrix(IList<IList<MapperNode>> nodeMatrix, ISpawnable spawnable, int matrixWidth, int startZ)
 		{
 			GridMatrix objectMatrix = spawnable.GetMatrix();
-			int width = objectMatrix.width;
-			int height = objectMatrix.height;
-			for (int j = startZ; j < startZ + height; j++)
+			int endZ = objectMatrix.height + startZ;
+			int objectRootX = objectMatrix.objectRootX;
+			int objectRootZ = objectMatrix.objectRootZ;
+
+			
+			int startX = Random.Range(0, matrixWidth - objectMatrix.concreteObjectWidth) - objectRootX;
+			int endX = objectMatrix.width + startX;
+
+			//startZ = startZ - objectRootZ;
+			endZ = objectMatrix.height + startZ;
+			for (int i = startZ; i < endZ; i++)
 			{
-				if(matrix[j] == null)
+				if (i >= minMapY && i <= maxMapY)
 				{
-					matrix[j] = new MapperNode[matrixWidth];
-				}
-				for (int i = 0; i < matrix[j].Length; i++)
-				{
-					if (i >= startX && i < (startX + width))
+					for (int j = startX; j < endX; j++)
 					{
-						matrix[j][i] = new MapperNode(objectMatrix.GetNode(j - startZ, i - startX), spawnable);
-					} else
-					{
-						matrix[j][i] = MapperNode.Empty;
+						if (j >= minMapX && j <= maxMapX)
+						{
+							GridNode node = objectMatrix.GetNode(i - startZ, j - startX);
+							nodeMatrix[i][j] = MapperNode.OverwriteNode(nodeMatrix[i][j], new MapperNode(node, spawnable));
+							//nodeMatrix[i][j] = nodeMatrix[i][j].OverwriteNode(node, spawnable);
+						}
 					}
 				}
 			}
-
 		}
 
 		public void SetPooler(IPooling pooler)
@@ -94,6 +100,26 @@ namespace VoxelPanda.ProcGen.Mappers
 		private void IncreaseChance()
 		{
 			chanceToSpawn = Mathf.Clamp(chanceToSpawn - chanceDecrementPerSpawn, 0, maxChanceToSpawn);
+		}
+		private static void FillBlankMap(int width, int height)
+		{
+			BlankMap = new MapperNode[height][];
+			for (int i = 0; i < height; i++)
+			{
+				BlankMap[i] = new MapperNode[width];
+				for (int j = 0; j < width; j++)
+				{
+					BlankMap[i][j] = MapperNode.Empty;
+				}
+			}
+		}
+		private static IList<IList<MapperNode>> GetBlankMap(int width, int height)
+		{
+			if (BlankMap == null || BlankMap.Count != height || BlankMap[0].Count != width)
+			{
+				FillBlankMap(width, height);
+			}
+			return BlankMap;
 		}
 	}
 }

@@ -53,7 +53,7 @@ MonoBehaviour:
       riskState: 2
       objectRoot: 0
     - occupiedState: 1
-      riskState: 1
+      riskState: 2
       objectRoot: 0
     - occupiedState: 1
       riskState: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
       riskState: 2
       objectRoot: 0
     - occupiedState: 1
-      riskState: 1
+      riskState: 2
       objectRoot: 0
     - occupiedState: 1
       riskState: 1
@@ -138,3 +138,5 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 0
       objectRoot: 0
+  concreteObjectWidth: 10
+  concreteObjectHeight: 2

@@ -17,9 +17,14 @@ namespace VoxelPanda.ProcGen.Elements
 			gameObject.SetActive(false);
 		}
 
-		public Vector2 GetDimensions()
+		public Vector2 GetFullDimensions()
 		{
 			return new Vector2(gridMatrix.width, gridMatrix.height);
+		}
+
+		public Vector2 GetConcreteDimensions()
+		{
+			return new Vector2(gridMatrix.concreteObjectWidth, gridMatrix.concreteObjectHeight);
 		}
 
 		public GridMatrix GetMatrix()
@@ -39,5 +44,9 @@ namespace VoxelPanda.ProcGen.Elements
 			this.transform.position = position;
 		}
 
+		public void ReserveForSpawning()
+		{
+			isAvailableToSpawn = false;
+		}
 	}
 }

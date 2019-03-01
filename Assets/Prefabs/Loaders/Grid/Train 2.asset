@@ -16,7 +16,7 @@ MonoBehaviour:
   obstacleMatrix:
   - nodes:
     - occupiedState: 0
-      riskState: 1
+      riskState: 0
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
-      riskState: 1
+      riskState: 0
       objectRoot: 0
   - nodes:
     - occupiedState: 2
@@ -48,9 +48,6 @@ MonoBehaviour:
       objectRoot: 0
   - nodes:
     - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
@@ -60,5 +57,10 @@ MonoBehaviour:
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
-      riskState: 0
+      riskState: 1
       objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+  concreteObjectWidth: 5
+  concreteObjectHeight: 1

@@ -16,23 +16,20 @@ namespace VoxelPanda.ProcGen.Spawners
 			this.mapper = mapper;
 		}
 
-		public void SpawnGrid(int width, int length)
+		public void SpawnGrid(int width, int height)
 		{
-			IEnumerable<IEnumerable<MapperNode>> grid = mapper.GetNodeMap(width, length);
-			int j = 0;
-			foreach(var col in grid)
+			IList<IList<MapperNode>> grid = mapper.GetNodeMap(width, height);
+			for(int i = 0; i < height; i++) 
 			{
-				int i = 0;
-				foreach(MapperNode node in col)
+				for(int j = 0; j < width; j++)
 				{
-					if (node.GetGridNode().objectRoot)
+					var node = grid[i][j];
+					if (node.IsObjectRoot())
 					{
-						Vector3 dst = new Vector3(i * gridUnitToMeter, yHeight, j * gridUnitToMeter);
+						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, i * gridUnitToMeter);
 						node.GetSpawnable().Spawn(dst);
 					}
-					i++;
 				}
-				j++;
 			}
 		}
 	}

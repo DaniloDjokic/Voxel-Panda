@@ -13,7 +13,8 @@ namespace VoxelPanda.ProcGen.Mappers
 
 		public MapperNode(GridNode gridNode, ISpawnable spawnable)
 		{
-			node = gridNode;
+			node = new GridNode(gridNode.occupiedState, gridNode.riskState);
+			node.objectRoot = gridNode.objectRoot;
 			this.spawnable = spawnable;
 		}
 		public GridNode GetGridNode()
@@ -23,6 +24,21 @@ namespace VoxelPanda.ProcGen.Mappers
 		public ISpawnable GetSpawnable()
 		{
 			return spawnable;
+		}
+		public bool IsObjectRoot()
+		{
+			return node.objectRoot;
+		}
+		public static MapperNode OverwriteNode(MapperNode oldNode, MapperNode newNode)
+		{
+			if (oldNode.node.riskState == NodeRiskState.Risky && newNode.node.riskState == NodeRiskState.Risky)
+			{
+				newNode.node.riskState = NodeRiskState.Dangerous;
+			} else if (oldNode.node.riskState == NodeRiskState.Dangerous && newNode.node.riskState == NodeRiskState.Dangerous)
+			{
+				newNode.node.riskState = NodeRiskState.Critical;
+			}
+			return newNode;
 		}
 	}
 }

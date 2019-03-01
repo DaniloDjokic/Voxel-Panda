@@ -22,13 +22,13 @@ MonoBehaviour:
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
-      riskState: 2
+      riskState: 1
       objectRoot: 0
     - occupiedState: 0
       riskState: 2
       objectRoot: 0
     - occupiedState: 0
-      riskState: 2
+      riskState: 1
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
@@ -60,13 +60,16 @@ MonoBehaviour:
       objectRoot: 0
   - nodes:
     - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 2
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 2
       objectRoot: 0
     - occupiedState: 0
       riskState: 2
@@ -77,6 +80,5 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 1
       objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
+  concreteObjectWidth: 7
+  concreteObjectHeight: 1

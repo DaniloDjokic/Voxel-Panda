@@ -80,3 +80,5 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 0
       objectRoot: 0
+  concreteObjectWidth: 4
+  concreteObjectHeight: 1

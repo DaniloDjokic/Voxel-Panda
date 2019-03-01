@@ -14,6 +14,15 @@ namespace VoxelPanda.ProcGen.Elements
 		public int width, height;
 		[SerializeField]
 		private List<NodeList> obstacleMatrix;
+		[SerializeField]
+		public int concreteObjectWidth = 0, concreteObjectHeight = 0;
+		[SerializeField]
+		public GridNode objectRoot { get; private set; }
+		[SerializeField]
+		public int objectRootX { get; private set; }
+		[SerializeField]
+		public int objectRootZ { get; private set; }
+
 		public List<NodeList> ObstacleMatrix
 		{
 			get
@@ -60,9 +69,14 @@ namespace VoxelPanda.ProcGen.Elements
 					if (obstacleMatrix[i].nodes[j] != node)
 					{
 						GetNode(i, j).objectRoot = false;
+					} else
+					{
+						this.objectRootX = j;
+						this.objectRootZ = i;
 					}
 				}
 			}
+			this.objectRoot = node;
 			node.objectRoot = true;
 		}
 	}
