@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,3 +15,14 @@ public class Coin : MonoBehaviour {
 		
 	}
 }
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace VoxelPanda.ProcGen.Elements
+{
+	public class Coin : Pickup {
+	}
+}
+>>>>>>> Stashed changes

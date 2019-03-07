@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,3 +15,16 @@ public class CoinPooler : MonoBehaviour {
 		
 	}
 }
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace VoxelPanda.ProcGen.Poolers
+{
+	public class CoinPooler : PickupPooler
+	{
+	}
+}
+
+>>>>>>> Stashed changes

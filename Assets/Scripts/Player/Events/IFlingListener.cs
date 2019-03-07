@@ -12,5 +12,6 @@ namespace VoxelPanda.Player.Events
 		void OnFlingStarted(FlingData flingData);
 		void OnFlingRunning(FlingData flingData);
 		void OnFlingEnded(FlingData flingData);
+        void OnStaminaChanged(FlingData flingData);
 	}
 }

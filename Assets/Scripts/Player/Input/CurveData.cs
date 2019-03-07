@@ -2,15 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CurveData : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class CurveData
+{
+    public Vector3 RawAccelerationVector { get; set; }
+    public Vector3 ModifiedAccelerationVector { get; set; }
 }
