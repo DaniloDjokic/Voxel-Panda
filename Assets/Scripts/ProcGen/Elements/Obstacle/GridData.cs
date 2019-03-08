@@ -10,6 +10,7 @@ namespace VoxelPanda.ProcGen.Elements
 		public GridMatrix gridMatrix;
 		private bool isAvailableToSpawn = true;
 		public bool IsAvailableToSpawn() { return isAvailableToSpawn; }
+		public Orientation orientation = Orientation.LEFT;
 
 		public void Despawn()
 		{
@@ -47,6 +48,28 @@ namespace VoxelPanda.ProcGen.Elements
 		public void ReserveForSpawning()
 		{
 			isAvailableToSpawn = false;
+		}
+
+		public void SetOrientation(Orientation orientation)
+		{
+			if (orientation == Orientation.LEFT || orientation == Orientation.RIGHT)
+			{
+				this.orientation = orientation;
+				this.gridMatrix.isFlipped = this.orientation == Orientation.RIGHT;
+				if (this.orientation == Orientation.LEFT)
+				{
+					this.transform.rotation = Quaternion.Euler(0, 0, 0);
+				} else
+				{
+					this.transform.rotation = Quaternion.Euler(0, 0, 180);
+				}
+
+			}
+		}
+
+		public void RandomizeOrientation()
+		{
+			this.SetOrientation((Random.Range(0, 2) == 0) ? Orientation.LEFT : Orientation.RIGHT);  
 		}
 	}
 }

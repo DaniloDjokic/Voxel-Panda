@@ -911,7 +911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c94ea4e33198e4cb0947aa66e056cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickups: []
+  pickups:
+  - {fileID: 114299056914861348, guid: b6f3afcab8a271f4e82390d778df4c1b, type: 2}
   obstacles:
   - {fileID: 114827938099151856, guid: d51dba74df13b2247ae0507350a3e929, type: 2}
   - {fileID: 114271322130863934, guid: 09fa95d6cfb6b20438e6bdc609856c61, type: 2}
@@ -925,6 +926,7 @@ MonoBehaviour:
   paths: []
   backdrops: []
   obstaclePoolSize: 10
+  pickupPoolSize: 500
 --- !u!114 &1902346564
 MonoBehaviour:
   m_ObjectHideFlags: 0

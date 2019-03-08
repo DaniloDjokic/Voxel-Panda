@@ -138,5 +138,132 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 0
       objectRoot: 0
+  flippedObstacleMatrix:
+  - nodes:
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+  - nodes:
+    - occupiedState: 1
+      riskState: 2
+      objectRoot: 1
+    - occupiedState: 1
+      riskState: 2
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 2
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+  - nodes:
+    - occupiedState: 1
+      riskState: 2
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 2
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 2
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+  - nodes:
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
   concreteObjectWidth: 10
   concreteObjectHeight: 2
+  objectRootX: 0
+  isFlippableHorizontally: 1

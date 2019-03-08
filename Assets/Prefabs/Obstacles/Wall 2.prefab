@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1903997849702750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4278344191285016}
@@ -168,3 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 1
   gridMatrix: {fileID: 11400000, guid: c623a94cfc78f5a45b09e59321c7c062, type: 2}
+  orientation: 0

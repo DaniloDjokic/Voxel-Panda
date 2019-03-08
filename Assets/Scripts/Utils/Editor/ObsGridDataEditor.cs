@@ -53,12 +53,37 @@ public class ObsGridDataEditor : Editor {
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.BeginVertical();
-		EditorGUILayout.LabelField("Obstacle Root X: " + obsGridMatrix.objectRootX);
+		EditorGUILayout.LabelField("Is object flippable horizontally?");
+		obsGridMatrix.isFlippableHorizontally = EditorGUILayout.Toggle(obsGridMatrix.isFlippableHorizontally);
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.BeginVertical();
-		EditorGUILayout.LabelField("Obstacle Root Z: " + obsGridMatrix.objectRootZ);
+		if (obsGridMatrix.isFlippableHorizontally) {
+			if (GUILayout.Button("Generated Flipped Matrix"))
+			{
+				obsGridMatrix.GenerateFlippedVersion();
+			}
+		}
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.EndHorizontal();
+		EditorGUILayout.BeginHorizontal();
+		EditorGUILayout.BeginVertical();
+		EditorGUILayout.LabelField("Obstacle Root X: " + obsGridMatrix.ObjectRootX);
+		EditorGUILayout.EndVertical();
+		EditorGUILayout.BeginVertical();
+		EditorGUILayout.LabelField("Obstacle Root Z: " + obsGridMatrix.ObjectRootZ);
+		EditorGUILayout.EndVertical();
+		EditorGUILayout.EndHorizontal();
+		if (obsGridMatrix.isFlippableHorizontally)
+		{
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.BeginVertical();
+			EditorGUILayout.LabelField("Flipped Obstacle Root X: " + (obsGridMatrix.concreteObjectWidth - 1 - obsGridMatrix.ObjectRootX));
+			EditorGUILayout.EndVertical();
+			EditorGUILayout.BeginVertical();
+			EditorGUILayout.LabelField("Flipped Obstacle Root Z: " + obsGridMatrix.ObjectRootZ);
+			EditorGUILayout.EndVertical();
+			EditorGUILayout.EndHorizontal();
+		}
 		EditorGUILayout.EndVertical();
 		CheckForWidthHeightChanges();
 		serializedObject.ApplyModifiedProperties();
@@ -131,7 +156,7 @@ public class ObsGridDataEditor : Editor {
 		if (node.occupiedState > NodeOccupiedState.Blocked)
 		{
 			node.occupiedState = NodeOccupiedState.None;
-		}	
+		}
 	}
 	public void ChangeRiskState(GridNode node)
 	{

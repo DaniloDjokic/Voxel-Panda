@@ -80,5 +80,9 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 1
       objectRoot: 0
+  flippedObstacleMatrix: []
   concreteObjectWidth: 7
   concreteObjectHeight: 1
+  objectRootX: 0
+  isFlippableHorizontally: 0
+  isFlipped: 0
