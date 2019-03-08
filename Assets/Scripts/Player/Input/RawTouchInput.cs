@@ -10,6 +10,7 @@ public class RawTouchInput : MonoBehaviour
     private bool detectingInput = true;
 
     private Vector3 initialTouchPosition;
+    private Vector3 touchStartingPosition;
     private Vector3 touchHoldPosition;
     
 	void Update ()
@@ -56,23 +57,26 @@ public class RawTouchInput : MonoBehaviour
 
     void TouchStarted(Touch touch)
     {
-        initialTouchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+    	initialTouchPosition = touch.position;
+        //initialTouchPosition = Camera.main.ScreenToWorldPoint(touch.position);
         flingCalculator.StartFlingCalculation();
     }
 
     void TouchHold(Touch touch)
     {
+    	touchStartingPosition = Camera.main.ScreenToWorldPoint(initialTouchPosition);
         touchHoldPosition = Camera.main.ScreenToWorldPoint(touch.position);
-        flingCalculator.UpdateRawVector(ConstructVector(initialTouchPosition, touchHoldPosition));
+        flingCalculator.UpdateRawVector(ConstructVector(touchStartingPosition, touchHoldPosition));
     }
 
     void TouchEnded(Touch touch)
     {
+    	touchStartingPosition = Camera.main.ScreenToWorldPoint(initialTouchPosition);
         touchHoldPosition = Camera.main.ScreenToWorldPoint(touch.position);
-        flingCalculator.UpdateRawVector(ConstructVector(initialTouchPosition, touchHoldPosition));
+        flingCalculator.UpdateRawVector(ConstructVector(touchStartingPosition, touchHoldPosition));
         flingCalculator.ApplyFling();
 
-        initialTouchPosition = touchHoldPosition = Vector3.zero;
+        initialTouchPosition = touchStartingPosition = touchHoldPosition = Vector3.zero;
     }
 
     void SimulateTouchWithMouse()
