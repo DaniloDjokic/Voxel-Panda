@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1661764493281546}
+  m_IsPrefabAsset: 1
+--- !u!1 &1273787968340134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4415370959907074}
+  - component: {fileID: 114198266438603112}
+  - component: {fileID: 114460060984618992}
+  - component: {fileID: 114794234042901482}
+  - component: {fileID: 114506744368682314}
+  m_Layer: 0
+  m_Name: Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1548346700352552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4716517752851754}
+  - component: {fileID: 114576848009845446}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1661764493281546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4704324310411098}
+  m_Layer: 0
+  m_Name: Managing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4415370959907074
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273787968340134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4704324310411098}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4704324310411098
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661764493281546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4716517752851754}
+  - {fileID: 4415370959907074}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4716517752851754
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1548346700352552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4704324310411098}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114198266438603112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273787968340134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e7070e12db809498370f3697b46ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114460060984618992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273787968340134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c94ea4e33198e4cb0947aa66e056cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickups: []
+  obstacles:
+  - {fileID: 114827938099151856, guid: d51dba74df13b2247ae0507350a3e929, type: 2}
+  - {fileID: 114271322130863934, guid: 09fa95d6cfb6b20438e6bdc609856c61, type: 2}
+  - {fileID: 114477417487849216, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+  - {fileID: 114895505485010346, guid: b0aec70ff2f06b241b983fc3fcf15079, type: 2}
+  - {fileID: 114697213162171274, guid: 7d7bdcc079811c9478d25f8f1c90c29c, type: 2}
+  - {fileID: 114610349627322622, guid: 20b88b5974102ab4fa257a3f457c9d30, type: 2}
+  - {fileID: 114911349801827280, guid: 056cf2f7a9c39de4caeb322c606e936b, type: 2}
+  - {fileID: 114284398148146730, guid: 19dba0fc4001bb846b69713c70da3a24, type: 2}
+  - {fileID: 114491535170004540, guid: ac6f3b90bd9876c4abc32c6849010d0d, type: 2}
+  paths: []
+  backdrops: []
+  obstaclePoolSize: 10
+--- !u!114 &114506744368682314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273787968340134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a81f8342b81c4f9338b0853997ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  physicsApplier: {fileID: 0}
+  rawInput: {fileID: 0}
+  animationManager: {fileID: 0}
+  arrowUI: {fileID: 0}
+  camBehaviour: {fileID: 0}
+  particles: {fileID: 0}
+  sfx: {fileID: 0}
+  staminaUI: {fileID: 0}
+  touchDragUI: {fileID: 0}
+--- !u!114 &114576848009845446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1548346700352552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd91bee4809fae847a18d40a7ad05ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  constMoveData: {fileID: 114198266438603112}
+  spawnData: {fileID: 114460060984618992}
+  scoreUI: {fileID: 114794234042901482}
+  deathUI: {fileID: 0}
+  playerElements: {fileID: 114506744368682314}
+  crusher: {fileID: 0}
+  randomSeed: 
+--- !u!114 &114794234042901482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273787968340134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0f4939e3eb0144e8e72ff4c0f9e500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
