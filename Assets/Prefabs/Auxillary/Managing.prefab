@@ -113,6 +113,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7070e12db809498370f3697b46ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flingForce: 50
+  maxStamina: 100
+  staminaPerFling: 20
+  staminaRegenDelay: 0
+  staminaRegenPerSecond: 25
+  vectorStaminaCost: 0
+  curveForce: 50
+  accelerationDeadzone: 0.1
+  accelerationFunctionModifier: 1.5
 --- !u!114 &114460060984618992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,8 +159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  physicsApplier: {fileID: 0}
-  rawInput: {fileID: 0}
+  physicsController: {fileID: 0}
+  accInput: {fileID: 0}
+  touchInput: {fileID: 0}
   animationManager: {fileID: 0}
   arrowUI: {fileID: 0}
   camBehaviour: {fileID: 0}
@@ -159,6 +169,8 @@ MonoBehaviour:
   sfx: {fileID: 0}
   staminaUI: {fileID: 0}
   touchDragUI: {fileID: 0}
+  flingCalculator: {fileID: 0}
+  curveCalculator: {fileID: 0}
 --- !u!114 &114576848009845446
 MonoBehaviour:
   m_ObjectHideFlags: 1

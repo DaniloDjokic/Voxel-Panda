@@ -59,6 +59,7 @@ namespace VoxelPanda.Editor
 			injector.deathUI = FindObjectOfType<DeathUI>();
 			injector.playerElements = FindObjectOfType<PlayerElements>();
 			injector.crusher = FindObjectOfType<Crusher>();
+            injector.dMoveData = GameObject.FindObjectOfType<DynamicMoveData>();
 		}
 		private void FillPlayerElements()
 		{

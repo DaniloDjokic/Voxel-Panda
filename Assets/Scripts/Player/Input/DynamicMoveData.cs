@@ -21,6 +21,8 @@ public class DynamicMoveData : MonoBehaviour
             currentVelocity = physicsController.playerRigidBody.velocity;
 
         if (currentPosition != physicsController.playerTransform.position)
+        {
             currentPosition = physicsController.playerTransform.position;
+        }
     }
 }

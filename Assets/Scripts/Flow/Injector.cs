@@ -10,6 +10,7 @@ namespace VoxelPanda.Flow
 	public class Injector : MonoBehaviour
 	{
 		public ConstMoveData constMoveData;
+        public DynamicMoveData dMoveData;
 		public SpawnData spawnData;
 		public ScoreUI scoreUI;
 		public DeathUI deathUI;
@@ -43,7 +44,7 @@ namespace VoxelPanda.Flow
 			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
 			crusher.Bind(gameManager, playerElements.physicsController.transform);
 
-			InputInjector inputInjector = new InputInjector(constMoveData, moveEvents, playerElements, crusher);
+			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher);
 
 
 		}

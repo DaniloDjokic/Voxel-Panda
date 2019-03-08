@@ -33,6 +33,6 @@ public class PhysicsController : MonoBehaviour
 
     public void Bind(DynamicMoveData dynMoveData)
     {
-
+        this.dynMoveData = dynMoveData;
     }
 }

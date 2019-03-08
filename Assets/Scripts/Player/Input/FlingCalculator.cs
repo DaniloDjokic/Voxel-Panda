@@ -62,9 +62,6 @@ namespace VoxelPanda.Player.Input
         {
             dynamicMoveData.currentStamina = constMoveData.maxStamina;
 
-            foreach (IFlingListener component in GetComponents<IFlingListener>())
-                AddListener(component);
-
             Debug.Log(listeners);
         }
 
