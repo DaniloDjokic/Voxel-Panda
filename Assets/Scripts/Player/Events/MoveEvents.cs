@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace VoxelPanda.Player.Events
 {
-	public class MoveEvents : MonoBehaviour
+	public class MoveEvents
 	{
 		private List<IMoveListener> listeners = new List<IMoveListener>();
 
@@ -33,3 +33,4 @@ namespace VoxelPanda.Player.Events
 		}
 	}
 }
+

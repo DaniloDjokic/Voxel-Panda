@@ -8,11 +8,13 @@ public class SpawnData : MonoBehaviour
 	[SerializeField]
 	private List<Pickup> pickups;
 	[SerializeField]
-	private List<ObsGridData> obstacles;
+	private List<GridData> obstacles;
 	[SerializeField]
 	private List<Path> paths;
 	[SerializeField]
 	private List<Backdrop> backdrops;
+	[SerializeField]
+	public int obstaclePoolSize = 10;
 
 	public IList<ISpawnable> Pickups
 	{

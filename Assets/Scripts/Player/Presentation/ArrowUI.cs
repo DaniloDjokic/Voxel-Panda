@@ -33,3 +33,4 @@ public class ArrowUI : MonoBehaviour, IFlingListener
     public void OnStaminaChanged(FlingData flingData)
     { }
 }
+

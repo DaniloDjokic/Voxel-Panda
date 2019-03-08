@@ -9,13 +9,19 @@ namespace VoxelPanda.Flow
 {
 	public class Injector : MonoBehaviour
 	{
+		public ConstMoveData constMoveData;
 		public SpawnData spawnData;
 		public ScoreUI scoreUI;
+		public DeathUI deathUI;
+		public PlayerElements playerElements;
+		public Crusher crusher;
+		public string randomSeed;
 
 		private MoveEvents moveEvents;
 		private ProcEvents procEvents;
 		private ScoreCalculator scoreCalculator;
 		private DeathController deathController;
+		private GameManager gameManager;
 
 		private void Awake()
 		{
@@ -25,20 +31,21 @@ namespace VoxelPanda.Flow
 		public void BindAll()
 		{
 			moveEvents = new MoveEvents();
-			procEvents = new ProcEvents();
+			procEvents = new ProcEvents(moveEvents);
 
 			ProcGenInjector pgInjector = new ProcGenInjector(spawnData, procEvents);
 			pgInjector.BindAll();
 
-			BindScore();
-			deathController = new DeathController(scoreCalculator);
-		}
-
-		private void BindScore()
-		{
-			scoreCalculator = new ScoreCalculator();
+			scoreCalculator = new ScoreCalculator(moveEvents);
 			scoreCalculator.Subscribe(scoreUI);
-			moveEvents.Subscribe(scoreCalculator);
+			deathController = new DeathController(scoreCalculator, deathUI);
+			gameManager = new GameManager(playerElements.physicsApplier, playerElements.rawInput, deathController, crusher);
+			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
+			crusher.Bind(gameManager, playerElements.physicsApplier.transform);
+
+			InputInjector inputInjector = new InputInjector(constMoveData, moveEvents, playerElements, crusher);
+
+
 		}
 	}
 }

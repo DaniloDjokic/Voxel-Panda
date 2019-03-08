@@ -4,21 +4,7 @@ using UnityEngine;
 
 namespace VoxelPanda.ProcGen.Elements
 {
-	public class Path : MonoBehaviour, ISpawnable
+	public class Path : GridData
 	{
-		public void Despawn()
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public Vector2 GetDimensions()
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void Spawn(Transform transform)
-		{
-			throw new System.NotImplementedException();
-		}
 	}
 }

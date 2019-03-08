@@ -8,6 +8,11 @@ namespace VoxelPanda.ProcGen
 {
 	public class ProcEvents : IMoveListener
 	{
+		
+		public ProcEvents(MoveEvents moveEvents)
+		{
+			moveEvents.Subscribe(this);
+		}
 
 		public void AddSpawningListener(ISpawning spawning)
 		{

@@ -1,16 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Score;
 
-public class DeathController : MonoBehaviour {
+namespace VoxelPanda.Flow
+{
+	public class DeathController
+	{
+		public GameManager gameManager;
+		private ScoreCalculator scoreCalculator;
+		private DeathUI deathUI;
 
-	// Use this for initialization
-	void Start () {
-		
+		public DeathController(ScoreCalculator scoreCalculator, DeathUI deathUI)
+		{
+			this.scoreCalculator = scoreCalculator;
+			this.deathUI = deathUI;
+			deathUI.Bind(this);
+		}
+
+		public void RaiseScreen()
+		{
+			deathUI.RaiseScreen();
+		}
+		public void LowerScreen()
+		{
+			deathUI.LowerScreen();
+		}
+		public void StartAgain()
+		{
+			LowerScreen();
+			gameManager.StartLevel();
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

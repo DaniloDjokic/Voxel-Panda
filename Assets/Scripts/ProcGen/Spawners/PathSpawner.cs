@@ -5,15 +5,6 @@ using VoxelPanda.ProcGen.Mappers;
 
 namespace VoxelPanda.ProcGen.Spawners 
 {
-	public class PathSpawner : ISpawning {
-		public void SetMapper(IMapping mapper)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void SpawnGrid(int width, int length)
-		{
-			throw new System.NotImplementedException();
-		}
+	public class PathSpawner : Spawner {
 	}
 }

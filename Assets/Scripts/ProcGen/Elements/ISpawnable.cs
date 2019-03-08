@@ -6,8 +6,14 @@ namespace VoxelPanda.ProcGen.Elements
 { 
 	public interface ISpawnable
 	{
-		void Spawn(Transform transform);
+		void Spawn(Vector3 position);
 		void Despawn();
-		Vector2 GetDimensions();
+		Vector2 GetFullDimensions();
+		Vector2 GetConcreteDimensions();
+		int GetWeight();
+		GridMatrix GetMatrix();
+
+		bool IsAvailableToSpawn();
+		void ReserveForSpawning();
 	}
 }

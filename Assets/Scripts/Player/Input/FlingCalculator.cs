@@ -6,7 +6,7 @@ using VoxelPanda.Player.Events;
 namespace VoxelPanda.Player.Input
 {
 
-	public class FlingCalculator : MonoBehaviour
+	public class FlingCalculator : InputCalculator
 	{
         public DynamicMoveData dynamicMoveData; 
         public ConstMoveData constMoveData;
@@ -98,10 +98,11 @@ namespace VoxelPanda.Player.Input
         #region Obvservers Logic
         public void AddListener(IFlingListener listener)
 		{
-			if (!listeners.Contains(listener))
-			{
-				listeners.Add(listener);
-			}
+		}
+
+		public void Subscribe(IFlingListener listener)
+		{
+			listeners.Add(listener);
 		}
 
 		public void RemoveListener(IFlingListener listener)

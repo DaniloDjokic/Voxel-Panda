@@ -9,6 +9,6 @@ namespace VoxelPanda.ProcGen.Mappers
 	{
 		void SetPooler(IPooling pooler);
 		void SetSubMapper(IMapping mapper);
-		IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int length);
+		IList<IList<MapperNode>> GetNodeMap(int width, int length);
 	}
 }
