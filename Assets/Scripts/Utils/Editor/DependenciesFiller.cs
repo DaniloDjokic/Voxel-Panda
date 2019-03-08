@@ -29,10 +29,10 @@ namespace VoxelPanda.Editor
 			EditorGUILayout.BeginVertical();
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.BeginVertical();
-			fillInjector = EditorGUILayout.Toggle(fillInjector, "Fill Injector");
+			fillInjector = EditorGUILayout.Toggle(fillInjector);
 			EditorGUILayout.EndVertical();
 			EditorGUILayout.BeginVertical();
-			fillPlayerElements = EditorGUILayout.Toggle(fillPlayerElements, "Fill Player Elements");
+			fillPlayerElements = EditorGUILayout.Toggle(fillPlayerElements);
 			EditorGUILayout.EndVertical();
 			EditorGUILayout.EndHorizontal();
 			EditorGUILayout.BeginHorizontal();
@@ -63,17 +63,21 @@ namespace VoxelPanda.Editor
 		private void FillPlayerElements()
 		{
 			PlayerElements playerElements = GameObject.FindObjectOfType<PlayerElements>();
-			playerElements.physicsApplier = GameObject.FindObjectOfType<PhysicsApplier>();
-			playerElements.playerTransform = playerElements.physicsApplier.transform;
-			playerElements.rawInput = GameObject.FindObjectOfType<RawInput>();
-			playerElements.animationManager = GameObject.FindObjectOfType<AnimationManager>();
+			playerElements.physicsController = GameObject.FindObjectOfType<PhysicsController>();
+			playerElements.playerTransform = playerElements.physicsController.transform;
+			playerElements.accInput = GameObject.FindObjectOfType<RawAccInput>();
+            playerElements.touchInput = GameObject.FindObjectOfType<RawTouchInput>();
+
+            playerElements.animationManager = GameObject.FindObjectOfType<AnimationManager>();
 			playerElements.arrowUI = GameObject.FindObjectOfType<ArrowUI>();
 			playerElements.camBehaviour = GameObject.FindObjectOfType<CamBehaviour>();
 			playerElements.particles = GameObject.FindObjectOfType<Particles>();
 			playerElements.sfx = GameObject.FindObjectOfType<SFX>();
 			playerElements.staminaUI = GameObject.FindObjectOfType<StaminaUI>();
 			playerElements.touchDragUI = GameObject.FindObjectOfType<TouchDragUI>();
-		}
+            playerElements.flingCalculator = GameObject.FindObjectOfType<FlingCalculator>();
+            playerElements.curveCalculator = GameObject.FindObjectOfType<CurveCalculator>();
+        }
 	}
 }
 

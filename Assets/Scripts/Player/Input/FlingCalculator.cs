@@ -8,9 +8,6 @@ namespace VoxelPanda.Player.Input
 
 	public class FlingCalculator : InputCalculator
 	{
-        public DynamicMoveData dynamicMoveData; 
-        public ConstMoveData constMoveData;
-        public PhysicsController physicsController;
         private List<IFlingListener> listeners = new List<IFlingListener>();
         
         private FlingData flingData = new FlingData();

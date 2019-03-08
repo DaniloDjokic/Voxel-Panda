@@ -3,55 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 using VoxelPanda.Player.Events;
 
-public class CurveCalculator : MonoBehaviour
+namespace VoxelPanda.Player.Input
 {
-    public ConstMoveData constMoveData;
-    public PhysicsController physicsController;
-
-    private CurveData curveData = new CurveData();
-    
-    private List<ICurveListener> listeners = new List<ICurveListener>();
-
-    public void UpdateRawAccelerationVector(Vector3 newAccelerationVector)
+    public class CurveCalculator : InputCalculator
     {
-        if(newAccelerationVector.magnitude > constMoveData.accelerationDeadzone)
+        
+        private CurveData curveData = new CurveData();
+
+        private List<ICurveListener> listeners = new List<ICurveListener>();
+
+        public void UpdateRawAccelerationVector(Vector3 newAccelerationVector)
         {
-            curveData.RawAccelerationVector = newAccelerationVector;
-            curveData.ModifiedAccelerationVector = ModifyAcceleration(newAccelerationVector);
+            if (newAccelerationVector.magnitude > constMoveData.accelerationDeadzone)
+            {
+                curveData.RawAccelerationVector = newAccelerationVector;
+                curveData.ModifiedAccelerationVector = ModifyAcceleration(newAccelerationVector);
 
-            physicsController.ApplyCurveForce(curveData.ModifiedAccelerationVector * constMoveData.curveForce);
-            CurveRunning(curveData);
-        }     
-    }
-
-    private Vector3 ModifyAcceleration(Vector3 rawAccelerationvector)
-    {
-        return rawAccelerationvector * constMoveData.accelerationFunctionModifier;
-    }
-
-    #region Observers  Logic
-    void AddListener(ICurveListener listener)
-    {
-        if (!listeners.Contains(listener))
-        {
-            listeners.Remove(listener);
+                physicsController.ApplyCurveForce(curveData.ModifiedAccelerationVector * constMoveData.curveForce);
+                CurveRunning(curveData);
+            }
         }
-    }
 
-    void RemoveListener(ICurveListener listener)
-    {
-        if (listeners.Contains(listener))
+        private Vector3 ModifyAcceleration(Vector3 rawAccelerationvector)
         {
-            listeners.Remove(listener);
+            return rawAccelerationvector * constMoveData.accelerationFunctionModifier;
         }
-    }
 
-    void CurveRunning(CurveData curveData)
-    {
-        foreach(ICurveListener listener in listeners)
+        #region Observers  Logic
+        public void Subscribe(ICurveListener listener)
         {
-            listener.OnCurveChanged(curveData);
+            if (!listeners.Contains(listener))
+            {
+                listeners.Remove(listener);
+            }
         }
+
+        void RemoveListener(ICurveListener listener)
+        {
+            if (listeners.Contains(listener))
+            {
+                listeners.Remove(listener);
+            }
+        }
+
+        void CurveRunning(CurveData curveData)
+        {
+            foreach (ICurveListener listener in listeners)
+            {
+                listener.OnCurveChanged(curveData);
+            }
+        }
+        #endregion
     }
-    #endregion
 }

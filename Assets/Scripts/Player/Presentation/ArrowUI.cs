@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VoxelPanda.Player.Events;
 
-public class ArrowUI : MonoBehaviour, IFlingListener
+public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
 {
     public LineRenderer lineRenderer;
 
@@ -32,5 +32,10 @@ public class ArrowUI : MonoBehaviour, IFlingListener
 
     public void OnStaminaChanged(FlingData flingData)
     { }
+
+    public void OnCurveChanged(CurveData curveData)
+    {
+        throw new System.NotImplementedException();
+    }
 }
 

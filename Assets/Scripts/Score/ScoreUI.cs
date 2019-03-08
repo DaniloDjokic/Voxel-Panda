@@ -13,5 +13,3 @@ namespace VoxelPanda.Score
 	}
 
 }
-
-}

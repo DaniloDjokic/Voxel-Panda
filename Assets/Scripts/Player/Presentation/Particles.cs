@@ -33,7 +33,12 @@ namespace VoxelPanda.Player.Presentation
 			throw new System.NotImplementedException();
 		}
 
-		public void OnVelocityChanged(Vector3 velocity)
+        public void OnStaminaChanged(FlingData flingData)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnVelocityChanged(Vector3 velocity)
 		{
 			throw new System.NotImplementedException();
 		}
