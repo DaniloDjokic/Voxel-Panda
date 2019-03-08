@@ -1,17 +1,3 @@
-<<<<<<< Updated upstream
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace VoxelPanda.ProcGen.Mappers
-{
-	public interface IMapping 
-	{
-		IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int length);
-	}
-}
-
-=======
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,5 +12,3 @@ namespace VoxelPanda.ProcGen.Mappers
 		IEnumerable<IEnumerable<MapperNode>> GetNodeMap(int width, int length);
 	}
 }
-
->>>>>>> Stashed changes
