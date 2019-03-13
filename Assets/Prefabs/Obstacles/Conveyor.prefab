@@ -53,6 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4587339231150522}
   - component: {fileID: 65380857103985840}
+  - component: {fileID: 114396645008865856}
   m_Layer: 0
   m_Name: Conveyor
   m_TagString: Untagged
@@ -94,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502990092820590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.2383776, y: 1.5618669e-18, z: -0.7034023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4587339231150522}
@@ -168,3 +169,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 1
   gridMatrix: {fileID: 11400000, guid: 1524cef2c11b4754bb33bdfd9262fba8, type: 2}
+--- !u!114 &114396645008865856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916369416551250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a433f0dafdcf09428faa23186c9ccd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridData: {fileID: 114271322130863934}
+  speed: 350
+  direction: 3
