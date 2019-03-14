@@ -5,10 +5,11 @@ using VoxelPanda.Player.Events;
 
 public class PhysicsController : MonoBehaviour
 {
+    public ConstMoveData constMoveData;
+    public DynamicMoveData dynamicMoveData;
     public Rigidbody playerRigidBody;
     public Transform playerTransform;
     private Vector3 startingPosition;
-    private DynamicMoveData dynMoveData;
 
     private void Awake()
     {
@@ -27,12 +28,12 @@ public class PhysicsController : MonoBehaviour
 
     public void ApplyCurveForce(Vector3 curveForceVector)
     {
-        if(playerRigidBody.velocity.z > 2f) // change to variable in dynamic move data
+        if(playerRigidBody.velocity.z > constMoveData.minVelocityForCurve) 
              playerRigidBody.AddForce(curveForceVector * Time.deltaTime, ForceMode.Impulse);
     }
 
-    public void Bind(DynamicMoveData dynMoveData)
+    public void Bind(DynamicMoveData dynamicMoveData)
     {
-        this.dynMoveData = dynMoveData;
+        this.dynamicMoveData = dynamicMoveData;
     }
 }

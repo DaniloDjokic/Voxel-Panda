@@ -17,6 +17,7 @@ public class ConstMoveData : MonoBehaviour
     public float curveForce;
     public float accelerationDeadzone;
     public float accelerationFunctionModifier;
+    public float minVelocityForCurve;
 
     //Misc
     public static float universalY = 1f;
