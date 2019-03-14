@@ -50,6 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4008219809431810}
+  - component: {fileID: 114109469845778032}
   m_Layer: 0
   m_Name: Train 2
   m_TagString: Obstacle
@@ -100,7 +101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4101594037029642}
   - component: {fileID: 65035970250451372}
-  - component: {fileID: 114137577879075616}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1637311440323878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.96521175, y: 7.411271e-18, z: -3.3377397}
+  m_LocalPosition: {x: 26.430223, y: 3.4923314e-17, z: -15.728063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4008219809431810}
@@ -287,18 +287,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114137577879075616
+--- !u!114 &114109469845778032
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1707804954047196}
+  m_GameObject: {fileID: 1663233547189922}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0baabaa572bb3884a94f41f40a596cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114697213162171274}
+  train: {fileID: 4101594037029642}
   trainSpeed: 5
   trainStoppageTime: 1
 --- !u!114 &114697213162171274

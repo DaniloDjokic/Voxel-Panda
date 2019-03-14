@@ -9,8 +9,7 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
 {
 	public class TrainBehaviour : ObsBehaviour
 	{
-        //This script should go on the deepest train child component, the one that is separated from the tracks
-
+        public Transform train;
 		public float trainSpeed;
 		public float trainStoppageTime;
 
@@ -27,8 +26,8 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
 
         private void Update()
 		{
-            if(Mathf.Abs((target.x - transform.localPosition.x)) >= offset && !isStopped)
-                transform.Translate(direction * trainSpeed * Time.deltaTime);
+            if(Mathf.Abs((target.x - train.localPosition.x)) >= offset && !isStopped)
+                train.Translate(direction * trainSpeed * Time.deltaTime);
             else
             {
                 if(!isStopped)

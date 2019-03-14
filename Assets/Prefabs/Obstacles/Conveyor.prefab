@@ -69,7 +69,7 @@ Transform:
   m_GameObject: {fileID: 1873191499942996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.45, z: 0}
-  m_LocalScale: {x: 5, y: 0.1, z: 2}
+  m_LocalScale: {x: 2, y: 0.1, z: 5}
   m_Children: []
   m_Father: {fileID: 4587339231150522}
   m_RootOrder: 0
@@ -94,14 +94,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502990092820590}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2383776, y: 1.5618669e-18, z: -0.7034023}
+  m_LocalRotation: {x: -0, y: 0.7120137, z: -0, w: 0.70216554}
+  m_LocalPosition: {x: -9.380704, y: 0, z: -5.472005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4587339231150522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.798004, z: 0}
 --- !u!23 &23663078503993168
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -154,7 +154,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 2}
+  m_Size: {x: 2, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114271322130863934
 MonoBehaviour:
@@ -182,4 +182,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridData: {fileID: 114271322130863934}
   speed: 350
-  direction: 3
