@@ -168,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 1
   gridMatrix: {fileID: 11400000, guid: 32e6f21875f4cd14283e8e79399ad475, type: 2}
-  orientation: 0
+  orientation: 1

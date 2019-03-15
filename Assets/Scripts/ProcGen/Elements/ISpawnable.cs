@@ -18,5 +18,5 @@ namespace VoxelPanda.ProcGen.Elements
 		void SetOrientation(Orientation orientation);
 		void RandomizeOrientation();
 	}
-	public enum Orientation {UP, DOWN, LEFT, RIGHT}
+	public enum Orientation {LEFT, RIGHT}
 }

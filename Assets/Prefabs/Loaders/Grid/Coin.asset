@@ -18,9 +18,8 @@ MonoBehaviour:
     - occupiedState: 1
       riskState: 0
       objectRoot: 1
-  flippedObstacleMatrix: []
+  flippedMatrix: {fileID: 0}
   concreteObjectWidth: 1
   concreteObjectHeight: 1
   objectRootX: 0
   isFlippableHorizontally: 0
-  isFlipped: 0

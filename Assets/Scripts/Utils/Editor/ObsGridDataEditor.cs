@@ -40,7 +40,7 @@ public class ObsGridDataEditor : Editor {
 		curHeight = EditorGUILayout.IntField(obsGridMatrix.height);
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.EndHorizontal();
-		RenderMatrix();
+		RenderMatrix(obsGridMatrix);
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.BeginVertical();
 		EditorGUILayout.LabelField("Concrete Object Width");
@@ -51,20 +51,7 @@ public class ObsGridDataEditor : Editor {
 		obsGridMatrix.concreteObjectHeight = EditorGUILayout.IntField(obsGridMatrix.concreteObjectHeight);
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.EndHorizontal();
-		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.BeginVertical();
-		EditorGUILayout.LabelField("Is object flippable horizontally?");
-		obsGridMatrix.isFlippableHorizontally = EditorGUILayout.Toggle(obsGridMatrix.isFlippableHorizontally);
-		EditorGUILayout.EndVertical();
-		EditorGUILayout.BeginVertical();
-		if (obsGridMatrix.isFlippableHorizontally) {
-			if (GUILayout.Button("Generated Flipped Matrix"))
-			{
-				obsGridMatrix.GenerateFlippedVersion();
-			}
-		}
-		EditorGUILayout.EndVertical();
-		EditorGUILayout.EndHorizontal();
+	
 		EditorGUILayout.BeginHorizontal();
 		EditorGUILayout.BeginVertical();
 		EditorGUILayout.LabelField("Obstacle Root X: " + obsGridMatrix.ObjectRootX);
@@ -73,8 +60,31 @@ public class ObsGridDataEditor : Editor {
 		EditorGUILayout.LabelField("Obstacle Root Z: " + obsGridMatrix.ObjectRootZ);
 		EditorGUILayout.EndVertical();
 		EditorGUILayout.EndHorizontal();
+		EditorGUILayout.BeginHorizontal();
+		EditorGUILayout.BeginVertical();
+		EditorGUILayout.LabelField("Is object flippable horizontally?");
+		obsGridMatrix.isFlippableHorizontally = EditorGUILayout.Toggle(obsGridMatrix.isFlippableHorizontally);
+		EditorGUILayout.EndVertical();
+		EditorGUILayout.BeginVertical();
+		if(obsGridMatrix.isFlippableHorizontally)
+		{
+			if(GUILayout.Button("Generate Flipped Matrix"))
+			{
+				obsGridMatrix.GenerateFlippedVersion();
+			}
+		}
+		EditorGUILayout.EndVertical();
+		EditorGUILayout.EndHorizontal();
 		if (obsGridMatrix.isFlippableHorizontally)
 		{
+			if(obsGridMatrix.FlippedMatrix != null)
+			{
+				EditorGUILayout.BeginHorizontal();
+				EditorGUILayout.BeginVertical();
+				RenderMatrix(obsGridMatrix.FlippedMatrix, false);
+				EditorGUILayout.EndVertical();
+				EditorGUILayout.EndHorizontal();
+			}
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.BeginVertical();
 			EditorGUILayout.LabelField("Flipped Obstacle Root X: " + (obsGridMatrix.concreteObjectWidth - 1 - obsGridMatrix.ObjectRootX));
@@ -110,25 +120,26 @@ public class ObsGridDataEditor : Editor {
 
 	}
 
-	public void RenderMatrix()
+	public void RenderMatrix(GridMatrix gridMatrix, bool allowEdit = true)
 	{
-		if (obsGridMatrix.width != 0 && obsGridMatrix.height != 0) {
-			for (int i = obsGridMatrix.ObstacleMatrix.Count - 1; i >= 0 ; i--)
+		if (gridMatrix.width != 0 && gridMatrix.height != 0) {
+			for (int i = gridMatrix.ObstacleMatrix.Count - 1; i >= 0 ; i--)
 			{
 
 				EditorGUILayout.BeginHorizontal();
-				RenderRowOfBoxes(obsGridMatrix.ObstacleMatrix[i]);
+				RenderRowOfBoxes(gridMatrix.ObstacleMatrix[i], allowEdit);
 				EditorGUILayout.EndHorizontal();
 			}
 		}
 	}
-	public void RenderRowOfBoxes(NodeList nodeList)
+	public void RenderRowOfBoxes(NodeList nodeList, bool allowEdit)
 	{
 		List<GridNode> nodes = nodeList.nodes;
 		for(int i = 0; i < nodes.Count; i++)
 		{
 			EditorGUILayout.BeginVertical();
 			var guiStyle = GetGUIStyle(nodes[i].occupiedState, nodes[i].riskState, nodes[i].objectRoot);
+			GUI.enabled = allowEdit;
 			if (GUILayout.Button(buttonContent, guiStyle))
 			{
 				var e = Event.current;
@@ -144,6 +155,7 @@ public class ObsGridDataEditor : Editor {
 				}
 
 			}
+			GUI.enabled = true;
 
 			EditorGUILayout.EndVertical();
 			//GUILayout.FlexibleSpace();

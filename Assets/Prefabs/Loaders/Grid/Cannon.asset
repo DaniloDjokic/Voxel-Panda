@@ -43,80 +43,13 @@ MonoBehaviour:
     - occupiedState: 2
       riskState: 0
       objectRoot: 1
-    - occupiedState: 0
+    - occupiedState: 1
       riskState: 2
       objectRoot: 0
-    - occupiedState: 0
+    - occupiedState: 1
       riskState: 2
       objectRoot: 0
-    - occupiedState: 0
-      riskState: 2
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-  - nodes:
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-  flippedObstacleMatrix:
-  - nodes:
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 1
-    - occupiedState: 0
-      riskState: 0
-      objectRoot: 0
-  - nodes:
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 2
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 2
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 2
-      objectRoot: 0
-    - occupiedState: 0
+    - occupiedState: 1
       riskState: 2
       objectRoot: 0
     - occupiedState: 0
@@ -147,6 +80,7 @@ MonoBehaviour:
     - occupiedState: 0
       riskState: 0
       objectRoot: 0
+  flippedMatrix: {fileID: 0}
   concreteObjectWidth: 4
   concreteObjectHeight: 1
   objectRootX: 1

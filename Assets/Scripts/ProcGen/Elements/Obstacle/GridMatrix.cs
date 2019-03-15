@@ -15,8 +15,23 @@ namespace VoxelPanda.ProcGen.Elements
 		[SerializeField]
 		private List<NodeList> obstacleMatrix;
 		[SerializeField]
-		private List<NodeList> flippedObstacleMatrix;
-		[SerializeField]
+		private GridMatrix flippedMatrix;
+		public GridMatrix FlippedMatrix
+		{
+			get {
+				if (isFlippableHorizontally)
+				{
+					if (flippedMatrix == null)
+					{
+						GenerateFlippedVersion();
+					}
+					return flippedMatrix;
+				}
+				return null;
+			}
+			private set { flippedMatrix = value; }
+		}
+[SerializeField]
 		public int concreteObjectWidth = 0, concreteObjectHeight = 0;
 		[SerializeField]
 		public GridNode objectRoot { get; private set; }
@@ -25,13 +40,7 @@ namespace VoxelPanda.ProcGen.Elements
 		public int ObjectRootX
 		{
 			get {
-				if (this.isFlippableHorizontally && isFlipped)
-				{
-					return concreteObjectWidth - 1 - objectRootX;
-				} else
-				{
-					return objectRootX;
-				}
+				return objectRootX;
 			}
 			private set { this.objectRootX = value; }
 		}
@@ -39,8 +48,6 @@ namespace VoxelPanda.ProcGen.Elements
 		public int ObjectRootZ { get; private set; }
 		[SerializeField]
 		public bool isFlippableHorizontally;
-		[NonSerialized]
-		public bool isFlipped = false;
 
 		public List<NodeList> ObstacleMatrix
 		{
@@ -48,13 +55,12 @@ namespace VoxelPanda.ProcGen.Elements
 			{
 				if(obstacleMatrix == null)
 					CreateMatrix();
-				return (isFlippableHorizontally && isFlipped) ? flippedObstacleMatrix : obstacleMatrix;
+				return obstacleMatrix;
 			}
 		}
 
 		public void CreateMatrix()
 		{
-			isFlipped = false;
 			List<NodeList> newObstacleMatrix = new List<NodeList>();
 
 			for(int i = 0; i < this.height; i++)
@@ -71,28 +77,37 @@ namespace VoxelPanda.ProcGen.Elements
 
 		public void GenerateFlippedVersion()
 		{
-			flippedObstacleMatrix = new List<NodeList>();
+			flippedMatrix = Instantiate(this);
+			flippedMatrix.objectRootX = width - concreteObjectWidth - this.objectRootX;
+			flippedMatrix.ObjectRootZ = this.ObjectRootZ;
+			flippedMatrix.flippedMatrix = null;
+			var flippedObstacleMatrix = new List<NodeList>();
 			for(int i = 0; i < this.height; i++)
 			{
 				flippedObstacleMatrix.Add(new NodeList());
 
-				for(int j = this.width; j > 0; j--)
+				for(int j = this.width - 1; j >= 0; j--)
 				{
-					flippedObstacleMatrix[i].Add(obstacleMatrix[i].nodes[width - j]);
+					var modelNode = obstacleMatrix[i].nodes[j];
+					var modifiedNode = new GridNode(modelNode.occupiedState, modelNode.riskState);
+					if(flippedMatrix.objectRootX == this.width - 1 - j && flippedMatrix.ObjectRootZ == i)
+					{
+						modifiedNode.objectRoot = true;
+						flippedMatrix.objectRoot = modifiedNode;
+						flippedObstacleMatrix[i].Add(modifiedNode);
+					} else
+					{
+						flippedObstacleMatrix[i].Add(modifiedNode);
+					}
 				}
 			}
+			flippedMatrix.obstacleMatrix = flippedObstacleMatrix;
+			//Calculate obstacle root
 		}
 
 		public GridNode GetNode(int i, int j)
 		{
-			if (isFlippableHorizontally && isFlipped)
-			{
-				return flippedObstacleMatrix[i].nodes[j];
-			} else
-			{
-				return obstacleMatrix[i].nodes[j];
-			}
-
+			return obstacleMatrix[i].nodes[j];
 		}
 
 		public void SetObjectRoot(GridNode node)
