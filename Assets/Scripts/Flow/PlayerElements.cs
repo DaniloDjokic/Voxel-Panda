@@ -6,8 +6,9 @@ using VoxelPanda.Player.Presentation;
 
 public class PlayerElements : MonoBehaviour {
 	public Transform playerTransform;
-	public PhysicsApplier physicsApplier;
-	public RawInput rawInput;
+    public PhysicsController physicsController;
+	public RawAccInput accInput;
+    public RawTouchInput touchInput;
 	public AnimationManager animationManager;
 	public ArrowUI arrowUI;
 	public CamBehaviour camBehaviour;
@@ -15,4 +16,6 @@ public class PlayerElements : MonoBehaviour {
 	public SFX sfx;
 	public StaminaUI staminaUI;
 	public TouchDragUI touchDragUI;
+    public FlingCalculator flingCalculator;
+    public CurveCalculator curveCalculator;
 }

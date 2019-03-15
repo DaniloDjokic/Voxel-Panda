@@ -9,15 +9,17 @@ namespace VoxelPanda.Flow
 	{
 		public GameState gameState = GameState.Running;
 
-		private PhysicsApplier player;
-		private RawInput rawInput;
+		private PhysicsController player;
+		private RawAccInput accInput;
+        private RawTouchInput touchInput;
 		private DeathController deathController;
 		private Crusher crusher;
 
-		public GameManager(PhysicsApplier player, RawInput rawInput, DeathController deathController, Crusher crusher)
+		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher)
 		{
-			this.player = player;
-			this.rawInput = rawInput;
+			this.player = playerElements.physicsController;
+			this.accInput = playerElements.accInput;
+            this.touchInput = playerElements.touchInput;
 			this.deathController = deathController;
 			this.crusher = crusher;
 			deathController.gameManager = this;
@@ -32,7 +34,8 @@ namespace VoxelPanda.Flow
 		{
 			crusher.ResetPosition();
 			player.ResetPosition();
-			rawInput.SetDetectingInput(true);
+			accInput.SetInputDetection(true);
+            touchInput.SetInputDetection(true);
 			ChangeState(GameState.Start);
 		}
 
@@ -44,16 +47,18 @@ namespace VoxelPanda.Flow
 
 		public void PauseLevel()
 		{
-			rawInput.SetDetectingInput(false);
-			crusher.SetShouldMove(false);
+            accInput.SetInputDetection(false);
+            touchInput.SetInputDetection(false);
+            crusher.SetShouldMove(false);
 			ChangeState(GameState.Paused);
 		}
 
 		public void EndRun()
 		{
 			deathController.RaiseScreen();
-			rawInput.SetDetectingInput(false);
-			crusher.SetShouldMove(false);
+            accInput.SetInputDetection(false);
+            touchInput.SetInputDetection(false);
+            crusher.SetShouldMove(false);
 			ChangeState(GameState.Stopped);
 		}
 

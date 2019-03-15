@@ -3,41 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using VoxelPanda.Player.Events;
 
-namespace VoxelPanda.Player.Presentation
+public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
 {
-	public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
-	{
-		public void OnCurveChanged(CurveData curveData)
-		{
-			throw new System.NotImplementedException();
-		}
+    public LineRenderer lineRenderer;
 
-		public void OnFlingEnded(FlingData flingData)
-		{
-			throw new System.NotImplementedException();
-		}
+    private void Start()
+    {
+        lineRenderer.enabled = false;
+    }
 
-		public void OnFlingRunning(FlingData flingData)
-		{
-			throw new System.NotImplementedException();
-		}
+    public void OnFlingEnded(FlingData flingData)
+    {
+        lineRenderer.enabled = false;
+        lineRenderer.SetPosition(0, Vector3.zero);
+        lineRenderer.SetPosition(1, Vector3.zero);
+    }
 
-		public void OnFlingStarted(FlingData flingData)
-		{
-			throw new System.NotImplementedException();
-		}
+    public void OnFlingRunning(FlingData flingData)
+    {
+        lineRenderer.SetPosition(0, flingData.PlayerPosition);
+        lineRenderer.SetPosition(1, flingData.TransposedVectorEndPosition);
+    }
 
-		// Use this for initialization
-		void Start()
-		{
+    public void OnFlingStarted(FlingData flingData)
+    {
+        lineRenderer.enabled = true;
+    }
 
-		}
+    public void OnStaminaChanged(FlingData flingData)
+    { }
 
-		// Update is called once per frame
-		void Update()
-		{
-
-		}
-	}
+    public void OnCurveChanged(CurveData curveData)
+    {
+        throw new System.NotImplementedException();
+    }
 }
 

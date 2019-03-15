@@ -23,8 +23,13 @@ namespace VoxelPanda.Player.Presentation
 			throw new System.NotImplementedException();
 		}
 
-		// Use this for initialization
-		void Start()
+        public void OnStaminaChanged(FlingData flingData)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        // Use this for initialization
+        void Start()
 		{
 
 		}

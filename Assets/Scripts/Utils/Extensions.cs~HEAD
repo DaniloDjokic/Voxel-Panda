@@ -1,0 +1,19 @@
+<<<<<<< HEAD:Assets/Scripts/Utils/Extensions.cs
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace VoxelPanda.Utils
+{
+	public static class MathHelpers
+	{
+	}
+}
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ConstMoveData : MonoBehaviour {
+}
+>>>>>>> dev-auxillary:Assets/Scripts/Player/ConstMoveData.cs

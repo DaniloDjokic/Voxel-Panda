@@ -15,10 +15,10 @@ namespace VoxelPanda.Flow
 		private MoveEvents moveEvents;
 		private Crusher crusher;
 
-		public InputInjector(ConstMoveData cMoveData, MoveEvents moveEvents, PlayerElements playerElements, Crusher crusher)
+		public InputInjector(ConstMoveData cMoveData, DynamicMoveData dMoveData, MoveEvents moveEvents, PlayerElements playerElements, Crusher crusher)
 		{
 			this.constMoveData = cMoveData;
-			this.dynMoveData = new DynamicMoveData();
+            this.dynMoveData = dMoveData;
 			this.playerElements = playerElements;
 			this.moveEvents = moveEvents;
 			this.crusher = crusher;
@@ -27,29 +27,29 @@ namespace VoxelPanda.Flow
 
 		public void BindAll()
 		{
-			var flingCalculator = new FlingCalculator(playerElements.rawInput, constMoveData, dynMoveData);
-			var curveCalculator = new CurveCalculator(playerElements.rawInput, constMoveData, dynMoveData);
+            var flingCalculator = playerElements.flingCalculator;
+            var curveCalculator = playerElements.curveCalculator;
+            flingCalculator.Bind(constMoveData, dynMoveData, playerElements.physicsController);
+            curveCalculator.Bind(constMoveData, dynMoveData, playerElements.physicsController);
 
-			//Subscribe fling listeners
-			flingCalculator.Subscribe(playerElements.arrowUI);
-			flingCalculator.Subscribe(playerElements.animationManager);
-			flingCalculator.Subscribe(playerElements.particles);
-			flingCalculator.Subscribe(playerElements.sfx);
+            //Subscribe fling listeners
+            flingCalculator.Subscribe(playerElements.arrowUI);
+			//flingCalculator.Subscribe(playerElements.animationManager);
+			//flingCalculator.Subscribe(playerElements.particles);
+			//flingCalculator.Subscribe(playerElements.sfx);
 			flingCalculator.Subscribe(playerElements.staminaUI);
-			flingCalculator.Subscribe(playerElements.touchDragUI);
-			flingCalculator.Subscribe(playerElements.physicsApplier);
+			//flingCalculator.Subscribe(playerElements.touchDragUI);
 			//Subscribe curve listeners
-			curveCalculator.Subscribe(playerElements.arrowUI);
-			curveCalculator.Subscribe(playerElements.animationManager);
-			curveCalculator.Subscribe(playerElements.sfx);
-			curveCalculator.Subscribe(playerElements.particles);
-			curveCalculator.Subscribe(playerElements.physicsApplier);
+			//curveCalculator.Subscribe(playerElements.arrowUI);
+			//curveCalculator.Subscribe(playerElements.animationManager);
+			//curveCalculator.Subscribe(playerElements.sfx);
+			//curveCalculator.Subscribe(playerElements.particles);
 			//Subscribe move events listeners
-			moveEvents.Subscribe(playerElements.animationManager);
-			moveEvents.Subscribe(playerElements.particles);
-			moveEvents.Subscribe(playerElements.sfx);
+			//moveEvents.Subscribe(playerElements.animationManager);
+			//moveEvents.Subscribe(playerElements.particles);
+			//moveEvents.Subscribe(playerElements.sfx);
 			//Bind Dynamic Move Data to physics Applier
-			playerElements.physicsApplier.Bind(dynMoveData);
+			playerElements.physicsController.Bind(dynMoveData);
 
 			//Bind specific
 			playerElements.camBehaviour.Rebind(playerElements.playerTransform, crusher.transform);

@@ -3,19 +3,13 @@ using UnityEngine;
 
 namespace VoxelPanda.Player.Input
 {
-	public class InputCalculator : IInputListener
-	{
-		protected ConstMoveData constMoveData;
-		protected DynamicMoveData dynamicMoveData;
+	public class InputCalculator : MonoBehaviour, IInputListener
+    {
+		public ConstMoveData constMoveData;
+        public DynamicMoveData dynamicMoveData;
+        public PhysicsController physicsController;
 
-		public InputCalculator(RawInput rawInput, ConstMoveData constMoveData, DynamicMoveData dynMoveData)
-		{
-			rawInput.Subscribe(this);
-			this.constMoveData = constMoveData;
-			this.dynamicMoveData = dynMoveData;
-		}
-
-		public void OnAccelerometerChanged(Vector3 accelerometer)
+        public void OnAccelerometerChanged(Vector3 accelerometer)
 		{
 			throw new System.NotImplementedException();
 		}
@@ -34,5 +28,12 @@ namespace VoxelPanda.Player.Input
 		{
 			throw new System.NotImplementedException();
 		}
+
+        public void Bind(ConstMoveData cMoveData, DynamicMoveData dMoveData, PhysicsController physicsController)
+        {
+            this.constMoveData = cMoveData;
+            this.dynamicMoveData = dMoveData;
+            this.physicsController = physicsController;
+        }
 	}
 }

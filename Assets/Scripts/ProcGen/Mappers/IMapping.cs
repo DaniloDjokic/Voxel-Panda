@@ -13,4 +13,3 @@ namespace VoxelPanda.ProcGen.Mappers
 		IList<IList<MapperNode>> GetNodeMap(IList<IList<MapperNode>> map);
 	}
 }
-

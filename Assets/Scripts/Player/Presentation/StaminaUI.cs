@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VoxelPanda.Player.Events;
+using UnityEngine.UI;
 
-namespace VoxelPanda.Player.Presentation
+public class StaminaUI : MonoBehaviour, IFlingListener
 {
-	public class StaminaUI : MonoBehaviour, IFlingListener
-	{
+    public Slider slider;
 
-		public void OnFlingEnded(FlingData flingData)
-		{
-			throw new System.NotImplementedException();
-		}
+    public void OnStaminaChanged(FlingData flingData)
+    {
+        slider.value = flingData.CurrentStamina / 100f;
+    }
 
-		public void OnFlingRunning(FlingData flingData)
-		{
-			throw new System.NotImplementedException();
-		}
+    public void OnFlingEnded(FlingData flingData)
+    {
+        
+    }
 
-		public void OnFlingStarted(FlingData flingData)
-		{
-			throw new System.NotImplementedException();
-		}
-	}
+    public void OnFlingRunning(FlingData flingData)
+    {
+        
+    }
+
+    public void OnFlingStarted(FlingData flingData)
+    {
+        
+    }
 }
 
