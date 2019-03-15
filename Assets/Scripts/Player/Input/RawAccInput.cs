@@ -10,7 +10,12 @@ public class RawAccInput : MonoBehaviour
 	private Vector3 currentAccelerationVector;
     private bool detectingInput = true;
 
-	void Update ()
+    private void Start()
+    {
+        currentAccelerationVector = Vector3.zero;
+    }
+
+    void Update ()
     {
         if(detectingInput)
             UpdateAcceleration();
@@ -23,7 +28,11 @@ public class RawAccInput : MonoBehaviour
 
     void UpdateAcceleration()
     {
-        currentAccelerationVector = new Vector3(Input.acceleration.x, 0f, 0f);
-        curveCalculator.UpdateRawAccelerationVector(currentAccelerationVector);
+        Vector3 inputVector = new Vector3(Mathf.Round(Input.acceleration.x * 10.0f) / 10.0f, 0f, 0f);
+        if(currentAccelerationVector.x != inputVector.x)
+        {
+            currentAccelerationVector = inputVector;
+            curveCalculator.UpdateRawAccelerationVector(currentAccelerationVector);
+        }           
     }
 }

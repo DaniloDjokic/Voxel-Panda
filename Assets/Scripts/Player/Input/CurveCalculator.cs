@@ -7,10 +7,14 @@ namespace VoxelPanda.Player.Input
 {
     public class CurveCalculator : InputCalculator
     {
-        
         private CurveData curveData = new CurveData();
 
         private List<ICurveListener> listeners = new List<ICurveListener>();
+
+        private void Start()
+        {
+            Subscribe(FindObjectOfType<ArrowUI>());
+        }
 
         public void UpdateRawAccelerationVector(Vector3 newAccelerationVector)
         {
@@ -34,7 +38,7 @@ namespace VoxelPanda.Player.Input
         {
             if (!listeners.Contains(listener))
             {
-                listeners.Remove(listener);
+                listeners.Add(listener);
             }
         }
 
@@ -48,6 +52,7 @@ namespace VoxelPanda.Player.Input
 
         void CurveRunning(CurveData curveData)
         {
+            Debug.Log("Observes notified");
             foreach (ICurveListener listener in listeners)
             {
                 listener.OnCurveChanged(curveData);
