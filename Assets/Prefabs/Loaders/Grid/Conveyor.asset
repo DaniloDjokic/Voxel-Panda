@@ -142,4 +142,5 @@ MonoBehaviour:
   concreteObjectWidth: 10
   concreteObjectHeight: 2
   objectRootX: 0
+  objectRootZ: 1
   isFlippableHorizontally: 1

@@ -45,7 +45,17 @@ namespace VoxelPanda.ProcGen.Elements
 			private set { this.objectRootX = value; }
 		}
 		[SerializeField]
-		public int ObjectRootZ { get; private set; }
+		private int objectRootZ;
+		public int ObjectRootZ {
+			get
+			{
+				return objectRootZ;
+			}
+			private set
+			{
+				objectRootZ = value;
+			}
+		}
 		[SerializeField]
 		public bool isFlippableHorizontally;
 
