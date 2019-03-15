@@ -100,6 +100,7 @@ namespace VoxelPanda.ProcGen.Elements
 						flippedObstacleMatrix[i].Add(modifiedNode);
 					} else
 					{
+						modifiedNode.objectRoot = false;
 						flippedObstacleMatrix[i].Add(modifiedNode);
 					}
 				}

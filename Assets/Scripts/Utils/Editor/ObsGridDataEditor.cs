@@ -87,10 +87,18 @@ public class ObsGridDataEditor : Editor {
 			}
 			EditorGUILayout.BeginHorizontal();
 			EditorGUILayout.BeginVertical();
-			EditorGUILayout.LabelField("Flipped Obstacle Root X: " + (obsGridMatrix.concreteObjectWidth - 1 - obsGridMatrix.ObjectRootX));
+			EditorGUILayout.LabelField("Flipped Obstacle Root X: " + obsGridMatrix.FlippedMatrix.ObjectRootX);
 			EditorGUILayout.EndVertical();
 			EditorGUILayout.BeginVertical();
-			EditorGUILayout.LabelField("Flipped Obstacle Root Z: " + obsGridMatrix.ObjectRootZ);
+			EditorGUILayout.LabelField("Flipped Obstacle Root Z: " + obsGridMatrix.FlippedMatrix.ObjectRootZ);
+			EditorGUILayout.EndVertical();
+			EditorGUILayout.EndHorizontal();
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.BeginVertical();
+			EditorGUILayout.LabelField("Flipped Concrete Object Width: " + obsGridMatrix.FlippedMatrix.concreteObjectWidth);
+			EditorGUILayout.EndVertical();
+			EditorGUILayout.BeginVertical();
+			EditorGUILayout.LabelField("Flipped Concrete Object Height: " + obsGridMatrix.FlippedMatrix.concreteObjectHeight);
 			EditorGUILayout.EndVertical();
 			EditorGUILayout.EndHorizontal();
 		}

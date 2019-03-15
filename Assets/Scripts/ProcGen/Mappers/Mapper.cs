@@ -88,7 +88,7 @@ namespace VoxelPanda.ProcGen.Mappers
 					}
 				}
 			}
-			return endZ - 1;
+			return endZ;
 		}
 
 		public void SetPooler(IPooling pooler)
