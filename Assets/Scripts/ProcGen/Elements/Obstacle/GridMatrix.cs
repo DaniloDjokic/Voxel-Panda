@@ -31,7 +31,7 @@ namespace VoxelPanda.ProcGen.Elements
 			}
 			private set { flippedMatrix = value; }
 		}
-[SerializeField]
+		[SerializeField]
 		public int concreteObjectWidth = 0, concreteObjectHeight = 0;
 		[SerializeField]
 		public GridNode objectRoot { get; private set; }
@@ -80,6 +80,9 @@ namespace VoxelPanda.ProcGen.Elements
 			flippedMatrix = Instantiate(this);
 			flippedMatrix.objectRootX = width - concreteObjectWidth - this.objectRootX;
 			flippedMatrix.ObjectRootZ = this.ObjectRootZ;
+			flippedMatrix.concreteObjectHeight = this.concreteObjectHeight;
+			flippedMatrix.concreteObjectWidth = this.concreteObjectWidth;
+
 			flippedMatrix.flippedMatrix = null;
 			var flippedObstacleMatrix = new List<NodeList>();
 			for(int i = 0; i < this.height; i++)

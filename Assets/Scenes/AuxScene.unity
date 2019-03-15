@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -696,7 +696,7 @@ Transform:
   m_GameObject: {fileID: 437279271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13.409536, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b847c6a133293642b8bdfab0403e3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 0}
+  lineRenderer: {fileID: 912732085}
 --- !u!120 &912732085
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1677,6 +1677,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: pickups.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4704324310411098, guid: 44eb4199898336d42a633281478e7b99, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1748,7 +1753,7 @@ Prefab:
         type: 2}
       propertyPath: arrowUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 912732084}
     - target: {fileID: 114506744368682314, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: camBehaviour
@@ -1768,7 +1773,7 @@ Prefab:
         type: 2}
       propertyPath: staminaUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 912732086}
     - target: {fileID: 114506744368682314, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: touchDragUI
@@ -1788,7 +1793,7 @@ Prefab:
         type: 2}
       propertyPath: dMoveData
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1922089238}
     - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: staminaPerFling
@@ -1813,6 +1818,17 @@ Prefab:
         type: 2}
       propertyPath: minVelocityForCurve
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: pickups.Array.data[0]
+      value: 
+      objectReference: {fileID: 114299056914861348, guid: b6f3afcab8a271f4e82390d778df4c1b,
+        type: 2}
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: pickupPoolSize
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44eb4199898336d42a633281478e7b99, type: 2}
@@ -1932,24 +1948,6 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickups:
-  - {fileID: 114299056914861348, guid: b6f3afcab8a271f4e82390d778df4c1b, type: 2}
-  obstacles:
-  - {fileID: 114827938099151856, guid: d51dba74df13b2247ae0507350a3e929, type: 2}
-  - {fileID: 114271322130863934, guid: 09fa95d6cfb6b20438e6bdc609856c61, type: 2}
-  - {fileID: 114477417487849216, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
-  - {fileID: 114895505485010346, guid: b0aec70ff2f06b241b983fc3fcf15079, type: 2}
-  - {fileID: 114697213162171274, guid: 7d7bdcc079811c9478d25f8f1c90c29c, type: 2}
-  - {fileID: 114610349627322622, guid: 20b88b5974102ab4fa257a3f457c9d30, type: 2}
-  - {fileID: 114911349801827280, guid: 056cf2f7a9c39de4caeb322c606e936b, type: 2}
-  - {fileID: 114284398148146730, guid: 19dba0fc4001bb846b69713c70da3a24, type: 2}
-  - {fileID: 114491535170004540, guid: ac6f3b90bd9876c4abc32c6849010d0d, type: 2}
-  paths: []
-  backdrops: []
-  obstaclePoolSize: 10
-  pickupPoolSize: 500
---- !u!114 &1902346564
-MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10

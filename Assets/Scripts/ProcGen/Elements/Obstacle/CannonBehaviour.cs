@@ -19,7 +19,7 @@ public class CannonBehaviour : ObsBehaviour
     {
         if(timer > secondsBetweenShots)
         {
-            activeBullet = Instantiate(bullet, transform.position, transform.rotation).GetComponent<BulletBehaviour>();
+            activeBullet = Instantiate(bullet, transform.position, Quaternion.FromToRotation(transform.position, transform.right)).GetComponent<BulletBehaviour>();
             Physics.IgnoreCollision(GetComponent<Collider>(), activeBullet.gameObject.GetComponent<Collider>());
             timer = 0f;
         }

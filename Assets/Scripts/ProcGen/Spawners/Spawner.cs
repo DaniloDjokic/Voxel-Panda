@@ -26,7 +26,7 @@ namespace VoxelPanda.ProcGen.Spawners
 					var node = grid[i][j];
 					if (node.IsObjectRoot())
 					{
-						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, i * gridUnitToMeter + (node.GetSpawnable().GetConcreteDimensions().y / 2));
+						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, i * gridUnitToMeter /*+ (node.GetSpawnable().GetConcreteDimensions().y / 2)*/);
 						node.GetSpawnable().Spawn(dst);
 					}
 					if (node.HasPickup())

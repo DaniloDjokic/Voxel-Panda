@@ -37,7 +37,7 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
 
         private void SetBoundries()
         {
-            Vector3 root = new Vector3(gridData.gridMatrix.objectRootX, ConstMoveData.universalY, gridData.gridMatrix.objectRootZ);
+            Vector3 root = new Vector3(gridData.gridMatrix.ObjectRootX, ConstMoveData.universalY, gridData.gridMatrix.ObjectRootZ);
             leftPoint = root;
             leftPoint.x -= Mathf.Abs(transform.localPosition.x);
             rightPoint = root;
