@@ -61,8 +61,6 @@ namespace VoxelPanda.Player.Input
         private void Init()
         {
             dynamicMoveData.currentStamina = constMoveData.maxStamina;
-
-            Debug.Log(listeners);
         }
 
         private Vector3 CompressVector(Vector3 vector)

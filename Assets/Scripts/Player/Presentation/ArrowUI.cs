@@ -6,23 +6,27 @@ using VoxelPanda.Player.Events;
 public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
 {
     public LineRenderer lineRenderer;
+    public int lineSmoothnes;
+
+    private Vector3[] positions;
 
     private void Start()
     {
         lineRenderer.enabled = false;
+
+        positions = new Vector3[lineSmoothnes];
+        lineRenderer.positionCount = lineSmoothnes;
     }
 
     public void OnFlingEnded(FlingData flingData)
     {
         lineRenderer.enabled = false;
-        lineRenderer.SetPosition(0, Vector3.zero);
-        lineRenderer.SetPosition(1, Vector3.zero);
+        ResetPositions();
     }
 
     public void OnFlingRunning(FlingData flingData)
     {
-        lineRenderer.SetPosition(0, flingData.PlayerPosition);
-        lineRenderer.SetPosition(1, flingData.TransposedVectorEndPosition);
+        SetStraightPositions(flingData);
     }
 
     public void OnFlingStarted(FlingData flingData)
@@ -35,7 +39,33 @@ public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
 
     public void OnCurveChanged(CurveData curveData)
     {
-        throw new System.NotImplementedException();
+        SetCurvedPositions(curveData);
+    }
+
+    void ResetPositions()
+    {
+        for (int i = 0; i < lineSmoothnes; i++)
+            lineRenderer.SetPosition(i, Vector3.zero);
+    }
+
+    void SetStraightPositions(FlingData flingData)
+    {
+        float lineLength = Vector3.Distance(flingData.TransposedVectorEndPosition, flingData.PlayerPosition);
+        float posDistance = lineLength / lineSmoothnes;
+
+        Vector3 offset = Vector3.zero;
+        Vector3 dir = (flingData.TransposedVectorEndPosition - flingData.PlayerPosition).normalized;
+
+        for(int i = 0; i < lineSmoothnes; i++)
+        {
+            lineRenderer.SetPosition(i, transform.position + offset);
+            offset += dir * posDistance;
+        }
+    }
+
+    void SetCurvedPositions(CurveData curveData)
+    {
+        lineRenderer.SetPosition(lineSmoothnes - 1, lineRenderer.GetPosition(lineSmoothnes - 1) + curveData.ModifiedAccelerationVector);
     }
 }
 
