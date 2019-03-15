@@ -20,7 +20,8 @@ public class BulletBehaviour : MonoBehaviour
     {
         if(timer >= 0f)
         {
-            transform.Translate(transform.forward * speed * Time.deltaTime);
+            var x = speed * Time.deltaTime;
+            transform.position += transform.forward * x;
             timer -= Time.deltaTime;
         }
         else
