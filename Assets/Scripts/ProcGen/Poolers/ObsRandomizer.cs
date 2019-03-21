@@ -5,11 +5,11 @@ using VoxelPanda.ProcGen.Elements;
 
 namespace VoxelPanda.ProcGen.Poolers
 {
-	public class ObsRandomizer : IPooling
+	public class PoolRandomizer : IPooling
 	{
 		private List<Pooler> subPoolers;
 
-		public ObsRandomizer()
+		public PoolRandomizer()
 		{
 			subPoolers = new List<Pooler>();
 		}

@@ -32,6 +32,7 @@ namespace VoxelPanda.Flow
 		public void BindAll()
 		{
 			moveEvents = new MoveEvents();
+			dMoveData.moveEvents = moveEvents;
 			procEvents = new ProcEvents(moveEvents);
 
 			ProcGenInjector pgInjector = new ProcGenInjector(spawnData, procEvents);

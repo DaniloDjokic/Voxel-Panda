@@ -28,7 +28,7 @@ namespace VoxelPanda.Flow
 			var pickupMapper = new CoinMapper();
 
 			//Obstacles
-			var obstacleRandomizer = new ObsRandomizer();
+			var obstacleRandomizer = new PoolRandomizer();
 			foreach (var gridData in spawnData.Obstacles)
 			{
 				var obstaclePooler = new ObsPooler();
@@ -42,12 +42,26 @@ namespace VoxelPanda.Flow
 			var obstacleSpawner = new ObsSpawner();
 
 			//Path
-			var pathPooler = new PathPooler();
+			var pathRandomizer = new PoolRandomizer();
+			foreach (var gridData in spawnData.Paths)
+			{
+				var pathPooler = new PathPooler();
+				pathPooler.SetSpawnable(gridData);
+				pathPooler.CreateSpawnables(spawnData.pathPoolSize);
+				pathRandomizer.SetSubPooling(pathPooler);
+			}
 			var pathMapper = new PathMapper();
 			var pathSpawner = new PathSpawner();
 
 			//Backdrop
-			var backdropPooler = new BackdropPooler();
+			var backdropRandomizer = new PoolRandomizer();
+			foreach(var gridData in spawnData.Backdrops)
+			{
+				var backdropPooler = new BackdropPooler();
+				backdropPooler.SetSpawnable(gridData);
+				backdropPooler.CreateSpawnables(spawnData.backdropPoolSize);
+				backdropRandomizer.SetSubPooling(backdropPooler);
+			}
 			var backdropMapper = new BackdropMapper();
 			var backdropSpawner = new BackdropSpawner();
 
@@ -57,21 +71,24 @@ namespace VoxelPanda.Flow
 			this.Bind(spawnData.Pickups, pickupPooler, pickupMapper);
 			pickupPooler.CreateSpawnables(spawnData.pickupPoolSize);
 			this.Bind(obstacleRandomizer, obstacleMapper);
-			this.Bind(obstacleMapper, obstacleSpawner);
-			//this.Bind(spawnData.Paths, pathPooler, pathMapper, pathSpawner);
+			obstacleSpawner.SetMapper(obstacleMapper);
+			procEvents.AddSpawningListener(new SpawnerData(obstacleSpawner, spawnData.obstaclesGenerationOffset, spawnData.obstaclesGenerationBuffer));
+
+			this.Bind(pathRandomizer, pathMapper);
+			pathSpawner.SetMapper(pathMapper);
+
+			procEvents.AddSpawningListener(new SpawnerData(pathSpawner));
+
+			this.Bind(backdropRandomizer, backdropMapper);
+			backdropSpawner.SetMapper(backdropMapper);
+			procEvents.AddSpawningListener(new SpawnerData(backdropSpawner));
 			//this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
-			obstacleSpawner.SpawnGrid(10, 120);
 		}
 
 		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper)
 		{
 			Bind(spawnables, pooler);
 			Bind(pooler, mapper);
-		}
-		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper, ISpawning spawning)
-		{
-			Bind(spawnables, pooler, mapper);
-			Bind(mapper, spawning);
 		}
 		private void Bind(IList<ISpawnable> spawnables, IPooling pooler)
 		{
@@ -86,10 +103,6 @@ namespace VoxelPanda.Flow
 			mapper.SetPooler(pooler);
 
 		}
-		private void Bind(IMapping mapper, ISpawning spawning)
-		{
-			spawning.SetMapper(mapper);
-			this.procEvents.AddSpawningListener(spawning);
-		}
+
 	}
 }

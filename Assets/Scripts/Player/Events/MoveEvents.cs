@@ -16,7 +16,7 @@ namespace VoxelPanda.Player.Events
 			}
 		}
 
-		private void NotifyPositionChanged(Vector3 newPosition)
+		public void NotifyPositionChanged(Vector3 newPosition)
 		{
 			foreach (var listener in listeners)
 			{
@@ -24,7 +24,7 @@ namespace VoxelPanda.Player.Events
 			}
 		}
 
-		private void NotifyVelocityChanged(Vector3 newVelocity)
+		public void NotifyVelocityChanged(Vector3 newVelocity)
 		{
 			foreach(var listener in listeners)
 			{

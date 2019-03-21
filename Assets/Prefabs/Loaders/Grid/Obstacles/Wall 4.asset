@@ -9,23 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ee004099300bda49957b0e957744202, type: 3}
-  m_Name: Train 4
+  m_Name: Wall 4
   m_EditorClassIdentifier: 
-  width: 7
+  width: 6
   height: 3
   obstacleMatrix:
   - nodes:
     - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 1
-      objectRoot: 0
-    - occupiedState: 0
-      riskState: 2
+      riskState: 0
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
@@ -35,8 +26,17 @@ MonoBehaviour:
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
       objectRoot: 0
   - nodes:
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
     - occupiedState: 2
       riskState: 0
       objectRoot: 1
@@ -49,18 +49,12 @@ MonoBehaviour:
     - occupiedState: 2
       riskState: 0
       objectRoot: 0
-    - occupiedState: 1
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 1
-      riskState: 0
-      objectRoot: 0
-    - occupiedState: 1
-      riskState: 0
+    - occupiedState: 0
+      riskState: 1
       objectRoot: 0
   - nodes:
     - occupiedState: 0
-      riskState: 1
+      riskState: 0
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
@@ -72,16 +66,14 @@ MonoBehaviour:
       riskState: 2
       objectRoot: 0
     - occupiedState: 0
-      riskState: 2
-      objectRoot: 0
-    - occupiedState: 0
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
-      riskState: 1
+      riskState: 0
       objectRoot: 0
   flippedMatrix: {fileID: 0}
-  concreteObjectWidth: 7
+  concreteObjectWidth: 4
   concreteObjectHeight: 1
-  objectRootX: 0
+  objectRootX: 1
+  objectRootZ: 0
   isFlippableHorizontally: 0
