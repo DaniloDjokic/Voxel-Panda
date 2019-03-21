@@ -26,6 +26,7 @@ namespace VoxelPanda.Flow
 			//Pickups
 			var pickupPooler = new CoinPooler();
 			var pickupMapper = new CoinMapper();
+			pickupMapper.SetChances(spawnData.coinSpawnRiskyChance, spawnData.coinSpawnDangerousChance, spawnData.coinSpawnCriticalChance);
 
 			//Obstacles
 			var obstacleRandomizer = new PoolRandomizer();

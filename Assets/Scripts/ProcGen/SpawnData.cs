@@ -26,6 +26,12 @@ public class SpawnData : MonoBehaviour
 	public int obstaclesGenerationOffset = 5;
 	[SerializeField]
 	public int obstaclesGenerationBuffer = 40;
+	[SerializeField]
+	public float coinSpawnCriticalChance = 0.2f;
+	[SerializeField]
+	public float coinSpawnDangerousChance = 0.1f;
+	[SerializeField]
+	public float coinSpawnRiskyChance = 0.005f;
 
 	public IList<ISpawnable> Pickups
 	{
