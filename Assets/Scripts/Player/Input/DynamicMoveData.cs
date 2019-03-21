@@ -11,6 +11,7 @@ public class DynamicMoveData : MonoBehaviour
     public float currentStamina;
     public Vector3 currentVelocity;
     public Vector3 currentPosition;
+	private bool fireEvents = true;
 
     private void Update()
     {
@@ -19,17 +20,30 @@ public class DynamicMoveData : MonoBehaviour
 
     void RefreshValues()
     {
-        if (currentVelocity != physicsController.playerRigidBody.velocity)
+		if (fireEvents)
 		{
-			currentVelocity = physicsController.playerRigidBody.velocity;
-			moveEvents.NotifyVelocityChanged(currentVelocity);
+			if(currentVelocity != physicsController.playerRigidBody.velocity)
+			{
+				currentVelocity = physicsController.playerRigidBody.velocity;
+				moveEvents.NotifyVelocityChanged(currentVelocity);
+			}
+
+
+			if(currentPosition != physicsController.playerTransform.position)
+			{
+				currentPosition = physicsController.playerTransform.position;
+				moveEvents.NotifyPositionChanged(currentPosition);
+			}
 		}
 
-
-        if (currentPosition != physicsController.playerTransform.position)
-        {
-            currentPosition = physicsController.playerTransform.position;
-			moveEvents.NotifyPositionChanged(currentPosition);
-        }
     }
+
+	public void ResetValues()
+	{
+		fireEvents = false;
+		currentVelocity = physicsController.playerRigidBody.velocity = Vector3.zero;
+		physicsController.ResetPosition();
+		currentPosition = physicsController.playerTransform.position;
+		fireEvents = true;
+	}
 }

@@ -73,6 +73,14 @@ namespace VoxelPanda.ProcGen.Poolers
 			}
 			return sum;
 		}
+
+		public void TryDespawning(Vector3 despawnReferentPosition)
+		{
+		}
+
+		public void DespawnAll()
+		{
+		}
 	}
 }
 

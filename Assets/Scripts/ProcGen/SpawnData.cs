@@ -32,6 +32,8 @@ public class SpawnData : MonoBehaviour
 	public float coinSpawnDangerousChance = 0.1f;
 	[SerializeField]
 	public float coinSpawnRiskyChance = 0.005f;
+	[SerializeField]
+	public int despawnDistanceFromPlayer = 20;
 
 	public IList<ISpawnable> Pickups
 	{

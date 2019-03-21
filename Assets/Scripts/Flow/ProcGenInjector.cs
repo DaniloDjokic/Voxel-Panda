@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Player.Events;
 using VoxelPanda.ProcGen;
 using VoxelPanda.ProcGen.Elements;
 using VoxelPanda.ProcGen.Mappers;
@@ -25,6 +26,8 @@ namespace VoxelPanda.Flow
 		{
 			//Pickups
 			var pickupPooler = new CoinPooler();
+			pickupPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+			procEvents.AddPoolingListener(pickupPooler);
 			var pickupMapper = new CoinMapper();
 			pickupMapper.SetChances(spawnData.coinSpawnRiskyChance, spawnData.coinSpawnDangerousChance, spawnData.coinSpawnCriticalChance);
 
@@ -33,6 +36,8 @@ namespace VoxelPanda.Flow
 			foreach (var gridData in spawnData.Obstacles)
 			{
 				var obstaclePooler = new ObsPooler();
+				obstaclePooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+				procEvents.AddPoolingListener(obstaclePooler);
 				obstaclePooler.SetSpawnable(gridData);
 				obstaclePooler.CreateSpawnables(spawnData.obstaclePoolSize);
 				obstacleRandomizer.SetSubPooling(obstaclePooler);
@@ -47,6 +52,8 @@ namespace VoxelPanda.Flow
 			foreach (var gridData in spawnData.Paths)
 			{
 				var pathPooler = new PathPooler();
+				pathPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+				procEvents.AddPoolingListener(pathPooler);
 				pathPooler.SetSpawnable(gridData);
 				pathPooler.CreateSpawnables(spawnData.pathPoolSize);
 				pathRandomizer.SetSubPooling(pathPooler);
@@ -59,6 +66,8 @@ namespace VoxelPanda.Flow
 			foreach(var gridData in spawnData.Backdrops)
 			{
 				var backdropPooler = new BackdropPooler();
+				backdropPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+				procEvents.AddPoolingListener(backdropPooler);
 				backdropPooler.SetSpawnable(gridData);
 				backdropPooler.CreateSpawnables(spawnData.backdropPoolSize);
 				backdropRandomizer.SetSubPooling(backdropPooler);
