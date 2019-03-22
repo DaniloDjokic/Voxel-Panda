@@ -16,7 +16,7 @@ namespace VoxelPanda.Flow
 		{
 			this.scoreCalculator = scoreCalculator;
 			this.deathUI = deathUI;
-			deathUI.Bind(this);
+			deathUI.Bind(this, scoreCalculator);
 		}
 
 		public void RaiseScreen()

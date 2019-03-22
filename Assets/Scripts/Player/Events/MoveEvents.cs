@@ -8,6 +8,11 @@ namespace VoxelPanda.Player.Events
 	{
 		private List<IMoveListener> listeners = new List<IMoveListener>();
 
+        public MoveEvents(DynamicMoveData dMoveData)
+        {
+            dMoveData.moveEvents = this;
+        }
+
 		public void Subscribe(IMoveListener listener)
 		{
 			if (!listeners.Contains(listener))

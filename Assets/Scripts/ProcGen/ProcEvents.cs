@@ -69,6 +69,7 @@ namespace VoxelPanda.ProcGen
 
 		public void OnVelocityChanged(Vector3 velocity)
 		{
+			
 		}
 
 		public void DespawnAll()

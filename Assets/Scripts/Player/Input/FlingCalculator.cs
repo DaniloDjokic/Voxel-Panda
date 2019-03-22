@@ -81,7 +81,7 @@ namespace VoxelPanda.Player.Input
         {
             if (dynamicMoveData.currentStamina < constMoveData.maxStamina)
             {
-                dynamicMoveData.currentStamina += (constMoveData.staminaRegenPerSecond) * Time.deltaTime;
+                dynamicMoveData.currentStamina += constMoveData.staminaRegenPerSecond * Time.deltaTime;
                 StaminaChanged();
             }              
         }
