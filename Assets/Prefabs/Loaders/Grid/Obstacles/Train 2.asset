@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ee004099300bda49957b0e957744202, type: 3}
-  m_Name: Wall 1
+  m_Name: Train 2
   m_EditorClassIdentifier: 
-  width: 3
+  width: 5
   height: 3
   obstacleMatrix:
   - nodes:
@@ -22,27 +22,49 @@ MonoBehaviour:
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
-      riskState: 0
+      riskState: 1
       objectRoot: 0
-  - nodes:
     - occupiedState: 0
       riskState: 1
       objectRoot: 0
+    - occupiedState: 0
+      riskState: 0
+      objectRoot: 0
+  - nodes:
     - occupiedState: 2
       riskState: 0
       objectRoot: 1
-    - occupiedState: 0
-      riskState: 1
+    - occupiedState: 2
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 0
+      objectRoot: 0
+    - occupiedState: 1
+      riskState: 0
       objectRoot: 0
   - nodes:
     - occupiedState: 0
-      riskState: 0
+      riskState: 1
       objectRoot: 0
     - occupiedState: 0
       riskState: 1
       objectRoot: 0
     - occupiedState: 0
-      riskState: 0
+      riskState: 1
       objectRoot: 0
-  concreteObjectWidth: 1
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+    - occupiedState: 0
+      riskState: 1
+      objectRoot: 0
+  flippedMatrix: {fileID: 0}
+  concreteObjectWidth: 5
   concreteObjectHeight: 1
+  objectRootX: 0
+  objectRootZ: 0
+  isFlippableHorizontally: 0

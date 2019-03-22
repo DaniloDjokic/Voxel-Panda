@@ -21,10 +21,10 @@ namespace VoxelPanda.ProcGen.Mappers
 		public int minMapX = 0, maxMapX = 9;
 		public int minMapY = 0, maxMapY = 119;
 		//static
-		private static IList<IList<MapperNode>> BlankMap;
+		private IList<IList<MapperNode>> BlankMap;
 
 
-		public IList<IList<MapperNode>> GetNodeMap(int width, int height)
+		public virtual IList<IList<MapperNode>> GetNodeMap(int width, int height)
 		{
 			maxMapX = width - 1; 
 			maxMapY = height - 1;
@@ -39,9 +39,9 @@ namespace VoxelPanda.ProcGen.Mappers
 					ISpawnable spawnable = pooler.GetSpawnable(heightLeft);
 					if (spawnable != null)
 					{
-						InsertToMatrix(nodeMatrix, spawnable, width, i);
+						i = InsertToMatrix(nodeMatrix, spawnable, width, i) - 1;
 						DecreaseChance();
-						i += (int)spawnable.GetFullDimensions().y - 1;
+						//i += (int)spawnable.GetFullDimensions().y - 1;
 					}
 
 				} else
@@ -52,20 +52,20 @@ namespace VoxelPanda.ProcGen.Mappers
 			return nodeMatrix;
 		}
 
-		private void InsertToMatrix(IList<IList<MapperNode>> nodeMatrix, ISpawnable spawnable, int matrixWidth, int startZ)
+		private int InsertToMatrix(IList<IList<MapperNode>> nodeMatrix, ISpawnable spawnable, int matrixWidth, int startZ)
 		{
+			spawnable.RandomizeOrientation();
 			GridMatrix objectMatrix = spawnable.GetMatrix();
-			int endZ = objectMatrix.height + startZ;
-			int objectRootX = objectMatrix.objectRootX;
-			int objectRootZ = objectMatrix.objectRootZ;
+			int objectRootX = objectMatrix.ObjectRootX;
+			int objectRootZ = objectMatrix.ObjectRootZ;
 
-			
 			int startX = Random.Range(0, matrixWidth - objectMatrix.concreteObjectWidth) - objectRootX;
 			int endX = objectMatrix.width + startX;
 
-			//startZ = startZ - objectRootZ;
-			endZ = objectMatrix.height + startZ;
-			for (int i = startZ; i < endZ; i++)
+			startZ = startZ - objectRootZ;
+			int endZ = objectMatrix.height + startZ;
+
+			for(int i = startZ; i < endZ; i++)
 			{
 				if (i >= minMapY && i <= maxMapY)
 				{
@@ -74,12 +74,21 @@ namespace VoxelPanda.ProcGen.Mappers
 						if (j >= minMapX && j <= maxMapX)
 						{
 							GridNode node = objectMatrix.GetNode(i - startZ, j - startX);
-							nodeMatrix[i][j] = MapperNode.OverwriteNode(nodeMatrix[i][j], new MapperNode(node, spawnable));
-							//nodeMatrix[i][j] = nodeMatrix[i][j].OverwriteNode(node, spawnable);
+							MapperNode newNode = null;
+							if (node.objectRoot)
+							{
+								newNode = new MapperNode(node, spawnable);
+							} else
+							{
+								newNode = new MapperNode(node, null);
+							}
+							nodeMatrix[i][j] = MapperNode.OverwriteNode(nodeMatrix[i][j], newNode);
+
 						}
 					}
 				}
 			}
+			return endZ;
 		}
 
 		public void SetPooler(IPooling pooler)
@@ -95,13 +104,13 @@ namespace VoxelPanda.ProcGen.Mappers
 		//Chance
 		private void DecreaseChance()
 		{
-			chanceToSpawn = Mathf.Clamp(chanceToSpawn + chanceIncrementPerIteration, 0, maxChanceToSpawn);
+			//chanceToSpawn = Mathf.Clamp(chanceToSpawn + chanceIncrementPerIteration, 0, maxChanceToSpawn);
 		}
 		private void IncreaseChance()
 		{
 			chanceToSpawn = Mathf.Clamp(chanceToSpawn - chanceDecrementPerSpawn, 0, maxChanceToSpawn);
 		}
-		private static void FillBlankMap(int width, int height)
+		private void FillBlankMap(int width, int height)
 		{
 			BlankMap = new MapperNode[height][];
 			for (int i = 0; i < height; i++)
@@ -113,13 +122,15 @@ namespace VoxelPanda.ProcGen.Mappers
 				}
 			}
 		}
-		private static IList<IList<MapperNode>> GetBlankMap(int width, int height)
+		protected IList<IList<MapperNode>> GetBlankMap(int width, int height)
 		{
-			if (BlankMap == null || BlankMap.Count != height || BlankMap[0].Count != width)
-			{
-				FillBlankMap(width, height);
-			}
+			FillBlankMap(width, height);
 			return BlankMap;
+		}
+		
+		public virtual IList<IList<MapperNode>> GetNodeMap(IList<IList<MapperNode>> map)
+		{
+			return map;
 		}
 	}
 }

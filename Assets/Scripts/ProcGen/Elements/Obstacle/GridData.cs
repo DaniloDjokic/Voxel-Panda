@@ -10,6 +10,8 @@ namespace VoxelPanda.ProcGen.Elements
 		public GridMatrix gridMatrix;
 		private bool isAvailableToSpawn = true;
 		public bool IsAvailableToSpawn() { return isAvailableToSpawn; }
+		public Orientation orientation = Orientation.RIGHT;
+		public Transform rotationPivot;
 
 		public void Despawn()
 		{
@@ -29,7 +31,7 @@ namespace VoxelPanda.ProcGen.Elements
 
 		public GridMatrix GetMatrix()
 		{
-			return gridMatrix;
+			return (orientation == Orientation.RIGHT) ? gridMatrix : gridMatrix.FlippedMatrix;
 		}
 
 		public int GetWeight()
@@ -48,5 +50,31 @@ namespace VoxelPanda.ProcGen.Elements
 		{
 			isAvailableToSpawn = false;
 		}
+
+		public void SetOrientation(Orientation orientation)
+		{
+			if (gridMatrix.isFlippableHorizontally)
+			{
+				this.orientation = orientation;
+				if (this.orientation == Orientation.LEFT)
+				{
+					rotationPivot.rotation = Quaternion.Euler(0, 180, 0);
+				} else
+				{
+					rotationPivot.rotation = Quaternion.Euler(0, 0, 0);
+				}
+			}
+		}
+
+		public void RandomizeOrientation()
+		{
+			this.SetOrientation((Random.Range(0, 2) == 0) ? Orientation.LEFT : Orientation.RIGHT);  
+		}
+
+		public Vector3 CurrentPosition()
+		{
+			return transform.position;
+		}
+
 	}
 }

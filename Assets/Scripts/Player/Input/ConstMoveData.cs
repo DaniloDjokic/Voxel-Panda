@@ -21,4 +21,5 @@ public class ConstMoveData : MonoBehaviour
 
     //Misc
     public static float universalY = 1f;
+	public Vector3 playerStartPosition;
 }

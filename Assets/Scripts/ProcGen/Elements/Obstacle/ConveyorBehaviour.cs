@@ -15,7 +15,7 @@ public class ConveyorBehaviour : LocalUpdater<Rigidbody>
     {
         foreach(Rigidbody rb in currentlyContained)
         {
-            rb.AddForce(transform.forward * speed * Time.deltaTime);
+            rb.AddForce(transform.right * speed * Time.deltaTime, ForceMode.Impulse);
         }
     }
 

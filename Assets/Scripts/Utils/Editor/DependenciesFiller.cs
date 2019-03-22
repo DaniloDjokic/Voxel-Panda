@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using VoxelPanda.Flow;
+using VoxelPanda.Player;
 using VoxelPanda.Player.Input;
 using VoxelPanda.Player.Presentation;
 using VoxelPanda.Score;

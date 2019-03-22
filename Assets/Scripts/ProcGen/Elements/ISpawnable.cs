@@ -13,7 +13,11 @@ namespace VoxelPanda.ProcGen.Elements
 		int GetWeight();
 		GridMatrix GetMatrix();
 
+		Vector3 CurrentPosition();
 		bool IsAvailableToSpawn();
 		void ReserveForSpawning();
+		void SetOrientation(Orientation orientation);
+		void RandomizeOrientation();
 	}
+	public enum Orientation {LEFT, RIGHT}
 }

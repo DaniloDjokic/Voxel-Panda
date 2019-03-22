@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114460060984618992}
   - component: {fileID: 114794234042901482}
   - component: {fileID: 114506744368682314}
+  - component: {fileID: 114891840132562606}
   m_Layer: 0
   m_Name: Data
   m_TagString: Untagged
@@ -113,15 +114,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7070e12db809498370f3697b46ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flingForce: 50
+  flingForce: 75
   maxStamina: 100
-  staminaPerFling: 20
+  staminaPerFling: 25
   staminaRegenDelay: 0
-  staminaRegenPerSecond: 25
+  staminaRegenPerSecond: 30
   vectorStaminaCost: 0
   curveForce: 50
   accelerationDeadzone: 0.1
   accelerationFunctionModifier: 1.5
+  minVelocityForCurve: 2
+  playerStartPosition: {x: 0, y: 0.5, z: 0}
 --- !u!114 &114460060984618992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -133,7 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c94ea4e33198e4cb0947aa66e056cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickups: []
+  pickups:
+  - {fileID: 114299056914861348, guid: b6f3afcab8a271f4e82390d778df4c1b, type: 2}
   obstacles:
   - {fileID: 114827938099151856, guid: d51dba74df13b2247ae0507350a3e929, type: 2}
   - {fileID: 114271322130863934, guid: 09fa95d6cfb6b20438e6bdc609856c61, type: 2}
@@ -144,9 +148,22 @@ MonoBehaviour:
   - {fileID: 114911349801827280, guid: 056cf2f7a9c39de4caeb322c606e936b, type: 2}
   - {fileID: 114284398148146730, guid: 19dba0fc4001bb846b69713c70da3a24, type: 2}
   - {fileID: 114491535170004540, guid: ac6f3b90bd9876c4abc32c6849010d0d, type: 2}
-  paths: []
-  backdrops: []
+  paths:
+  - {fileID: 114750744444068508, guid: 381bbf113f684804bbf244bb00a4850b, type: 2}
+  - {fileID: 114244252106406492, guid: be795d3b3b936d84b87c6f919c46124e, type: 2}
+  backdrops:
+  - {fileID: 114401316754229260, guid: 18f091d7e96922449874a71d5fb791df, type: 2}
+  - {fileID: 114864696643226722, guid: fbccf7cb4594eff45b885046e521297c, type: 2}
   obstaclePoolSize: 10
+  pickupPoolSize: 20
+  pathPoolSize: 10
+  backdropPoolSize: 10
+  obstaclesGenerationOffset: 5
+  obstaclesGenerationBuffer: 40
+  coinSpawnCriticalChance: 0.2
+  coinSpawnDangerousChance: 0.1
+  coinSpawnRiskyChance: 0.005
+  despawnDistanceFromPlayer: 20
 --- !u!114 &114506744368682314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   constMoveData: {fileID: 114198266438603112}
+  dMoveData: {fileID: 114891840132562606}
   spawnData: {fileID: 114460060984618992}
   scoreUI: {fileID: 114794234042901482}
   deathUI: {fileID: 0}
@@ -200,3 +218,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0f4939e3eb0144e8e72ff4c0f9e500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114891840132562606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273787968340134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66993530369c4494fa93e66a10a1a471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsController: {fileID: 0}
+  currentStamina: 0
+  currentVelocity: {x: 0, y: 0, z: 0}
+  currentPosition: {x: 0, y: 0, z: 0}
