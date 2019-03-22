@@ -12,5 +12,7 @@ namespace VoxelPanda.ProcGen.Poolers
 		void CreateSpawnables(int size);
 		int GetAvailableWeightSum(int maxHeight);
 		int CurrentlyAvailable(int maxHeight);
+		void TryDespawning(Vector3 despawnReferentPosition);
+		void DespawnAll();
 	}
 }

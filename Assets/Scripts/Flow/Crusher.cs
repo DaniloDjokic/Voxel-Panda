@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using VoxelPanda.Flow;
+using VoxelPanda.ProcGen.Elements;
 
 namespace VoxelPanda.Flow
 {
@@ -21,18 +22,13 @@ namespace VoxelPanda.Flow
 		private const string obstacleTag = "Obstacle";
 		private GameManager gameManager;
 		private Transform player;
-		private Vector3 startingPosition;
+		public Vector3 startingPosition;
 
 		public void Bind(GameManager gameManager, Transform player)
 		{
 			this.gameManager = gameManager;
 			this.player = player;
 			playerTag = this.player.tag;
-		}
-
-		private void Awake()
-		{
-			startingPosition = this.transform.position;
 		}
 
 		private void Update()
@@ -56,10 +52,10 @@ namespace VoxelPanda.Flow
 		{
 			if (ShouldCatchUp())
 			{
-				this.transform.position = this.transform.position + direction * catchUpSpeed;
+				this.transform.position = this.transform.position + direction * catchUpSpeed * Time.deltaTime;
 			} else
 			{
-				this.transform.position = this.transform.position + direction * speed;
+				this.transform.position = this.transform.position + direction * speed * Time.deltaTime;
 			}
 			
 		}
@@ -75,19 +71,12 @@ namespace VoxelPanda.Flow
 		{
 			gameManager.EndRun();
 		}
-		private void ObstacleTouched(GameObject obstacle)
-		{
-
-		}
 
 		private void OnTriggerEnter(Collider other)
 		{
 			if (other.CompareTag(playerTag))
 			{
 				PlayerTouched();
-			} else if (other.CompareTag(obstacleTag))
-			{
-				ObstacleTouched(other.gameObject);
 			}
 
 		}

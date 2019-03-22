@@ -23,16 +23,12 @@ namespace VoxelPanda.Score
 
 		public void OnPositionChanged(Vector3 position)
 		{
-            if (position.z > bestZ && position.z > startingPos.z)
-            {
-                bestZ = position.z;
-                UpdateScore(position);
-            }
-        }
+			throw new System.NotImplementedException();
+		}
 
 		public void OnVelocityChanged(Vector3 velocity)
 		{
-            
+			throw new System.NotImplementedException();
 		}
 
         void UpdateScore(Vector3 position)
@@ -59,3 +55,14 @@ namespace VoxelPanda.Score
 	}
 }
 
+
+		{
+            if (position.z > bestZ && position.z > startingPos.z)
+            {
+                bestZ = position.z;
+                UpdateScore(position);
+            }
+        }
+		{
+            
+		{

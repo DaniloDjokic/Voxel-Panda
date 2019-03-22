@@ -40,11 +40,14 @@ namespace VoxelPanda.Flow
 			scoreCalculator = new ScoreCalculator(moveEvents, dMoveData.currentPosition);
 			scoreCalculator.Subscribe(scoreUI);
 			deathController = new DeathController(scoreCalculator, deathUI);
-			gameManager = new GameManager(playerElements, deathController, crusher);
+			gameManager = new GameManager(playerElements, deathController, crusher, procEvents);
+			moveEvents.Subscribe(gameManager);
 			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
 			crusher.Bind(gameManager, playerElements.physicsController.transform);
 
 			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher);
+
+			gameManager.StartLevel();
 		}
 	}
 }

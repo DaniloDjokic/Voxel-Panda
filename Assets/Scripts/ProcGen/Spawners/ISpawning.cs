@@ -8,6 +8,6 @@ namespace VoxelPanda.ProcGen.Spawners
 	public interface ISpawning
 	{
 		void SetMapper(IMapping mapper);
-		void SpawnGrid(int width, int length);
+		int SpawnGrid(int startZ, int width, int length);
 	}
 }

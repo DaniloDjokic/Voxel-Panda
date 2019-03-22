@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using VoxelPanda.Player.Events;
 using VoxelPanda.ProcGen.Elements;
 
 namespace VoxelPanda.ProcGen.Poolers
@@ -11,6 +12,7 @@ namespace VoxelPanda.ProcGen.Poolers
 		public GridData spawnableModel;
 		protected List<ISpawnable> spawnables;
 		private int spawnablesCount;
+		public float DespawnDistanceFromPlayer;
 
 		public void CreateSpawnables(int size)
 		{
@@ -53,6 +55,30 @@ namespace VoxelPanda.ProcGen.Poolers
 		private bool IsAvailableToSpawnAndInDimensions(ISpawnable i, int maxHeight)
 		{
 			return i.IsAvailableToSpawn() && i.GetConcreteDimensions().y <= maxHeight;
+		}
+
+		public void TryDespawning(Vector3 despawnReferentPosition)
+		{
+			for (int i = 0; i < spawnables.Count; i++)
+			{
+				if (!spawnables[i].IsAvailableToSpawn() && ShouldDespawnByDistance(spawnables[i], despawnReferentPosition))
+				{
+					spawnables[i].Despawn();
+				}
+			}
+		}
+
+		private bool ShouldDespawnByDistance(ISpawnable spawnable, Vector3 despawnReferentPosition)
+		{
+			return (despawnReferentPosition.z - (spawnable.CurrentPosition().z + spawnable.GetConcreteDimensions().y)) > DespawnDistanceFromPlayer;
+		}
+
+		public void DespawnAll()
+		{
+			for(int i = 0; i < spawnables.Count; i++)
+			{
+				spawnables[i].Despawn();
+			}
 		}
 	}
 }
