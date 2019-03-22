@@ -1842,6 +1842,7 @@ MonoBehaviour:
   gridData: {fileID: 114765304657984220}
   bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
   secondsBetweenShots: 2
+  phaseStart: 0
 --- !u!114 &114224902711813356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1871,6 +1872,7 @@ MonoBehaviour:
   gridData: {fileID: 114224902711813356}
   bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
   secondsBetweenShots: 2
+  phaseStart: 0
 --- !u!114 &114352906410344578
 MonoBehaviour:
   m_ObjectHideFlags: 1

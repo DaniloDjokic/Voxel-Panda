@@ -5401,7 +5401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 5
+  weight: 1
   gridMatrix: {fileID: 11400000, guid: e5fae96c4f66d264eaca7aefc7099797, type: 2}
   orientation: 1
   rotationPivot: {fileID: 0}
