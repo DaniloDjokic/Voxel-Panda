@@ -69,7 +69,7 @@ namespace VoxelPanda.ProcGen
 
 		public void OnVelocityChanged(Vector3 velocity)
 		{
-			throw new System.NotImplementedException();
+			
 		}
 
 		public void DespawnAll()

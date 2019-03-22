@@ -4,6 +4,7 @@ using UnityEngine;
 using VoxelPanda.Player.Events;
 using VoxelPanda.Player.Input;
 using VoxelPanda.ProcGen;
+using VoxelPanda.Score;
 
 namespace VoxelPanda.Flow
 {
@@ -11,6 +12,7 @@ namespace VoxelPanda.Flow
 	{
 		public GameState gameState = GameState.Stopped;
 
+        private ScoreCalculator scoreCalculator;
 		private PhysicsController player;
 		private RawAccInput accInput;
         private RawTouchInput touchInput;
@@ -18,8 +20,9 @@ namespace VoxelPanda.Flow
 		private Crusher crusher;
 		public ProcEvents procEvents;
 
-		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents)
+		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator)
 		{
+            this.scoreCalculator = scoreCalculator;
 			this.player = playerElements.physicsController;
 			this.accInput = playerElements.accInput;
             this.touchInput = playerElements.touchInput;
@@ -36,11 +39,13 @@ namespace VoxelPanda.Flow
 
 		public void StartLevel()
 		{
+            scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
 			procEvents.OnPositionChanged(player.transform.position);
 			accInput.SetInputDetection(true);
             touchInput.SetInputDetection(true);
+
 			ChangeState(GameState.Start);
 		}
 

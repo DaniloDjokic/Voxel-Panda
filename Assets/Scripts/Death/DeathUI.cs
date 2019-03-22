@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using VoxelPanda.Flow;
+using VoxelPanda.Score;
 
 namespace VoxelPanda.Flow
 {
 	public class DeathUI : MonoBehaviour
 	{
+        public ScoreCalculator scoreCalculator;
+        public Text scoreText;
 		public GameObject deathScreen;
 		private DeathController deathController;
 		public Button restartButton;
@@ -18,9 +21,10 @@ namespace VoxelPanda.Flow
 		private float currentTime = 0f;
 		private bool isCountingDown = false;
 
-		public void Bind(DeathController deathController)
+		public void Bind(DeathController deathController, ScoreCalculator scoreCalculator)
 		{
 			this.deathController = deathController;
+            this.scoreCalculator = scoreCalculator;
 		}
 
 		private void Update()
@@ -45,6 +49,7 @@ namespace VoxelPanda.Flow
 			restartButton.gameObject.SetActive(true);
 			countdownTimer.gameObject.SetActive(false);
 			deathScreen.SetActive(true);
+            scoreText.text = scoreCalculator.GetScore().ToString();
 		}
 		public void LowerScreen()
 		{

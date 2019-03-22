@@ -34,13 +34,13 @@ namespace VoxelPanda.Flow
 			moveEvents = new MoveEvents(dMoveData);
 			procEvents = new ProcEvents(moveEvents);
 
-			ProcGenInjector pgInjector = new ProcGenInjector(spawnData, procEvents);
-			pgInjector.BindAll();
 
-			scoreCalculator = new ScoreCalculator(moveEvents, dMoveData.currentPosition);
+			scoreCalculator = new ScoreCalculator(moveEvents);
 			scoreCalculator.Subscribe(scoreUI);
-			deathController = new DeathController(scoreCalculator, deathUI);
-			gameManager = new GameManager(playerElements, deathController, crusher, procEvents);
+            ProcGenInjector pgInjector = new ProcGenInjector(spawnData, procEvents, scoreCalculator);
+            pgInjector.BindAll();
+            deathController = new DeathController(scoreCalculator, deathUI);
+			gameManager = new GameManager(playerElements, deathController, crusher, procEvents, scoreCalculator);
 			moveEvents.Subscribe(gameManager);
 			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
 			crusher.Bind(gameManager, playerElements.physicsController.transform);

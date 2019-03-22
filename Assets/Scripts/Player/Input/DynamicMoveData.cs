@@ -6,6 +6,7 @@ using VoxelPanda.Player.Events;
 public class DynamicMoveData : MonoBehaviour
 {
     public PhysicsController physicsController;
+    public MoveEvents moveEvents;
 
     public float currentStamina;
     public Vector3 currentVelocity;
@@ -19,16 +20,19 @@ public class DynamicMoveData : MonoBehaviour
 
     void RefreshValues()
     {
-        if (currentVelocity != physicsController.playerRigidBody.velocity)
+        if(fireEvents)
         {
-            currentVelocity = physicsController.playerRigidBody.velocity;
-            VelocityChanged(currentVelocity);
-        }
-            
-        if (currentPosition != physicsController.playerTransform.position)
-        {
-            currentPosition = physicsController.playerTransform.position;
-            PositionChanged(currentPosition);
+            if (currentVelocity != physicsController.playerRigidBody.velocity)
+            {
+                currentVelocity = physicsController.playerRigidBody.velocity;
+                VelocityChanged(currentVelocity);
+            }
+
+            if (currentPosition != physicsController.playerTransform.position)
+            {
+                currentPosition = physicsController.playerTransform.position;
+                PositionChanged(currentPosition);
+            }
         }
     }
 

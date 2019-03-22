@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4415370959907074}
   - component: {fileID: 114198266438603112}
   - component: {fileID: 114460060984618992}
-  - component: {fileID: 114794234042901482}
   - component: {fileID: 114506744368682314}
   - component: {fileID: 114891840132562606}
   m_Layer: 0
@@ -202,22 +201,11 @@ MonoBehaviour:
   constMoveData: {fileID: 114198266438603112}
   dMoveData: {fileID: 114891840132562606}
   spawnData: {fileID: 114460060984618992}
-  scoreUI: {fileID: 114794234042901482}
+  scoreUI: {fileID: 0}
   deathUI: {fileID: 0}
   playerElements: {fileID: 114506744368682314}
   crusher: {fileID: 0}
   randomSeed: 
---- !u!114 &114794234042901482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1273787968340134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b0f4939e3eb0144e8e72ff4c0f9e500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114891840132562606
 MonoBehaviour:
   m_ObjectHideFlags: 1

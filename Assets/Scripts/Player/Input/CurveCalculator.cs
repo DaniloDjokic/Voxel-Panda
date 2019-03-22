@@ -6,8 +6,7 @@ using VoxelPanda.Player.Events;
 namespace VoxelPanda.Player.Input
 {
     public class CurveCalculator : InputCalculator
-    {
-        
+    {  
         private CurveData curveData = new CurveData();
 
         private List<ICurveListener> listeners = new List<ICurveListener>();

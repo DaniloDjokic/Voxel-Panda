@@ -8,32 +8,53 @@ namespace VoxelPanda.Score
 	public class ScoreCalculator : IMoveListener
 	{
         public float scorePerMeterMultiplier = 1;
+        public float coinValue = 20f;
 
 		private List<IScoreListener> listeners = new List<IScoreListener>();
 
-        private Vector3 startingPos;
         private float bestZ = 0f;
         private float currentScore = 0f;
+        private float coinScore = 0f;
 
-		public ScoreCalculator(MoveEvents moveEvents, Vector3 startingPos)
+		public ScoreCalculator(MoveEvents moveEvents)
 		{
 			moveEvents.Subscribe(this);
-            this.startingPos = startingPos;
 		}
 
-		public void OnPositionChanged(Vector3 position)
+        public int GetScore()
+        {
+            return (int)Mathf.Round(currentScore);
+        }
+
+        public void Reset()
+        {
+            currentScore = bestZ = coinScore = 0f;
+            NotifyScoreChanged(Mathf.Round(currentScore));
+        }
+
+        public void PickupCoin()
+        {
+            currentScore += coinValue;
+            NotifyScoreChanged(Mathf.Round(currentScore));
+        }
+
+        public void OnPositionChanged(Vector3 position)
 		{
-			throw new System.NotImplementedException();
-		}
+            if (position.z > bestZ)
+            {            
+                UpdateScore(position);
+                bestZ = position.z;
+            }
+        }
 
 		public void OnVelocityChanged(Vector3 velocity)
 		{
-			throw new System.NotImplementedException();
-		}
+              
+        }
 
         void UpdateScore(Vector3 position)
         {
-            currentScore = (position.z - startingPos.z) * scorePerMeterMultiplier;
+            currentScore += (position.z - bestZ) * scorePerMeterMultiplier;
             NotifyScoreChanged(Mathf.Round(currentScore));
         }
 
@@ -54,15 +75,3 @@ namespace VoxelPanda.Score
 		}
 	}
 }
-
-
-		{
-            if (position.z > bestZ && position.z > startingPos.z)
-            {
-                bestZ = position.z;
-                UpdateScore(position);
-            }
-        }
-		{
-            
-		{

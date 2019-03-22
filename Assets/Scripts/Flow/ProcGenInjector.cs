@@ -7,23 +7,27 @@ using VoxelPanda.ProcGen.Elements;
 using VoxelPanda.ProcGen.Mappers;
 using VoxelPanda.ProcGen.Poolers;
 using VoxelPanda.ProcGen.Spawners;
+using VoxelPanda.Score;
 
 namespace VoxelPanda.Flow
 {
 	public class ProcGenInjector
 	{
 		private ProcEvents procEvents;
-		private SpawnData spawnData;
+        private ScoreCalculator scoreCalculator;
+        private SpawnData spawnData;
 
-		public ProcGenInjector(SpawnData spawnData, ProcEvents procEvents)
+		public ProcGenInjector(SpawnData spawnData, ProcEvents procEvents, ScoreCalculator scoreCalculator)
 		{
 			this.spawnData = spawnData;
 			this.procEvents = procEvents;
+            this.scoreCalculator = scoreCalculator;
 		}
 
 
 		public void BindAll()
 		{
+
 			//Pickups
 			var pickupPooler = new CoinPooler();
 			pickupPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
@@ -80,6 +84,7 @@ namespace VoxelPanda.Flow
 			
 			this.Bind(spawnData.Pickups, pickupPooler, pickupMapper);
 			pickupPooler.CreateSpawnables(spawnData.pickupPoolSize);
+            pickupPooler.SetScoreCalculator(scoreCalculator);
 			this.Bind(obstacleRandomizer, obstacleMapper);
 			obstacleSpawner.SetMapper(obstacleMapper);
 			procEvents.AddSpawningListener(new SpawnerData(obstacleSpawner, spawnData.obstaclesGenerationOffset, spawnData.obstaclesGenerationBuffer));
