@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.ProcGen;
 using VoxelPanda.ProcGen.Elements;
 
 [System.Serializable]
@@ -17,6 +18,22 @@ public class SpawnData : MonoBehaviour
 	public int obstaclePoolSize = 10;
 	[SerializeField]
 	public int pickupPoolSize = 10;
+	[SerializeField]
+	public int pathPoolSize = 10;
+	[SerializeField]
+	public int backdropPoolSize = 10;
+	[SerializeField]
+	public int obstaclesGenerationOffset = 5;
+	[SerializeField]
+	public int obstaclesGenerationBuffer = 40;
+	[SerializeField]
+	public float coinSpawnCriticalChance = 0.2f;
+	[SerializeField]
+	public float coinSpawnDangerousChance = 0.1f;
+	[SerializeField]
+	public float coinSpawnRiskyChance = 0.005f;
+	[SerializeField]
+	public int despawnDistanceFromPlayer = 20;
 
 	public IList<ISpawnable> Pickups
 	{

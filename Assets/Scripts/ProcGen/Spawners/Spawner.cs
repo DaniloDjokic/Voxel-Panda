@@ -16,9 +16,10 @@ namespace VoxelPanda.ProcGen.Spawners
 			this.mapper = mapper;
 		}
 
-		public void SpawnGrid(int width, int height)
+		public virtual int SpawnGrid(int startZ, int width, int height)
 		{
 			IList<IList<MapperNode>> grid = mapper.GetNodeMap(width, height);
+			int lastHeightGenerated = 0;
 			for(int i = 0; i < height; i++) 
 			{
 				for(int j = 0; j < width; j++)
@@ -26,8 +27,10 @@ namespace VoxelPanda.ProcGen.Spawners
 					var node = grid[i][j];
 					if (node.IsObjectRoot())
 					{
-						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, i * gridUnitToMeter /*+ (node.GetSpawnable().GetConcreteDimensions().y / 2)*/);
-						node.GetSpawnable().Spawn(dst);
+						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, startZ + i * gridUnitToMeter);
+						ISpawnable spawnable = node.GetSpawnable();
+						spawnable.Spawn(dst);
+						lastHeightGenerated = i + (int)spawnable.GetConcreteDimensions().y;
 					}
 					if (node.HasPickup())
 					{
@@ -36,6 +39,7 @@ namespace VoxelPanda.ProcGen.Spawners
 					}
 				}
 			}
+			return lastHeightGenerated + startZ;
 		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Player.Events;
 using VoxelPanda.ProcGen;
 using VoxelPanda.ProcGen.Elements;
 using VoxelPanda.ProcGen.Mappers;
@@ -25,13 +26,18 @@ namespace VoxelPanda.Flow
 		{
 			//Pickups
 			var pickupPooler = new CoinPooler();
+			pickupPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+			procEvents.AddPoolingListener(pickupPooler);
 			var pickupMapper = new CoinMapper();
+			pickupMapper.SetChances(spawnData.coinSpawnRiskyChance, spawnData.coinSpawnDangerousChance, spawnData.coinSpawnCriticalChance);
 
 			//Obstacles
-			var obstacleRandomizer = new ObsRandomizer();
+			var obstacleRandomizer = new PoolRandomizer();
 			foreach (var gridData in spawnData.Obstacles)
 			{
 				var obstaclePooler = new ObsPooler();
+				obstaclePooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+				procEvents.AddPoolingListener(obstaclePooler);
 				obstaclePooler.SetSpawnable(gridData);
 				obstaclePooler.CreateSpawnables(spawnData.obstaclePoolSize);
 				obstacleRandomizer.SetSubPooling(obstaclePooler);
@@ -42,12 +48,30 @@ namespace VoxelPanda.Flow
 			var obstacleSpawner = new ObsSpawner();
 
 			//Path
-			var pathPooler = new PathPooler();
+			var pathRandomizer = new PoolRandomizer();
+			foreach (var gridData in spawnData.Paths)
+			{
+				var pathPooler = new PathPooler();
+				pathPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+				procEvents.AddPoolingListener(pathPooler);
+				pathPooler.SetSpawnable(gridData);
+				pathPooler.CreateSpawnables(spawnData.pathPoolSize);
+				pathRandomizer.SetSubPooling(pathPooler);
+			}
 			var pathMapper = new PathMapper();
 			var pathSpawner = new PathSpawner();
 
 			//Backdrop
-			var backdropPooler = new BackdropPooler();
+			var backdropRandomizer = new PoolRandomizer();
+			foreach(var gridData in spawnData.Backdrops)
+			{
+				var backdropPooler = new BackdropPooler();
+				backdropPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
+				procEvents.AddPoolingListener(backdropPooler);
+				backdropPooler.SetSpawnable(gridData);
+				backdropPooler.CreateSpawnables(spawnData.backdropPoolSize);
+				backdropRandomizer.SetSubPooling(backdropPooler);
+			}
 			var backdropMapper = new BackdropMapper();
 			var backdropSpawner = new BackdropSpawner();
 
@@ -57,21 +81,24 @@ namespace VoxelPanda.Flow
 			this.Bind(spawnData.Pickups, pickupPooler, pickupMapper);
 			pickupPooler.CreateSpawnables(spawnData.pickupPoolSize);
 			this.Bind(obstacleRandomizer, obstacleMapper);
-			this.Bind(obstacleMapper, obstacleSpawner);
-			//this.Bind(spawnData.Paths, pathPooler, pathMapper, pathSpawner);
+			obstacleSpawner.SetMapper(obstacleMapper);
+			procEvents.AddSpawningListener(new SpawnerData(obstacleSpawner, spawnData.obstaclesGenerationOffset, spawnData.obstaclesGenerationBuffer));
+
+			this.Bind(pathRandomizer, pathMapper);
+			pathSpawner.SetMapper(pathMapper);
+
+			procEvents.AddSpawningListener(new SpawnerData(pathSpawner));
+
+			this.Bind(backdropRandomizer, backdropMapper);
+			backdropSpawner.SetMapper(backdropMapper);
+			procEvents.AddSpawningListener(new SpawnerData(backdropSpawner));
 			//this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
-			obstacleSpawner.SpawnGrid(10, 120);
 		}
 
 		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper)
 		{
 			Bind(spawnables, pooler);
 			Bind(pooler, mapper);
-		}
-		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper, ISpawning spawning)
-		{
-			Bind(spawnables, pooler, mapper);
-			Bind(mapper, spawning);
 		}
 		private void Bind(IList<ISpawnable> spawnables, IPooling pooler)
 		{
@@ -86,10 +113,6 @@ namespace VoxelPanda.Flow
 			mapper.SetPooler(pooler);
 
 		}
-		private void Bind(IMapping mapper, ISpawning spawning)
-		{
-			spawning.SetMapper(mapper);
-			this.procEvents.AddSpawningListener(spawning);
-		}
+
 	}
 }

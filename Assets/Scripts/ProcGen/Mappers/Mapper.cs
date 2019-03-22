@@ -21,7 +21,7 @@ namespace VoxelPanda.ProcGen.Mappers
 		public int minMapX = 0, maxMapX = 9;
 		public int minMapY = 0, maxMapY = 119;
 		//static
-		private static IList<IList<MapperNode>> BlankMap;
+		private IList<IList<MapperNode>> BlankMap;
 
 
 		public virtual IList<IList<MapperNode>> GetNodeMap(int width, int height)
@@ -110,7 +110,7 @@ namespace VoxelPanda.ProcGen.Mappers
 		{
 			chanceToSpawn = Mathf.Clamp(chanceToSpawn - chanceDecrementPerSpawn, 0, maxChanceToSpawn);
 		}
-		private static void FillBlankMap(int width, int height)
+		private void FillBlankMap(int width, int height)
 		{
 			BlankMap = new MapperNode[height][];
 			for (int i = 0; i < height; i++)
@@ -122,12 +122,9 @@ namespace VoxelPanda.ProcGen.Mappers
 				}
 			}
 		}
-		private static IList<IList<MapperNode>> GetBlankMap(int width, int height)
+		protected IList<IList<MapperNode>> GetBlankMap(int width, int height)
 		{
-			if (BlankMap == null || BlankMap.Count != height || BlankMap[0].Count != width)
-			{
-				FillBlankMap(width, height);
-			}
+			FillBlankMap(width, height);
 			return BlankMap;
 		}
 		

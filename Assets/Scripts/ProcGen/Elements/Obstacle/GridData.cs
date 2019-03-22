@@ -70,5 +70,11 @@ namespace VoxelPanda.ProcGen.Elements
 		{
 			this.SetOrientation((Random.Range(0, 2) == 0) ? Orientation.LEFT : Orientation.RIGHT);  
 		}
+
+		public Vector3 CurrentPosition()
+		{
+			return transform.position;
+		}
+
 	}
 }

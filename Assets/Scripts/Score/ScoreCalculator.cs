@@ -16,12 +16,10 @@ namespace VoxelPanda.Score
 
 		public void OnPositionChanged(Vector3 position)
 		{
-			throw new System.NotImplementedException();
 		}
 
 		public void OnVelocityChanged(Vector3 velocity)
 		{
-			throw new System.NotImplementedException();
 		}
 
 		public void Subscribe(IScoreListener listener)

@@ -11,14 +11,14 @@ public class PhysicsController : MonoBehaviour
     public Transform playerTransform;
     private Vector3 startingPosition;
 
-    private void Awake()
-    {
-        startingPosition = this.transform.position;
-    }
+	public void ResetPlayer()
+	{
+		dynamicMoveData.ResetValues();
+	}
 
-    public void ResetPosition()
+	public void ResetPosition()
     {
-        this.transform.position = startingPosition;
+        this.transform.position = constMoveData.playerStartPosition;
     }
 
     public void ApplyFlingForce(Vector3 flingForceVector)

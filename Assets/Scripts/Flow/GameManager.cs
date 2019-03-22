@@ -1,27 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Player.Events;
 using VoxelPanda.Player.Input;
+using VoxelPanda.ProcGen;
 
 namespace VoxelPanda.Flow
 {
-	public class GameManager
+	public class GameManager : IMoveListener
 	{
-		public GameState gameState = GameState.Running;
+		public GameState gameState = GameState.Stopped;
 
 		private PhysicsController player;
 		private RawAccInput accInput;
         private RawTouchInput touchInput;
 		private DeathController deathController;
 		private Crusher crusher;
+		public ProcEvents procEvents;
 
-		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher)
+		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents)
 		{
 			this.player = playerElements.physicsController;
 			this.accInput = playerElements.accInput;
             this.touchInput = playerElements.touchInput;
 			this.deathController = deathController;
 			this.crusher = crusher;
+			this.procEvents = procEvents;
 			deathController.gameManager = this;
 		}
 
@@ -33,7 +37,8 @@ namespace VoxelPanda.Flow
 		public void StartLevel()
 		{
 			crusher.ResetPosition();
-			player.ResetPosition();
+			player.ResetPlayer();
+			procEvents.OnPositionChanged(player.transform.position);
 			accInput.SetInputDetection(true);
             touchInput.SetInputDetection(true);
 			ChangeState(GameState.Start);
@@ -55,6 +60,7 @@ namespace VoxelPanda.Flow
 
 		public void EndRun()
 		{
+			procEvents.ResetAll();
 			deathController.RaiseScreen();
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);
@@ -65,6 +71,18 @@ namespace VoxelPanda.Flow
 		private void ChangeState(GameState newState)
 		{
 			gameState = newState;
+		}
+
+		public void OnPositionChanged(Vector3 position)
+		{
+			if (gameState == GameState.Start)
+			{
+				StartRunning();
+			}
+		}
+
+		public void OnVelocityChanged(Vector3 velocity)
+		{
 		}
 	}
 	public enum GameState { Start, Running, Paused, Stopped }
