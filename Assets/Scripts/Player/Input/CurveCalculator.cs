@@ -5,17 +5,54 @@ using VoxelPanda.Player.Events;
 
 namespace VoxelPanda.Player.Input
 {
-	public class CurveCalculator : InputCalculator
-	{
-		private List<ICurveListener> listeners = new List<ICurveListener>();
+    public class CurveCalculator : InputCalculator
+    {
+        
+        private CurveData curveData = new CurveData();
 
-		public CurveCalculator(RawInput rawInput, ConstMoveData constMoveData, DynamicMoveData dynMoveData) : base(rawInput, constMoveData, dynMoveData)
-		{
-		}
+        private List<ICurveListener> listeners = new List<ICurveListener>();
 
-		public void Subscribe(ICurveListener listener)
-		{
-			listeners.Add(listener);
-		}
-	}
+        public void UpdateRawAccelerationVector(Vector3 newAccelerationVector)
+        {
+            if (newAccelerationVector.magnitude > constMoveData.accelerationDeadzone)
+            {
+                curveData.RawAccelerationVector = newAccelerationVector;
+                curveData.ModifiedAccelerationVector = ModifyAcceleration(newAccelerationVector);
+
+                physicsController.ApplyCurveForce(curveData.ModifiedAccelerationVector * constMoveData.curveForce);
+                CurveRunning(curveData);
+            }
+        }
+
+        private Vector3 ModifyAcceleration(Vector3 rawAccelerationvector)
+        {
+            return rawAccelerationvector * constMoveData.accelerationFunctionModifier;
+        }
+
+        #region Observers  Logic
+        public void Subscribe(ICurveListener listener)
+        {
+            if (!listeners.Contains(listener))
+            {
+                listeners.Remove(listener);
+            }
+        }
+
+        void RemoveListener(ICurveListener listener)
+        {
+            if (listeners.Contains(listener))
+            {
+                listeners.Remove(listener);
+            }
+        }
+
+        void CurveRunning(CurveData curveData)
+        {
+            foreach (ICurveListener listener in listeners)
+            {
+                listener.OnCurveChanged(curveData);
+            }
+        }
+        #endregion
+    }
 }

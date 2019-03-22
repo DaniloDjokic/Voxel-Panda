@@ -55,10 +55,11 @@ namespace VoxelPanda.Flow
 			obstacleMapper.SetSubMapper(pickupMapper);
 			
 			this.Bind(spawnData.Pickups, pickupPooler, pickupMapper);
+			pickupPooler.CreateSpawnables(spawnData.pickupPoolSize);
 			this.Bind(obstacleRandomizer, obstacleMapper);
 			this.Bind(obstacleMapper, obstacleSpawner);
-			this.Bind(spawnData.Paths, pathPooler, pathMapper, pathSpawner);
-			this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
+			//this.Bind(spawnData.Paths, pathPooler, pathMapper, pathSpawner);
+			//this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
 			obstacleSpawner.SpawnGrid(10, 120);
 		}
 

@@ -10,22 +10,22 @@ namespace VoxelPanda.Player.Presentation
 
 		public void OnCurveChanged(CurveData curveData)
 		{
-			throw new System.NotImplementedException();
+			//throw new System.NotImplementedException();
 		}
 
 		public void OnFlingEnded(FlingData flingData)
 		{
-			throw new System.NotImplementedException();
+			//throw new System.NotImplementedException();
 		}
 
 		public void OnFlingRunning(FlingData flingData)
 		{
-			throw new System.NotImplementedException();
+			//throw new System.NotImplementedException();
 		}
 
 		public void OnFlingStarted(FlingData flingData)
 		{
-			throw new System.NotImplementedException();
+			//throw new System.NotImplementedException();
 		}
 
 		public void OnPositionChanged(Vector3 position)
@@ -33,7 +33,12 @@ namespace VoxelPanda.Player.Presentation
 			throw new System.NotImplementedException();
 		}
 
-		public void OnVelocityChanged(Vector3 velocity)
+        public void OnStaminaChanged(FlingData flingData)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnVelocityChanged(Vector3 velocity)
 		{
 			throw new System.NotImplementedException();
 		}

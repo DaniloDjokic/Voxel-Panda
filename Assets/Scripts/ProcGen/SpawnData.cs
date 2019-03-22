@@ -15,6 +15,8 @@ public class SpawnData : MonoBehaviour
 	private List<Backdrop> backdrops;
 	[SerializeField]
 	public int obstaclePoolSize = 10;
+	[SerializeField]
+	public int pickupPoolSize = 10;
 
 	public IList<ISpawnable> Pickups
 	{

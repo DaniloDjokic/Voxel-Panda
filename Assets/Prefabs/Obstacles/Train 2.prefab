@@ -50,6 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4008219809431810}
+  - component: {fileID: 114109469845778032}
   m_Layer: 0
   m_Name: Train 2
   m_TagString: Obstacle
@@ -114,7 +115,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663233547189922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -2.5, y: 0.5, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4101594037029642}
@@ -286,6 +287,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114109469845778032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663233547189922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0baabaa572bb3884a94f41f40a596cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridData: {fileID: 114697213162171274}
+  train: {fileID: 4101594037029642}
+  trainSpeed: 5
+  trainStoppageTime: 1
 --- !u!114 &114697213162171274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -299,3 +315,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 1
   gridMatrix: {fileID: 11400000, guid: d9831931837f4354fb10c0c5a1da2b9f, type: 2}
+  orientation: 1
+  rotationPivot: {fileID: 0}
