@@ -31,13 +31,13 @@ namespace VoxelPanda.Flow
 
 		public void BindAll()
 		{
-			moveEvents = new MoveEvents();
+			moveEvents = new MoveEvents(dMoveData);
 			procEvents = new ProcEvents(moveEvents);
 
 			ProcGenInjector pgInjector = new ProcGenInjector(spawnData, procEvents);
 			pgInjector.BindAll();
 
-			scoreCalculator = new ScoreCalculator(moveEvents);
+			scoreCalculator = new ScoreCalculator(moveEvents, dMoveData.currentPosition);
 			scoreCalculator.Subscribe(scoreUI);
 			deathController = new DeathController(scoreCalculator, deathUI);
 			gameManager = new GameManager(playerElements, deathController, crusher);
@@ -45,8 +45,6 @@ namespace VoxelPanda.Flow
 			crusher.Bind(gameManager, playerElements.physicsController.transform);
 
 			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher);
-
-
 		}
 	}
 }
