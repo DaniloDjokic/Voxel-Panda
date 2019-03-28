@@ -7,9 +7,15 @@ public class CannonBehaviour : ObsBehaviour
 {
     public GameObject bullet;
     public float secondsBetweenShots;
+    public float phaseStart = 0f;
     private float timer = 0f;
 
     BulletBehaviour activeBullet;
+
+    private void Start() {
+    	timer = phaseStart;
+    }
+
     private void Update()
     {
         Fire();
