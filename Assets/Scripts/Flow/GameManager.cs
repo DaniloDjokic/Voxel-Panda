@@ -49,6 +49,16 @@ namespace VoxelPanda.Flow
 			ChangeState(GameState.Start);
 		}
 
+		public void RestartLevel()
+		{
+			crusher.ResetPositionForRevive();
+			player.RevivePlayer();
+			accInput.SetInputDetection(true);
+			touchInput.SetInputDetection(true);
+
+			ChangeState(GameState.Start);
+		}
+
 		public void StartRunning()
 		{
 			crusher.SetShouldMove(true);
