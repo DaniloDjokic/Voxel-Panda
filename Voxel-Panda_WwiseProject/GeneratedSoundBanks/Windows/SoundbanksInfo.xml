@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,6 +15,34 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4072029455" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
+			<ShortName>New_SoundBank</ShortName>
+			<Path>New_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate"/>
+				<Event Id="3678449574" Name="Play_Swipe_Pull" ObjectPath="\Events\Default Work Unit\Play_Swipe_Pull"/>
+				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="404366919" Language="SFX">
+					<ShortName>SwipeRelease_4_1.wav</ShortName>
+					<Path>SFX\SwipeRelease_4_1_56D34C19.wem</Path>
+				</File>
+				<File Id="411884726" Language="SFX">
+					<ShortName>Pull2_1.wav</ShortName>
+					<Path>SFX\Pull2_1_625F40C8.wem</Path>
+				</File>
+				<File Id="587656586" Language="SFX">
+					<ShortName>SkateLoop.wav</ShortName>
+					<Path>SFX\SkateLoop_8956FC97_CA6E67AC.wem</Path>
+				</File>
+				<File Id="709625329" Language="SFX">
+					<ShortName>SwipeRelease_4_2.wav</ShortName>
+					<Path>SFX\SwipeRelease_4_2_56D34C19.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

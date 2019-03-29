@@ -1,6 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" SchemaVersion="89">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Swipe_Pull" ID="{894AF518-041B-4805-800E-04FE07A586FE}">
+					<ChildrenList>
+						<Action Name="" ID="{8562A116-381A-42BF-A809-DD035CDA0EC1}" ShortID="676058600">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swipe_Pull_1" ID="{CDA53BC6-66F0-483A-997E-7364467E4AAB}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A5E7553C-F0E2-4F92-8E97-CDBC754A4066}" ShortID="280382345">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swipe_Pull_2" ID="{AC8BCE14-6572-4BCD-8B0D-CA815BAC3695}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7BD71CBE-489A-4CE7-A918-B0181C25453E}" ShortID="110677381">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swipe_Pull_3" ID="{386A60F9-811C-461E-A646-FEEBE624C54F}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Swipe_Release" ID="{08E2F55F-9C53-4583-8F8A-066C90963C72}">
+					<ChildrenList>
+						<Action Name="" ID="{4D433A22-BAB6-4D93-A4BC-6A01AC67ABC0}" ShortID="319641417">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swipe_Release_4" ID="{7E6392C9-2554-4220-9997-782C9729522D}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Skate" ID="{7DF390D2-0F49-4A83-873B-0FD7B5A762CD}">
+					<ChildrenList>
+						<Action Name="" ID="{300887EF-54B1-4E2F-B2E3-F29A7608E2C8}" ShortID="61095435">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SkateLoop" ID="{65DC962E-7642-40D2-BB56-C6AE7D1EEA33}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_WallKick" ID="{F60980B4-9BA8-4367-9BB7-0E756907BE1B}">
+					<ChildrenList>
+						<Action Name="" ID="{881A3F96-A36B-4E0B-92F2-2B02017E7D4B}" ShortID="873891802">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WallKick" ID="{89245EB7-49DE-4037-AEF0-8B93B42E3881}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_GameplayMusic" ID="{BF47E2B1-5D89-4A5F-8102-9149A6246732}">
+					<ChildrenList>
+						<Action Name="" ID="{49ACBEFD-B351-4FD7-BD1E-B3F1A07F12FD}" ShortID="697435604">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VoxelPandaGameplayMusic1" ID="{67BBCCAD-C625-4324-B058-7C15534EDC85}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Coin" ID="{358ACB91-AA25-4757-A7C3-1A697FECE811}">
+					<ChildrenList>
+						<Action Name="" ID="{0B669C67-951D-4603-B5A0-284BF43151A3}" ShortID="330636854">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Coin" ID="{D82C6ADF-5C80-4D45-95BF-CCE471BABE27}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

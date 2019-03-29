@@ -11,6 +11,24 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAY_SKATE = 1618563948U;
+        static const AkUniqueID PLAY_SWIPE_PULL = 3678449574U;
+        static const AkUniqueID PLAY_SWIPE_RELEASE = 2803607158U;
+    } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID SKATE_SPEED = 3490328425U;
+    } // namespace GAME_PARAMETERS
+
+    namespace BANKS
+    {
+        static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID NEW_SOUNDBANK = 4072029455U;
+    } // namespace BANKS
+
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{430C24AF-3E9B-43FD-A14A-C64B5D636DD3}" SchemaVersion="89">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{430C24AF-3E9B-43FD-A14A-C64B5D636DD3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{430C24AF-3E9B-43FD-A14A-C64B5D636DD3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="New_SoundBank" ID="{82A49EA2-41DC-4FE9-B632-5F61341EEE7F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Swipe_Release" ID="{08E2F55F-9C53-4583-8F8A-066C90963C72}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Swipe_Pull" ID="{894AF518-041B-4805-800E-04FE07A586FE}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Skate" ID="{7DF390D2-0F49-4A83-873B-0FD7B5A762CD}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1618563948	Play_Skate			\Default Work Unit\Play_Skate	
+	2803607158	Play_Swipe_Release			\Default Work Unit\Play_Swipe_Release	
+	3678449574	Play_Swipe_Pull			\Default Work Unit\Play_Swipe_Pull	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3490328425	Skate_Speed			\Default Work Unit\Skate_Speed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	404366919	SwipeRelease_4_1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\SFX\SwipeRelease_4_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Release\Swipe_Release_4\SwipeRelease_4_1		11090
+	411884726	Pull2_1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\SFX\Pull2_1_625F40C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Pull\Swipe_Pull_2\Pull2_1		54834
+	587656586	SkateLoop	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\SFX\SkateLoop_8956FC97_CA6E67AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\SkateLoop		198514
+	709625329	SwipeRelease_4_2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\SFX\SwipeRelease_4_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Release\Swipe_Release_4\SwipeRelease_4_2		11090
+
