@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

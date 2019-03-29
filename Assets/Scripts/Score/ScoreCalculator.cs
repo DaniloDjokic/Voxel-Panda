@@ -15,11 +15,16 @@ namespace VoxelPanda.Score
         private float bestZ = 0f;
         private float currentScore = 0f;
         private float coinScore = 0f;
+		private float currentHighScore = 0f;
+		private const string highScoreKey = "VP_HIGHSCORE";
 
 		public ScoreCalculator(MoveEvents moveEvents)
 		{
 			moveEvents.Subscribe(this);
+			LoadHighScore();
 		}
+
+
 
         public int GetScore()
         {
@@ -28,6 +33,7 @@ namespace VoxelPanda.Score
 
         public void Reset()
         {
+			UpdateHighScore();
             currentScore = bestZ = coinScore = 0f;
             NotifyScoreChanged(Mathf.Round(currentScore));
         }
@@ -63,6 +69,30 @@ namespace VoxelPanda.Score
 			if(!listeners.Contains(listener))
 			{
 				listeners.Add(listener);
+			}
+		}
+
+
+		public int GetHighScore()
+		{
+			return (int)Mathf.Round(currentHighScore);
+		}
+
+		public bool HighScoreReached()
+		{
+			return currentScore >= currentHighScore;
+		}
+
+		private void LoadHighScore()
+		{
+			currentHighScore = PlayerPrefs.GetFloat(highScoreKey);
+		}
+		private void UpdateHighScore()
+		{
+			if(currentScore > currentHighScore)
+			{
+				currentHighScore = currentScore;
+				PlayerPrefs.SetFloat(highScoreKey, currentScore);
 			}
 		}
 

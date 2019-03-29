@@ -15,6 +15,10 @@ public class PhysicsController : MonoBehaviour
 	{
 		dynamicMoveData.ResetValues();
 	}
+	public void RevivePlayer()
+	{
+
+	}
 
 	public void ResetPosition()
     {

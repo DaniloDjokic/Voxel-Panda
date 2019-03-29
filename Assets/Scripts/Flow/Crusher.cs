@@ -22,6 +22,8 @@ namespace VoxelPanda.Flow
 		private const string obstacleTag = "Obstacle";
 		private GameManager gameManager;
 		private Transform player;
+		public float reviveDistanceOffset;
+
 		public Vector3 startingPosition;
 
 		public void Bind(GameManager gameManager, Transform player)
@@ -43,6 +45,10 @@ namespace VoxelPanda.Flow
 		public void ResetPosition()
 		{
 			this.transform.position = startingPosition;
+		}
+		public void ResetPositionForRevive()
+		{
+			this.transform.position = new Vector3(player.position.x, this.transform.position.y, player.position.z - reviveDistanceOffset);
 		}
 		public void SetShouldMove(bool shouldMove)
 		{

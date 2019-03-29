@@ -44,6 +44,13 @@ public class DynamicMoveData : MonoBehaviour
 		currentPosition = physicsController.playerTransform.position;
 		fireEvents = true;
 	}
+	public void RevivePlayer()
+	{
+		fireEvents = false;
+		currentVelocity = physicsController.playerRigidBody.velocity = Vector3.zero;
+		currentPosition = physicsController.playerTransform.position;
+		fireEvents = true;
+	}
 
     private void VelocityChanged(Vector3 velocity)
     {

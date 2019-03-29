@@ -14,8 +14,15 @@ namespace VoxelPanda.Flow
 		public GameObject deathScreen;
 		private DeathController deathController;
 		public Button restartButton;
+		public GameObject revivalPrompt;
+		public Text restartButtonText;
 		public Text countdownTimer;
+		public Text highScoreText;
 		public string countdownPreText = "Starting in:\n";
+		public string restartText = "Try Again";
+		public string reviveText = "Revive!";
+		public string highScoreTextPrefix = "High score: ";
+		public string highScoreReachedText = "High Score Reached!";
 		private string countdownText = "";
 		public float countdownTime = 3f;
 		private float currentTime = 0f;
@@ -31,6 +38,7 @@ namespace VoxelPanda.Flow
 		{
 			UpdateCountDown();
 		}
+
 		private void UpdateCountDown()
 		{
 			if(isCountingDown)
@@ -44,12 +52,22 @@ namespace VoxelPanda.Flow
 				}
 			}
 		}
+
 		public void RaiseScreen()
 		{
+			revivalPrompt.SetActive(false);
+			ChangeRestartText(false);
 			restartButton.gameObject.SetActive(true);
 			countdownTimer.gameObject.SetActive(false);
 			deathScreen.SetActive(true);
             scoreText.text = scoreCalculator.GetScore().ToString();
+			if (scoreCalculator.HighScoreReached())
+			{
+				highScoreText.text = highScoreReachedText;
+			} else
+			{
+				highScoreText.text = highScoreTextPrefix + scoreCalculator.GetHighScore().ToString();
+			}
 		}
 		public void LowerScreen()
 		{
@@ -73,6 +91,22 @@ namespace VoxelPanda.Flow
 		{
 			isCountingDown = false;
 			deathController.StartAgain();
+		}
+
+		public void ChangeRestartText(bool shouldRevive)
+		{
+			restartButtonText.text = (shouldRevive) ? reviveText : restartText;
+		}
+
+		public void EnableRevivalPrompt()
+		{
+			revivalPrompt.SetActive(true);
+		}
+
+		public void OnRevivalPromptClick()
+		{
+			deathController.TryToRevive();
+			revivalPrompt.SetActive(false);
 		}
 	}
 }
