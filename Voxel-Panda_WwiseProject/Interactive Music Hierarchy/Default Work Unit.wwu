@@ -5,9 +5,10 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="Music" ID="{F6535ACD-1295-497F-A6F6-B6BC0961F5CC}" ShortID="464545258">
 					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="158"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-13</Value>
+								<Value>-12</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -20,124 +21,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicSegment Name="VoxelPanda_Loop2" ID="{0B78C346-E1CF-42A4-AD66-8C20AEE60748}" ShortID="1035095717">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="24367.3922902494"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="VoxelPanda_Loop2" ID="{1F9F73CB-6471-4839-8AF8-CE9FC7CE9123}" ShortID="350352309">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VoxelPanda_Loop2" ID="{80260E0B-8CB2-4CB7-A8C7-A4188E47663D}" ShortID="302087857">
-											<Language>SFX</Language>
-											<AudioFile>VoxelPanda_Loop2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{5F2C4877-8CC8-4C87-81B0-5DC9F6A6BA5B}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{CAE69321-AE69-4251-8DF4-9B305A96C411}">
-											<ClipList>
-												<MusicClip Name="VoxelPanda_Loop2" ID="{5D435873-AD53-44B9-BB04-EE679FF183AB}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="24367.3922902494"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="VoxelPanda_Loop2" ID="{80260E0B-8CB2-4CB7-A8C7-A4188E47663D}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{FC77BCA4-73B8-47B7-B6BF-846A4829A773}"/>
-								<MusicCue Name="Exit Cue" ID="{232665A1-E42F-4879-A0E0-8E8D321894F4}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="24367.3922902494"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-						<MusicSegment Name="VoxelPanda_Loop3" ID="{01EDF6EC-3667-4B86-8F0A-B98030CF8A1A}" ShortID="627539641">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="24367.3922902494"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="VoxelPanda_Loop3" ID="{F2C29C27-2B7F-466F-911E-F338B98E66FD}" ShortID="387207692">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VoxelPanda_Loop3" ID="{5EC5B641-AFE1-4AA5-A4E6-E9BBA1DFB9C4}" ShortID="177644634">
-											<Language>SFX</Language>
-											<AudioFile>VoxelPanda_Loop3.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{4CE83FD3-3286-4C23-958D-0369AF803261}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{3090E366-5164-48D0-97A7-363EA91C6F78}">
-											<ClipList>
-												<MusicClip Name="VoxelPanda_Loop3" ID="{927E5707-C10F-402F-A8DA-08D3666D98CD}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="24367.3922902494"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="VoxelPanda_Loop3" ID="{5EC5B641-AFE1-4AA5-A4E6-E9BBA1DFB9C4}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{70CFD044-F069-42F0-AA0B-0198F2CF4CC2}"/>
-								<MusicCue Name="Exit Cue" ID="{60DF2E43-2E99-4A71-9090-BFB4DFE7AE87}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="24367.3922902494"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
 						<MusicSegment Name="VoxelPanda_Loop4" ID="{A20BC859-9CD7-4F71-9443-86B184F6442F}" ShortID="1068117106">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="24367.3922902494"/>
@@ -374,65 +257,6 @@
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
-						<MusicSegment Name="VoxelPanda_Loop8" ID="{F4BBC882-0F52-49B3-A039-CD181C043635}" ShortID="436151706">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="24367.3922902494"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="VoxelPanda_Loop8" ID="{3D816800-B914-4935-93D2-F2258498B585}" ShortID="894179865">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VoxelPanda_Loop8" ID="{C27C6578-70FA-42A0-BC70-938A24A51034}" ShortID="592243212">
-											<Language>SFX</Language>
-											<AudioFile>VoxelPanda_Loop8.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{05917BB4-5843-481D-A861-08A832FF57E0}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{F3DBF890-91A3-4DF2-9F9E-136467236FB7}">
-											<ClipList>
-												<MusicClip Name="VoxelPanda_Loop8" ID="{52DD2D1C-4157-43CF-BD71-8857C599EB16}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="24367.3922902494"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="VoxelPanda_Loop8" ID="{C27C6578-70FA-42A0-BC70-938A24A51034}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{FB5F5819-7C4C-4A2B-B44E-C6140D405918}"/>
-								<MusicCue Name="Exit Cue" ID="{99025966-01B8-4052-B20B-D15C5DA13551}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="24367.3922902494"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
 						<MusicSegment Name="VoxelPandaTheme_Loop1" ID="{C9392051-DC59-4FE1-904C-AAC462D488ED}" ShortID="769120397">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="24367.3922902494"/>
@@ -494,7 +318,7 @@
 						</MusicSegment>
 						<MusicSegment Name="VoxelPanda_PreStart_Fx" ID="{4EBC49BD-F944-4E3B-815F-DA50E34E9678}" ShortID="979617245">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="3375"/>
+								<Property Name="EndPosition" Type="Real64" Value="6075.94936708861"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -530,7 +354,7 @@
 											<ClipList>
 												<MusicClip Name="VoxelPanda_PreStart_Fx" ID="{FD8DCE12-277B-43C9-AADA-D0F6BDF55FDD}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="3125"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="6075.94936708861"/>
 														<Property Name="FadeInDuration" Type="Real64" Value="644.82328306961"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="106.362603392925"/>
 													</PropertyList>
@@ -548,7 +372,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3.125</XPos>
+																		<XPos>6.07595</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -567,7 +391,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3.125</XPos>
+																		<XPos>6.07595</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -586,7 +410,7 @@
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>3.125</XPos>
+																		<XPos>6.07595</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -605,7 +429,7 @@
 								<MusicCue Name="Exit Cue" ID="{162B1BE6-C004-4ABE-947E-93F91E274974}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="3000"/>
+										<Property Name="TimeMs" Type="Real64" Value="3037.9746835443"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
@@ -650,12 +474,6 @@
 										<Property Name="PlayMode" Type="int16" Value="2"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{E4A6E5BA-A038-4DB5-9793-B9BB36C0C43C}" ShortID="567802126">
-											<PropertyList>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="VoxelPanda_Loop8" ID="{F4BBC882-0F52-49B3-A039-CD181C043635}"/>
-										</MusicPlaylistItem>
 										<MusicPlaylistItem Name="" ID="{0AC07D1F-F139-4054-9E22-90C0AFAB2882}" ShortID="253358219">
 											<PropertyList>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
@@ -680,18 +498,6 @@
 											</PropertyList>
 											<SegmentRef Name="VoxelPanda_Loop4" ID="{A20BC859-9CD7-4F71-9443-86B184F6442F}"/>
 										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{71EA989C-97CD-454B-A319-C102D9FD83B7}" ShortID="721668900">
-											<PropertyList>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="VoxelPanda_Loop3" ID="{01EDF6EC-3667-4B86-8F0A-B98030CF8A1A}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{9D47682E-9399-46F9-80CB-C24BEE058E6C}" ShortID="275729005">
-											<PropertyList>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="VoxelPanda_Loop2" ID="{0B78C346-E1CF-42A4-AD66-8C20AEE60748}"/>
-										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
 							</ChildrenList>
@@ -700,9 +506,10 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="MenuMusic" ID="{B87A4D8C-5422-4A16-AC30-9D60E1FB8B43}" ShortID="817940013">
 					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="158"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-12</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

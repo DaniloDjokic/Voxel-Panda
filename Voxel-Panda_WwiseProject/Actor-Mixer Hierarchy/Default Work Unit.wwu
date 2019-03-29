@@ -413,8 +413,41 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-19</Value>
+										<Value>-6</Value>
 									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{04B6BE89-2328-4397-A9B1-75942831E5EB}" ShortID="112575788">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8AB8E18D-F7CE-4078-9511-98918B0AB1B0}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>7.5</XPos>
+														<YPos>-13</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>40</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -456,6 +489,33 @@
 									<ValueList>
 										<Value>-14</Value>
 									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{D6218516-8833-4C84-B247-A512BB805AEE}" ShortID="211665126">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{68122E6A-81B2-405A-B9DF-2479F7A4C92F}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-6.24051</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>40</XPos>
+														<YPos>10.45757</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>

@@ -33,7 +33,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}"/>
-							<Value>8</Value>
+							<Value>40</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

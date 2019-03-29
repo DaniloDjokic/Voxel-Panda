@@ -97,7 +97,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="VoxelPandaGameplayMusic1" ID="{67BBCCAD-C625-4324-B058-7C15534EDC85}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
+									<ObjectRef Name="Music" ID="{F6535ACD-1295-497F-A6F6-B6BC0961F5CC}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -112,6 +112,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Coin" ID="{D82C6ADF-5C80-4D45-95BF-CCE471BABE27}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MenuMusic" ID="{885376EF-0A4D-49E2-A6BE-1E1D6D825031}">
+					<ChildrenList>
+						<Action Name="" ID="{28E389E2-7FBC-4F15-8398-EB9CBD9A5C22}" ShortID="989689844">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MenuMusic" ID="{B87A4D8C-5422-4A16-AC30-9D60E1FB8B43}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

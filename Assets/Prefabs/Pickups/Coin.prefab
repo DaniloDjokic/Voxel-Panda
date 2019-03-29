@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4674791989262108}
   - component: {fileID: 135492975296395898}
   - component: {fileID: 114715524485957502}
+  - component: {fileID: 114983401543485992}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -158,6 +159,28 @@ MonoBehaviour:
   gridMatrix: {fileID: 11400000, guid: 424eade3d3f964542a2bd74c36919ccd, type: 2}
   orientation: 1
   rotationPivot: {fileID: 0}
+  coinTriggerEvent: Play_Coin
+--- !u!114 &114983401543485992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103724621744538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6f7cf82ac14f34d8405b07b5a2cfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!135 &135492975296395898
 SphereCollider:
   m_ObjectHideFlags: 1
