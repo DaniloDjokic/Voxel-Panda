@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/AuxScene.unity
     guid: 5566cb3322042b740b8848b6f0fef3ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AdScene.unity
     guid: aebdbd223333c884e94dace6e244050a
+  - enabled: 1
+    path: Assets/Scenes/AudioScene.unity
+    guid: 631bb0bbc10c1e5458ca4884b9c82f1f
   m_configObjects: {}
