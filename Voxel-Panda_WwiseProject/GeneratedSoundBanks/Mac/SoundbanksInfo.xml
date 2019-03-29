@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\DharmaGames\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -15,6 +15,90 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4072029455" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
+			<ShortName>New_SoundBank</ShortName>
+			<Path>New_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3114179205" Name="Play_Coin" ObjectPath="\Events\Default Work Unit\Play_Coin"/>
+				<Event Id="2481433679" Name="Play_GameplayMusic" ObjectPath="\Events\Default Work Unit\Play_GameplayMusic"/>
+				<Event Id="2570041344" Name="Play_MenuMusic" ObjectPath="\Events\Default Work Unit\Play_MenuMusic"/>
+				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate"/>
+				<Event Id="3678449574" Name="Play_Swipe_Pull" ObjectPath="\Events\Default Work Unit\Play_Swipe_Pull"/>
+				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
+				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="14775637" Language="SFX">
+					<ShortName>WallKick3.wav</ShortName>
+					<Path>SFX\WallKick3_56D34C19.wem</Path>
+				</File>
+				<File Id="103177881" Language="SFX">
+					<ShortName>WallKick 1.wav</ShortName>
+					<Path>SFX\WallKick 1_56D34C19.wem</Path>
+				</File>
+				<File Id="300004841" Language="SFX">
+					<ShortName>Coin1.wav</ShortName>
+					<Path>SFX\Coin1_56D34C19.wem</Path>
+				</File>
+				<File Id="325845651" Language="SFX">
+					<ShortName>VoxelPanda_Loop6.wav</ShortName>
+					<Path>SFX\VoxelPanda_Loop6_8956FC97.wem</Path>
+				</File>
+				<File Id="380212301" Language="SFX">
+					<ShortName>VoxelPanda_Loop5.wav</ShortName>
+					<Path>SFX\VoxelPanda_Loop5_8956FC97.wem</Path>
+				</File>
+				<File Id="404366919" Language="SFX">
+					<ShortName>SwipeRelease_4_1.wav</ShortName>
+					<Path>SFX\SwipeRelease_4_1_56D34C19.wem</Path>
+				</File>
+				<File Id="411884726" Language="SFX">
+					<ShortName>Pull2_1.wav</ShortName>
+					<Path>SFX\Pull2_1_625F40C8.wem</Path>
+				</File>
+				<File Id="480031258" Language="SFX">
+					<ShortName>WallKick2.wav</ShortName>
+					<Path>SFX\WallKick2_56D34C19.wem</Path>
+				</File>
+				<File Id="481497763" Language="SFX">
+					<ShortName>VoxelPanda_PreStart_Fx.wav</ShortName>
+					<Path>SFX\VoxelPanda_PreStart_Fx_8956FC97.wem</Path>
+				</File>
+				<File Id="534643346" Language="SFX">
+					<ShortName>VoxelPandaTheme_Loop1.wav</ShortName>
+					<Path>SFX\VoxelPandaTheme_Loop1_8956FC97.wem</Path>
+				</File>
+				<File Id="587656586" Language="SFX">
+					<ShortName>SkateLoop.wav</ShortName>
+					<Path>SFX\SkateLoop_8956FC97_CA6E67AC.wem</Path>
+				</File>
+				<File Id="709625329" Language="SFX">
+					<ShortName>SwipeRelease_4_2.wav</ShortName>
+					<Path>SFX\SwipeRelease_4_2_56D34C19.wem</Path>
+				</File>
+				<File Id="717490860" Language="SFX">
+					<ShortName>VoxelPanda_Loop4.wav</ShortName>
+					<Path>SFX\VoxelPanda_Loop4_8956FC97.wem</Path>
+				</File>
+				<File Id="728904219" Language="SFX">
+					<ShortName>VoxelPandaMenu.wav</ShortName>
+					<Path>SFX\VoxelPandaMenu_8956FC97.wem</Path>
+				</File>
+				<File Id="814602296" Language="SFX">
+					<ShortName>Coin3.wav</ShortName>
+					<Path>SFX\Coin3_56D34C19.wem</Path>
+				</File>
+				<File Id="872231671" Language="SFX">
+					<ShortName>Coin2.wav</ShortName>
+					<Path>SFX\Coin2_56D34C19.wem</Path>
+				</File>
+				<File Id="930236180" Language="SFX">
+					<ShortName>VoxelPanda_Loop7.wav</ShortName>
+					<Path>SFX\VoxelPanda_Loop7_8956FC97.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

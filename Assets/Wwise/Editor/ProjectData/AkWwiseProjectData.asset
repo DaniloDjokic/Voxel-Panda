@@ -21,20 +21,113 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586519073068454244
+    m_lastTime: -8586477296115219017
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586519073068374885
-    List: []
+    m_lastTime: -8586477365125466177
+    List:
+    - name: New_SoundBank
+      guid: a29ea482dc41e94fb6325f61341eee7f
+      id: 4072029455
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\New_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586519073068593123
-    List: []
+    m_lastTime: -8586477369018508846
+    List:
+    - name: Play_Coin
+      guid: 91cb8a3525aa5747a7c31a697fece811
+      id: 3114179205
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Coin
+        ObjectType: 3
+      Path: Default Work Unit\Play_Coin
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_GameplayMusic
+      guid: b1e247bf895d5f4a81029149a6246732
+      id: 2481433679
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_GameplayMusic
+        ObjectType: 3
+      Path: Default Work Unit\Play_GameplayMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_MenuMusic
+      guid: ef7653884d0ae249a6be1e1d6d825031
+      id: 2570041344
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_MenuMusic
+        ObjectType: 3
+      Path: Default Work Unit\Play_MenuMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Skate
+      guid: d290f37d490f834a873b0fd7b5a762cd
+      id: 1618563948
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Skate
+        ObjectType: 3
+      Path: Default Work Unit\Play_Skate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Swipe_Pull
+      guid: 18f54a891b040548800e04fe07a586fe
+      id: 3678449574
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Swipe_Pull
+        ObjectType: 3
+      Path: Default Work Unit\Play_Swipe_Pull
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Swipe_Release
+      guid: 5ff5e208539c83458f8a066c90963c72
+      id: 2803607158
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Swipe_Release
+        ObjectType: 3
+      Path: Default Work Unit\Play_Swipe_Release
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_WallKick
+      guid: b48009f6a89b67439bb70e756907be1b
+      id: 2567365808
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_WallKick
+        ObjectType: 3
+      Path: Default Work Unit\Play_WallKick
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -61,5 +154,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Voxel-Panda_WwiseProject
+  - /Voxel-Panda_WwiseProject/Events
+  - /Voxel-Panda_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
