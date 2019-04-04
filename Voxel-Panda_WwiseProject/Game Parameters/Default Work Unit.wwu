@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}" SchemaVersion="89">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="40"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="3"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="4"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

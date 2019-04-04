@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A78DB138-D355-4C1B-9AF3-1EC7532E513E}" SchemaVersion="89">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{A78DB138-D355-4C1B-9AF3-1EC7532E513E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A78DB138-D355-4C1B-9AF3-1EC7532E513E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{9A5A6236-79D7-4808-A152-56F6512A0DA5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Swipe_Pull" ID="{894AF518-041B-4805-800E-04FE07A586FE}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Skate" ID="{7DF390D2-0F49-4A83-873B-0FD7B5A762CD}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_GameplayMusic" ID="{BF47E2B1-5D89-4A5F-8102-9149A6246732}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Swipe_Release" ID="{08E2F55F-9C53-4583-8F8A-066C90963C72}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Coin" ID="{358ACB91-AA25-4757-A7C3-1A697FECE811}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_WallKick" ID="{F60980B4-9BA8-4367-9BB7-0E756907BE1B}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}"/>
+							<Value>40</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
