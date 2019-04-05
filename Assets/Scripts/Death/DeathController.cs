@@ -70,6 +70,11 @@ namespace VoxelPanda.Flow
 		{
 			adManager.TryToShowRewardVideo();
 		}
+
+		public void Quit()
+		{
+			gameManager.Quit();
+		}
 	}
 
 }

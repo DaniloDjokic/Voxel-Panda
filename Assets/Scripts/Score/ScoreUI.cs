@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ namespace VoxelPanda.Score
 {
 	public class ScoreUI : MonoBehaviour, IScoreListener
 	{
-        public Text scoreText;
+        public TextMeshProUGUI scoreText;
 
         public ScoreUI(ScoreCalculator scoreCalculator)
         {
