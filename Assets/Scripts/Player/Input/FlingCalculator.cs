@@ -25,15 +25,17 @@ namespace VoxelPanda.Player.Input
         }
         #endregion
 
-        public void StartFlingCalculation()
+        public void StartFlingCalculation(Vector3 initialTouchPosition)
         {
+            flingData.unmodifiedTouchStartingPosition = initialTouchPosition;
             flingData.PlayerPosition = dynamicMoveData.currentPosition;
             FlingStarted(flingData);
         }
 
-        public void UpdateRawVector(Vector3 rawVector)
+        public void UpdateRawVector(Vector3 rawVector, Vector3 touchHoldPos)
         {
             this.rawVector = rawVector;
+            flingData.unmodifiedTouchEndPosition = touchHoldPos;
             flingData.RawFlingVector = rawVector;
             flingData.PlayerPosition = dynamicMoveData.currentPosition;
             flingData.TransposedVectorEndPosition = dynamicMoveData.currentPosition + rawVector;
@@ -52,7 +54,7 @@ namespace VoxelPanda.Player.Input
                 else
                 {
                     SpendStamina(CompressVector(rawVector));
-                    physicsController.ApplyCurveForce(CompressVector(rawVector * constMoveData.flingForce));
+                    physicsController.ApplyFlingForce(CompressVector(rawVector * constMoveData.flingForce));
                 }
                 FlingEnded(flingData);
             }         

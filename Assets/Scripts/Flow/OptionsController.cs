@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using VoxelPanda.ProcGen.Elements.Obstacle;
 using VoxelPanda.ProcGen.Elements;
-using UnityEngine.SceneManagement;
+using VoxelPanda.Flow;
 
-public class OptionsUI : MonoBehaviour
+public class OptionsController : MonoBehaviour
 {
     struct BtnWithIndex
     {
@@ -64,8 +64,17 @@ public class OptionsUI : MonoBehaviour
     private List<GameObject> menus = new List<GameObject>();
     private List<BtnWithIndex> indexedBtns = new List<BtnWithIndex>();
 
+    private GameManager menager;
+
     private void Start()
     {
+        InputField[] inputs = optionsOverlay.GetComponentsInChildren<InputField>(true);
+        for(int i = 0; i < inputs.Length; i++)
+        {
+            inputs[i].keyboardType = TouchScreenKeyboardType.NumbersAndPunctuation;
+        }
+
+
         trainBehaviour = (TrainBehaviour)GetBehaviour(train2);
         sandBehaviour = (SandBehaviour)GetBehaviour(sand);
         cannonBehaviour = (CannonBehaviour)GetBehaviour(cannon);
@@ -89,6 +98,11 @@ public class OptionsUI : MonoBehaviour
        
         SetOptionValues();
         AttachEvents();
+    }
+
+    public void SetGameManager(GameManager menager)
+    {
+        this.menager = menager;
     }
 
     private void AttachEvents()
@@ -225,7 +239,7 @@ public class OptionsUI : MonoBehaviour
         SetPlayerPrefs();
         SetOptionValues();
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        menager.OptionsReset();
     }
 
     void SetPlayerPrefs()
@@ -235,7 +249,8 @@ public class OptionsUI : MonoBehaviour
             Component[] inputs = menus[i].GetComponentsInChildren(typeof(InputField));
             foreach (Component inp in inputs)
             {
-                PlayerPrefs.SetFloat(inp.name, float.Parse((inp as InputField).text));
+                if((inp as InputField).text != "0")
+                    PlayerPrefs.SetFloat(inp.name, float.Parse((inp as InputField).text));
             }
         }
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FlingData
 {
+    public Vector3 unmodifiedTouchStartingPosition { get; set; }
+    public Vector3 unmodifiedTouchEndPosition { get; set; }
     public Vector3 RawFlingVector { get; set; }
     public Vector3 ModifiedFlingVector { get; set; }
     public Vector3 TouchStartingPosition { get; set; }

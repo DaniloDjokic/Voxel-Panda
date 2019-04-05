@@ -18,9 +18,11 @@ namespace VoxelPanda.Flow
         private RawTouchInput touchInput;
 		private DeathController deathController;
 		private Crusher crusher;
+        private ProcGenInjector pgInjector;
 		public ProcEvents procEvents;
+        private SpawnData spawnData;
 
-		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator)
+		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator, ProcGenInjector procGenInjector)
 		{
             this.scoreCalculator = scoreCalculator;
 			this.player = playerElements.physicsController;
@@ -29,6 +31,7 @@ namespace VoxelPanda.Flow
 			this.deathController = deathController;
 			this.crusher = crusher;
 			this.procEvents = procEvents;
+            this.pgInjector = procGenInjector;
 			deathController.gameManager = this;
 		}
 
@@ -72,6 +75,13 @@ namespace VoxelPanda.Flow
             crusher.SetShouldMove(false);
 			ChangeState(GameState.Paused);
 		}
+
+        public void OptionsReset()
+        {
+            pgInjector.ResetObstacleBinds();
+            procEvents.ResetAll();
+            StartLevel();
+        }
 
 		public void EndRun()
 		{

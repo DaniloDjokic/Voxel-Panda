@@ -72,6 +72,11 @@ namespace VoxelPanda.ProcGen
 			
 		}
 
+        public void ClearSubs()
+        {
+            spawners.Clear();
+        }
+
 		public void DespawnAll()
 		{
 			for (int i = 0; i < poolers.Count; i++)

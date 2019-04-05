@@ -6,17 +6,20 @@ using VoxelPanda.Player.Events;
 public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
 {
     public LineRenderer lineRenderer;
+    public int positionCount;
+
+    Vector3[] positions;
 
     private void Start()
     {
-        lineRenderer.enabled = false;
+        lineRenderer.enabled = false;        
     }
 
     public void OnFlingEnded(FlingData flingData)
     {
         lineRenderer.enabled = false;
         lineRenderer.SetPosition(0, Vector3.zero);
-        lineRenderer.SetPosition(1, Vector3.zero);
+        lineRenderer.SetPosition(1, Vector3.zero);  
     }
 
     public void OnFlingRunning(FlingData flingData)

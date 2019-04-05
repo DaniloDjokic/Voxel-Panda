@@ -24,10 +24,8 @@ namespace VoxelPanda.Flow
             this.scoreCalculator = scoreCalculator;
 		}
 
-
 		public void BindAll()
 		{
-
 			//Pickups
 			var pickupPooler = new CoinPooler();
 			pickupPooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
@@ -100,7 +98,13 @@ namespace VoxelPanda.Flow
 			//this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
 		}
 
-		private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper)
+        public void ResetObstacleBinds()
+        {
+            procEvents.ClearSubs();
+            BindAll();
+        }
+
+        private void Bind(IList<ISpawnable> spawnables, IPooling pooler, IMapping mapper)
 		{
 			Bind(spawnables, pooler);
 			Bind(pooler, mapper);

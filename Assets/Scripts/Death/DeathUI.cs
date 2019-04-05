@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using VoxelPanda.Flow;
+using VoxelPanda.Player.Presentation;
 using VoxelPanda.Score;
 
 namespace VoxelPanda.Flow
@@ -18,6 +19,8 @@ namespace VoxelPanda.Flow
 		public Text restartButtonText;
 		public Text countdownTimer;
 		public Text highScoreText;
+        public TiltArrowUI tiltArrowUI;
+        public TouchDragUI touchDragUI;
 		public string countdownPreText = "Starting in:\n";
 		public string restartText = "Try Again";
 		public string reviveText = "Revive!";
@@ -56,6 +59,8 @@ namespace VoxelPanda.Flow
 		public void RaiseScreen()
 		{
 			revivalPrompt.SetActive(false);
+            tiltArrowUI.SetInvisible();
+            touchDragUI.ToggleImages(false);
 			ChangeRestartText(false);
 			restartButton.gameObject.SetActive(true);
 			countdownTimer.gameObject.SetActive(false);
