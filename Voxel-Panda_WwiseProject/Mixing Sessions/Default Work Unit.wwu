@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8D26A92B-392C-478A-A49D-B1C9FF218EB4}" SchemaVersion="89">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{8D26A92B-392C-478A-A49D-B1C9FF218EB4}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8D26A92B-392C-478A-A49D-B1C9FF218EB4}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="New Mixing Session" ID="{08DD4EA2-EC0D-4E2B-9627-796F01F85DCD}">
+					<ObjectList>
+						<ObjectRef Name="Swipe_Pull_1" ID="{CDA53BC6-66F0-483A-997E-7364467E4AAB}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+						<ObjectRef Name="Swipe_Release_4" ID="{7E6392C9-2554-4220-9997-782C9729522D}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+						<ObjectRef Name="Coin" ID="{D82C6ADF-5C80-4D45-95BF-CCE471BABE27}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+						<ObjectRef Name="WallKick" ID="{89245EB7-49DE-4037-AEF0-8B93B42E3881}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+						<ObjectRef Name="SkateLoop" ID="{65DC962E-7642-40D2-BB56-C6AE7D1EEA33}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+						<ObjectRef Name="MenuMusic" ID="{B87A4D8C-5422-4A16-AC30-9D60E1FB8B43}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
+						<ObjectRef Name="Music" ID="{F6535ACD-1295-497F-A6F6-B6BC0961F5CC}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

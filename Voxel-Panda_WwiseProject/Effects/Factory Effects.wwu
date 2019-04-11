@@ -14,7 +14,7 @@
 						<Effect Name="Gentle_Program_Compressor_Minus_14dB_RMS" ID="{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
 								<Property Name="Ratio" Type="Real32" Value="3"/>
-								<Property Name="Threshold" Type="Real32" Value="-14"/>
+								<Property Name="Threshold" Type="Real32" Value="-11.2"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Hard_Knee_Minus_3dB_RMS" ID="{D083BAE5-F9EF-426B-A311-D9DF8DFE8807}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
@@ -101,7 +101,7 @@
 						<Effect Name="Light_Expander" ID="{C7E71A3B-745F-47B0-8F31-276DD413F83C}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
 							<PropertyList>
 								<Property Name="Ratio" Type="Real32" Value="1.5"/>
-								<Property Name="Threshold" Type="Real32" Value="0"/>
+								<Property Name="Threshold" Type="Real32" Value="-58.3"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Noise_Gate_Fast_Attack" ID="{747A6B61-E953-474C-8227-672C884DA616}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
@@ -203,10 +203,10 @@
 						<Effect Name="Nasty_Radio" ID="{7E6FAC41-3332-47EA-9AC6-625A78B63226}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
 							<PropertyList>
 								<Property Name="LookAhead" Type="Real32" Value="0.003"/>
-								<Property Name="OutputGain" Type="Real32" Value="12"/>
+								<Property Name="OutputGain" Type="Real32" Value="14"/>
 								<Property Name="Ratio" Type="Real32" Value="35"/>
 								<Property Name="ReleaseTime" Type="Real32" Value="0.071"/>
-								<Property Name="Threshold" Type="Real32" Value="-25"/>
+								<Property Name="Threshold" Type="Real32" Value="-15.7"/>
 							</PropertyList>
 						</Effect>
 					</ChildrenList>
