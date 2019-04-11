@@ -92,11 +92,11 @@ namespace VoxelPanda.Flow
 			this.Bind(pathRandomizer, pathMapper);
 			pathSpawner.SetMapper(pathMapper);
 
-			procEvents.AddSpawningListener(new SpawnerData(pathSpawner));
+			procEvents.AddSpawningListener(new SpawnerData(pathSpawner), true);
 
 			this.Bind(backdropRandomizer, backdropMapper);
 			backdropSpawner.SetMapper(backdropMapper);
-			procEvents.AddSpawningListener(new SpawnerData(backdropSpawner));
+			procEvents.AddSpawningListener(new SpawnerData(backdropSpawner), true);
 			//this.Bind(spawnData.Backdrops, backdropPooler, backdropMapper, backdropSpawner);
 		}
 

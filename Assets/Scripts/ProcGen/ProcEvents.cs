@@ -15,6 +15,7 @@ namespace VoxelPanda.ProcGen
 		public int generationOffset;
 		public int batchHeight;
 		public static int gridWidth = 10;
+		public bool isInitialAreaSpawner = false;
 
 		public SpawnerData(ISpawning spawner, int generationOffset = 0, int generationBuffer = 50, int batchHeight = 40, int lastZ = 0)
 		{
@@ -44,8 +45,9 @@ namespace VoxelPanda.ProcGen
 			moveEvents.Subscribe(this);
 		}
 
-		public void AddSpawningListener(SpawnerData spawnerData)
+		public void AddSpawningListener(SpawnerData spawnerData, bool addToInitialSpawners = false)
 		{
+			spawnerData.isInitialAreaSpawner = addToInitialSpawners;
 			spawners.Add(spawnerData);
 		}
 
@@ -60,8 +62,28 @@ namespace VoxelPanda.ProcGen
 			for (int i = 0; i < spawners.Count; i++)
 			{
 				spawners[i].TryToSpawn(ZPosition);
+
 			}
 			for (int i = 0; i < poolers.Count; i++)
+			{
+				poolers[i].TryDespawning(position);
+			}
+		}
+
+		public void GenerateInitial(Vector3 position, int offsetPosition = 20)
+		{
+			int ZPosition = (int)position.z;
+			for(int i = 0; i < spawners.Count; i++)
+			{
+				if (spawners[i].isInitialAreaSpawner)
+				{
+					spawners[i].TryToSpawn(ZPosition);
+				} else
+				{
+					spawners[i].lastZGenerated = offsetPosition;
+				}
+			}
+			for(int i = 0; i < poolers.Count; i++)
 			{
 				poolers[i].TryDespawning(position);
 			}
