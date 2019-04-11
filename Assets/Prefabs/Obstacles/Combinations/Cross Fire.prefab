@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 4365657008888192}
   - component: {fileID: 114178100475981012}
   m_Layer: 0
-  m_Name: Cannon (2)
+  m_Name: Cannon-CrossFire (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 4013254200424128}
   - component: {fileID: 114855981565671366}
   m_Layer: 0
-  m_Name: Cannon
+  m_Name: Cannon-CrossFire
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 4948968005794232}
   - component: {fileID: 114468070196584848}
   m_Layer: 0
-  m_Name: Cannon (1)
+  m_Name: Cannon-CrossFire (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 4690980254837650}
   - component: {fileID: 114438264162436814}
   m_Layer: 0
-  m_Name: Cannon (3)
+  m_Name: Cannon-CrossFire (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 4649507242436846}
   - component: {fileID: 114043051945549164}
   m_Layer: 0
-  m_Name: Sand
+  m_Name: Sand-CrossFire
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

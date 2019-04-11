@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 4680950314532742}
   - component: {fileID: 114327536777342774}
   m_Layer: 0
-  m_Name: Sand
+  m_Name: Sand-SandTunnel
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 4160446263323506}
   - component: {fileID: 114235064940695590}
   m_Layer: 0
-  m_Name: Cannon
+  m_Name: Cannon-SandTunnel
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

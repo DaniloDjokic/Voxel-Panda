@@ -1030,7 +1030,7 @@ GameObject:
   - component: {fileID: 4569092051718714}
   - component: {fileID: 114934688588890532}
   m_Layer: 0
-  m_Name: Robotic Arm
+  m_Name: Robotic Arm-ArmSolo
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 1000
   gridMatrix: {fileID: 11400000, guid: 549a35c9bfe7eef448b51712781cab29, type: 2}
   orientation: 1
   rotationPivot: {fileID: 0}

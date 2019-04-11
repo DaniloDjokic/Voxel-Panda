@@ -75,6 +75,5 @@ namespace VoxelPanda.ProcGen.Elements
 		{
 			return transform.position;
 		}
-
 	}
 }
