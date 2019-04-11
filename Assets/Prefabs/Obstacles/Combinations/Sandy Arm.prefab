@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 4643912867778216}
   - component: {fileID: 114101213683996300}
   m_Layer: 0
-  m_Name: Robotic Arm
+  m_Name: Robotic Arm-SandyArm
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
