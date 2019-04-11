@@ -109,6 +109,11 @@ namespace VoxelPanda.Flow
 		public void OnVelocityChanged(Vector3 velocity)
 		{
 		}
+
+		public void Quit()
+		{
+			Application.Quit();
+		}
 	}
 	public enum GameState { Start, Running, Paused, Stopped }
 }
