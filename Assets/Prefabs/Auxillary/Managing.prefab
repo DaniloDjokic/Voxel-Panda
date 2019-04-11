@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4415370959907074}
   - component: {fileID: 114198266438603112}
   - component: {fileID: 114460060984618992}
-  - component: {fileID: 114794234042901482}
   - component: {fileID: 114506744368682314}
   - component: {fileID: 114891840132562606}
   m_Layer: 0
@@ -124,7 +123,7 @@ MonoBehaviour:
   accelerationDeadzone: 0.1
   accelerationFunctionModifier: 1.5
   minVelocityForCurve: 2
-  playerStartPosition: {x: 0, y: 0.5, z: 0}
+  playerStartPosition: {x: 0, y: 0.5, z: 15}
 --- !u!114 &114460060984618992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickups:
-  - {fileID: 114299056914861348, guid: b6f3afcab8a271f4e82390d778df4c1b, type: 2}
+  - {fileID: 114715524485957502, guid: b6f3afcab8a271f4e82390d778df4c1b, type: 2}
   obstacles:
   - {fileID: 114827938099151856, guid: d51dba74df13b2247ae0507350a3e929, type: 2}
   - {fileID: 114271322130863934, guid: 09fa95d6cfb6b20438e6bdc609856c61, type: 2}
@@ -148,14 +147,19 @@ MonoBehaviour:
   - {fileID: 114911349801827280, guid: 056cf2f7a9c39de4caeb322c606e936b, type: 2}
   - {fileID: 114284398148146730, guid: 19dba0fc4001bb846b69713c70da3a24, type: 2}
   - {fileID: 114491535170004540, guid: ac6f3b90bd9876c4abc32c6849010d0d, type: 2}
+  - {fileID: 114352906410344578, guid: cae3cb0ba38bea54d83961d42ff7c397, type: 2}
+  - {fileID: 114312323047882576, guid: ab4554fd38022b049988432c67d501d7, type: 2}
+  - {fileID: 114662258448351580, guid: 28560e4821afca24386fdefcb0dfcd29, type: 2}
+  - {fileID: 114938540513788008, guid: c132559dad03b6b4ea025f2e00a26496, type: 2}
+  - {fileID: 114005247870236210, guid: 23adef9fad8f9424d9f130d7d0e190df, type: 2}
+  - {fileID: 114732205689421394, guid: 81fbe80af72d6aa46900d47d5d619b8c, type: 2}
+  - {fileID: 114336763154471620, guid: 8200b6762fb278e4cb119f9285f8b4e3, type: 2}
   paths:
-  - {fileID: 114750744444068508, guid: 381bbf113f684804bbf244bb00a4850b, type: 2}
-  - {fileID: 114244252106406492, guid: be795d3b3b936d84b87c6f919c46124e, type: 2}
+  - {fileID: 114029820916447168, guid: 2c929cac49eb0fb4ea809da8fe7eba4a, type: 2}
   backdrops:
-  - {fileID: 114401316754229260, guid: 18f091d7e96922449874a71d5fb791df, type: 2}
-  - {fileID: 114864696643226722, guid: fbccf7cb4594eff45b885046e521297c, type: 2}
+  - {fileID: 114603603427145600, guid: 92fca2ee7d368b74d8174da4feb48176, type: 2}
   obstaclePoolSize: 10
-  pickupPoolSize: 20
+  pickupPoolSize: 50
   pathPoolSize: 10
   backdropPoolSize: 10
   obstaclesGenerationOffset: 5
@@ -202,22 +206,12 @@ MonoBehaviour:
   constMoveData: {fileID: 114198266438603112}
   dMoveData: {fileID: 114891840132562606}
   spawnData: {fileID: 114460060984618992}
-  scoreUI: {fileID: 114794234042901482}
+  scoreUI: {fileID: 0}
   deathUI: {fileID: 0}
   playerElements: {fileID: 114506744368682314}
   crusher: {fileID: 0}
+  adManager: {fileID: 0}
   randomSeed: 
---- !u!114 &114794234042901482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1273787968340134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b0f4939e3eb0144e8e72ff4c0f9e500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114891840132562606
 MonoBehaviour:
   m_ObjectHideFlags: 1

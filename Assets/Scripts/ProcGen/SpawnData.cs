@@ -7,7 +7,7 @@ using VoxelPanda.ProcGen.Elements;
 public class SpawnData : MonoBehaviour
 {
 	[SerializeField]
-	private List<Pickup> pickups;
+	public List<Pickup> pickups;
 	[SerializeField]
 	private List<GridData> obstacles;
 	[SerializeField]
