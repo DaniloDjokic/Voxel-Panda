@@ -19,4 +19,5 @@ public class PlayerElements : MonoBehaviour {
     public FlingCalculator flingCalculator;
     public CurveCalculator curveCalculator;
     public TiltArrowUI tiltArrowUI;
+    public GameObject movementUIComponents;
 }

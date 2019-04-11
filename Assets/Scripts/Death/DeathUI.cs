@@ -11,17 +11,19 @@ namespace VoxelPanda.Flow
 {
 	public class DeathUI : MonoBehaviour
 	{
-		//Death screen
-		public GameObject deathScreen;
+        public TextMeshProUGUI restartButtonText;
+        //Get Ready panel
+        public GameObject getReadyPanel;
+        public TextMeshProUGUI countdownTimer;
+
+        //Death screen
+        public GameObject deathScreen;
 		public GameObject deathOptionsPanel;
 		public ScoreCalculator scoreCalculator;
         public TextMeshProUGUI scoreText;
 		public TextMeshProUGUI scoreNumberText;
 		//Revival prompt
 		public GameObject revivalPrompt;
-		public Text restartButtonText;
-		public Text countdownTimer;
-		public Text highScoreText;
 		public string countdownPreText = "Starting in:\n";
 		public string restartText = "Try Again";
 		public string reviveText = "Revive!";
@@ -68,8 +70,6 @@ namespace VoxelPanda.Flow
 		public void RaiseScreen()
 		{
 			revivalPrompt.SetActive(false);
-            tiltArrowUI.SetInvisible();
-            touchDragUI.ToggleImages(false);
 			ChangeRestartText(false);
 			deathOptionsPanel.SetActive(true);
 			getReadyPanel.SetActive(false);
@@ -133,7 +133,4 @@ namespace VoxelPanda.Flow
 }
 
 
-		public TextMeshProUGUI restartButtonText;
-		//Get Ready panel
-		public GameObject getReadyPanel;
-		public TextMeshProUGUI countdownTimer;
+		

@@ -21,6 +21,7 @@ namespace VoxelPanda.Flow
         private ProcGenInjector pgInjector;
 		public ProcEvents procEvents;
         private SpawnData spawnData;
+        private GameObject movementUIComponents;
 
 		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator, ProcGenInjector procGenInjector)
 		{
@@ -32,6 +33,7 @@ namespace VoxelPanda.Flow
 			this.crusher = crusher;
 			this.procEvents = procEvents;
             this.pgInjector = procGenInjector;
+            this.movementUIComponents = playerElements.movementUIComponents;
 			deathController.gameManager = this;
 		}
 
@@ -45,6 +47,7 @@ namespace VoxelPanda.Flow
             scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
+            movementUIComponents.SetActive(true);
 			procEvents.OnPositionChanged(player.transform.position);
 			accInput.SetInputDetection(true);
             touchInput.SetInputDetection(true);
@@ -90,6 +93,7 @@ namespace VoxelPanda.Flow
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);
             crusher.SetShouldMove(false);
+            movementUIComponents.SetActive(false);
 			ChangeState(GameState.Stopped);
 		}
 
