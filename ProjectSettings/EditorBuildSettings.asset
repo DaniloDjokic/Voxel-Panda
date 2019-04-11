@@ -5,16 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/DumpScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Scenes/AuxScene.unity
-    guid: 5566cb3322042b740b8848b6f0fef3ae
-  - enabled: 0
-    path: Assets/Scenes/AdScene.unity
-    guid: aebdbd223333c884e94dace6e244050a
   - enabled: 1
-    path: Assets/Scenes/AudioScene.unity
-    guid: 631bb0bbc10c1e5458ca4884b9c82f1f
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 6eb077ce5ff924e4bbdf87adc2c7bf7a
+  - enabled: 1
+    path: Assets/Scenes/DeathUIScene.unity
+    guid: 3ee017feb505ce44a8b95a1bca6875ab
   m_configObjects: {}
