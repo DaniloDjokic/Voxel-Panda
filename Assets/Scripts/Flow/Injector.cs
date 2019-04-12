@@ -17,6 +17,7 @@ namespace VoxelPanda.Flow
 		public PlayerElements playerElements;
 		public Crusher crusher;
 		public AdManager adManager;
+        public OptionsController optionsController;
 		public Tutorial tutorial;
 		public string randomSeed;
 
@@ -42,10 +43,11 @@ namespace VoxelPanda.Flow
             ProcGenInjector pgInjector = new ProcGenInjector(spawnData, procEvents, scoreCalculator);
             pgInjector.BindAll();
             deathController = new DeathController(scoreCalculator, deathUI, adManager);
-			gameManager = new GameManager(playerElements, deathController, crusher, procEvents, scoreCalculator);
+			gameManager = new GameManager(playerElements, deathController, crusher, procEvents, scoreCalculator, pgInjector);
 			moveEvents.Subscribe(gameManager);
 			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
 			crusher.Bind(gameManager, playerElements.physicsController.transform);
+            optionsController.SetGameManager(gameManager);
 
 			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher, tutorial);
 

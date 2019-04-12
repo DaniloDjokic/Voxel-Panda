@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using VoxelPanda.Flow;
+using VoxelPanda.Player.Presentation;
 using VoxelPanda.Score;
 using TMPro;
 
@@ -10,19 +11,20 @@ namespace VoxelPanda.Flow
 {
 	public class DeathUI : MonoBehaviour
 	{
-		//Death screen
-		public GameObject deathScreen;
+        public TextMeshProUGUI restartButtonText;
+        //Get Ready panel
+        public GameObject getReadyPanel;
+        public TextMeshProUGUI countdownTimer;
+
+        //Death screen
+        public GameObject deathScreen;
 		public GameObject deathOptionsPanel;
 		public ScoreCalculator scoreCalculator;
         public TextMeshProUGUI scoreText;
 		public TextMeshProUGUI scoreNumberText;
 		//Revival prompt
 		public GameObject revivalPrompt;
-		public TextMeshProUGUI restartButtonText;
-		//Get Ready panel
-		public GameObject getReadyPanel;
-		public TextMeshProUGUI countdownTimer;
-
+		public string countdownPreText = "Starting in:\n";
 		public string restartText = "Try Again";
 		public string reviveText = "Revive!";
 		public string regularScorePrefix = "High score: ";
@@ -130,3 +132,5 @@ namespace VoxelPanda.Flow
 	}
 }
 
+
+		
