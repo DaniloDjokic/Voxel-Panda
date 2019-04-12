@@ -24,7 +24,10 @@ namespace VoxelPanda.Score
 			LoadHighScore();
 		}
 
-
+		public static void ResetHighScore()
+		{
+			PlayerPrefs.SetFloat(highScoreKey, 0);
+		}
 
         public int GetScore()
         {

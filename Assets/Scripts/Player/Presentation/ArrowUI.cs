@@ -35,7 +35,6 @@ public class ArrowUI : MonoBehaviour, IFlingListener, ICurveListener
 
     public void OnCurveChanged(CurveData curveData)
     {
-        throw new System.NotImplementedException();
     }
 }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VoxelPanda.Flow;
+using VoxelPanda.Score;
 
 public class MainMenu : MonoBehaviour {
 	public GameObject soundOnIcon;
@@ -26,5 +28,15 @@ public class MainMenu : MonoBehaviour {
 
 	public void ChangeSound(bool isSoundOn) {
 		PlayerPrefs.SetInt(isSoundOnKey, isSoundOn ? 1 : 0);
+	}
+
+	public void ResetTutorial()
+	{
+		Tutorial.ResetTutorial();
+	}
+
+	public void ResetHighScore()
+	{
+		ScoreCalculator.ResetHighScore();
 	}
 }
