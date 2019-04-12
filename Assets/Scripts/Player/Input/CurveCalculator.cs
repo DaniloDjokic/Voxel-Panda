@@ -33,7 +33,7 @@ namespace VoxelPanda.Player.Input
         {
             if (!listeners.Contains(listener))
             {
-                listeners.Remove(listener);
+                listeners.Add(listener);
             }
         }
 
