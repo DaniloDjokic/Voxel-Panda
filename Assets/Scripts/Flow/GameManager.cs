@@ -42,7 +42,7 @@ namespace VoxelPanda.Flow
             scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
-			procEvents.OnPositionChanged(player.transform.position);
+			procEvents.GenerateInitial(player.transform.position);
 			accInput.SetInputDetection(true);
             touchInput.SetInputDetection(true);
 

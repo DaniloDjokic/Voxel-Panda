@@ -17,6 +17,7 @@ namespace VoxelPanda.Flow
 		public PlayerElements playerElements;
 		public Crusher crusher;
 		public AdManager adManager;
+		public Tutorial tutorial;
 		public string randomSeed;
 
 		private MoveEvents moveEvents;
@@ -46,7 +47,7 @@ namespace VoxelPanda.Flow
 			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
 			crusher.Bind(gameManager, playerElements.physicsController.transform);
 
-			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher);
+			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher, tutorial);
 
 			gameManager.StartLevel();
 		}

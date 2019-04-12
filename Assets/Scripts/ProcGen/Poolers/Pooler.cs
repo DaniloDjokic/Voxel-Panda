@@ -57,7 +57,7 @@ namespace VoxelPanda.ProcGen.Poolers
 			return i.IsAvailableToSpawn() && i.GetConcreteDimensions().y <= maxHeight;
 		}
 
-		public void TryDespawning(Vector3 despawnReferentPosition)
+		public virtual void TryDespawning(Vector3 despawnReferentPosition)
 		{
 			for (int i = 0; i < spawnables.Count; i++)
 			{
