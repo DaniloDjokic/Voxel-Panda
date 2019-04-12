@@ -29,9 +29,12 @@ namespace VoxelPanda.Player.Presentation
 
 		public void OnFlingRunning(FlingData flingData)
 		{
-            touchEnd.transform.position = flingData.unmodifiedTouchEndPosition;
-		}
+            Vector3 newPos = flingData.unmodifiedTouchEndPosition;
 
+            Vector3 offset = (newPos - touchStart.transform.position);
+            touchEnd.transform.position = touchStart.transform.position + Vector3.ClampMagnitude(offset, flingData.MaxFlingVector.magnitude);
+        }
+        
 		public void OnFlingStarted(FlingData flingData)
 		{
             ToggleImages(true);

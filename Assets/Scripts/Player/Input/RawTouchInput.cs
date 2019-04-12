@@ -58,7 +58,6 @@ public class RawTouchInput : MonoBehaviour
     void TouchStarted(Touch touch)
     {
     	initialTouchPosition = touch.position;
-        //initialTouchPosition = Camera.main.ScreenToWorldPoint(touch.position);
         flingCalculator.StartFlingCalculation(initialTouchPosition);
     }
 

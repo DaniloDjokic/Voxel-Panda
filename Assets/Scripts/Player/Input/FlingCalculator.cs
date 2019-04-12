@@ -9,14 +9,16 @@ namespace VoxelPanda.Player.Input
 	public class FlingCalculator : InputCalculator
 	{
         private List<IFlingListener> listeners = new List<IFlingListener>();
-        
-        private FlingData flingData = new FlingData();
+
+        private FlingData flingData;
         private Vector3 rawVector;
 
         #region UnityFunctions
         private void Start()
         {
             Init();
+            flingData = new FlingData();
+            
         }
 
         private void Update()
@@ -27,6 +29,9 @@ namespace VoxelPanda.Player.Input
 
         public void StartFlingCalculation(Vector3 initialTouchPosition)
         {
+            //TODO: Sync with options setting vector stamina cost
+            flingData.MaxFlingVector = Vector3.forward * (GetUsableMaxStamina() / constMoveData.vectorStaminaCost);
+
             flingData.unmodifiedTouchStartingPosition = initialTouchPosition;
             flingData.PlayerPosition = dynamicMoveData.currentPosition;
             FlingStarted(flingData);
@@ -39,6 +44,10 @@ namespace VoxelPanda.Player.Input
             flingData.RawFlingVector = rawVector;
             flingData.PlayerPosition = dynamicMoveData.currentPosition;
             flingData.TransposedVectorEndPosition = dynamicMoveData.currentPosition + rawVector;
+
+            flingData.ModifiedFlingVector = CompressVector(rawVector);
+            flingData.MaxCurrentFlingVector = Vector3.forward * (GetUsableStamina() / constMoveData.vectorStaminaCost);
+
             FlingRunning(flingData);
         }
 
@@ -46,16 +55,8 @@ namespace VoxelPanda.Player.Input
         {
             if(dynamicMoveData.currentStamina > constMoveData.staminaPerFling)
             {
-                if (dynamicMoveData.currentStamina > (rawVector.magnitude * constMoveData.vectorStaminaCost))
-                {
-                    SpendStamina(rawVector);
-                    physicsController.ApplyFlingForce(rawVector * constMoveData.flingForce);
-                }
-                else
-                {
-                    SpendStamina(CompressVector(rawVector));
-                    physicsController.ApplyFlingForce(CompressVector(rawVector * constMoveData.flingForce));
-                }
+                SpendStamina(flingData.ModifiedFlingVector);
+                physicsController.ApplyFlingForce(flingData.ModifiedFlingVector * constMoveData.flingForce);
                 FlingEnded(flingData);
             }         
         }
@@ -67,7 +68,10 @@ namespace VoxelPanda.Player.Input
 
         private Vector3 CompressVector(Vector3 vector)
         {
-            return Vector3.ClampMagnitude(vector, dynamicMoveData.currentStamina * constMoveData.vectorStaminaCost);
+                Vector3 temp;
+                temp = Vector3.ClampMagnitude(vector, GetUsableStamina() / constMoveData.vectorStaminaCost);
+                return temp;
+            
         }
 
         private void SpendStamina(Vector3 flingVector)
@@ -77,6 +81,16 @@ namespace VoxelPanda.Player.Input
             dynamicMoveData.currentStamina = Mathf.Clamp(dynamicMoveData.currentStamina, 0f, constMoveData.maxStamina);
 
             StaminaChanged();
+        }
+
+        private float GetUsableStamina()
+        {
+            return dynamicMoveData.currentStamina - constMoveData.staminaPerFling;
+        }
+
+        private float GetUsableMaxStamina()
+        {
+            return constMoveData.maxStamina - constMoveData.staminaPerFling;
         }
 
         private void RefillStamina()
