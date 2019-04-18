@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657952, g: 0.4964137, b: 0.5748193, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657934, g: 0.49641305, b: 0.5748188, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -353,40 +353,6 @@ Prefab:
       propertyPath: slider
       value: 
       objectReference: {fileID: 730621360}
-    - target: {fileID: 54031005986847038, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54031005986847038, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65359399493282360, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 54031005986847038, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_Drag
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 54031005986847038, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114941839500339878, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_positionOffsetData.positionOffset.z
-      value: -8.025949
-      objectReference: {fileID: 0}
-    - target: {fileID: 4472897858204830, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
   m_IsPrefabAsset: 0
@@ -1292,6 +1258,11 @@ Prefab:
       propertyPath: physicsController
       value: 
       objectReference: {fileID: 685307788}
+    - target: {fileID: 114576848009845446, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: randomSeed
+      value: mareseed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44eb4199898336d42a633281478e7b99, type: 2}
   m_IsPrefabAsset: 0

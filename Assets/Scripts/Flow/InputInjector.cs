@@ -14,14 +14,16 @@ namespace VoxelPanda.Flow
 		private PlayerElements playerElements;
 		private MoveEvents moveEvents;
 		private Crusher crusher;
+		private Tutorial tutorial;
 
-		public InputInjector(ConstMoveData cMoveData, DynamicMoveData dMoveData, MoveEvents moveEvents, PlayerElements playerElements, Crusher crusher)
+		public InputInjector(ConstMoveData cMoveData, DynamicMoveData dMoveData, MoveEvents moveEvents, PlayerElements playerElements, Crusher crusher, Tutorial tutorial)
 		{
 			this.constMoveData = cMoveData;
             this.dynMoveData = dMoveData;
 			this.playerElements = playerElements;
 			this.moveEvents = moveEvents;
 			this.crusher = crusher;
+			this.tutorial = tutorial;
 			BindAll();
 		}
 
@@ -34,22 +36,24 @@ namespace VoxelPanda.Flow
 
             //Subscribe fling listeners
             flingCalculator.Subscribe(playerElements.arrowUI);
-			//flingCalculator.Subscribe(playerElements.animationManager);
+			flingCalculator.Subscribe(playerElements.animationManager);
 			//flingCalculator.Subscribe(playerElements.particles);
 			flingCalculator.Subscribe(playerElements.sfx);
 			flingCalculator.Subscribe(playerElements.staminaUI);
 			//flingCalculator.Subscribe(playerElements.touchDragUI);
 			//Subscribe curve listeners
 			//curveCalculator.Subscribe(playerElements.arrowUI);
-			//curveCalculator.Subscribe(playerElements.animationManager);
+			curveCalculator.Subscribe(playerElements.animationManager);
 			curveCalculator.Subscribe(playerElements.sfx);
 			//curveCalculator.Subscribe(playerElements.particles);
 			//Subscribe move events listeners
-			//moveEvents.Subscribe(playerElements.animationManager);
+			moveEvents.Subscribe(playerElements.animationManager);
 			//moveEvents.Subscribe(playerElements.particles);
 			moveEvents.Subscribe(playerElements.sfx);
 			//Bind Dynamic Move Data to physics Applier
 			playerElements.physicsController.Bind(dynMoveData);
+			moveEvents.Subscribe(tutorial);
+			curveCalculator.Subscribe(tutorial);
 
 			//Bind specific
 			playerElements.camBehaviour.Rebind(playerElements.playerTransform, crusher.transform);

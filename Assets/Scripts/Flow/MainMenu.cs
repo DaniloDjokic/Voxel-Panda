@@ -1,16 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using VoxelPanda.Flow;
+using VoxelPanda.Score;
 
 public class MainMenu : MonoBehaviour {
+	public GameObject soundOnIcon;
+	public GameObject soundOffIcon;
+	private const string isSoundOnKey = "IsSoundOn";
 
-	// Use this for initialization
-	void Start () {
-		
+	public void StartGame() {
+		SceneManager.LoadScene(1);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void ToggleSound() {
+		bool currentSoundOn = GetSoundOn();
+		bool newSoundOn = !currentSoundOn;
+		ChangeSound(newSoundOn);
+		soundOnIcon.SetActive(newSoundOn);
+		soundOffIcon.SetActive(!newSoundOn);
+	}
+
+	public bool GetSoundOn() {
+		return PlayerPrefs.GetInt(isSoundOnKey) == 1;
+	}
+
+	public void ChangeSound(bool isSoundOn) {
+		PlayerPrefs.SetInt(isSoundOnKey, isSoundOn ? 1 : 0);
+	}
+
+	public void ResetTutorial()
+	{
+		Tutorial.ResetTutorial();
+	}
+
+	public void ResetHighScore()
+	{
+		ScoreCalculator.ResetHighScore();
 	}
 }
