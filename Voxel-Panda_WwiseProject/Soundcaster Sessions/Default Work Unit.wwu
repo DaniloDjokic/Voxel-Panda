@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{9A5A6236-79D7-4808-A152-56F6512A0DA5}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Swipe_Pull" ID="{894AF518-041B-4805-800E-04FE07A586FE}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<ObjectRef Name="Play_Swipe_Low_Stamina" ID="{894AF518-041B-4805-800E-04FE07A586FE}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
@@ -38,22 +38,38 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<ObjectRef Name="Play_Countdown" ID="{9829954D-A8F8-4571-B4A4-9808CD689DDA}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_CanonLaunch" ID="{ADBCCF62-316E-4F80-A742-11BC1F40B107}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Crusher" ID="{080CC6C3-9D30-4017-BBD2-E92D3757BD07}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_CanonExplosion" ID="{54FF2FD0-0190-4C38-A360-D241D35A8F1D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="RobotArm" ID="{C4B31473-2C0A-42CF-8171-9FE0BB9C9452}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
 							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Train" ID="{DBECA0A3-740E-4B47-BCF7-CA0394DD2813}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="5" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}"/>
-							<Value>0</Value>
+							<Value>21.9</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Side_Chain" ID="{2421908A-D56B-4B21-94C0-D87BA0943011}"/>
@@ -65,7 +81,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Alive" ID="{C38997E7-EB16-49FF-8B6E-BC877E57E8EA}"/>
+						<CurrentStateRef Name="Dead" ID="{8822DF23-0A91-4DD7-A0F7-B9C5D04A59AE}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

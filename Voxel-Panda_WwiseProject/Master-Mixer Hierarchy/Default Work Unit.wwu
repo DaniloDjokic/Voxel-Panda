@@ -33,12 +33,12 @@
 												<PointList>
 													<Point>
 														<XPos>-48</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>5</Flags>
 													</Point>
 													<Point>
 														<XPos>-46.5</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log2</SegmentShape>
 													</Point>
@@ -62,6 +62,7 @@
 								</Reference>
 							</ReferenceList>
 						</Bus>
+						<Bus Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}"/>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

@@ -21,14 +21,19 @@
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="779278001" Name="Death" ObjectPath="\Events\Default Work Unit\Death"/>
+				<Event Id="2685623696" Name="Play_CanonExplosion" ObjectPath="\Events\Default Work Unit\Play_CanonExplosion"/>
+				<Event Id="317442834" Name="Play_CanonLaunch" ObjectPath="\Events\Default Work Unit\Play_CanonLaunch"/>
 				<Event Id="3114179205" Name="Play_Coin" ObjectPath="\Events\Default Work Unit\Play_Coin"/>
+				<Event Id="2175797879" Name="Play_Countdown" ObjectPath="\Events\Default Work Unit\Play_Countdown"/>
 				<Event Id="2458249826" Name="Play_Crusher" ObjectPath="\Events\Default Work Unit\Play_Crusher"/>
 				<Event Id="2481433679" Name="Play_GameplayMusic" ObjectPath="\Events\Default Work Unit\Play_GameplayMusic"/>
 				<Event Id="2570041344" Name="Play_MenuMusic" ObjectPath="\Events\Default Work Unit\Play_MenuMusic"/>
 				<Event Id="3759318933" Name="Play_Robot_Arm" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm"/>
 				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate"/>
-				<Event Id="3678449574" Name="Play_Swipe_Pull" ObjectPath="\Events\Default Work Unit\Play_Swipe_Pull"/>
+				<Event Id="2608897773" Name="Play_Swipe_Low_Stamina" ObjectPath="\Events\Default Work Unit\Play_Swipe_Low_Stamina"/>
 				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
+				<Event Id="163991396" Name="Play_Train" ObjectPath="\Events\Default Work Unit\Play_Train"/>
 				<Event Id="1749424733" Name="Play_UI_Click" ObjectPath="\Events\Default Work Unit\Play_UI_Click"/>
 				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick"/>
 				<Event Id="3025617480" Name="Sand_Enter" ObjectPath="\Events\Default Work Unit\Sand_Enter"/>
@@ -38,9 +43,13 @@
 					<ShortName>WallKick3.wav</ShortName>
 					<Path>SFX\WallKick3_56D34C19.wem</Path>
 				</File>
+				<File Id="40010365" Language="SFX">
+					<ShortName>DeathSynth.wav</ShortName>
+					<Path>SFX\DeathSynth_B12F659A.wem</Path>
+				</File>
 				<File Id="75030674" Language="SFX">
 					<ShortName>Pull3_2.wav</ShortName>
-					<Path>SFX\Pull3_2_56D34C19.wem</Path>
+					<Path>SFX\Pull3_2_77087AB7.wem</Path>
 				</File>
 				<File Id="103177881" Language="SFX">
 					<ShortName>WallKick 1.wav</ShortName>
@@ -58,9 +67,17 @@
 					<ShortName>Coin1.wav</ShortName>
 					<Path>SFX\Coin1_2BE44AB9.wem</Path>
 				</File>
+				<File Id="320287986" Language="SFX">
+					<ShortName>Train2.wav</ShortName>
+					<Path>SFX\Train2_01AD3999.wem</Path>
+				</File>
 				<File Id="325845651" Language="SFX">
 					<ShortName>VoxelPanda_Loop6.wav</ShortName>
 					<Path>SFX\VoxelPanda_Loop6_8956FC97.wem</Path>
+				</File>
+				<File Id="332300684" Language="SFX">
+					<ShortName>Train1.wav</ShortName>
+					<Path>SFX\Train1_584CD0B5.wem</Path>
 				</File>
 				<File Id="380212301" Language="SFX">
 					<ShortName>VoxelPanda_Loop5.wav</ShortName>
@@ -72,7 +89,7 @@
 				</File>
 				<File Id="442245914" Language="SFX">
 					<ShortName>Pull3_1.wav</ShortName>
-					<Path>SFX\Pull3_1_29501DCA.wem</Path>
+					<Path>SFX\Pull3_1_60726D67.wem</Path>
 				</File>
 				<File Id="480031258" Language="SFX">
 					<ShortName>WallKick2.wav</ShortName>
@@ -86,6 +103,10 @@
 					<ShortName>VoxelPandaTheme_Loop1.wav</ShortName>
 					<Path>SFX\VoxelPandaTheme_Loop1_8956FC97.wem</Path>
 				</File>
+				<File Id="571536977" Language="SFX">
+					<ShortName>Countdown.wav</ShortName>
+					<Path>SFX\Countdown_56D34C19.wem</Path>
+				</File>
 				<File Id="587656586" Language="SFX">
 					<ShortName>SkateLoop.wav</ShortName>
 					<Path>SFX\SkateLoop_8956FC97_CA6E67AC.wem</Path>
@@ -93,6 +114,10 @@
 				<File Id="686013350" Language="SFX">
 					<ShortName>Crusher.wav</ShortName>
 					<Path>SFX\Crusher_8956FC97.wem</Path>
+				</File>
+				<File Id="689281227" Language="SFX">
+					<ShortName>CanonExplosion.wav</ShortName>
+					<Path>SFX\CanonExplosion_56D34C19.wem</Path>
 				</File>
 				<File Id="709625329" Language="SFX">
 					<ShortName>SwipeRelease_4_2.wav</ShortName>
@@ -122,17 +147,17 @@
 					<ShortName>VoxelPanda_Loop3.wav</ShortName>
 					<Path>SFX\VoxelPanda_Loop3_8956FC97.wem</Path>
 				</File>
-				<File Id="872231671" Language="SFX">
-					<ShortName>Coin2.wav</ShortName>
-					<Path>SFX\Coin2_EDB0AB87.wem</Path>
-				</File>
 				<File Id="930236180" Language="SFX">
 					<ShortName>VoxelPanda_Loop7.wav</ShortName>
 					<Path>SFX\VoxelPanda_Loop7_8956FC97.wem</Path>
 				</File>
+				<File Id="936149454" Language="SFX">
+					<ShortName>CanonLaunch.wav</ShortName>
+					<Path>SFX\CanonLaunch_4B17CF62.wem</Path>
+				</File>
 				<File Id="964041011" Language="SFX">
 					<ShortName>Pull3_3.wav</ShortName>
-					<Path>SFX\Pull3_3_7A17E870.wem</Path>
+					<Path>SFX\Pull3_3_BBD51EAA.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -21,13 +21,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586477296115219017
+    m_lastTime: -8586471372867170085
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586477365125466177
+    m_lastTime: -8586471365030411848
     List:
     - name: New_SoundBank
       guid: a29ea482dc41e94fb6325f61341eee7f
@@ -42,8 +42,20 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586477369018508846
+    m_lastTime: -8586471322359628410
     List:
+    - name: Death
+      guid: 30f026c1457cee4d92f24d7bf14900bb
+      id: 779278001
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Death
+        ObjectType: 3
+      Path: Default Work Unit\Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Coin
       guid: 91cb8a3525aa5747a7c31a697fece811
       id: 3114179205
@@ -54,6 +66,18 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Coin
       maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Crusher
+      guid: 5f2eb4516e42cf4eabb531aa3fd63a3e
+      id: 2458249826
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Crusher
+        ObjectType: 3
+      Path: Default Work Unit\Play_Crusher
+      maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
     - name: Play_GameplayMusic
@@ -78,6 +102,18 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_MenuMusic
       maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Robot_Arm
+      guid: e3b8102eb721a241bc0978e5aebf5e0d
+      id: 3759318933
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Robot_Arm
+        ObjectType: 3
+      Path: Default Work Unit\Play_Robot_Arm
+      maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
     - name: Play_Skate
@@ -116,6 +152,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_UI_Click
+      guid: 18fefab5d7ae2c4480c2569504fea62a
+      id: 1749424733
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_UI_Click
+        ObjectType: 3
+      Path: Default Work Unit\Play_UI_Click
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_WallKick
       guid: b48009f6a89b67439bb70e756907be1b
       id: 2567365808
@@ -128,18 +176,85 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Sand_Enter
+      guid: 1877ee3c92e4544ea25ad486a643c6f8
+      id: 3025617480
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sand_Enter
+        ObjectType: 3
+      Path: Default Work Unit\Sand_Enter
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4204f4678e24ab43ae48f3b1e3b5608a
-    m_lastTime: -8586519073068578239
-    List: []
+    m_lastTime: -8586471368677060425
+    List:
+    - name: Side_Chain
+      guid: 8a9021246bd5214b94c0d87ba0943011
+      id: 479396230
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Side_Chain
+        ObjectType: 13
+      Path: Default Work Unit\Side_Chain
+    - name: Skate_Speed
+      guid: 209eba2d89cb164a979b25878058b30e
+      id: 3490328425
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Skate_Speed
+        ObjectType: 13
+      Path: Default Work Unit\Skate_Speed
+    - name: Sound_Pitch
+      guid: 33ad02ceb13a144db3d4d62bb338d525
+      id: 2100146717
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sound_Pitch
+        ObjectType: 13
+      Path: Default Work Unit\Sound_Pitch
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: c206041e42c6bc4793974387cff8923c
-    m_lastTime: -8586519073068354013
-    List: []
+    m_lastTime: -8586471325894320532
+    List:
+    - name: PlayerLife
+      guid: 1f18aa2ed7b06447a6255f0d2608c987
+      id: 444815956
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerLife
+        ObjectType: 9
+      Path: Default Work Unit\PlayerLife
+      values:
+      - name: Alive
+        guid: e79789c316ebff498b6ebc877e57e8ea
+        id: 655265632
+        PathAndIcons:
+        - ElementName: Alive
+          ObjectType: 8
+      - name: Dead
+        guid: 23df2288910ad74da0f7b9c5d04a59ae
+        id: 2044049779
+        PathAndIcons:
+        - ElementName: Dead
+          ObjectType: 8
+      - name: None
+        guid: 89876af488590345b1401c25412655b3
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 

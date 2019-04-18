@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="Voxel-Panda_WwiseProject" Platform="Mac" BasePlatform="Mac">
 	<Plugins>
+		<Plugin Name="Wwise Compressor" ID="7077891" DLL="AkCompressor"/>
+		<Plugin Name="Wwise Peak Limiter" ID="7208963" DLL="AkPeakLimiter"/>
+		<Plugin Name="Wwise Meter" ID="8454147" DLL="AkSoundEngineDLL"/>
 		<Plugin Name="System" ID="11403271" DLL="DefaultSink"/>
 		<Plugin Name="No Output" ID="11862023" DLL="DefaultSink"/>
 	</Plugins>
