@@ -57,6 +57,7 @@ namespace VoxelPanda.Flow
 
 			//Bind specific
 			playerElements.camBehaviour.Rebind(playerElements.playerTransform, crusher.transform);
+            playerElements.sfx.Bind(dynMoveData, constMoveData);
 		}
 	}
 }

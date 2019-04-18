@@ -35,6 +35,7 @@
 				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
 				<Event Id="163991396" Name="Play_Train" ObjectPath="\Events\Default Work Unit\Play_Train"/>
 				<Event Id="1749424733" Name="Play_UI_Click" ObjectPath="\Events\Default Work Unit\Play_UI_Click"/>
+				<Event Id="1911738069" Name="Play_UI_Click_Pitched" ObjectPath="\Events\Default Work Unit\Play_UI_Click_Pitched"/>
 				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick"/>
 				<Event Id="3025617480" Name="Sand_Enter" ObjectPath="\Events\Default Work Unit\Sand_Enter"/>
 			</IncludedEvents>

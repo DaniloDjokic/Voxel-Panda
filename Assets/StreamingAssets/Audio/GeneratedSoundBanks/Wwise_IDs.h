@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAY_SWIPE_RELEASE = 2803607158U;
         static const AkUniqueID PLAY_TRAIN = 163991396U;
         static const AkUniqueID PLAY_UI_CLICK = 1749424733U;
+        static const AkUniqueID PLAY_UI_CLICK_PITCHED = 1911738069U;
         static const AkUniqueID PLAY_WALLKICK = 2567365808U;
         static const AkUniqueID SAND_ENTER = 3025617480U;
     } // namespace EVENTS

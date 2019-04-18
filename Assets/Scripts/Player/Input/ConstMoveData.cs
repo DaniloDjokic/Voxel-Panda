@@ -11,7 +11,7 @@ public class ConstMoveData : MonoBehaviour
     public float staminaPerFling;
     public float staminaRegenDelay;
     public float staminaRegenPerSecond;
-    public float vectorStaminaCost;
+    public float vectorStaminaCost = 1;
 
     //Curve
     public float curveForce;

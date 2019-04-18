@@ -10,7 +10,7 @@ namespace VoxelPanda.Flow
 {
 	public class DeathUI : MonoBehaviour
 	{
-		//Death screen
+        //Death screen
 		public GameObject deathScreen;
 		public GameObject deathOptionsPanel;
 		public ScoreCalculator scoreCalculator;
@@ -22,6 +22,7 @@ namespace VoxelPanda.Flow
 		//Get Ready panel
 		public GameObject getReadyPanel;
 		public TextMeshProUGUI countdownTimer;
+        public UISFX uiSFX;
 
 		public string restartText = "Try Again";
 		public string reviveText = "Revive!";
@@ -88,11 +89,13 @@ namespace VoxelPanda.Flow
 
 		public void StartAgain()
 		{
-			StartCountDown();
+            uiSFX.PlayUIClick();
+            StartCountDown();
 		}
 
 		public void Quit()
 		{
+            uiSFX.PlayUIClick();
 			deathController.Quit();
 		}
 
@@ -124,6 +127,7 @@ namespace VoxelPanda.Flow
 
 		public void OnRevivalPromptClick()
 		{
+            uiSFX.PlayUIClick(true);
 			deathController.TryToRevive();
 			revivalPrompt.SetActive(false);
 		}

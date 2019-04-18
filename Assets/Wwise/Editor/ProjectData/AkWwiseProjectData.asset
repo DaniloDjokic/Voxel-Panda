@@ -128,15 +128,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Swipe_Pull
+    - name: Play_Stamina_Low
       guid: 18f54a891b040548800e04fe07a586fe
-      id: 3678449574
+      id: 1289252702
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Swipe_Pull
+      - ElementName: Play_Stamina_Low
         ObjectType: 3
-      Path: Default Work Unit\Play_Swipe_Pull
+      Path: Default Work Unit\Play_Stamina_Low
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
