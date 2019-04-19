@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &57354989
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458990699513332, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c30e0c1bee954a488dc58f5e3dd996e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!114 &209672518 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114926313560044722, guid: 352b796d25972dd4fa50d6da5158f295,
@@ -359,6 +401,12 @@ Prefab:
       propertyPath: staminaLowEvent
       value: Play_Swipe_Low_Stamina
       objectReference: {fileID: 0}
+    - target: {fileID: 65359399493282360, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: fd7b16bc5ae2b4146b0493ae2f754ed1,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
   m_IsPrefabAsset: 0

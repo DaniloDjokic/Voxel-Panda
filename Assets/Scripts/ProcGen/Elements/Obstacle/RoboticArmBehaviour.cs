@@ -13,9 +13,15 @@ public class RoboticArmBehaviour : ObsBehaviour
     public bool counterClockwise;
 
     private float pauseTimer = 0f;
-    private float angleSinceLastCheckpoint;
+    public float angleSinceLastCheckpoint;
+	private Quaternion rotationBase;
 
-    private void Update()
+	private void Awake()
+	{
+		rotationBase = craneBase.transform.rotation;
+	}
+
+	private void Update()
     {
         Rotate();
     }
@@ -30,17 +36,18 @@ public class RoboticArmBehaviour : ObsBehaviour
             if(CheckpointReached())
             {
                 if (counterClockwise)
-                    currentAngle = -craneBase.transform.rotation.eulerAngles.y % angleAmountCheckpoint;
+                    currentAngle = -rotationBase.eulerAngles.y % angleAmountCheckpoint;
                 else
-                    currentAngle = angleAmountCheckpoint - (craneBase.transform.rotation.eulerAngles.y % angleAmountCheckpoint);
+                    currentAngle = angleAmountCheckpoint - (rotationBase.eulerAngles.y % angleAmountCheckpoint);
 
                 PauseRotation();
-            }
+            } else
+			{
+				Vector3 currentEuler = new Vector3(0, currentAngle, 0);
+				craneHook.transform.rotation = rotationBase = Quaternion.Euler(0, rotationBase.eulerAngles.y + currentAngle, 0);
+				craneHook.transform.position = RotateAroundPivot(craneHook.transform.position, craneBase.transform.position, currentEuler);
+			}
 
-
-            Vector3 currentEuler = new Vector3(0, currentAngle, 0);
-            craneHook.transform.rotation = craneBase.transform.rotation = Quaternion.Euler(0, craneBase.transform.rotation.eulerAngles.y + currentAngle, 0);
-            craneHook.transform.position = RotateAroundPivot(craneHook.transform.position, craneBase.transform.position, currentEuler);
         }
         else
         {
