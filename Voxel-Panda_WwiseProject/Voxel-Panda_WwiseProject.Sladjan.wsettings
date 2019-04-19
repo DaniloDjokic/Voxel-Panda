@@ -4,19 +4,30 @@
 		<UserProjectSettings Name="" ID="{ED94FDCA-2A73-4BAB-A19A-0A515231622E}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\Sladjan\Desktop\Temp\VoxelPanda\SFX\Character"/>
+				<Property Name="Event Action List\{00E0730D-E9E7-4CB4-BC5F-604DE35BA26A}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{04880CD7-2F83-4CCB-AA9A-0B23CEDB4B36}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{08E2F55F-9C53-4583-8F8A-066C90963C72}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{1F63A290-AE64-4C3A-BA1D-ECF923EE66C6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2EC402C4-9BC0-4E79-824B-3D50D54E96D7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{358ACB91-AA25-4757-A7C3-1A697FECE811}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{3CEE7718-E492-4E54-A25A-D486A643C6F8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4A08A90A-836C-4B3D-9B4B-7ED5E4BC87AF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{51B42E5F-426E-4ECF-ABB5-31AA3FD63A3E}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{54FF2FD0-0190-4C38-A360-D241D35A8F1D}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7DF390D2-0F49-4A83-873B-0FD7B5A762CD}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{7E9491A8-5AA7-4053-95B2-63BED83D61F6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{885376EF-0A4D-49E2-A6BE-1E1D6D825031}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{894AF518-041B-4805-800E-04FE07A586FE}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9829954D-A8F8-4571-B4A4-9808CD689DDA}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{ADBCCF62-316E-4F80-A742-11BC1F40B107}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B3369C0C-C358-4E55-BDBC-51197232BDD7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B5FAFE18-AED7-442C-80C2-569504FEA62A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BF47E2B1-5D89-4A5F-8102-9149A6246732}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C126F030-7C45-4DEE-92F2-4D7BF14900BB}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CD689573-8B36-4348-8756-B419CB7EC2A0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{D1996265-F547-4F4F-A4B5-59E6C6DF0B9F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{DBECA0A3-740E-4B47-BCF7-CA0394DD2813}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{F60980B4-9BA8-4367-9BB7-0E756907BE1B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -103,7 +114,7 @@
 				<Property Name="Music Transition List\{F658C4CA-DCCC-4235-8BC2-704B3840BCEB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
-				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{26596965-5073-47CA-9AD2-6D34DC10176A}"/>
 				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>

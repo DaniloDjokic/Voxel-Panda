@@ -18,6 +18,8 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
         private Vector3 target;
         private float offset = 0.05f;
         private bool isStopped;
+        private const string playTrainSFX = "Play_Train";
+        private const string stopTrainSFX = "Stop_Train";
 
         private void Start()
         {
@@ -27,11 +29,17 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
         private void Update()
 		{
             if(Mathf.Abs((target.x - train.localPosition.x)) >= offset && !isStopped)
+            {
                 train.Translate(direction * trainSpeed * Time.deltaTime);
+            }
             else
             {
                 if(!isStopped)
+                {
+                    AkSoundEngine.PostEvent(stopTrainSFX, train.gameObject);
                     StartCoroutine(SwitchDirection());
+                }
+                    
             }
 		}
 
@@ -64,6 +72,7 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
             }
 
             yield return new WaitForSeconds(trainStoppageTime);
+            AkSoundEngine.PostEvent(playTrainSFX, train.gameObject);
             isStopped = false;
         }
 	}

@@ -14,6 +14,7 @@
 				<GameParameter Name="Sound_Pitch" ID="{CE02AD33-3AB1-4D14-B3D4-D62BB338D525}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="50"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="Side_Chain" ID="{2421908A-D56B-4B21-94C0-D87BA0943011}">

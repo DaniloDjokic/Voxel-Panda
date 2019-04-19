@@ -481,6 +481,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="WallKick" ID="{89245EB7-49DE-4037-AEF0-8B93B42E3881}" ShortID="706564064">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -527,6 +528,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
 								</Reference>
@@ -596,11 +600,13 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Coin" ID="{D82C6ADF-5C80-4D45-95BF-CCE471BABE27}" ShortID="481750223">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>47</Value>
 									</ValueList>
 								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-11</Value>
@@ -701,6 +707,7 @@
 										<Value>40</Value>
 									</ValueList>
 								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>23</Value>
@@ -772,7 +779,7 @@
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -782,6 +789,15 @@
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{0D618FFC-842F-4911-BC6B-E05788F7B60C}" ShortID="754710312" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="GainBand2" Type="Real32" Value="1"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -837,6 +853,14 @@
 						</RandomSequenceContainer>
 						<Sound Name="CanonExplosion" ID="{C121C098-5535-4ACC-8691-8E28C03D7267}" ShortID="43476427">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -850,6 +874,17 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+								<Property Name="PriorityDistanceOffset" Type="int16">
+									<ValueList>
+										<Value>-25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-4</Value>
@@ -857,6 +892,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Canon Distance" ID="{B10D0F7C-C215-4BFE-8F9C-C623D620A8B5}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
 								</Reference>
@@ -879,6 +917,14 @@
 						</Sound>
 						<Sound Name="CanonLaunch" ID="{DD605F22-4E95-4DE6-8A4F-8EB6F49B5898}" ShortID="97595907">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -892,6 +938,17 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+								<Property Name="PriorityDistanceOffset" Type="int16">
+									<ValueList>
+										<Value>-25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>1</Value>
@@ -899,6 +956,9 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Canon Distance" ID="{B10D0F7C-C215-4BFE-8F9C-C623D620A8B5}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
 								</Reference>
@@ -940,6 +1000,7 @@
 						</Sound>
 						<Sound Name="DeathSynth" ID="{10075548-8EDD-44BC-91DB-77B1F1CCC31C}" ShortID="1037033291">
 							<PropertyList>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-7</Value>
@@ -971,6 +1032,7 @@
 						</Sound>
 						<Sound Name="Countdown" ID="{B085E71D-9907-457B-B2D1-0366DFD4E02C}" ShortID="694436200">
 							<PropertyList>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-8</Value>
@@ -996,7 +1058,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="Train" ID="{75B52EF6-FF24-42BE-A6F2-9EF73F6BA1FE}" ShortID="695299343">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
 								</Reference>
@@ -1057,6 +1125,46 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Click_Pitched" ID="{2C365C12-58F7-49D8-812C-32ADCBD7DDA0}" ShortID="20173623">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>23</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>450</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Click" ID="{211745EE-F7BF-41FB-9D99-07739E6FEFFA}" ShortID="1028529645">
+									<Language>SFX</Language>
+									<AudioFile>Click.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="778663241"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Click" ID="{211745EE-F7BF-41FB-9D99-07739E6FEFFA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

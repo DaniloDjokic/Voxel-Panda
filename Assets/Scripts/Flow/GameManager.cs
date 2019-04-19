@@ -20,6 +20,7 @@ namespace VoxelPanda.Flow
 		private Crusher crusher;
 		public ProcEvents procEvents;
 
+
 		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator)
 		{
             this.scoreCalculator = scoreCalculator;
@@ -51,7 +52,7 @@ namespace VoxelPanda.Flow
 
 		public void RestartLevel()
 		{
-			crusher.ResetPositionForRevive();
+            crusher.ResetPositionForRevive();
 			player.RevivePlayer();
 			accInput.SetInputDetection(true);
 			touchInput.SetInputDetection(true);
@@ -75,7 +76,7 @@ namespace VoxelPanda.Flow
 
 		public void EndRun()
 		{
-			procEvents.ResetAll();
+            procEvents.ResetAll();
 			deathController.RaiseScreen();
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);

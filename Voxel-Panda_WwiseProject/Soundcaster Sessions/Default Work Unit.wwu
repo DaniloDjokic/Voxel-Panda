@@ -18,6 +18,10 @@
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Mute_All" ID="{1F63A290-AE64-4C3A-BA1D-ECF923EE66C6}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_Swipe_Release" ID="{08E2F55F-9C53-4583-8F8A-066C90963C72}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -28,6 +32,10 @@
 						<Module>
 							<ObjectRef Name="Play_MenuMusic" ID="{885376EF-0A4D-49E2-A6BE-1E1D6D825031}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Unmute_All" ID="{B3369C0C-C358-4E55-BDBC-51197232BDD7}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_UI_Click" ID="{B5FAFE18-AED7-442C-80C2-569504FEA62A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
@@ -50,7 +58,7 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<ObjectRef Name="Play_Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
@@ -81,7 +89,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Dead" ID="{8822DF23-0A91-4DD7-A0F7-B9C5D04A59AE}"/>
+						<CurrentStateRef Name="Alive" ID="{C38997E7-EB16-49FF-8B6E-BC877E57E8EA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

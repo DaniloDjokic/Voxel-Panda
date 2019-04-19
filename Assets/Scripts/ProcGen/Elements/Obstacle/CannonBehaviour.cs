@@ -9,6 +9,7 @@ public class CannonBehaviour : ObsBehaviour
     public float secondsBetweenShots;
     public float phaseStart = 0f;
     private float timer = 0f;
+    private const string launchBulletSFX = "Play_CanonLaunch";
 
     BulletBehaviour activeBullet;
 
@@ -25,6 +26,7 @@ public class CannonBehaviour : ObsBehaviour
     {
         if(timer > secondsBetweenShots)
         {
+            AkSoundEngine.PostEvent(launchBulletSFX, gameObject);
             Quaternion rot = Quaternion.LookRotation(transform.right, Vector3.up);
 
             activeBullet = Instantiate(bullet, transform.position, rot).GetComponent<BulletBehaviour>();

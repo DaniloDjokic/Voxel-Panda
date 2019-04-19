@@ -9,6 +9,7 @@ public class BulletBehaviour : MonoBehaviour
     public float secondsActive;
     public float explosionRadius;
     public float explosionKnockback;
+    private const string explosionSFX = "Play_CanonExplosion";
 
     private float timer;
 
@@ -27,16 +28,16 @@ public class BulletBehaviour : MonoBehaviour
         }
         else
         {
-            Explode();
+            Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Explode();
+        Collide();
     }
 
-    void Explode()
+    void Collide()
     {
         Collider[] explosion = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach(Collider col in explosion)
@@ -49,13 +50,22 @@ public class BulletBehaviour : MonoBehaviour
                 {
                     Vector3 forceVector = player.gameObject.transform.position - transform.position;
                     player.AddForce(forceVector.normalized * explosionKnockback * Time.deltaTime, ForceMode.VelocityChange);
+                    Explode(col.gameObject);
                 }
                 else
                 {
                     Debug.LogError("Player caught in explosion does not have a rigidbody");
                 }
+            } else if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("Obstacle"))
+            {
+                Explode(col.gameObject);
             }
         }
+
+    }
+    void Explode(GameObject gameObjectHit)
+    {
+        //AkSoundEngine.PostEvent(explosionSFX, gameObjectHit);
         Destroy(this.gameObject);
     }
 }

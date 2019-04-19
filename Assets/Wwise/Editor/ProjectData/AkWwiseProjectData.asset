@@ -21,13 +21,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586471372867170085
+    m_lastTime: -8586460149576104726
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586471365030411848
+    m_lastTime: -8586460057177199811
     List:
     - name: New_SoundBank
       guid: a29ea482dc41e94fb6325f61341eee7f
@@ -42,18 +42,42 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586471322359628410
+    m_lastTime: -8586460046652307822
     List:
-    - name: Death
-      guid: 30f026c1457cee4d92f24d7bf14900bb
-      id: 779278001
+    - name: Mute_All
+      guid: 90a2631f64ae3a4cba1decf923ee66c6
+      id: 1739713018
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Death
+      - ElementName: Mute_All
         ObjectType: 3
-      Path: Default Work Unit\Death
+      Path: Default Work Unit\Mute_All
       maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_CanonExplosion
+      guid: d02fff549001384ca360d241d35a8f1d
+      id: 2685623696
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_CanonExplosion
+        ObjectType: 3
+      Path: Default Work Unit\Play_CanonExplosion
+      maxAttenuation: 5
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_CanonLaunch
+      guid: 62cfbcad6e31804fa74211bc1f40b107
+      id: 317442834
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_CanonLaunch
+        ObjectType: 3
+      Path: Default Work Unit\Play_CanonLaunch
+      maxAttenuation: 5
       maxDuration: 0
       minDuration: 0
     - name: Play_Coin
@@ -68,6 +92,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Countdown
+      guid: 4d952998f8a87145b4a49808cd689dda
+      id: 2175797879
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Countdown
+        ObjectType: 3
+      Path: Default Work Unit\Play_Countdown
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Crusher
       guid: 5f2eb4516e42cf4eabb531aa3fd63a3e
       id: 2458249826
@@ -78,6 +114,18 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Crusher
       maxAttenuation: 20
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Death
+      guid: 30f026c1457cee4d92f24d7bf14900bb
+      id: 1172822028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Death
+        ObjectType: 3
+      Path: Default Work Unit\Play_Death
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_GameplayMusic
@@ -128,15 +176,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Stamina_Low
+    - name: Play_Swipe_Low_Stamina
       guid: 18f54a891b040548800e04fe07a586fe
-      id: 1289252702
+      id: 2608897773
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Stamina_Low
+      - ElementName: Play_Swipe_Low_Stamina
         ObjectType: 3
-      Path: Default Work Unit\Play_Stamina_Low
+      Path: Default Work Unit\Play_Swipe_Low_Stamina
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -152,6 +200,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_Train
+      guid: a3a0ecdb0e74474bbcf7ca0394dd2813
+      id: 163991396
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Train
+        ObjectType: 3
+      Path: Default Work Unit\Play_Train
+      maxAttenuation: 20
+      maxDuration: 0
+      minDuration: 0
     - name: Play_UI_Click
       guid: 18fefab5d7ae2c4480c2569504fea62a
       id: 1749424733
@@ -164,6 +224,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_UI_Click_Pitched
+      guid: d70c8804832fcb4caa9a0b23cedb4b36
+      id: 1911738069
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_UI_Click_Pitched
+        ObjectType: 3
+      Path: Default Work Unit\Play_UI_Click_Pitched
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_WallKick
       guid: b48009f6a89b67439bb70e756907be1b
       id: 2567365808
@@ -173,18 +245,30 @@ MonoBehaviour:
       - ElementName: Play_WallKick
         ObjectType: 3
       Path: Default Work Unit\Play_WallKick
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: 0
       minDuration: 0
-    - name: Sand_Enter
-      guid: 1877ee3c92e4544ea25ad486a643c6f8
-      id: 3025617480
+    - name: Stop_Train
+      guid: 739568cd368b48438756b419cb7ec2a0
+      id: 3191503118
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Sand_Enter
+      - ElementName: Stop_Train
         ObjectType: 3
-      Path: Default Work Unit\Sand_Enter
+      Path: Default Work Unit\Stop_Train
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Unmute_All
+      guid: 0c9c36b358c3554ebdbc51197232bdd7
+      id: 4003578643
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Unmute_All
+        ObjectType: 3
+      Path: Default Work Unit\Unmute_All
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -192,7 +276,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4204f4678e24ab43ae48f3b1e3b5608a
-    m_lastTime: -8586471368677060425
+    m_lastTime: -8586460066699034429
     List:
     - name: Side_Chain
       guid: 8a9021246bd5214b94c0d87ba0943011
@@ -269,7 +353,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Voxel-Panda_WwiseProject
-  - /Voxel-Panda_WwiseProject/Events
-  - /Voxel-Panda_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

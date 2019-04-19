@@ -6,6 +6,7 @@
 				<SoundBank Name="New_SoundBank" ID="{82A49EA2-41DC-4FE9-B632-5F61341EEE7F}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Stop_Train" ID="{CD689573-8B36-4348-8756-B419CB7EC2A0}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_WallKick" ID="{F60980B4-9BA8-4367-9BB7-0E756907BE1B}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_UI_Click" ID="{B5FAFE18-AED7-442C-80C2-569504FEA62A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Countdown" ID="{9829954D-A8F8-4571-B4A4-9808CD689DDA}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
@@ -17,8 +18,10 @@
 						<ObjectRef Name="Play_Skate" ID="{7DF390D2-0F49-4A83-873B-0FD7B5A762CD}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Train" ID="{DBECA0A3-740E-4B47-BCF7-CA0394DD2813}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_CanonExplosion" ID="{54FF2FD0-0190-4C38-A360-D241D35A8F1D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Sand_Enter" ID="{3CEE7718-E492-4E54-A25A-D486A643C6F8}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Mute_All" ID="{1F63A290-AE64-4C3A-BA1D-ECF923EE66C6}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_UI_Click_Pitched" ID="{04880CD7-2F83-4CCB-AA9A-0B23CEDB4B36}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Unmute_All" ID="{B3369C0C-C358-4E55-BDBC-51197232BDD7}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Crusher" ID="{51B42E5F-426E-4ECF-ABB5-31AA3FD63A3E}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_CanonLaunch" ID="{ADBCCF62-316E-4F80-A742-11BC1F40B107}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

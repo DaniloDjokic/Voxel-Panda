@@ -13,12 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID DEATH = 779278001U;
+        static const AkUniqueID MUTE_ALL = 1739713018U;
         static const AkUniqueID PLAY_CANONEXPLOSION = 2685623696U;
         static const AkUniqueID PLAY_CANONLAUNCH = 317442834U;
         static const AkUniqueID PLAY_COIN = 3114179205U;
         static const AkUniqueID PLAY_COUNTDOWN = 2175797879U;
         static const AkUniqueID PLAY_CRUSHER = 2458249826U;
+        static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_GAMEPLAYMUSIC = 2481433679U;
         static const AkUniqueID PLAY_MENUMUSIC = 2570041344U;
         static const AkUniqueID PLAY_ROBOT_ARM = 3759318933U;
@@ -29,7 +30,8 @@ namespace AK
         static const AkUniqueID PLAY_UI_CLICK = 1749424733U;
         static const AkUniqueID PLAY_UI_CLICK_PITCHED = 1911738069U;
         static const AkUniqueID PLAY_WALLKICK = 2567365808U;
-        static const AkUniqueID SAND_ENTER = 3025617480U;
+        static const AkUniqueID STOP_TRAIN = 3191503118U;
+        static const AkUniqueID UNMUTE_ALL = 4003578643U;
     } // namespace EVENTS
 
     namespace STATES

@@ -8,14 +8,25 @@ using VoxelPanda.Score;
 public class MainMenu : MonoBehaviour {
 	public GameObject soundOnIcon;
 	public GameObject soundOffIcon;
-	private const string isSoundOnKey = "IsSoundOn";
+    public UISFX uiSFX;
+    private const string isSoundOnKey = "IsSoundOn";
+    private const string muteAllEvent = "Mute_All";
+    private const string unmuteAllEvent = "Unmute_All";
 
-	public void StartGame() {
+    private void Start()
+    {
+        ChangeSound(GetSoundOn());
+
+    }
+
+    public void StartGame() {
+        uiSFX.PlayUIClick();
 		SceneManager.LoadScene(1);
 	}
 
 	public void ToggleSound() {
-		bool currentSoundOn = GetSoundOn();
+        uiSFX.PlayUIClick();
+        bool currentSoundOn = GetSoundOn();
 		bool newSoundOn = !currentSoundOn;
 		ChangeSound(newSoundOn);
 		soundOnIcon.SetActive(newSoundOn);
@@ -27,16 +38,26 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void ChangeSound(bool isSoundOn) {
-		PlayerPrefs.SetInt(isSoundOnKey, isSoundOn ? 1 : 0);
+        if (isSoundOn)
+        {
+            AkSoundEngine.PostEvent(unmuteAllEvent, gameObject);
+        } else
+        {
+            AkSoundEngine.PostEvent(muteAllEvent, gameObject);
+        }
+        PlayerPrefs.SetInt(isSoundOnKey, isSoundOn ? 1 : 0);
 	}
 
 	public void ResetTutorial()
 	{
-		Tutorial.ResetTutorial();
+        uiSFX.PlayUIClick();
+        Tutorial.ResetTutorial();
 	}
 
 	public void ResetHighScore()
 	{
-		ScoreCalculator.ResetHighScore();
+        uiSFX.PlayUIClick();
+        ScoreCalculator.ResetHighScore();
 	}
+
 }

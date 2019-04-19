@@ -179,20 +179,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Sand_Enter" ID="{3CEE7718-E492-4E54-A25A-D486A643C6F8}">
-					<ChildrenList>
-						<Action Name="" ID="{D7F68F3F-5DF4-4C41-A82C-F42AB39C67D4}" ShortID="902223558">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Sound_Pitch" ID="{CE02AD33-3AB1-4D14-B3D4-D62BB338D525}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}">
 					<ChildrenList>
 						<Action Name="" ID="{F191E113-67BC-4263-AC19-9E364D7E8601}" ShortID="708612264">
@@ -207,7 +193,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}">
+				<Event Name="Play_Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}">
 					<ChildrenList>
 						<Action Name="" ID="{AE66FB01-1149-446D-B35A-FFD17F18F3F0}" ShortID="79316635">
 							<PropertyList>
@@ -301,6 +287,65 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Train" ID="{75B52EF6-FF24-42BE-A6F2-9EF73F6BA1FE}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_UI_Click_Pitched" ID="{04880CD7-2F83-4CCB-AA9A-0B23CEDB4B36}">
+					<ChildrenList>
+						<Action Name="" ID="{D9021CF0-CF37-4E6F-B818-669DD7752A49}" ShortID="709899346">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click_Pitched" ID="{2C365C12-58F7-49D8-812C-32ADCBD7DDA0}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Train" ID="{CD689573-8B36-4348-8756-B419CB7EC2A0}">
+					<ChildrenList>
+						<Action Name="" ID="{310D5B32-36DD-4200-A7E3-BA608D666CED}" ShortID="145185895">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Train" ID="{75B52EF6-FF24-42BE-A6F2-9EF73F6BA1FE}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Mute_All" ID="{1F63A290-AE64-4C3A-BA1D-ECF923EE66C6}">
+					<ChildrenList>
+						<Action Name="" ID="{D002F037-481D-49CA-AF49-E4E1A73BA8CE}" ShortID="58282428">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Unmute_All" ID="{B3369C0C-C358-4E55-BDBC-51197232BDD7}">
+					<ChildrenList>
+						<Action Name="" ID="{208855C5-8CEA-44AF-BBE3-9044BE32107B}" ShortID="1041262506">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="14"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

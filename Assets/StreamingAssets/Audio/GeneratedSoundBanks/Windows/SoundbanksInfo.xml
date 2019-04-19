@@ -21,12 +21,13 @@
 			<ShortName>New_SoundBank</ShortName>
 			<Path>New_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="779278001" Name="Death" ObjectPath="\Events\Default Work Unit\Death"/>
+				<Event Id="1739713018" Name="Mute_All" ObjectPath="\Events\Default Work Unit\Mute_All"/>
 				<Event Id="2685623696" Name="Play_CanonExplosion" ObjectPath="\Events\Default Work Unit\Play_CanonExplosion"/>
 				<Event Id="317442834" Name="Play_CanonLaunch" ObjectPath="\Events\Default Work Unit\Play_CanonLaunch"/>
 				<Event Id="3114179205" Name="Play_Coin" ObjectPath="\Events\Default Work Unit\Play_Coin"/>
 				<Event Id="2175797879" Name="Play_Countdown" ObjectPath="\Events\Default Work Unit\Play_Countdown"/>
 				<Event Id="2458249826" Name="Play_Crusher" ObjectPath="\Events\Default Work Unit\Play_Crusher"/>
+				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Play_Death"/>
 				<Event Id="2481433679" Name="Play_GameplayMusic" ObjectPath="\Events\Default Work Unit\Play_GameplayMusic"/>
 				<Event Id="2570041344" Name="Play_MenuMusic" ObjectPath="\Events\Default Work Unit\Play_MenuMusic"/>
 				<Event Id="3759318933" Name="Play_Robot_Arm" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm"/>
@@ -37,7 +38,8 @@
 				<Event Id="1749424733" Name="Play_UI_Click" ObjectPath="\Events\Default Work Unit\Play_UI_Click"/>
 				<Event Id="1911738069" Name="Play_UI_Click_Pitched" ObjectPath="\Events\Default Work Unit\Play_UI_Click_Pitched"/>
 				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick"/>
-				<Event Id="3025617480" Name="Sand_Enter" ObjectPath="\Events\Default Work Unit\Sand_Enter"/>
+				<Event Id="3191503118" Name="Stop_Train" ObjectPath="\Events\Default Work Unit\Stop_Train"/>
+				<Event Id="4003578643" Name="Unmute_All" ObjectPath="\Events\Default Work Unit\Unmute_All"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="14775637" Language="SFX">
@@ -50,7 +52,7 @@
 				</File>
 				<File Id="75030674" Language="SFX">
 					<ShortName>Pull3_2.wav</ShortName>
-					<Path>SFX\Pull3_2_77087AB7.wem</Path>
+					<Path>SFX\Pull3_2_2A8C9FE8.wem</Path>
 				</File>
 				<File Id="103177881" Language="SFX">
 					<ShortName>WallKick 1.wav</ShortName>
@@ -70,7 +72,7 @@
 				</File>
 				<File Id="320287986" Language="SFX">
 					<ShortName>Train2.wav</ShortName>
-					<Path>SFX\Train2_01AD3999.wem</Path>
+					<Path>SFX\Train2_9EC7BF3D.wem</Path>
 				</File>
 				<File Id="325845651" Language="SFX">
 					<ShortName>VoxelPanda_Loop6.wav</ShortName>
@@ -78,7 +80,7 @@
 				</File>
 				<File Id="332300684" Language="SFX">
 					<ShortName>Train1.wav</ShortName>
-					<Path>SFX\Train1_584CD0B5.wem</Path>
+					<Path>SFX\Train1_D77FE458.wem</Path>
 				</File>
 				<File Id="380212301" Language="SFX">
 					<ShortName>VoxelPanda_Loop5.wav</ShortName>
@@ -90,7 +92,7 @@
 				</File>
 				<File Id="442245914" Language="SFX">
 					<ShortName>Pull3_1.wav</ShortName>
-					<Path>SFX\Pull3_1_60726D67.wem</Path>
+					<Path>SFX\Pull3_1_057B8BA4.wem</Path>
 				</File>
 				<File Id="480031258" Language="SFX">
 					<ShortName>WallKick2.wav</ShortName>
@@ -154,11 +156,11 @@
 				</File>
 				<File Id="936149454" Language="SFX">
 					<ShortName>CanonLaunch.wav</ShortName>
-					<Path>SFX\CanonLaunch_4B17CF62.wem</Path>
+					<Path>SFX\CanonLaunch_55C47DED.wem</Path>
 				</File>
 				<File Id="964041011" Language="SFX">
 					<ShortName>Pull3_3.wav</ShortName>
-					<Path>SFX\Pull3_3_BBD51EAA.wem</Path>
+					<Path>SFX\Pull3_3_AD82D75C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

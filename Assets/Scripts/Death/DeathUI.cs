@@ -50,12 +50,12 @@ namespace VoxelPanda.Flow
 		{
 			if(isCountingDown)
 			{
-				if (currentTime < 0.5f)
+				if (currentTime < 0.2f)
 				{
 					countdownText = getReadyText;
 				} else
 				{
-					countdownText = currentTime.ToString("0");
+					countdownText = Mathf.Ceil(currentTime).ToString("0");
 				}
 				countdownTimer.text = countdownText;
 				currentTime -= Time.deltaTime;
@@ -105,7 +105,9 @@ namespace VoxelPanda.Flow
 			getReadyPanel.SetActive(true);
 			isCountingDown = true;
 			currentTime = countdownTime;
-		}
+            uiSFX.PlayCountdown();
+
+        }
 
 		private void TimerCountOut()
 		{
