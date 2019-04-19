@@ -11,6 +11,8 @@ namespace VoxelPanda.Player.Presentation
         public Image touchStart;
         public Image touchEnd;
 
+        public float visualModifier;
+
         void Start()
         {
             ToggleImages(false);
@@ -32,7 +34,7 @@ namespace VoxelPanda.Player.Presentation
             Vector3 newPos = flingData.unmodifiedTouchEndPosition;
 
             Vector3 offset = (newPos - touchStart.transform.position);
-            touchEnd.transform.position = touchStart.transform.position + Vector3.ClampMagnitude(offset, flingData.MaxFlingVector.magnitude);
+            touchEnd.transform.position = touchStart.transform.position + Vector3.ClampMagnitude(offset, flingData.MaxFlingVector.magnitude * visualModifier);
         }
         
 		public void OnFlingStarted(FlingData flingData)
