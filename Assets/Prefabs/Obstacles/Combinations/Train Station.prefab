@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 65384834839964976}
   m_Layer: 0
   m_Name: Train
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 65511199119796046}
   m_Layer: 0
   m_Name: Wall 4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 65007165276119168}
   m_Layer: 0
   m_Name: Wall 4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 65335406718135182}
   m_Layer: 0
   m_Name: Train
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 65402020144342014}
   m_Layer: 0
   m_Name: Train
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2617,6 +2617,11 @@ MonoBehaviour:
   train: {fileID: 4854606942626896}
   trainSpeed: 5
   trainStoppageTime: 1
+  direction: {x: 0, y: 0, z: 0}
+  leftPoint: {x: 0, y: 0, z: 0}
+  rightPoint: {x: 0, y: 0, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  alreadySetBoundaries: 0
 --- !u!114 &114267965529658776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2632,6 +2637,11 @@ MonoBehaviour:
   train: {fileID: 4959716788700884}
   trainSpeed: 5
   trainStoppageTime: 1
+  direction: {x: 0, y: 0, z: 0}
+  leftPoint: {x: 0, y: 0, z: 0}
+  rightPoint: {x: 0, y: 0, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  alreadySetBoundaries: 0
 --- !u!114 &114312323047882576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2722,3 +2732,8 @@ MonoBehaviour:
   train: {fileID: 4006567264349230}
   trainSpeed: 5
   trainStoppageTime: 1
+  direction: {x: 0, y: 0, z: 0}
+  leftPoint: {x: 0, y: 0, z: 0}
+  rightPoint: {x: 0, y: 0, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  alreadySetBoundaries: 0

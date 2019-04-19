@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 54550410669097884}
   m_Layer: 0
   m_Name: Train
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -493,3 +493,8 @@ MonoBehaviour:
   train: {fileID: 4682637819876392}
   trainSpeed: 5
   trainStoppageTime: 1
+  direction: {x: 0, y: 0, z: 0}
+  leftPoint: {x: 0, y: 0, z: 0}
+  rightPoint: {x: 0, y: 0, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  alreadySetBoundaries: 0

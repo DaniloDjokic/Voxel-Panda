@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 114599125426861510}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114660056067943364}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 114157444504781500}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 114201050572002800}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 114109008666167112}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1174,7 +1174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114239577372258388}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 1.5
   phaseStart: 1
 --- !u!114 &114157444504781500
@@ -1189,7 +1191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114863479255020118}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 1.5
   phaseStart: 0.25
 --- !u!114 &114201050572002800
@@ -1204,7 +1208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114401489296385526}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 1.5
   phaseStart: 0.5
 --- !u!114 &114239577372258388
@@ -1264,7 +1270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114559577269529490}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 1.5
   phaseStart: 0
 --- !u!114 &114660056067943364
@@ -1279,7 +1287,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114824633814304406}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 1.5
   phaseStart: 0.75
 --- !u!114 &114824633814304406

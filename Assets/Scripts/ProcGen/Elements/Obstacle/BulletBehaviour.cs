@@ -18,7 +18,7 @@ public class BulletBehaviour : MonoBehaviour
         timer = secondsActive;    
     }
 
-    private void Update()
+	private void Update()
     {
         if(timer >= 0f)
         {
@@ -28,13 +28,14 @@ public class BulletBehaviour : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Despawn();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Collide();
+		if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Obstacle")) 
+			Collide();
     }
 
     void Collide()
@@ -50,22 +51,37 @@ public class BulletBehaviour : MonoBehaviour
                 {
                     Vector3 forceVector = player.gameObject.transform.position - transform.position;
                     player.AddForce(forceVector.normalized * explosionKnockback * Time.deltaTime, ForceMode.VelocityChange);
-                    Explode(col.gameObject);
                 }
                 else
                 {
                     Debug.LogError("Player caught in explosion does not have a rigidbody");
                 }
-            } else if (col.gameObject.CompareTag("Wall") || col.gameObject.CompareTag("Obstacle"))
-            {
-                Explode(col.gameObject);
             }
         }
+		Explode();
 
-    }
-    void Explode(GameObject gameObjectHit)
+	}
+    void Explode()
     {
-        //AkSoundEngine.PostEvent(explosionSFX, gameObjectHit);
-        Destroy(this.gameObject);
+        AkSoundEngine.PostEvent(explosionSFX, gameObject);
+        Despawn();
     }
+
+	public void Spawn(Vector3 position, Quaternion rotation)
+	{
+		this.transform.position = position;
+		this.transform.rotation = rotation;
+		this.gameObject.SetActive(true);
+		timer = secondsActive;
+	}
+
+	public void Despawn()
+	{
+		this.gameObject.SetActive(false);
+	}
+
+	public bool AvailableToSpawn()
+	{
+		return !gameObject.activeInHierarchy;
+	}
 }

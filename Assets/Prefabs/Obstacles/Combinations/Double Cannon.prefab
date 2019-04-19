@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 65275883219888144}
   m_Layer: 0
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 65036852470706214}
   m_Layer: 0
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 65411634531521056}
   m_Layer: 0
   m_Name: Wall 4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 114009803830646132}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 114352233532106794}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1840,7 +1840,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114765304657984220}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114224902711813356
@@ -1870,7 +1872,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114224902711813356}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114352906410344578

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Wall
+  - PhysicsDecoration
   layers:
   - Default
   - TransparentFX

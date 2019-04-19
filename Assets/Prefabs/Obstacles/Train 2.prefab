@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 54696555189898528}
   m_Layer: 0
   m_Name: Train
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 50
+  weight: 1
   gridMatrix: {fileID: 11400000, guid: d9831931837f4354fb10c0c5a1da2b9f, type: 2}
   orientation: 1
   rotationPivot: {fileID: 0}

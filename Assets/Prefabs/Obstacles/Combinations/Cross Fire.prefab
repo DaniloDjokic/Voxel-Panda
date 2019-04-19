@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114403328722680118}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 65073479215038972}
   m_Layer: 0
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 65877666994317002}
   m_Layer: 0
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 114451021521401684}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 114029519056400604}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 65221875280177818}
   m_Layer: 0
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 114913882167315862}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 135820998814702136}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: PhysicsDecoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 65326248467616782}
   m_Layer: 0
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1895,7 +1895,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114468070196584848}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114043051945549164
@@ -1970,7 +1972,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114855981565671366}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114438264162436814
@@ -2000,7 +2004,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114178100475981012}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114468070196584848
@@ -2103,7 +2109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114438264162436814}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!135 &135820998814702136

@@ -1193,39 +1193,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 353765122}
   m_Script: {fileID: 11500000, guid: 101c65da697fbca4d87463733550b730, type: 3}
---- !u!1 &963360162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1473146205800644, guid: 05b281523051b9c45961fd31fb5bb4e4,
-    type: 2}
-  m_PrefabInternal: {fileID: 829186500}
---- !u!114 &963360164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 963360162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae77a0884c3aa8342a8c85a4b8c8ae73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    valueGuid: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8784bf2c5cb079748acd0ff605a79034,
-      type: 2}
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: 
-  multiPositionArray: []
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
 --- !u!1 &978214834
 GameObject:
   m_ObjectHideFlags: 0

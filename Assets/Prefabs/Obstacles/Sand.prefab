@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4088507520495226}
   m_Layer: 0
   m_Name: Bucket
-  m_TagString: Untagged
+  m_TagString: PhysicsDecoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 135915199804026562}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: PhysicsDecoration
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
