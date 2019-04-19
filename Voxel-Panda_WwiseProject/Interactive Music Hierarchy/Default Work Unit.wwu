@@ -70,7 +70,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+							<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{C58B4873-97BB-4CD2-81C8-F7205DC79567}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -1543,21 +1543,28 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="MenuMusic" ID="{B87A4D8C-5422-4A16-AC30-9D60E1FB8B43}" ShortID="817940013">
 					<PropertyList>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>36</Value>
-							</ValueList>
-						</Property>
 						<Property Name="Tempo" Type="Real64" Value="158"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-7</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+							<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise Parametric EQ (Custom)" ID="{8C092092-414D-4B73-A92D-D450ABBFA04D}" ShortID="540475399" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="1646"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="3656"/>
+										<Property Name="GainBand2" Type="Real32" Value="-10"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Music" ID="{C58B4873-97BB-4CD2-81C8-F7205DC79567}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -1566,7 +1573,7 @@
 					<ChildrenList>
 						<MusicSegment Name="VoxelPandaMenu" ID="{E8FF1D69-5D79-4C02-8F98-2438BA6865E1}" ShortID="457181218">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="12751.4802372459"/>
+								<Property Name="EndPosition" Type="Real64" Value="14197.9899133388"/>
 								<Property Name="Tempo" Type="Real64" Value="158"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -1608,11 +1615,11 @@
 											<ClipList>
 												<MusicClip Name="VoxelPandaMenu" ID="{A0B1A5A6-6EE5-4BA0-91B8-B0C9B6E6A3EC}">
 													<PropertyList>
-														<Property Name="BeginTrimOffset" Type="Real64" Value="6455.69620253164"/>
-														<Property Name="EndTrimOffset" Type="Real64" Value="18227.8481012658"/>
-														<Property Name="FadeInDuration" Type="Real64" Value="319.087214754606"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="319.087214754607"/>
-														<Property Name="PlayAt" Type="Real64" Value="-6455.69620253164"/>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="6075.9493670886"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="18987.3417721519"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="1051.80600419112"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1453.61953388211"/>
+														<Property Name="PlayAt" Type="Real64" Value="-6075.9493670886"/>
 													</PropertyList>
 													<AudioSourceRef Name="VoxelPandaMenu" ID="{B0CF4A1C-6DB5-4E75-AB4C-CBF4FD79D9A7}"/>
 													<PropertyCurveList>
@@ -1623,12 +1630,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>6.4557</XPos>
+																		<XPos>6.07595</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>18.22785</XPos>
+																		<XPos>18.98734</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1642,12 +1649,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>6.4557</XPos>
+																		<XPos>6.07595</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>18.22785</XPos>
+																		<XPos>18.98734</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1661,12 +1668,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>6.4557</XPos>
+																		<XPos>6.07595</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>18.22785</XPos>
+																		<XPos>18.98734</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1683,20 +1690,20 @@
 							<CueList>
 								<MusicCue Name="Entry Cue" ID="{5141000F-2BE3-4EA3-943D-966FE68D8F21}">
 									<PropertyList>
-										<Property Name="TimeMs" Type="Real64" Value="379.746835443038"/>
+										<Property Name="TimeMs" Type="Real64" Value="759.493670886077"/>
 									</PropertyList>
 								</MusicCue>
 								<MusicCue Name="Exit Cue" ID="{CC241310-B934-4C3C-80CD-FFA52BAED2CA}">
 									<PropertyList>
 										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="11392.4050632911"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
 									</PropertyList>
 								</MusicCue>
 							</CueList>
 						</MusicSegment>
 						<MusicSegment Name="VoxelPandaMenu_01" ID="{167ABC48-127E-4386-B2C4-FA75373D074C}" ShortID="434627484">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="12923.0321975617"/>
+								<Property Name="EndPosition" Type="Real64" Value="12911.3924050633"/>
 								<Property Name="Tempo" Type="Real64" Value="158"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -1741,11 +1748,11 @@
 											<ClipList>
 												<MusicClip Name="VoxelPandaMenu" ID="{EADA9D81-453F-4F58-8C03-6BC15C53E62B}">
 													<PropertyList>
-														<Property Name="BeginTrimOffset" Type="Real64" Value="18253.164556962"/>
-														<Property Name="EndTrimOffset" Type="Real64" Value="31164.5569620253"/>
-														<Property Name="FadeInDuration" Type="Real64" Value="413.437506182679"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="360.256303723576"/>
-														<Property Name="PlayAt" Type="Real64" Value="-18253.164556962"/>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="17873.417721519"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="30784.8101265823"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="1989.17683830421"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="796.210852277205"/>
+														<Property Name="PlayAt" Type="Real64" Value="-17873.417721519"/>
 													</PropertyList>
 													<AudioSourceRef Name="VoxelPandaMenu" ID="{228C5B6C-1C42-4346-9D92-6BB24C60E805}"/>
 													<PropertyCurveList>
@@ -1756,12 +1763,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>18.25316</XPos>
+																		<XPos>17.87342</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>31.16456</XPos>
+																		<XPos>30.78481</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1775,12 +1782,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>18.25316</XPos>
+																		<XPos>17.87342</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>31.16456</XPos>
+																		<XPos>30.78481</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1794,12 +1801,12 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>18.25316</XPos>
+																		<XPos>17.87342</XPos>
 																		<YPos>0</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>31.16456</XPos>
+																		<XPos>30.78481</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
@@ -1816,7 +1823,7 @@
 							<CueList>
 								<MusicCue Name="Entry Cue" ID="{0EFA6597-23D5-41EC-B3DA-87F70F8C1F21}">
 									<PropertyList>
-										<Property Name="TimeMs" Type="Real64" Value="379.746835443038"/>
+										<Property Name="TimeMs" Type="Real64" Value="379.746835443054"/>
 									</PropertyList>
 								</MusicCue>
 								<MusicCue Name="Exit Cue" ID="{2E65B69D-4746-49C6-A32A-9D9D9C1F1B1C}">

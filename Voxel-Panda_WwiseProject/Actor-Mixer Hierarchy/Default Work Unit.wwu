@@ -187,11 +187,6 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Swipe_Pull_3" ID="{386A60F9-811C-461E-A646-FEEBE624C54F}" ShortID="821476852">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>32</Value>
-											</ValueList>
-										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -205,13 +200,28 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
 										</Reference>
+										<Reference Name="Effect0">
+											<Custom>
+												<Effect Name="Wwise Parametric EQ (Custom)" ID="{92BF11D0-AEB9-4039-BB54-0685535AA895}" ShortID="317144003" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+													<PropertyList>
+														<Property Name="FrequencyBand2" Type="Real32" Value="1215"/>
+														<Property Name="GainBand2" Type="Real32" Value="1"/>
+													</PropertyList>
+												</Effect>
+											</Custom>
+										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+											<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -230,7 +240,7 @@
 														<Property Name="FadeInDuration" Type="Real64" Value="1.06910132474042E-02"/>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.269948084496957"/>
 														<Property Name="TrimBegin" Type="Real64" Value="2.94002864303616E-02"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.581769304212913"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.686006683375104"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Pull3_1.wav</AudioFile>
@@ -253,7 +263,7 @@
 												<AudioFileSource Name="Pull3_2" ID="{42CC0E5B-FEA0-4429-AE83-BD14CA8152DA}" ShortID="75030674">
 													<PropertyList>
 														<Property Name="FadeOutDuration" Type="Real64" Value="9.88891126626089E-02"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.600461819230616"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.775967721884075"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Pull3_2.wav</AudioFile>
@@ -276,7 +286,7 @@
 												<AudioFileSource Name="Pull3_3" ID="{2B37080B-6FC5-4678-921C-B7B56A12F104}" ShortID="964041011">
 													<PropertyList>
 														<Property Name="FadeOutDuration" Type="Real64" Value="0.104030463062418"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.459090956558062"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.605336679993635"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Pull3_3.wav</AudioFile>
@@ -309,7 +319,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -318,7 +328,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+											<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -368,7 +378,7 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>41</Value>
+										<Value>35</Value>
 									</ValueList>
 								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -417,7 +427,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-19</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{04B6BE89-2328-4397-A9B1-75942831E5EB}" ShortID="112575788">
@@ -462,7 +472,7 @@
 									<ObjectRef Name="New_Wwise_Parametric_EQ" ID="{3666D3C9-8FC9-478A-9C9B-9DB725D8845A}" WorkUnitID="{531A9A5D-51D8-451F-BE06-C4C5BFCDCE92}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -496,35 +506,8 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-14</Value>
 									</ValueList>
-									<RTPCList>
-										<RTPC Name="" ID="{D6218516-8833-4C84-B247-A512BB805AEE}" ShortID="211665126">
-											<ReferenceList>
-												<Reference Name="ControlInput">
-													<ObjectRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
-												</Reference>
-											</ReferenceList>
-											<Curve Name="" ID="{68122E6A-81B2-405A-B9DF-2479F7A4C92F}">
-												<PropertyList>
-													<Property Name="Flags" Type="int32" Value="3"/>
-												</PropertyList>
-												<PointList>
-													<Point>
-														<XPos>0</XPos>
-														<YPos>-6.24051</YPos>
-														<Flags>5</Flags>
-														<SegmentShape>Exp1</SegmentShape>
-													</Point>
-													<Point>
-														<XPos>40</XPos>
-														<YPos>10.45757</YPos>
-														<Flags>37</Flags>
-													</Point>
-												</PointList>
-											</Curve>
-										</RTPC>
-									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -532,7 +515,7 @@
 									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -609,13 +592,13 @@
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-14</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -704,19 +687,24 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>40</Value>
+										<Value>49</Value>
 									</ValueList>
 								</Property>
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>23</Value>
+										<Value>28</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -726,6 +714,9 @@
 								<AudioFileSource Name="Click" ID="{194FEC4D-D358-4B59-9C99-78E2FF8A603A}" ShortID="778663241">
 									<Language>SFX</Language>
 									<AudioFile>Click.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="1028529645"/>
+									</ConvertedFileIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -735,6 +726,11 @@
 						<Sound Name="Crusher" ID="{080CC6C3-9D30-4017-BBD2-E92D3757BD07}" ShortID="307133876">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
@@ -748,7 +744,28 @@
 									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{94CA2C34-A84A-45B1-997F-F38F84808025}" ShortID="623047932" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+												<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="849"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="921"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="4517"/>
+												<Property Name="GainBand1" Type="Real32" Value="3"/>
+												<Property Name="GainBand2" Type="Real32" Value="-24"/>
+												<Property Name="GainBand3" Type="Real32" Value="-24"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="53.4"/>
+												<Property Name="QFactorBand3" Type="Real32" Value="46.1"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="Effect1" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+									<ObjectRef Name="Brick_Wall_Minus_6dB_Peak_Fast_Release" ID="{3FF9AD86-E377-40F8-970F-3D4EE73288B5}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -770,31 +787,26 @@
 						<RandomSequenceContainer Name="RobotArm" ID="{C4B31473-2C0A-42CF-8171-9FE0BB9C9452}" ShortID="400074991">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>31</Value>
-									</ValueList>
-								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-1</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
 									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="Effect0">
 									<Custom>
 										<Effect Name="Wwise Parametric EQ (Custom)" ID="{0D618FFC-842F-4911-BC6B-E05788F7B60C}" ShortID="754710312" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 											<PropertyList>
-												<Property Name="GainBand2" Type="Real32" Value="1"/>
+												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="318"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="519"/>
+												<Property Name="GainBand1" Type="Real32" Value="-0.5"/>
+												<Property Name="GainBand2" Type="Real32" Value="-2"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="5.2"/>
 											</PropertyList>
 										</Effect>
 									</Custom>
@@ -896,10 +908,23 @@
 									<ObjectRef Name="Canon Distance" ID="{B10D0F7C-C215-4BFE-8F9C-C623D620A8B5}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
 									<ObjectRef Name="Hall_Guns" ID="{B35D266A-CE6E-40A1-B197-14C12F9C21B1}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="Effect1">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{0E9022AF-921A-4394-AC29-6A4796B7B5A0}" ShortID="137054753" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="175"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="447"/>
+												<Property Name="GainBand2" Type="Real32" Value="-5.5"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="55"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -960,7 +985,7 @@
 									<ObjectRef Name="Canon Distance" ID="{B10D0F7C-C215-4BFE-8F9C-C623D620A8B5}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="Effect0">
 									<Custom>
@@ -968,11 +993,11 @@
 											<PropertyList>
 												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 												<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-												<Property Name="FrequencyBand1" Type="Real32" Value="232"/>
-												<Property Name="FrequencyBand2" Type="Real32" Value="490"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="7962"/>
-												<Property Name="GainBand2" Type="Real32" Value="-4"/>
-												<Property Name="QFactorBand2" Type="Real32" Value="30.9"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="103"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="476"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="7531"/>
+												<Property Name="GainBand2" Type="Real32" Value="-6"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="75.9"/>
 											</PropertyList>
 										</Effect>
 									</Custom>
@@ -1009,7 +1034,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -1018,9 +1043,9 @@
 							<ChildrenList>
 								<AudioFileSource Name="DeathSynth" ID="{2A07277A-8B25-4A0A-B184-E9FF6F49EFC5}" ShortID="40010365">
 									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.197930316863587"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.46615049528583E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.664654891196244"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.73250116859609"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>DeathSynth.wav</AudioFile>
@@ -1035,13 +1060,13 @@
 								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -1060,13 +1085,31 @@
 						<RandomSequenceContainer Name="Train" ID="{75B52EF6-FF24-42BE-A6F2-9EF73F6BA1FE}" ShortID="695299343">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
 									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
 								</Reference>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{42EDA6C4-2D68-4BD3-B9E0-6CF133FDF72E}" ShortID="458859015" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FrequencyBand2" Type="Real32" Value="763"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="2794"/>
+												<Property Name="GainBand2" Type="Real32" Value="-24"/>
+												<Property Name="GainBand3" Type="Real32" Value="-7.5"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="17.8"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -1143,10 +1186,15 @@
 										<Value>450</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
@@ -1156,9 +1204,6 @@
 								<AudioFileSource Name="Click" ID="{211745EE-F7BF-41FB-9D99-07739E6FEFFA}" ShortID="1028529645">
 									<Language>SFX</Language>
 									<AudioFile>Click.wav</AudioFile>
-									<ConvertedFileIDList>
-										<File ID="778663241"/>
-									</ConvertedFileIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>

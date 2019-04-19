@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="132">
+<SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
 		<ProjectRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<SourceFilesRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

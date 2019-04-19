@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{430C24AF-3E9B-43FD-A14A-C64B5D636DD3}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="New_SoundBank" ID="{82A49EA2-41DC-4FE9-B632-5F61341EEE7F}">
+					<PropertyList>
+						<Property Name="Maximum" Type="int32">
+							<ValueList>
+								<Value>15000000</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Train" ID="{CD689573-8B36-4348-8756-B419CB7EC2A0}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>

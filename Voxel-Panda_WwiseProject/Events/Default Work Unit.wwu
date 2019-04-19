@@ -91,6 +91,12 @@
 				</Event>
 				<Event Name="Play_GameplayMusic" ID="{BF47E2B1-5D89-4A5F-8102-9149A6246732}">
 					<ChildrenList>
+						<Action Name="" ID="{66869FB3-605F-43C6-9316-E241B5848D10}" ShortID="431219355">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{81BED2E6-B1BB-4DD4-862F-431F74AD4221}" ShortID="526590216">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
@@ -208,6 +214,7 @@
 						<Action Name="" ID="{B314A303-D575-4908-8588-B0FC7B3F3DC4}" ShortID="31505082">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -218,7 +225,8 @@
 						<Action Name="" ID="{4FE3F4A6-1424-4600-AC70-1A90DD28FBC1}" ShortID="703254105">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="24"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="26"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
