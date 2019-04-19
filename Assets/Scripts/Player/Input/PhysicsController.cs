@@ -32,7 +32,7 @@ public class PhysicsController : MonoBehaviour
 
     public void ApplyCurveForce(Vector3 curveForceVector)
     {
-        if(playerRigidBody.velocity.z > constMoveData.minVelocityForCurve) 
+        if(playerRigidBody.velocity.z > constMoveData.minVelocityForCurve)
              playerRigidBody.AddForce(curveForceVector * Time.deltaTime, ForceMode.Impulse);
     }
 
