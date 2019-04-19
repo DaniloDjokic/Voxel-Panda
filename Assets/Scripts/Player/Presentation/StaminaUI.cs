@@ -1,16 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Player.Events;
+using UnityEngine.UI;
 
-public class StaminaUI : MonoBehaviour {
+public class StaminaUI : MonoBehaviour, IFlingListener
+{
+    public Slider slider;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void OnStaminaChanged(FlingData flingData)
+    {
+        slider.value = flingData.CurrentStamina / 100f;
+    }
+
+    public void OnFlingEnded(FlingData flingData)
+    {
+        
+    }
+
+    public void OnFlingRunning(FlingData flingData)
+    {
+        
+    }
+
+    public void OnFlingStarted(FlingData flingData)
+    {
+        
+    }
 }
+

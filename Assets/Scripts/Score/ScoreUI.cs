@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ScoreUI : MonoBehaviour {
+namespace VoxelPanda.Score
+{
+	public class ScoreUI : MonoBehaviour, IScoreListener
+	{
+        public TextMeshProUGUI scoreText;
 
-	// Use this for initialization
-	void Start () {
-		
+        public ScoreUI(ScoreCalculator scoreCalculator)
+        {
+            scoreCalculator.Subscribe(this);
+        }
+
+		public void OnScoreChanged(float newScore)
+		{
+            scoreText.text = newScore.ToString();
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

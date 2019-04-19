@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Score;
 
-public class Coin : MonoBehaviour {
+namespace VoxelPanda.ProcGen.Elements
+{
+	public class Coin : Pickup
+    {
+        public string coinTriggerEvent = "Play_Coin";
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.gameObject.CompareTag("Player"))
+            {
+                scoreCalculator.PickupCoin();
+                AkSoundEngine.PostEvent(coinTriggerEvent, gameObject);
+                this.Despawn();
+            } 
+        }
+    }
 }
