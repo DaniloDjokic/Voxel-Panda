@@ -46,6 +46,7 @@ namespace VoxelPanda.Flow
 
 		public void StartLevel()
 		{
+			procEvents.ResetAll();
 			scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
@@ -90,7 +91,6 @@ namespace VoxelPanda.Flow
 
 		public void EndRun()
 		{
-            procEvents.ResetAll();
 			deathController.RaiseScreen();
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);

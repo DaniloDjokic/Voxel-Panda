@@ -11,6 +11,9 @@ public class RoboticArmBehaviour : ObsBehaviour
     public float pauseTime;
     public float angleAmountCheckpoint;
     public bool counterClockwise;
+    public float angleWhenBrakingStarts = 60;
+    public float angleWhenBrakingStops = 80;
+    public ParticleSystem brakingVFX;
 
     private float pauseTimer = 0f;
     public float angleSinceLastCheckpoint;
@@ -49,13 +52,11 @@ public class RoboticArmBehaviour : ObsBehaviour
                     currentAngle = angleAmountCheckpoint - (rotationBase.eulerAngles.y % angleAmountCheckpoint);
 
                 PauseRotation();
-            } else
-			{
-				Vector3 currentEuler = new Vector3(0, currentAngle, 0);
-				craneHook.transform.rotation = rotationBase = Quaternion.Euler(0, rotationBase.eulerAngles.y + currentAngle, 0);
-				craneHook.transform.position = RotateAroundPivot(craneHook.transform.position, craneBase.transform.position, currentEuler);
-			}
-
+            } 
+            UpdateBrakingVFX(rotationBase.eulerAngles.y);
+			Vector3 currentEuler = new Vector3(0, currentAngle, 0);
+			craneHook.transform.rotation = rotationBase = Quaternion.Euler(0, rotationBase.eulerAngles.y + currentAngle, 0);
+			craneHook.transform.position = RotateAroundPivot(craneHook.transform.position, craneBase.transform.position, currentEuler);
         }
         else
         {
@@ -79,6 +80,16 @@ public class RoboticArmBehaviour : ObsBehaviour
     {
         pauseTimer = 0;
         angleSinceLastCheckpoint = 0;
+    }
+
+    bool IsBraking(float currentAngle) {
+        float currentAngleRelative = currentAngle % angleAmountCheckpoint;
+        return currentAngleRelative > angleWhenBrakingStarts && currentAngleRelative < angleWhenBrakingStops;
+    }
+
+    void UpdateBrakingVFX(float currentAngle) {
+        var emission = brakingVFX.emission;
+        emission.enabled = IsBraking(currentAngle);
     }
 
     bool CheckpointReached()
