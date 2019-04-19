@@ -365,6 +365,16 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: fd7b16bc5ae2b4146b0493ae2f754ed1,
         type: 2}
+    - target: {fileID: 114469104986889356, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: curveVectorText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114469104986889356, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: velocityText
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
   m_IsPrefabAsset: 0
@@ -467,9 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e3676273690ae48b73b34f31e87bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  catchUpSpeed: 3
-  catchUpDistance: 10
+  speed: 2
+  catchUpSpeed: 5
+  catchUpDistance: 20
   shouldMove: 0
   reviveDistanceOffset: 15
   startingPosition: {x: 0, y: 0.5, z: -10.31}
@@ -1328,6 +1338,39 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 885010797c90ec740a184daa02b29089, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1170348572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1473146205800644, guid: 05b281523051b9c45961fd31fb5bb4e4,
+    type: 2}
+  m_PrefabInternal: {fileID: 829186500}
+--- !u!114 &1170348575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170348572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae77a0884c3aa8342a8c85a4b8c8ae73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    valueGuid: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8784bf2c5cb079748acd0ff605a79034,
+      type: 2}
+  m_callbackData: {fileID: 0}
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  valueGuid: 
+  multiPositionArray: []
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
 --- !u!224 &1206577546 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224704742404611032, guid: fa308d9dd6f6be34193a4d1fb031d9c2,
