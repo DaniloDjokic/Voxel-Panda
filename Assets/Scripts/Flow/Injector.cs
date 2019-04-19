@@ -45,7 +45,9 @@ namespace VoxelPanda.Flow
             deathController = new DeathController(scoreCalculator, deathUI, adManager);
 			gameManager = new GameManager(playerElements, deathController, crusher, procEvents, scoreCalculator, pgInjector);
 			moveEvents.Subscribe(gameManager);
-			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); }
+			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); } else {
+				randomSeed = Random.seed.ToString();
+			}
 			crusher.Bind(gameManager, playerElements.physicsController.transform);
             optionsController.SetGameManager(gameManager);
 
