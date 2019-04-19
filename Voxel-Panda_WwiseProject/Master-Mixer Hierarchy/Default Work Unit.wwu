@@ -4,15 +4,48 @@
 		<WorkUnit Name="Default Work Unit" ID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{A96C98E0-D0C1-48DB-B5FF-F25119578646}" WorkUnitID="{89235492-EEDB-440B-A8E7-2546E6989A3E}"/>
 						</Reference>
-						<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
-							<ObjectRef Name="Gentle_Program_Compressor_Minus_14dB_RMS" ID="{1595E6B0-DD58-4363-A3F0-DF0C96EC7C17}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						<Reference Name="Effect0">
+							<Custom CreatedFrom="{D3F1F88E-4123-4C05-946B-1B036BAC2DFD}">
+								<Effect Name="Gentle_Program_Compressor_Minus_20dB_RMS (Custom)" ID="{B1E79D72-E3C3-43A2-A494-9BCE31AE7731}" ShortID="861746751" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<PropertyList>
+										<Property Name="Ratio" Type="Real32" Value="3"/>
+										<Property Name="Threshold" Type="Real32" Value="-30.4"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="Effect1">
+							<Custom CreatedFrom="{3666D3C9-8FC9-478A-9C9B-9DB725D8845A}">
+								<Effect Name="New_Wwise_Parametric_EQ (Custom)" ID="{545F381F-043E-4398-8F46-0284E2B49D93}" ShortID="414462996" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+										<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="117"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="490"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="3656"/>
+										<Property Name="GainBand1" Type="Real32" Value="1"/>
+										<Property Name="GainBand2" Type="Real32" Value="-2.5"/>
+										<Property Name="GainBand3" Type="Real32" Value="-2.5"/>
+										<Property Name="QFactorBand1" Type="Real32" Value="19.9"/>
+										<Property Name="QFactorBand2" Type="Real32" Value="16.2"/>
+										<Property Name="QFactorBand3" Type="Real32" Value="20.9"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
 						</Reference>
 						<Reference Name="Effect3" CompanyID="4095" PluginID="65535" PluginType="15">
-							<ObjectRef Name="Nasty_Radio" ID="{7E6FAC41-3332-47EA-9AC6-625A78B63226}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+							<ObjectRef Name="Brick_Wall_Minus_6dB_Peak_Slow_Release" ID="{E0BA4DE6-A10C-49AF-A3E4-C5F71BA79EE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -37,10 +70,16 @@
 														<Flags>5</Flags>
 													</Point>
 													<Point>
-														<XPos>-46.5</XPos>
-														<YPos>0</YPos>
+														<XPos>-42.4683</XPos>
+														<YPos>-0.05171</YPos>
 														<Flags>0</Flags>
 														<SegmentShape>Log2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-21.15888</XPos>
+														<YPos>-15.89442</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp2</SegmentShape>
 													</Point>
 													<Point>
 														<XPos>0</XPos>
@@ -51,6 +90,11 @@
 											</Curve>
 										</RTPC>
 									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 						</Bus>
