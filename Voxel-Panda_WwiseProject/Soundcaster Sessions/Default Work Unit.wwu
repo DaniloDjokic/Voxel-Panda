@@ -179,7 +179,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Dead" ID="{8822DF23-0A91-4DD7-A0F7-B9C5D04A59AE}"/>
+						<CurrentStateRef Name="Alive" ID="{C38997E7-EB16-49FF-8B6E-BC877E57E8EA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

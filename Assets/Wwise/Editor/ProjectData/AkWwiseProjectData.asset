@@ -21,13 +21,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586459395630072141
+    m_lastTime: -8586459172807946373
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586459395624592233
+    m_lastTime: -8586459175819249474
     List:
     - name: New_SoundBank
       guid: a29ea482dc41e94fb6325f61341eee7f
@@ -42,7 +42,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586459395631602116
+    m_lastTime: -8586459175819469431
     List:
     - name: Mute_All
       guid: 90a2631f64ae3a4cba1decf923ee66c6
@@ -65,7 +65,7 @@ MonoBehaviour:
       - ElementName: Play_CanonExplosion
         ObjectType: 3
       Path: Default Work Unit\Play_CanonExplosion
-      maxAttenuation: 0
+      maxAttenuation: 7
       maxDuration: 0
       minDuration: 0
     - name: Play_CanonLaunch
@@ -77,7 +77,7 @@ MonoBehaviour:
       - ElementName: Play_CanonLaunch
         ObjectType: 3
       Path: Default Work Unit\Play_CanonLaunch
-      maxAttenuation: 0
+      maxAttenuation: 7
       maxDuration: 0
       minDuration: 0
     - name: Play_Coin
@@ -113,7 +113,7 @@ MonoBehaviour:
       - ElementName: Play_Crusher
         ObjectType: 3
       Path: Default Work Unit\Play_Crusher
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - name: Play_Death
@@ -161,7 +161,7 @@ MonoBehaviour:
       - ElementName: Play_Robot_Arm
         ObjectType: 3
       Path: Default Work Unit\Play_Robot_Arm
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - name: Play_Skate
@@ -209,7 +209,7 @@ MonoBehaviour:
       - ElementName: Play_Train
         ObjectType: 3
       Path: Default Work Unit\Play_Train
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
     - name: Play_UI_Click
@@ -245,6 +245,18 @@ MonoBehaviour:
       - ElementName: Play_WallKick
         ObjectType: 3
       Path: Default Work Unit\Play_WallKick
+      maxAttenuation: 10
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_MenuMusic
+      guid: 076635dc672f5e438f617a8d2912adb3
+      id: 2753202630
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_MenuMusic
+        ObjectType: 3
+      Path: Default Work Unit\Stop_MenuMusic
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -353,7 +365,5 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Voxel-Panda_WwiseProject
-  - /Voxel-Panda_WwiseProject/Events
-  - /Voxel-Panda_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

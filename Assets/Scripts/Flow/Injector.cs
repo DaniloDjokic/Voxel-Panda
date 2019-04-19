@@ -27,6 +27,13 @@ namespace VoxelPanda.Flow
 		private DeathController deathController;
 		private GameManager gameManager;
 
+		private const string playAliveEvent = "Play_GameplayMusic";
+
+		private void Start()
+		{
+			AkSoundEngine.PostEvent(playAliveEvent, Camera.main.transform.GetChild(0).gameObject);
+		}
+
 		private void Awake()
 		{
 			BindAll();

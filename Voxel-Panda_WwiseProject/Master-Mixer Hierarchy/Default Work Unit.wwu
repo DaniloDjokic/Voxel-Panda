@@ -93,10 +93,24 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{D7BDE346-E3F7-4082-9CDC-37F1D9C5C5CF}" ShortID="28715757" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="734"/>
+												<Property Name="GainBand1" Type="Real32" Value="4"/>
+												<Property Name="QFactorBand1" Type="Real32" Value="27.2"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 						</Bus>
 						<Bus Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}"/>
 						<Bus Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}">

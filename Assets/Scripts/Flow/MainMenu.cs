@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour {
     private const string isSoundOnKey = "IsSoundOn";
     private const string muteAllEvent = "Mute_All";
     private const string unmuteAllEvent = "Unmute_All";
+	private const string stopMenuMusic = "Stop_MenuMusic";
 
     private void Start()
     {
@@ -19,7 +20,9 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void StartGame() {
+		AkSoundEngine.PostEvent(stopMenuMusic, Camera.main.gameObject);
         uiSFX.PlayUIClick();
+
 		SceneManager.LoadScene(1);
 	}
 

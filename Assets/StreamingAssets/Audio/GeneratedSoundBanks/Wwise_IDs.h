@@ -30,6 +30,7 @@ namespace AK
         static const AkUniqueID PLAY_UI_CLICK = 1749424733U;
         static const AkUniqueID PLAY_UI_CLICK_PITCHED = 1911738069U;
         static const AkUniqueID PLAY_WALLKICK = 2567365808U;
+        static const AkUniqueID STOP_MENUMUSIC = 2753202630U;
         static const AkUniqueID STOP_TRAIN = 3191503118U;
         static const AkUniqueID UNMUTE_ALL = 4003578643U;
     } // namespace EVENTS

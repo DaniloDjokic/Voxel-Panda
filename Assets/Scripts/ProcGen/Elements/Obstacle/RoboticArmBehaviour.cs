@@ -15,6 +15,8 @@ public class RoboticArmBehaviour : ObsBehaviour
     private float pauseTimer = 0f;
     public float angleSinceLastCheckpoint;
 	private Quaternion rotationBase;
+	private const string roboticArmSFXEvent = "Play_Robot_Arm";
+	private bool isGoingToStartMoving = false;
 
 	private void Awake()
 	{
@@ -30,7 +32,13 @@ public class RoboticArmBehaviour : ObsBehaviour
     {
         if(pauseTimer >= pauseTime)
         {
-            float currentAngle = (counterClockwise ? -speed : speed) * Time.deltaTime;            
+			if (isGoingToStartMoving)
+			{
+				isGoingToStartMoving = false;
+				AkSoundEngine.PostEvent(roboticArmSFXEvent, this.gameObject);
+			}
+
+			float currentAngle = (counterClockwise ? -speed : speed) * Time.deltaTime;            
             angleSinceLastCheckpoint += currentAngle;
 
             if(CheckpointReached())
@@ -52,6 +60,10 @@ public class RoboticArmBehaviour : ObsBehaviour
         else
         {
             pauseTimer += Time.deltaTime;
+			if (pauseTimer >= pauseTime)
+			{
+				isGoingToStartMoving = true;
+			}
         }
     }
 

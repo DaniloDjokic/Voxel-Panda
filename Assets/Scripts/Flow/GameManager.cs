@@ -24,6 +24,7 @@ namespace VoxelPanda.Flow
         private SpawnData spawnData;
         private GameObject movementUIComponents;
 
+
 		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator, ProcGenInjector procGenInjector)
 		{
             this.scoreCalculator = scoreCalculator;
@@ -45,7 +46,7 @@ namespace VoxelPanda.Flow
 
 		public void StartLevel()
 		{
-            scoreCalculator.Reset();
+			scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
             movementUIComponents.SetActive(true);
@@ -58,7 +59,7 @@ namespace VoxelPanda.Flow
 
 		public void RestartLevel()
 		{
-            crusher.ResetPositionForRevive();
+			crusher.ResetPositionForRevive();
 			player.RevivePlayer();
 			accInput.SetInputDetection(true);
 			touchInput.SetInputDetection(true);

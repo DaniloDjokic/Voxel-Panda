@@ -14,6 +14,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Train" ID="{CD689573-8B36-4348-8756-B419CB7EC2A0}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Stop_MenuMusic" ID="{DC356607-2F67-435E-8F61-7A8D2912ADB3}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_WallKick" ID="{F60980B4-9BA8-4367-9BB7-0E756907BE1B}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_UI_Click" ID="{B5FAFE18-AED7-442C-80C2-569504FEA62A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Countdown" ID="{9829954D-A8F8-4571-B4A4-9808CD689DDA}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
