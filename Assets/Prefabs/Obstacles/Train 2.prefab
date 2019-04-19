@@ -376,6 +376,11 @@ MonoBehaviour:
   train: {fileID: 4101594037029642}
   trainSpeed: 5
   trainStoppageTime: 1
+  direction: {x: 0, y: 0, z: 0}
+  leftPoint: {x: 0, y: 0, z: 0}
+  rightPoint: {x: 0, y: 0, z: 0}
+  target: {x: 0, y: 0, z: 0}
+  alreadySetBoundaries: 0
 --- !u!114 &114697213162171274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -387,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 50
   gridMatrix: {fileID: 11400000, guid: d9831931837f4354fb10c0c5a1da2b9f, type: 2}
   orientation: 1
   rotationPivot: {fileID: 0}

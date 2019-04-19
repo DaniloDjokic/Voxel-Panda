@@ -34,7 +34,7 @@ namespace VoxelPanda.ProcGen.Spawners
 					}
 					if (node.HasPickup())
 					{
-						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, i * gridUnitToMeter);
+						Vector3 dst = new Vector3(j * gridUnitToMeter, yHeight, startZ + i * gridUnitToMeter);
 						node.GetPickup().Spawn(dst);
 					}
 				}

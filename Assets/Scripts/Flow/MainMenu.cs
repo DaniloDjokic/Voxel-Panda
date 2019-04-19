@@ -16,7 +16,6 @@ public class MainMenu : MonoBehaviour {
     private void Start()
     {
         ChangeSound(GetSoundOn());
-
     }
 
     public void StartGame() {
@@ -29,8 +28,6 @@ public class MainMenu : MonoBehaviour {
         bool currentSoundOn = GetSoundOn();
 		bool newSoundOn = !currentSoundOn;
 		ChangeSound(newSoundOn);
-		soundOnIcon.SetActive(newSoundOn);
-		soundOffIcon.SetActive(!newSoundOn);
 	}
 
 	public bool GetSoundOn() {
@@ -38,7 +35,9 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void ChangeSound(bool isSoundOn) {
-        if (isSoundOn)
+		soundOnIcon.SetActive(isSoundOn);
+		soundOffIcon.SetActive(!isSoundOn);
+		if (isSoundOn)
         {
             AkSoundEngine.PostEvent(unmuteAllEvent, gameObject);
         } else

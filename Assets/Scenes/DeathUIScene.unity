@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657922, g: 0.4964133, b: 0.5748186, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657922, g: 0.4964133, b: 0.5748187, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1373,6 +1373,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: obstacles.Array.size
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4704324310411098, guid: 44eb4199898336d42a633281478e7b99, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1509,6 +1514,21 @@ Prefab:
         type: 2}
       propertyPath: obstaclePoolSize
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: vectorStaminaCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: despawnDistanceFromPlayer
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: obstacles.Array.data[15]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44eb4199898336d42a633281478e7b99, type: 2}

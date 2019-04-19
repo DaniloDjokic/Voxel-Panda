@@ -13,7 +13,6 @@ public class SandBehaviour : LocalUpdater<Rigidbody>
     {
         if (PlayerInSand())
         {
-            Debug.Log(PlayerDistanceToRTPC());
             AkSoundEngine.SetRTPCValue(sandRTPC, PlayerDistanceToRTPC());
         }
     }
