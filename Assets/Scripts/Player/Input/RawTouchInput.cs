@@ -58,22 +58,21 @@ public class RawTouchInput : MonoBehaviour
     void TouchStarted(Touch touch)
     {
     	initialTouchPosition = touch.position;
-        //initialTouchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-        flingCalculator.StartFlingCalculation();
+        flingCalculator.StartFlingCalculation(initialTouchPosition);
     }
 
     void TouchHold(Touch touch)
     {
     	touchStartingPosition = Camera.main.ScreenToWorldPoint(initialTouchPosition);
         touchHoldPosition = Camera.main.ScreenToWorldPoint(touch.position);
-        flingCalculator.UpdateRawVector(ConstructVector(touchStartingPosition, touchHoldPosition));
+        flingCalculator.UpdateRawVector(ConstructVector(touchStartingPosition, touchHoldPosition), touch.position);
     }
 
     void TouchEnded(Touch touch)
     {
     	touchStartingPosition = Camera.main.ScreenToWorldPoint(initialTouchPosition);
         touchHoldPosition = Camera.main.ScreenToWorldPoint(touch.position);
-        flingCalculator.UpdateRawVector(ConstructVector(touchStartingPosition, touchHoldPosition));
+        flingCalculator.UpdateRawVector(ConstructVector(touchStartingPosition, touchHoldPosition), touch.position);
         flingCalculator.ApplyFling();
 
         initialTouchPosition = touchStartingPosition = touchHoldPosition = Vector3.zero;

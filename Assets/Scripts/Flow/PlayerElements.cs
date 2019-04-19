@@ -18,4 +18,6 @@ public class PlayerElements : MonoBehaviour {
 	public TouchDragUI touchDragUI;
     public FlingCalculator flingCalculator;
     public CurveCalculator curveCalculator;
+    public TiltArrowUI tiltArrowUI;
+    public GameObject movementUIComponents;
 }
