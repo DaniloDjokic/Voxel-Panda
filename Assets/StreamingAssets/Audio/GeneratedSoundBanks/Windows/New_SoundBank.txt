@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	163991396	Play_Train			\Default Work Unit\Play_Train	
 	317442834	Play_CanonLaunch			\Default Work Unit\Play_CanonLaunch	
+	1111717060	Play_Robot_Arm_Start			\Default Work Unit\Play_Robot_Arm_Start	
 	1172822028	Play_Death			\Default Work Unit\Play_Death	
 	1618563948	Play_Skate			\Default Work Unit\Play_Skate	
 	1739713018	Mute_All			\Default Work Unit\Mute_All	
@@ -16,7 +17,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2803607158	Play_Swipe_Release			\Default Work Unit\Play_Swipe_Release	
 	3114179205	Play_Coin			\Default Work Unit\Play_Coin	
 	3191503118	Stop_Train			\Default Work Unit\Stop_Train	
-	3759318933	Play_Robot_Arm			\Default Work Unit\Play_Robot_Arm	
 	4003578643	Unmute_All			\Default Work Unit\Unmute_All	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -37,43 +37,42 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	137054753	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	317144003	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	343503686	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	458859015	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	540475399	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	584975767	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	623047932	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
-	754710312	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	4113267698	Hall_Guns	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	14775637	WallKick3	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\WallKick3_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WallKick\WallKick3		1336
-	40010365	DeathSynth	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\DeathSynth_5E38B37A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\DeathSynth		19410
+	40010365	DeathSynth	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\DeathSynth_497E9D3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\DeathSynth		19410
 	75030674	Pull3_2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Pull3_2_49DD7AE2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Pull\Swipe_Pull_3\Pull3_2		68504
 	103177881	WallKick 1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\WallKick 1_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WallKick\WallKick 1		2039
 	227641372	VoxelPanda_Loop2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_Loop2_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_Loop2\VoxelPanda_Loop2		220253
-	258528941	RobotArm2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\RobotArm2_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RobotArm\RobotArm2		26810
 	300004841	Coin1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Coin1_CBAF9255.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Coin\Coin1		3991
 	320287986	Train2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Train2_4CDD6E41.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Train\Train2		10987
 	325845651	VoxelPanda_Loop6	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_Loop6_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_Loop6\VoxelPanda_Loop6		417825
 	332300684	Train1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Train1_7F539A3C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Train\Train1		11053
 	380212301	VoxelPanda_Loop5	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_Loop5_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_Loop5\VoxelPanda_Loop5		420434
 	404366919	SwipeRelease_4_1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\SwipeRelease_4_1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Release\Swipe_Release_4\SwipeRelease_4_1		11090
-	442245914	Pull3_1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Pull3_1_F5B0AE88.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Pull\Swipe_Pull_3\Pull3_1		57976
+	442245914	Pull3_1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Pull3_1_15CE83DE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Pull\Swipe_Pull_3\Pull3_1		57976
 	480031258	WallKick2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\WallKick2_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\WallKick\WallKick2		1947
 	481497763	VoxelPanda_PreStart_Fx	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_PreStart_Fx_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_PreStart_Fx\VoxelPanda_PreStart_Fx		42804
 	534643346	VoxelPandaTheme_Loop1	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPandaTheme_Loop1_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPandaTheme_Loop1\VoxelPandaTheme_Loop1		410390
 	571536977	Countdown	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Countdown_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Countdown		32691
 	587656586	SkateLoop	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\SkateLoop_8956FC97_375D7C52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\SkateLoop		198514
+	683035887	RobotArm_01	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\RobotArm_B24BA62D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RobotArm_01		8359
 	686013350	Crusher	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Crusher_6C6B4BA3.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crusher		175635
 	689281227	CanonExplosion	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\CanonExplosion_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\CanonExplosion		6888
 	709625329	SwipeRelease_4_2	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\SwipeRelease_4_2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Release\Swipe_Release_4\SwipeRelease_4_2		11090
 	717490860	VoxelPanda_Loop4	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_Loop4_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_Loop4\VoxelPanda_Loop4		462969
 	728904219	VoxelPandaMenu	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPandaMenu_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\MenuMusic\VoxelPandaMenu\VoxelPandaMenu		513799
-	759977854	RobotArm	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\RobotArm_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\RobotArm\RobotArm		27337
 	814602296	Coin3	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Coin3_2C198971.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Coin\Coin3		3089
 	824757086	VoxelPanda_Loop3	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_Loop3_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_Loop3\VoxelPanda_Loop3		471119
 	930236180	VoxelPanda_Loop7	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\VoxelPanda_Loop7_6C6B4BA3.wem		\Interactive Music Hierarchy\Default Work Unit\Music\VoxelPanda_Loop7\VoxelPanda_Loop7		204337
 	936149454	CanonLaunch	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\CanonLaunch_6F55F359.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\CanonLaunch		6017
-	964041011	Pull3_3	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Pull3_3_820337B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Pull\Swipe_Pull_3\Pull3_3		53454
+	964041011	Pull3_3	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Pull3_3_EF3617CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character\Swipe_Pull\Swipe_Pull_3\Pull3_3		53454
 	1028529645	Click	D:\Git projects\VoxelPanda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\SFX\Click_4F00D835.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Click		1230
 

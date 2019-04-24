@@ -22,7 +22,7 @@ namespace AK
         static const AkUniqueID PLAY_DEATH = 1172822028U;
         static const AkUniqueID PLAY_GAMEPLAYMUSIC = 2481433679U;
         static const AkUniqueID PLAY_MENUMUSIC = 2570041344U;
-        static const AkUniqueID PLAY_ROBOT_ARM = 3759318933U;
+        static const AkUniqueID PLAY_ROBOT_ARM_START = 1111717060U;
         static const AkUniqueID PLAY_SKATE = 1618563948U;
         static const AkUniqueID PLAY_SWIPE_LOW_STAMINA = 2608897773U;
         static const AkUniqueID PLAY_SWIPE_RELEASE = 2803607158U;

@@ -66,10 +66,6 @@
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="RobotArm" ID="{C4B31473-2C0A-42CF-8171-9FE0BB9C9452}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
-							<Position X="4" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Train" ID="{DBECA0A3-740E-4B47-BCF7-CA0394DD2813}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="5" Y="1"/>
 						</Module>
@@ -116,8 +112,12 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<ObjectRef Name="Play_Robot_Arm_Start" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Robot_Arm_Stop" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_Countdown" ID="{9829954D-A8F8-4571-B4A4-9808CD689DDA}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
@@ -167,7 +167,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Skate_Speed" ID="{2DBA9E20-CB89-4A16-979B-25878058B30E}"/>
-							<Value>1.1</Value>
+							<Value>20.4</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Side_Chain" ID="{2421908A-D56B-4B21-94C0-D87BA0943011}"/>

@@ -30,7 +30,7 @@
 				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Play_Death"/>
 				<Event Id="2481433679" Name="Play_GameplayMusic" ObjectPath="\Events\Default Work Unit\Play_GameplayMusic"/>
 				<Event Id="2570041344" Name="Play_MenuMusic" ObjectPath="\Events\Default Work Unit\Play_MenuMusic"/>
-				<Event Id="3759318933" Name="Play_Robot_Arm" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm"/>
+				<Event Id="1111717060" Name="Play_Robot_Arm_Start" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm_Start"/>
 				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate"/>
 				<Event Id="2608897773" Name="Play_Swipe_Low_Stamina" ObjectPath="\Events\Default Work Unit\Play_Swipe_Low_Stamina"/>
 				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
@@ -48,7 +48,7 @@
 				</File>
 				<File Id="40010365" Language="SFX">
 					<ShortName>DeathSynth.wav</ShortName>
-					<Path>SFX\DeathSynth_5E38B37A.wem</Path>
+					<Path>SFX\DeathSynth_497E9D3A.wem</Path>
 				</File>
 				<File Id="75030674" Language="SFX">
 					<ShortName>Pull3_2.wav</ShortName>
@@ -61,10 +61,6 @@
 				<File Id="227641372" Language="SFX">
 					<ShortName>VoxelPanda_Loop2.wav</ShortName>
 					<Path>SFX\VoxelPanda_Loop2_6C6B4BA3.wem</Path>
-				</File>
-				<File Id="258528941" Language="SFX">
-					<ShortName>RobotArm2.wav</ShortName>
-					<Path>SFX\RobotArm2_4F00D835.wem</Path>
 				</File>
 				<File Id="300004841" Language="SFX">
 					<ShortName>Coin1.wav</ShortName>
@@ -92,7 +88,7 @@
 				</File>
 				<File Id="442245914" Language="SFX">
 					<ShortName>Pull3_1.wav</ShortName>
-					<Path>SFX\Pull3_1_F5B0AE88.wem</Path>
+					<Path>SFX\Pull3_1_15CE83DE.wem</Path>
 				</File>
 				<File Id="480031258" Language="SFX">
 					<ShortName>WallKick2.wav</ShortName>
@@ -114,6 +110,10 @@
 					<ShortName>SkateLoop.wav</ShortName>
 					<Path>SFX\SkateLoop_8956FC97_375D7C52.wem</Path>
 				</File>
+				<File Id="683035887" Language="SFX">
+					<ShortName>RobotArm.wav</ShortName>
+					<Path>SFX\RobotArm_B24BA62D.wem</Path>
+				</File>
 				<File Id="686013350" Language="SFX">
 					<ShortName>Crusher.wav</ShortName>
 					<Path>SFX\Crusher_6C6B4BA3.wem</Path>
@@ -134,10 +134,6 @@
 					<ShortName>VoxelPandaMenu.wav</ShortName>
 					<Path>SFX\VoxelPandaMenu_6C6B4BA3.wem</Path>
 				</File>
-				<File Id="759977854" Language="SFX">
-					<ShortName>RobotArm.wav</ShortName>
-					<Path>SFX\RobotArm_4F00D835.wem</Path>
-				</File>
 				<File Id="814602296" Language="SFX">
 					<ShortName>Coin3.wav</ShortName>
 					<Path>SFX\Coin3_2C198971.wem</Path>
@@ -156,7 +152,7 @@
 				</File>
 				<File Id="964041011" Language="SFX">
 					<ShortName>Pull3_3.wav</ShortName>
-					<Path>SFX\Pull3_3_820337B4.wem</Path>
+					<Path>SFX\Pull3_3_EF3617CF.wem</Path>
 				</File>
 				<File Id="1028529645" Language="SFX">
 					<ShortName>Click.wav</ShortName>

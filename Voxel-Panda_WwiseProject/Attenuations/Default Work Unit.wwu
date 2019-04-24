@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" ShortID="428279733">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="10"/>
+						<Property Name="RadiusMax" Type="Real64" Value="15"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -21,12 +21,12 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>4.96865333333333</XPos>
+											<XPos>7.45297999999999</XPos>
 											<YPos>-12.27563</YPos>
 											<Flags>0</Flags>
 										</Point>
 										<Point>
-											<XPos>10</XPos>
+											<XPos>15</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -56,7 +56,7 @@
 				</Attenuation>
 				<Attenuation Name="Canon Distance" ID="{B10D0F7C-C215-4BFE-8F9C-C623D620A8B5}" ShortID="914666286">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="7"/>
+						<Property Name="RadiusMax" Type="Real64" Value="10"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -72,7 +72,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>7</XPos>
+											<XPos>10</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
