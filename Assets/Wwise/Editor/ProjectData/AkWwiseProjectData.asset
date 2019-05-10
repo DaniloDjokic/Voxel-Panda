@@ -21,7 +21,7 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586441195967303050
+    m_lastTime: -8586441158734855724
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
@@ -42,7 +42,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586441195968613006
+    m_lastTime: -8586441075176496459
     List:
     - name: Mute_All
       guid: 90a2631f64ae3a4cba1decf923ee66c6
@@ -377,5 +377,12 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /Voxel-Panda_WwiseProject
+  - /Voxel-Panda_WwiseProject/Events
+  - /Voxel-Panda_WwiseProject/Events/Default Work Unit
+  - /Voxel-Panda_WwiseProject/SoundBanks
+  - /Voxel-Panda_WwiseProject/SoundBanks/Default Work Unit
+  - /Voxel-Panda_WwiseProject/States
+  - /Voxel-Panda_WwiseProject/States/Default Work Unit
+  - /Voxel-Panda_WwiseProject/States/Default Work Unit/PlayerLife
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
