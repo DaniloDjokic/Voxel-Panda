@@ -185,7 +185,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Robot_Arm_Start" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}">
+				<Event Name="Play_Robot_Arm_Stop" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}">
 					<ChildrenList>
 						<Action Name="" ID="{F191E113-67BC-4263-AC19-9E364D7E8601}" ShortID="708612264">
 							<PropertyList>
@@ -359,15 +359,30 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Robot_Arm_Stop" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}">
+				<Event Name="Play_Robot_Arm_Start" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}">
 					<ChildrenList>
 						<Action Name="" ID="{7C2D14D6-4ADB-494D-BC71-EB55C0E7B1C6}" ShortID="138153505">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="1.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="RobotArm_02" ID="{14554794-D09D-416B-A378-9ED72318E20D}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_MenuMusic" ID="{DC356607-2F67-435E-8F61-7A8D2912ADB3}">
+					<ChildrenList>
+						<Action Name="" ID="{7767C707-8C79-4255-A2A3-0F31746CD471}" ShortID="335072533">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MenuMusic" ID="{B87A4D8C-5422-4A16-AC30-9D60E1FB8B43}" WorkUnitID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

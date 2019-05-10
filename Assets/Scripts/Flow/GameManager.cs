@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using VoxelPanda.Player.Events;
 using VoxelPanda.Player.Input;
 using VoxelPanda.ProcGen;
@@ -18,10 +19,13 @@ namespace VoxelPanda.Flow
         private RawTouchInput touchInput;
 		private DeathController deathController;
 		private Crusher crusher;
+        private ProcGenInjector pgInjector;
 		public ProcEvents procEvents;
+        private SpawnData spawnData;
+        private GameObject movementUIComponents;
 
 
-		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator)
+		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator, ProcGenInjector procGenInjector)
 		{
             this.scoreCalculator = scoreCalculator;
 			this.player = playerElements.physicsController;
@@ -30,6 +34,8 @@ namespace VoxelPanda.Flow
 			this.deathController = deathController;
 			this.crusher = crusher;
 			this.procEvents = procEvents;
+            this.pgInjector = procGenInjector;
+            this.movementUIComponents = playerElements.movementUIComponents;
 			deathController.gameManager = this;
 		}
 
@@ -40,9 +46,11 @@ namespace VoxelPanda.Flow
 
 		public void StartLevel()
 		{
-            scoreCalculator.Reset();
+			procEvents.ResetAll();
+			scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
+            movementUIComponents.SetActive(true);
 			procEvents.GenerateInitial(player.transform.position);
 			accInput.SetInputDetection(true);
             touchInput.SetInputDetection(true);
@@ -52,7 +60,7 @@ namespace VoxelPanda.Flow
 
 		public void RestartLevel()
 		{
-            crusher.ResetPositionForRevive();
+			crusher.ResetPositionForRevive();
 			player.RevivePlayer();
 			accInput.SetInputDetection(true);
 			touchInput.SetInputDetection(true);
@@ -74,13 +82,20 @@ namespace VoxelPanda.Flow
 			ChangeState(GameState.Paused);
 		}
 
+        public void OptionsReset()
+        {
+            pgInjector.ResetObstacleBinds();
+            procEvents.ResetAll();
+            StartLevel();
+        }
+
 		public void EndRun()
 		{
-            procEvents.ResetAll();
 			deathController.RaiseScreen();
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);
             crusher.SetShouldMove(false);
+            movementUIComponents.SetActive(false);
 			ChangeState(GameState.Stopped);
 		}
 
@@ -103,7 +118,7 @@ namespace VoxelPanda.Flow
 
 		public void Quit()
 		{
-			Application.Quit();
+			SceneManager.LoadScene(0);
 		}
 	}
 	public enum GameState { Start, Running, Paused, Stopped }

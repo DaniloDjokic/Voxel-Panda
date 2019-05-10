@@ -31,6 +31,7 @@
 				<Event Id="2481433679" Name="Play_GameplayMusic" ObjectPath="\Events\Default Work Unit\Play_GameplayMusic"/>
 				<Event Id="2570041344" Name="Play_MenuMusic" ObjectPath="\Events\Default Work Unit\Play_MenuMusic"/>
 				<Event Id="1111717060" Name="Play_Robot_Arm_Start" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm_Start"/>
+				<Event Id="2534828664" Name="Play_Robot_Arm_Stop" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm_Stop"/>
 				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate"/>
 				<Event Id="2608897773" Name="Play_Swipe_Low_Stamina" ObjectPath="\Events\Default Work Unit\Play_Swipe_Low_Stamina"/>
 				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
@@ -38,6 +39,7 @@
 				<Event Id="1749424733" Name="Play_UI_Click" ObjectPath="\Events\Default Work Unit\Play_UI_Click"/>
 				<Event Id="1911738069" Name="Play_UI_Click_Pitched" ObjectPath="\Events\Default Work Unit\Play_UI_Click_Pitched"/>
 				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick"/>
+				<Event Id="2753202630" Name="Stop_MenuMusic" ObjectPath="\Events\Default Work Unit\Stop_MenuMusic"/>
 				<Event Id="3191503118" Name="Stop_Train" ObjectPath="\Events\Default Work Unit\Stop_Train"/>
 				<Event Id="4003578643" Name="Unmute_All" ObjectPath="\Events\Default Work Unit\Unmute_All"/>
 			</IncludedEvents>
@@ -112,7 +114,7 @@
 				</File>
 				<File Id="683035887" Language="SFX">
 					<ShortName>RobotArm.wav</ShortName>
-					<Path>SFX\RobotArm_B24BA62D.wem</Path>
+					<Path>SFX\RobotArm_EEECF1DF.wem</Path>
 				</File>
 				<File Id="686013350" Language="SFX">
 					<ShortName>Crusher.wav</ShortName>
@@ -133,6 +135,10 @@
 				<File Id="728904219" Language="SFX">
 					<ShortName>VoxelPandaMenu.wav</ShortName>
 					<Path>SFX\VoxelPandaMenu_6C6B4BA3.wem</Path>
+				</File>
+				<File Id="759977854" Language="SFX">
+					<ShortName>RobotArm.wav</ShortName>
+					<Path>SFX\RobotArm_3CDED946.wem</Path>
 				</File>
 				<File Id="814602296" Language="SFX">
 					<ShortName>Coin3.wav</ShortName>

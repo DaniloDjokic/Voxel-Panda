@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c050d62c32f43640a7a89ec7a0ee678, type: 3}
   m_Name: 2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D
   m_EditorClassIdentifier: 
-  objectName: Play_Robot_Arm
-  id: 3759318933
+  objectName: Play_Robot_Arm_Stop
+  id: 2534828664
   guid: 2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D

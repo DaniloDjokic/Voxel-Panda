@@ -10,7 +10,8 @@ namespace VoxelPanda.Flow
         public string UIClickPitchedEvent = "Play_UI_Click_Pitched";
         public string UICountdownEvent = "Play_Countdown";
 
-        public void PlayUIClick(bool pitchedVersion = false)
+
+		public void PlayUIClick(bool pitchedVersion = false)
         {
             if (pitchedVersion)
             {
@@ -27,5 +28,6 @@ namespace VoxelPanda.Flow
         {
             AkSoundEngine.PostEvent(UICountdownEvent, gameObject);
         }
+
     }
 }

@@ -21,13 +21,13 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586460149576104726
+    m_lastTime: -8586441214635634636
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586460057177199811
+    m_lastTime: -8586441203501366222
     List:
     - name: New_SoundBank
       guid: a29ea482dc41e94fb6325f61341eee7f
@@ -42,7 +42,7 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586460046652307822
+    m_lastTime: -8586441200571188625
     List:
     - name: Mute_All
       guid: 90a2631f64ae3a4cba1decf923ee66c6
@@ -65,7 +65,7 @@ MonoBehaviour:
       - ElementName: Play_CanonExplosion
         ObjectType: 3
       Path: Default Work Unit\Play_CanonExplosion
-      maxAttenuation: 5
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_CanonLaunch
@@ -77,7 +77,7 @@ MonoBehaviour:
       - ElementName: Play_CanonLaunch
         ObjectType: 3
       Path: Default Work Unit\Play_CanonLaunch
-      maxAttenuation: 5
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Coin
@@ -113,7 +113,7 @@ MonoBehaviour:
       - ElementName: Play_Crusher
         ObjectType: 3
       Path: Default Work Unit\Play_Crusher
-      maxAttenuation: 20
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Death
@@ -152,16 +152,28 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Play_Robot_Arm
-      guid: e3b8102eb721a241bc0978e5aebf5e0d
-      id: 3759318933
+    - name: Play_Robot_Arm_Start
+      guid: 7354b89cdfc6124f8b4d86989062792a
+      id: 1111717060
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Robot_Arm
+      - ElementName: Play_Robot_Arm_Start
         ObjectType: 3
-      Path: Default Work Unit\Play_Robot_Arm
-      maxAttenuation: 20
+      Path: Default Work Unit\Play_Robot_Arm_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Robot_Arm_Stop
+      guid: e3b8102eb721a241bc0978e5aebf5e0d
+      id: 2534828664
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Robot_Arm_Stop
+        ObjectType: 3
+      Path: Default Work Unit\Play_Robot_Arm_Stop
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_Skate
@@ -209,7 +221,7 @@ MonoBehaviour:
       - ElementName: Play_Train
         ObjectType: 3
       Path: Default Work Unit\Play_Train
-      maxAttenuation: 20
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Play_UI_Click
@@ -245,7 +257,19 @@ MonoBehaviour:
       - ElementName: Play_WallKick
         ObjectType: 3
       Path: Default Work Unit\Play_WallKick
-      maxAttenuation: 20
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_MenuMusic
+      guid: 076635dc672f5e438f617a8d2912adb3
+      id: 2753202630
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_MenuMusic
+        ObjectType: 3
+      Path: Default Work Unit\Stop_MenuMusic
+      maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
     - name: Stop_Train
@@ -276,7 +300,7 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4204f4678e24ab43ae48f3b1e3b5608a
-    m_lastTime: -8586460066699034429
+    m_lastTime: -8586459167820732030
     List:
     - name: Side_Chain
       guid: 8a9021246bd5214b94c0d87ba0943011
@@ -309,7 +333,7 @@ MonoBehaviour:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: c206041e42c6bc4793974387cff8923c
-    m_lastTime: -8586471325894320532
+    m_lastTime: -8586459167819171997
     List:
     - name: PlayerLife
       guid: 1f18aa2ed7b06447a6255f0d2608c987

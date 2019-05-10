@@ -21,6 +21,9 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
         private const string playTrainSFX = "Play_Train";
         private const string stopTrainSFX = "Stop_Train";
 		public bool alreadySetBoundaries = false;
+        public ParticleSystem trainBrakingVFX;
+        public GameObject traingBrakingVFXPivot;
+        public float brakingDistance = 0.3f;
 
         private void Start()
         {
@@ -41,11 +44,13 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
             if(target.x * direction.x > train.localPosition.x * direction.x && !isStopped)
             {
                 train.Translate(direction * trainSpeed * Time.deltaTime);
+                PlayBrakingVFX(Mathf.Abs(target.x - train.localPosition.x));
             }
             else
             {
                 if(!isStopped)
-                {
+               {
+                    StopBrakingVFX();
                     AkSoundEngine.PostEvent(stopTrainSFX, train.gameObject);
                     StartCoroutine(SwitchDirection());
                 }
@@ -85,6 +90,26 @@ namespace VoxelPanda.ProcGen.Elements.Obstacle
             yield return new WaitForSeconds(trainStoppageTime);
             AkSoundEngine.PostEvent(playTrainSFX, train.gameObject);
             isStopped = false;
+        }
+
+        bool IsBraking(float distanceToTarget) {
+            return distanceToTarget < brakingDistance;
+        }
+
+        void PlayBrakingVFX(float distanceToTarget) {
+
+            if (IsBraking(distanceToTarget)) {
+                var emission = trainBrakingVFX.emission;
+                emission.enabled = true;
+                float rotation = direction.x >= 0 ? 0 : 180;
+                traingBrakingVFXPivot.transform.localRotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+        }
+
+        void StopBrakingVFX() {
+            var emission = trainBrakingVFX.emission;
+            emission.enabled = false;
         }
 	}
 }

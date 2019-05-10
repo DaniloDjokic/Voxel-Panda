@@ -112,11 +112,11 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Robot_Arm_Start" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<ObjectRef Name="Play_Robot_Arm_Stop" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Robot_Arm_Stop" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
+							<ObjectRef Name="Play_Robot_Arm_Start" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}"/>
 							<Position X="1" Y="3"/>
 						</Module>
 						<Module>
@@ -179,7 +179,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Dead" ID="{8822DF23-0A91-4DD7-A0F7-B9C5D04A59AE}"/>
+						<CurrentStateRef Name="Alive" ID="{C38997E7-EB16-49FF-8B6E-BC877E57E8EA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

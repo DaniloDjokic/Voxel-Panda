@@ -505,7 +505,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -679,6 +679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c757be6092ff840985fb457b32ab76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartButtonText: {fileID: 114404483053987212}
+  getReadyPanel: {fileID: 1737608480142834}
+  countdownTimer: {fileID: 114173096975261048}
   deathScreen: {fileID: 1422062234917610}
   deathOptionsPanel: {fileID: 1681508600054826}
   scoreText: {fileID: 114476109473806296}
