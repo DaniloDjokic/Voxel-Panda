@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using VoxelPanda.Flow;
@@ -13,11 +14,22 @@ public class MainMenu : MonoBehaviour {
     private const string muteAllEvent = "Mute_All";
     private const string unmuteAllEvent = "Unmute_All";
 	private const string stopMenuMusic = "Stop_MenuMusic";
+	private const string shadowStateKey = "Shadow_State";
+	private int currentShadowState = 0;
+	public TextMeshProUGUI shadowButtonText;
+
+	private Dictionary<int, string> shadowStateNames = new Dictionary<int, string>();
 
     private void Start()
     {
-        ChangeSound(GetSoundOn());
-    }
+		shadowStateNames[0] = "No shadows";
+		shadowStateNames[1] = "Low detail";
+		shadowStateNames[2] = "High detail";
+
+		ChangeSound(GetSoundOn());
+		GetShadowState();
+
+	}
 
     public void StartGame() {
 		AkSoundEngine.PostEvent(stopMenuMusic, Camera.main.gameObject);
@@ -60,6 +72,24 @@ public class MainMenu : MonoBehaviour {
 	{
         uiSFX.PlayUIClick();
         ScoreCalculator.ResetHighScore();
+	}
+
+	private void GetShadowState()
+	{
+		currentShadowState = PlayerPrefs.GetInt(shadowStateKey, 0);
+		SetShadowState();
+	}
+
+	public void ChangeShadowState()
+	{
+		currentShadowState = ( currentShadowState < 2 )? currentShadowState + 1 : 0;
+		SetShadowState();
+	}
+
+	private void SetShadowState()
+	{
+		PlayerPrefs.SetInt(shadowStateKey, currentShadowState);
+		shadowButtonText.text = shadowStateNames[currentShadowState];
 	}
 
 }
