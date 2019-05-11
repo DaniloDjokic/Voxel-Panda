@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4145206772234568}
   - component: {fileID: 198377038419439946}
   - component: {fileID: 199291307694560664}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CubeSmokePuffs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114880105951344206}
   - component: {fileID: 114542625188662470}
   - component: {fileID: 114974152166260122}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PHCrusher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4042850226074606}
   - component: {fileID: 198760197846669992}
   - component: {fileID: 199189639065777058}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CrusherParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 33616813274230240}
   - component: {fileID: 23194001857322756}
   - component: {fileID: 64395881643290454}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4170343106318408}
   - component: {fileID: 198759608615434848}
   - component: {fileID: 199392155797124578}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ElectricalSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 33122105835025046}
   - component: {fileID: 23734021336708710}
   - component: {fileID: 64623849936684870}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 33012043096017290}
   - component: {fileID: 23592677657058948}
   - component: {fileID: 64695151393587180}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4182186375662306}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Crusher VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 33984973667258492}
   - component: {fileID: 23989590203471774}
   - component: {fileID: 65671574884208620}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 4025433413630196}
   - component: {fileID: 198832194395173158}
   - component: {fileID: 199469507132530864}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HeatedParts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 4483181519474752}
   - component: {fileID: 198960363703974746}
   - component: {fileID: 199037129981989228}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireCubes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4692789611662984}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Disabled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 4665142178640556}
   - component: {fileID: 198413144800807072}
   - component: {fileID: 199988194037444600}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalParts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,8 +424,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1224948891390002}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -459,8 +459,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085151165524746}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -494,8 +494,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1516387419131582}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -529,8 +529,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436715236487870}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -564,8 +564,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779521556733254}
   m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

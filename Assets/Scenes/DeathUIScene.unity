@@ -257,11 +257,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1866043424}
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
---- !u!198 &228408851 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1001281677}
 --- !u!1 &301151377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,59 +1263,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1142356207877980, guid: 41550019d08c6b24ca9faf4d3b50b72c,
     type: 2}
   m_PrefabInternal: {fileID: 920650268}
---- !u!1 &975335765 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690074892478178, guid: 8d6fa35f5309126438118041fd71fcf0,
+--- !u!114 &975335771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114275779568061372, guid: 8d6fa35f5309126438118041fd71fcf0,
     type: 2}
   m_PrefabInternal: {fileID: 1001281677}
---- !u!114 &975335771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 975335765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cb4c4b78dadbc841b41c721a684a28c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skateSparks: {fileID: 228408851}
-  sparkCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 5
-      value: 30
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 200
-      value: 30
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  hitVFXRoot: {fileID: 599654654}
-  shockwaveVFX: {fileID: 599654655}
-  sparksVFX: {fileID: 599654653}
 --- !u!1001 &1001281677
 Prefab:
   m_ObjectHideFlags: 0
@@ -1328,11 +1276,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4342430541945604, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1390,6 +1333,21 @@ Prefab:
       propertyPath: dynamicMoveData
       value: 
       objectReference: {fileID: 1922089238}
+    - target: {fileID: 114275779568061372, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: hitVFXRoot
+      value: 
+      objectReference: {fileID: 599654654}
+    - target: {fileID: 114275779568061372, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: shockwaveVFX
+      value: 
+      objectReference: {fileID: 599654655}
+    - target: {fileID: 114275779568061372, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: sparksVFX
+      value: 
+      objectReference: {fileID: 599654653}
     - target: {fileID: 114959667254925690, guid: 8d6fa35f5309126438118041fd71fcf0,
         type: 2}
       propertyPath: leftArrow
@@ -1415,209 +1373,7 @@ Prefab:
       propertyPath: touchEnd
       value: 
       objectReference: {fileID: 1109168448}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: useRigidbodyForVelocity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: InitialModule.maxNumParticles
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: skateSparks
-      value: 
-      objectReference: {fileID: 228408851}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[0].tangentMode
-      value: 136
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[0].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[0].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].time
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].value
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].tangentMode
-      value: 136
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[2].time
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[2].value
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[2].tangentMode
-      value: 136
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[2].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: sparkCurve.m_Curve.Array.data[2].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: lengthInSec
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: VelocityModule.x.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: VelocityModule.y.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: VelocityModule.z.scalar
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: VelocityModule.z.minScalar
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198738252816396556, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: VelocityModule.inWorldSpace
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 96514810221357854, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_Parameters.colorGradient.key0.a
-      value: 0.627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 4428295604452980, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367825760764898, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54031005986847038, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1969940330136912, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694937005982416, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23932632659552606, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23744265352405464, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23054811277117752, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23932632659552606, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23054811277117752, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23744265352405464, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137222450093195704, guid: 8d6fa35f5309126438118041fd71fcf0,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114467697592734582, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1014471989
@@ -2122,60 +1878,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 1641752559853414, guid: bec19c4e679a93848bd64de50d197851, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23272575102289210, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23272575102289210, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23194001857322756, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23592677657058948, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23734021336708710, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23989590203471774, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23592677657058948, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23194001857322756, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23734021336708710, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23989590203471774, guid: bec19c4e679a93848bd64de50d197851,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec19c4e679a93848bd64de50d197851, type: 2}
   m_IsPrefabAsset: 0
@@ -2348,6 +2050,15 @@ Prefab:
     - target: {fileID: 1483719668633712, guid: abe7a7c23167b45488958250332aab40, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834109174316076, guid: abe7a7c23167b45488958250332aab40, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224639872308052558, guid: abe7a7c23167b45488958250332aab40,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe7a7c23167b45488958250332aab40, type: 2}

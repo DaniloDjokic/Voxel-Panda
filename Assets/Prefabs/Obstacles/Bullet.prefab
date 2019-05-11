@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4271729229525416}
   - component: {fileID: 198632781587669552}
   - component: {fileID: 199927945153686080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CubeSmokePuffs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4158831925217164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4934558025873174}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 65900426506306730}
   - component: {fileID: 114403197629152362}
   - component: {fileID: 54292338287034234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4393254777496534}
   - component: {fileID: 33520392512653766}
   - component: {fileID: 23549469873764742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4308095620057908}
   - component: {fileID: 198225837962290572}
   - component: {fileID: 199375740564600470}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CubeFlames
   m_TagString: Untagged
   m_Icon: {fileID: 0}

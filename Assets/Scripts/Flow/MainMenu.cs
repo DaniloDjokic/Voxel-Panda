@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public bool GetSoundOn() {
-		return PlayerPrefs.GetInt(isSoundOnKey) == 1;
+		return PlayerPrefs.GetInt(isSoundOnKey, 1) == 1;
 	}
 
 	public void ChangeSound(bool isSoundOn) {

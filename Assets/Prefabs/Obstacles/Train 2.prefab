@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4278347056498860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Track
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4857469883541468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rale Track Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 4223630331367268}
   - component: {fileID: 33051386615235880}
   - component: {fileID: 23625516833125428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 33835663273420830}
   - component: {fileID: 23321450639989184}
   - component: {fileID: 64331632401327940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4931285813105238}
   - component: {fileID: 33019996706016126}
   - component: {fileID: 23683297389682490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4067115583883156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VFXPivoted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4061650103074260}
   - component: {fileID: 114697213162171274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Train 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4008219809431810}
   - component: {fileID: 114109469845778032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Train 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 4101594037029642}
   - component: {fileID: 65035970250451372}
   - component: {fileID: 54696555189898528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Train
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4697341707605740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 4986050800760202}
   - component: {fileID: 198346762426061510}
   - component: {fileID: 199409974164385210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TrainSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4658375230330448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
