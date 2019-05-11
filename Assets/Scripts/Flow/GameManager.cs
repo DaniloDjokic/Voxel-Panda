@@ -118,6 +118,7 @@ namespace VoxelPanda.Flow
 
 		public void Quit()
 		{
+			AkSoundEngine.StopAll();
 			SceneManager.LoadScene(0);
 		}
 	}
