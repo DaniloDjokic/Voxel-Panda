@@ -17,6 +17,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Effect plug-ins	ID	Name	Type				Notes
+	28715757	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	414462996	New_Wwise_Parametric_EQ (Custom)	Wwise Parametric EQ			
 	780838069	New_Wwise_Meter	Wwise Meter			
 	861746751	Gentle_Program_Compressor_Minus_20dB_RMS (Custom)	Wwise Compressor			

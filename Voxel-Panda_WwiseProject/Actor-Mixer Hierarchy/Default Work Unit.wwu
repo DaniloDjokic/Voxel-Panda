@@ -7,184 +7,6 @@
 					<ChildrenList>
 						<Folder Name="Swipe_Pull" ID="{CA73AC4B-522A-4765-95DE-4BCE96ACA5BA}" ShortID="735363508">
 							<ChildrenList>
-								<RandomSequenceContainer Name="Swipe_Pull_1" ID="{CDA53BC6-66F0-483A-997E-7364467E4AAB}" ShortID="457791673">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>15</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{3984F0DA-E7E1-4428-AC62-D5373E628A0C}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="278"/>
-															<Property Name="Min" Type="Real64" Value="-227"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>7</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Pull1" ID="{619220C4-C18C-4925-9BC6-B0EDCF26602F}" ShortID="632320537">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pull1" ID="{F11026FC-3DE1-4F7F-A224-46BBF63FF208}" ShortID="319149010">
-													<Language>SFX</Language>
-													<AudioFile>Character\Pull\Pull1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Pull1" ID="{F11026FC-3DE1-4F7F-A224-46BBF63FF208}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Pull2" ID="{FEB52C8B-4B66-46E4-8727-C99AEACFA2C8}" ShortID="325052290">
-											<PropertyList>
-												<Property Name="Weight" Type="Real64">
-													<ValueList>
-														<Value>19</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pull2" ID="{2938B5CF-DC0B-47B5-88DB-90C32131ADC5}" ShortID="937588763">
-													<Language>SFX</Language>
-													<AudioFile>Character\Pull\Pull2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Pull2" ID="{2938B5CF-DC0B-47B5-88DB-90C32131ADC5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Pull3" ID="{E134534D-F543-448D-B7AB-9A1802B4C8A1}" ShortID="145273747">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pull3" ID="{F70FD6F4-D093-443D-8887-CDAF2F70569E}" ShortID="384378088">
-													<Language>SFX</Language>
-													<AudioFile>Character\Pull\Pull3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Pull3" ID="{F70FD6F4-D093-443D-8887-CDAF2F70569E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<PositioningInfo>
-										<Position Name="" ID="{2D29672F-6DEB-4D5B-AE0B-A7228979B522}"/>
-									</PositioningInfo>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Swipe_Pull_2" ID="{AC8BCE14-6572-4BCD-8B0D-CA815BAC3695}" ShortID="407244329">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>39</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>32</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{79DA18DA-5131-4BC4-A144-FC6D039248FE}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="278"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-9</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Pull2_1" ID="{D601B7C1-1E21-499B-BFF6-5D7D62231EB1}" ShortID="482888604">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Pull2_1" ID="{BA7BE360-827F-4F05-AF72-FBD3CBC700AC}" ShortID="411884726">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="9.17645303735529E-02"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.620969686120062"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Pull2_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Pull2_1" ID="{BA7BE360-827F-4F05-AF72-FBD3CBC700AC}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Swipe_Pull_3" ID="{386A60F9-811C-461E-A646-FEEBE624C54F}" ShortID="821476852">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
@@ -202,7 +24,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-3</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -319,7 +141,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-8</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -427,7 +249,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-19</Value>
+										<Value>-9</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{04B6BE89-2328-4397-A9B1-75942831E5EB}" ShortID="112575788">
@@ -492,6 +314,16 @@
 						<RandomSequenceContainer Name="WallKick" ID="{89245EB7-49DE-4037-AEF0-8B93B42E3881}" ShortID="706564064">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>29</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -506,7 +338,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-14</Value>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -628,36 +460,6 @@
 										<ActiveSource Name="Coin1" ID="{CCAF030C-43D3-47F3-9C4B-F42D7A10B7A0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Coin2" ID="{EEC04CAB-7557-482A-8A84-B2E0E3376A2D}" ShortID="109418804">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Coin2" ID="{05670C2E-0EB2-49CC-9CD6-8E67AEB4D752}" ShortID="872231671">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="4.92859131956874E-03"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.278654970760234"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Coin2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Coin2" ID="{05670C2E-0EB2-49CC-9CD6-8E67AEB4D752}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Coin3" ID="{2D405C61-39C9-416A-A641-CC88B354E7C3}" ShortID="585636844">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -725,7 +527,6 @@
 						</Sound>
 						<Sound Name="Crusher" ID="{080CC6C3-9D30-4017-BBD2-E92D3757BD07}" ShortID="307133876">
 							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>20</Value>
@@ -735,13 +536,70 @@
 								<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
-									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+									<Custom CreatedFrom="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}">
+										<Attenuation Name="Obstacle_Distance (Custom)" ID="{4FBE0557-4D6D-46FC-8D7E-8C9205D51906}" ShortID="201557610">
+											<PropertyList>
+												<Property Name="RadiusMax" Type="Real64" Value="22"/>
+											</PropertyList>
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{0B88D496-1DAE-476C-B849-1CEC3FDF9FF5}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>7.48276</XPos>
+																	<YPos>-7.10837</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>15.06897</XPos>
+																	<YPos>-26.04946</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>22</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
 								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
@@ -784,84 +642,6 @@
 								<ActiveSource Name="Crusher" ID="{5D6C6F6B-82F0-4334-A30C-05835681E258}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="RobotArm" ID="{C4B31473-2C0A-42CF-8171-9FE0BB9C9452}" ShortID="400074991">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
-								</Reference>
-								<Reference Name="Effect0">
-									<Custom>
-										<Effect Name="Wwise Parametric EQ (Custom)" ID="{0D618FFC-842F-4911-BC6B-E05788F7B60C}" ShortID="754710312" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-											<PropertyList>
-												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-												<Property Name="FrequencyBand1" Type="Real32" Value="318"/>
-												<Property Name="FrequencyBand2" Type="Real32" Value="519"/>
-												<Property Name="GainBand1" Type="Real32" Value="-0.5"/>
-												<Property Name="GainBand2" Type="Real32" Value="-2"/>
-												<Property Name="QFactorBand2" Type="Real32" Value="5.2"/>
-											</PropertyList>
-										</Effect>
-									</Custom>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="RobotArm" ID="{7C0ED00F-0D3E-4EC9-900A-72E742FC312A}" ShortID="975454530">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="RobotArm" ID="{C3BD57F0-F59D-4B97-B327-4F8657FC2760}" ShortID="759977854">
-											<Language>SFX</Language>
-											<AudioFile>RobotArm.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="RobotArm" ID="{C3BD57F0-F59D-4B97-B327-4F8657FC2760}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="RobotArm2" ID="{C91D5317-09C6-4073-813E-40294D6F4831}" ShortID="161437451">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="RobotArm2" ID="{02A6F920-B3D7-4A6D-BA89-8E2EE4072FEB}" ShortID="258528941">
-											<Language>SFX</Language>
-											<AudioFile>RobotArm2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="RobotArm2" ID="{02A6F920-B3D7-4A6D-BA89-8E2EE4072FEB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
 						<Sound Name="CanonExplosion" ID="{C121C098-5535-4ACC-8691-8E28C03D7267}" ShortID="43476427">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -898,7 +678,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -944,12 +724,20 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>5</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-80</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{2B4A24FC-30EA-4737-8807-E76A3B8387F6}">
@@ -1084,9 +872,10 @@
 						<RandomSequenceContainer Name="Train" ID="{75B52EF6-FF24-42BE-A6F2-9EF73F6BA1FE}" ShortID="695299343">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1101,11 +890,12 @@
 									<Custom>
 										<Effect Name="Wwise Parametric EQ (Custom)" ID="{42EDA6C4-2D68-4BD3-B9E0-6CF133FDF72E}" ShortID="458859015" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 											<PropertyList>
-												<Property Name="FrequencyBand2" Type="Real32" Value="763"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="2794"/>
+												<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="490"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="1502"/>
 												<Property Name="GainBand2" Type="Real32" Value="-24"/>
-												<Property Name="GainBand3" Type="Real32" Value="-7.5"/>
-												<Property Name="QFactorBand2" Type="Real32" Value="17.8"/>
+												<Property Name="GainBand3" Type="Real32" Value="-3.5"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="9.4"/>
 											</PropertyList>
 										</Effect>
 									</Custom>
@@ -1207,6 +997,110 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Click" ID="{211745EE-F7BF-41FB-9D99-07739E6FEFFA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotArm_01" ID="{7DF0FA50-771A-43C2-9753-298EA258826F}" ShortID="639721075">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{536E389A-C68B-44DD-BDD7-7B41D80FC585}" ShortID="343503686" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="533"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="519"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="8823"/>
+												<Property Name="GainBand1" Type="Real32" Value="-0.5"/>
+												<Property Name="GainBand2" Type="Real32" Value="-3"/>
+												<Property Name="GainBand3" Type="Real32" Value="7"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="5.2"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotArm" ID="{4C2C335A-996B-4AE1-894C-0022420AEAAB}" ShortID="683035887">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.83771929824561E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.049890350877193"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.00548245614035"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>RobotArm.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotArm" ID="{4C2C335A-996B-4AE1-894C-0022420AEAAB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotArm_02" ID="{14554794-D09D-416B-A378-9ED72318E20D}" ShortID="795996697">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Obstacle_Distance" ID="{CA6AEF5F-7AFB-49E5-89AB-802D77D5885D}" WorkUnitID="{F7123B30-CB43-44F2-9895-C24AEF5CFA17}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{A837545A-76C4-48D0-9777-2F912CC868C6}" ShortID="93726003" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="318"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="519"/>
+												<Property Name="GainBand1" Type="Real32" Value="-0.5"/>
+												<Property Name="GainBand2" Type="Real32" Value="-2"/>
+												<Property Name="QFactorBand2" Type="Real32" Value="5.2"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotArm" ID="{82D5DD0F-3172-4250-947C-5B2AED74031E}" ShortID="320507490">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.134320175438597"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="6.52412280701755E-02"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.04769736842105"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.19517543859649"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>RobotArm.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="759977854"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotArm" ID="{82D5DD0F-3172-4250-947C-5B2AED74031E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

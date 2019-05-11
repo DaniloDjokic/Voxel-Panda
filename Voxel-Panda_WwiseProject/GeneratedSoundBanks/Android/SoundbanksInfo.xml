@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\</SourceFilesRoot>
-		<SoundBanksRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
+		<ProjectRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Android\</SourceFilesRoot>
+		<SoundBanksRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Android\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\GitHub\Panda Repository\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Android</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -22,22 +22,23 @@
 			<Path>New_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1739713018" Name="Mute_All" ObjectPath="\Events\Default Work Unit\Mute_All" MaxAttenuation="0.000000"/>
-				<Event Id="2685623696" Name="Play_CanonExplosion" ObjectPath="\Events\Default Work Unit\Play_CanonExplosion" MaxAttenuation="7.000000"/>
-				<Event Id="317442834" Name="Play_CanonLaunch" ObjectPath="\Events\Default Work Unit\Play_CanonLaunch" MaxAttenuation="7.000000"/>
+				<Event Id="2685623696" Name="Play_CanonExplosion" ObjectPath="\Events\Default Work Unit\Play_CanonExplosion" MaxAttenuation="10.000000"/>
+				<Event Id="317442834" Name="Play_CanonLaunch" ObjectPath="\Events\Default Work Unit\Play_CanonLaunch" MaxAttenuation="10.000000"/>
 				<Event Id="3114179205" Name="Play_Coin" ObjectPath="\Events\Default Work Unit\Play_Coin"/>
 				<Event Id="2175797879" Name="Play_Countdown" ObjectPath="\Events\Default Work Unit\Play_Countdown"/>
-				<Event Id="2458249826" Name="Play_Crusher" ObjectPath="\Events\Default Work Unit\Play_Crusher" MaxAttenuation="10.000000"/>
+				<Event Id="2458249826" Name="Play_Crusher" ObjectPath="\Events\Default Work Unit\Play_Crusher" MaxAttenuation="22.000000"/>
 				<Event Id="1172822028" Name="Play_Death" ObjectPath="\Events\Default Work Unit\Play_Death"/>
 				<Event Id="2481433679" Name="Play_GameplayMusic" ObjectPath="\Events\Default Work Unit\Play_GameplayMusic"/>
 				<Event Id="2570041344" Name="Play_MenuMusic" ObjectPath="\Events\Default Work Unit\Play_MenuMusic"/>
-				<Event Id="3759318933" Name="Play_Robot_Arm" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm" MaxAttenuation="10.000000"/>
+				<Event Id="1111717060" Name="Play_Robot_Arm_Start" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm_Start" MaxAttenuation="18.000000"/>
+				<Event Id="2534828664" Name="Play_Robot_Arm_Stop" ObjectPath="\Events\Default Work Unit\Play_Robot_Arm_Stop" MaxAttenuation="18.000000"/>
 				<Event Id="1618563948" Name="Play_Skate" ObjectPath="\Events\Default Work Unit\Play_Skate"/>
 				<Event Id="2608897773" Name="Play_Swipe_Low_Stamina" ObjectPath="\Events\Default Work Unit\Play_Swipe_Low_Stamina"/>
 				<Event Id="2803607158" Name="Play_Swipe_Release" ObjectPath="\Events\Default Work Unit\Play_Swipe_Release"/>
-				<Event Id="163991396" Name="Play_Train" ObjectPath="\Events\Default Work Unit\Play_Train" MaxAttenuation="10.000000"/>
+				<Event Id="163991396" Name="Play_Train" ObjectPath="\Events\Default Work Unit\Play_Train" MaxAttenuation="18.000000"/>
 				<Event Id="1749424733" Name="Play_UI_Click" ObjectPath="\Events\Default Work Unit\Play_UI_Click"/>
 				<Event Id="1911738069" Name="Play_UI_Click_Pitched" ObjectPath="\Events\Default Work Unit\Play_UI_Click_Pitched"/>
-				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick" MaxAttenuation="10.000000"/>
+				<Event Id="2567365808" Name="Play_WallKick" ObjectPath="\Events\Default Work Unit\Play_WallKick" MaxAttenuation="18.000000"/>
 				<Event Id="2753202630" Name="Stop_MenuMusic" ObjectPath="\Events\Default Work Unit\Stop_MenuMusic" MaxAttenuation="0.000000"/>
 				<Event Id="3191503118" Name="Stop_Train" ObjectPath="\Events\Default Work Unit\Stop_Train" MaxAttenuation="0.000000"/>
 				<Event Id="4003578643" Name="Unmute_All" ObjectPath="\Events\Default Work Unit\Unmute_All" MaxAttenuation="0.000000"/>
@@ -62,10 +63,6 @@
 				<File Id="227641372" Language="SFX">
 					<ShortName>VoxelPanda_Loop2.wav</ShortName>
 					<Path>SFX\VoxelPanda_Loop2_6C6B4BA3.wem</Path>
-				</File>
-				<File Id="258528941" Language="SFX">
-					<ShortName>RobotArm2.wav</ShortName>
-					<Path>SFX\RobotArm2_4F00D835.wem</Path>
 				</File>
 				<File Id="300004841" Language="SFX">
 					<ShortName>Coin1.wav</ShortName>
@@ -115,6 +112,10 @@
 					<ShortName>SkateLoop.wav</ShortName>
 					<Path>SFX\SkateLoop_8956FC97_375D7C52.wem</Path>
 				</File>
+				<File Id="683035887" Language="SFX">
+					<ShortName>RobotArm.wav</ShortName>
+					<Path>SFX\RobotArm_EEECF1DF.wem</Path>
+				</File>
 				<File Id="686013350" Language="SFX">
 					<ShortName>Crusher.wav</ShortName>
 					<Path>SFX\Crusher_6C6B4BA3.wem</Path>
@@ -137,7 +138,7 @@
 				</File>
 				<File Id="759977854" Language="SFX">
 					<ShortName>RobotArm.wav</ShortName>
-					<Path>SFX\RobotArm_4F00D835.wem</Path>
+					<Path>SFX\RobotArm_3CDED946.wem</Path>
 				</File>
 				<File Id="814602296" Language="SFX">
 					<ShortName>Coin3.wav</ShortName>

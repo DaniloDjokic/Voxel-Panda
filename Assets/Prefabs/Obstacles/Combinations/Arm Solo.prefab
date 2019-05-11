@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4475419680912532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Robotska Ruka Rotirajuca Ruka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4334410812317676}
   - component: {fileID: 65699648592832412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4606680161321612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Robotska Ruka Baza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4156773683487232}
   - component: {fileID: 33130267854031962}
   - component: {fileID: 23384467308268084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4475704919812968}
   - component: {fileID: 65420072332780588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Base
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4463685251660308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4925807802793418}
   - component: {fileID: 65413544366678724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4161223277754130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4428776023297154}
   - component: {fileID: 33150825317029478}
   - component: {fileID: 23767785123155678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4827451299397110}
   - component: {fileID: 65718177564960380}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4991470396325498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4783306501663622}
   - component: {fileID: 65308578388038030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 4639855519868638}
   - component: {fileID: 33120507753185436}
   - component: {fileID: 23002194090239288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4856676995869392}
   - component: {fileID: 65673205176727168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 4594187498010120}
   - component: {fileID: 33691053011693556}
   - component: {fileID: 23365631350198560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 4967947533281350}
   - component: {fileID: 33233187202207384}
   - component: {fileID: 23402840162517296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4844821157226248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4349519479378798}
   - component: {fileID: 114739742667609120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1 (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4933568207066600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 4286347071194222}
   - component: {fileID: 33101785543522118}
   - component: {fileID: 23268336180898144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4614176288443656}
   - component: {fileID: 65684547495393710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4814955211934468}
   - component: {fileID: 114544109101245638}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2 (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4470494761263114}
   - component: {fileID: 114060814529844416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4049816509758498}
   - component: {fileID: 114809050482081168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1 (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 4291045445208146}
   - component: {fileID: 33606339407921506}
   - component: {fileID: 23522131285568490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 4730980074192502}
   - component: {fileID: 33238569778746400}
   - component: {fileID: 23862422272906532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387983109363414}
   - component: {fileID: 65454154412310438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 4371208178203566}
   - component: {fileID: 33255367237883340}
   - component: {fileID: 23898497109204150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4043579881933404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 4475408205336900}
   - component: {fileID: 33274260093220178}
   - component: {fileID: 23450835860711472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 4331255648663692}
   - component: {fileID: 33209854499859550}
   - component: {fileID: 23035752043651732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 4089077158432632}
   - component: {fileID: 33663472720993862}
   - component: {fileID: 23270961484318312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 4951273436566410}
   - component: {fileID: 33343501589206676}
   - component: {fileID: 23290056876863288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4169878359729434}
   - component: {fileID: 114353842139948690}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726086070374562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 4382073287386016}
   - component: {fileID: 33226751133320978}
   - component: {fileID: 23234540187052600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4794483140953876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4280949196967282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4740862856579172}
   - component: {fileID: 114938540513788008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arm Solo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 4784780698385236}
   - component: {fileID: 33648608156128616}
   - component: {fileID: 23839584740387026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4230506173501734}
   - component: {fileID: 114099560218096252}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1 (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4624589650141684}
   - component: {fileID: 114545642484776754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1 (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 4549763049923036}
   - component: {fileID: 33213166075134978}
   - component: {fileID: 23142930352916180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4128401878235084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Robotska Ruka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4927640363088862}
   - component: {fileID: 114723910881796350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2 (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4537882977636620}
   - component: {fileID: 65631629321269866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 4513076025363966}
   - component: {fileID: 33688939837589108}
   - component: {fileID: 23459670353585844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 4905893498774678}
   - component: {fileID: 198375939008177288}
   - component: {fileID: 199591871302392146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CraneSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4533737055003880}
   - component: {fileID: 65977904625637194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4951242315060132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +826,7 @@ GameObject:
   - component: {fileID: 4127441085676076}
   - component: {fileID: 33829225630457128}
   - component: {fileID: 23986922418600296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4976068552050800}
   - component: {fileID: 65467278395501052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4611969672544850}
   - component: {fileID: 114593200505952486}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2 (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -873,7 +873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4246920153973286}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4735740329952768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4636315251656272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4437261706271024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809797371562296}
   - component: {fileID: 114797853910854318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2 (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 4845236462240268}
   - component: {fileID: 33752744795666944}
   - component: {fileID: 23002642515127104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   - component: {fileID: 4150623467452154}
   - component: {fileID: 33232475316821694}
   - component: {fileID: 23064349980404324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4653428917332140}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4701515417439950}
   - component: {fileID: 65645434547818902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 4307464957536588}
   - component: {fileID: 33718767385979586}
   - component: {fileID: 23409998738209136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1031,7 +1031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4884278818189748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4602230732118280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4396137723887520}
   - component: {fileID: 114102203008098764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Robotic Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1078,7 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4569092051718714}
   - component: {fileID: 114934688588890532}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Robotic Arm-ArmSolo
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1094,7 +1094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4170905486888450}
   - component: {fileID: 65537304913544102}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 4648213480186682}
   - component: {fileID: 33977746591083796}
   - component: {fileID: 23983318768946828}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4096517862535132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4498799588186280}
   - component: {fileID: 114384899285510998}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2150,7 +2150,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1173028416165812}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2185,7 +2185,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1810153643702448}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2220,7 +2220,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1434163796379412}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2255,7 +2255,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1818042417217060}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2290,7 +2290,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1570945697609400}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2325,7 +2325,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1474428947376624}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2360,7 +2360,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1225913726695224}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2395,7 +2395,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1446005143367050}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2430,7 +2430,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1459051449835244}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2465,7 +2465,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1187329690428976}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2500,7 +2500,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1085258546737608}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2535,7 +2535,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1195338825980196}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2570,7 +2570,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1881692286043076}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2605,7 +2605,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1431325370628344}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2640,7 +2640,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1656160929033918}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2675,7 +2675,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1343186477926256}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2710,7 +2710,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1152132054804760}
   m_Enabled: 0
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2745,7 +2745,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1513724749148914}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2780,7 +2780,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1344207760180616}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2815,7 +2815,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1412709473955190}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2850,7 +2850,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1948269142564048}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2885,7 +2885,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1686144508512422}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

@@ -19,6 +19,7 @@
 							<Custom CreatedFrom="{D3F1F88E-4123-4C05-946B-1B036BAC2DFD}">
 								<Effect Name="Gentle_Program_Compressor_Minus_20dB_RMS (Custom)" ID="{B1E79D72-E3C3-43A2-A494-9BCE31AE7731}" ShortID="861746751" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 									<PropertyList>
+										<Property Name="OutputGain" Type="Real32" Value="2"/>
 										<Property Name="Ratio" Type="Real32" Value="3"/>
 										<Property Name="Threshold" Type="Real32" Value="-30.4"/>
 									</PropertyList>
@@ -35,8 +36,9 @@
 										<Property Name="FrequencyBand2" Type="Real32" Value="490"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="3656"/>
 										<Property Name="GainBand1" Type="Real32" Value="1"/>
-										<Property Name="GainBand2" Type="Real32" Value="-2.5"/>
-										<Property Name="GainBand3" Type="Real32" Value="-2.5"/>
+										<Property Name="GainBand2" Type="Real32" Value="-2"/>
+										<Property Name="GainBand3" Type="Real32" Value="-2"/>
+										<Property Name="OutputLevel" Type="Real32" Value="1.5"/>
 										<Property Name="QFactorBand1" Type="Real32" Value="19.9"/>
 										<Property Name="QFactorBand2" Type="Real32" Value="16.2"/>
 										<Property Name="QFactorBand3" Type="Real32" Value="20.9"/>
@@ -91,9 +93,11 @@
 										</RTPC>
 									</RTPCList>
 								</Property>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="0"/>
+								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

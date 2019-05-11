@@ -12,8 +12,8 @@ public class AdManager : MonoBehaviour
 	public string interstitialAdUnitID = "ca-app-pub-4430923652609758/1794110741";
 	public string rewardAdUnitID = "ca-app-pub-4430923652609758/3653987329";
 	public string testDeviceID = "D3E3C92E3D91C65EF00DD3BB74883BB9";
-	public int minplaySessionWithoutAd = 5;
-	public int maxPlaySessionsWithoutAd = 10;
+	public int minplaySessionWithoutAd = 3;
+	public int maxPlaySessionsWithoutAd = 5;
 	
 	private int currentPlaySessionsWithoutAd = 0;
 	private InterstitialAd interstitial;
@@ -23,13 +23,19 @@ public class AdManager : MonoBehaviour
 
 	private void Start()
 	{
-		instance = this;
-		DontDestroyOnLoad(gameObject);
-		MobileAds.Initialize(appID);
-		this.rewardBasedVideo = RewardBasedVideoAd.Instance;
-		OpenRewardVideo();
-		RegisterRewardEvents();
-		InitInterstitial();
+		if (instance == null)
+		{
+			instance = this;
+			DontDestroyOnLoad(gameObject);
+			MobileAds.Initialize(appID);
+			this.rewardBasedVideo = RewardBasedVideoAd.Instance;
+			OpenRewardVideo();
+			RegisterRewardEvents();
+			InitInterstitial();
+		} else
+		{
+			Destroy (this.gameObject);
+		}
 	}
 
 	public void OpenRewardVideo()

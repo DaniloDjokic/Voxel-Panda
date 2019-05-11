@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4750481010401624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pivot
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4895438983716250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4913327216214052}
   - component: {fileID: 114827938099151856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4230527245322718}
   - component: {fileID: 33420908969647318}
   - component: {fileID: 23327070745369260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 4107873952836614}
   - component: {fileID: 65322652761468108}
   - component: {fileID: 114916765348949308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1411135261872342}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

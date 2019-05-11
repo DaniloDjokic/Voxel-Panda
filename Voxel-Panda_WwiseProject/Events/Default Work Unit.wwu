@@ -5,36 +5,6 @@
 			<ChildrenList>
 				<Event Name="Play_Swipe_Low_Stamina" ID="{894AF518-041B-4805-800E-04FE07A586FE}">
 					<ChildrenList>
-						<Action Name="" ID="{8562A116-381A-42BF-A809-DD035CDA0EC1}" ShortID="676058600">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Swipe_Pull_1" ID="{CDA53BC6-66F0-483A-997E-7364467E4AAB}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{A5E7553C-F0E2-4F92-8E97-CDBC754A4066}" ShortID="280382345">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Swipe_Pull_2" ID="{AC8BCE14-6572-4BCD-8B0D-CA815BAC3695}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{7BD71CBE-489A-4CE7-A918-B0181C25453E}" ShortID="110677381">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
@@ -185,15 +155,16 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}">
+				<Event Name="Play_Robot_Arm_Stop" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}">
 					<ChildrenList>
 						<Action Name="" ID="{F191E113-67BC-4263-AC19-9E364D7E8601}" ShortID="708612264">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="2.4"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RobotArm" ID="{C4B31473-2C0A-42CF-8171-9FE0BB9C9452}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
+									<ObjectRef Name="RobotArm_01" ID="{7DF0FA50-771A-43C2-9753-298EA258826F}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -354,6 +325,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Robot_Arm_Start" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}">
+					<ChildrenList>
+						<Action Name="" ID="{7C2D14D6-4ADB-494D-BC71-EB55C0E7B1C6}" ShortID="138153505">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RobotArm_02" ID="{14554794-D09D-416B-A378-9ED72318E20D}" WorkUnitID="{B2DE72F6-41B5-4966-9B0E-F60DC5DA8BDA}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

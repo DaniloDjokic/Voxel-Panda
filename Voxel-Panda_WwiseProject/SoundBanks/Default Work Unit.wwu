@@ -12,7 +12,7 @@
 						</Property>
 					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_Robot_Arm" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Robot_Arm_Stop" ID="{2E10B8E3-21B7-41A2-BC09-78E5AEBF5E0D}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Train" ID="{CD689573-8B36-4348-8756-B419CB7EC2A0}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_MenuMusic" ID="{DC356607-2F67-435E-8F61-7A8D2912ADB3}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_WallKick" ID="{F60980B4-9BA8-4367-9BB7-0E756907BE1B}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
@@ -31,6 +31,7 @@
 						<ObjectRef Name="Play_Death" ID="{C126F030-7C45-4DEE-92F2-4D7BF14900BB}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Unmute_All" ID="{B3369C0C-C358-4E55-BDBC-51197232BDD7}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Crusher" ID="{51B42E5F-426E-4ECF-ABB5-31AA3FD63A3E}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Robot_Arm_Start" ID="{9CB85473-C6DF-4F12-8B4D-86989062792A}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_CanonLaunch" ID="{ADBCCF62-316E-4F80-A742-11BC1F40B107}" WorkUnitID="{E9093A79-B41D-4A20-9437-F1BF150C56CC}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
