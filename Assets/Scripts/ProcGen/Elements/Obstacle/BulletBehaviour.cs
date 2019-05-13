@@ -9,6 +9,7 @@ public class BulletBehaviour : MonoBehaviour
     public float secondsActive;
     public float explosionRadius;
     public float explosionKnockback;
+    private const string explosionSFX = "Play_CanonExplosion";
 
     private float timer;
 
@@ -17,7 +18,7 @@ public class BulletBehaviour : MonoBehaviour
         timer = secondsActive;    
     }
 
-    private void Update()
+	private void Update()
     {
         if(timer >= 0f)
         {
@@ -27,16 +28,17 @@ public class BulletBehaviour : MonoBehaviour
         }
         else
         {
-            Explode();
+            Despawn();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Explode();
+		if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Obstacle")) 
+			Collide();
     }
 
-    void Explode()
+    void Collide()
     {
         Collider[] explosion = Physics.OverlapSphere(transform.position, explosionRadius);
         foreach(Collider col in explosion)
@@ -56,6 +58,30 @@ public class BulletBehaviour : MonoBehaviour
                 }
             }
         }
-        Destroy(this.gameObject);
+		Explode();
+
+	}
+    void Explode()
+    {
+        AkSoundEngine.PostEvent(explosionSFX, gameObject);
+        Despawn();
     }
+
+	public void Spawn(Vector3 position, Quaternion rotation)
+	{
+		this.transform.position = position;
+		this.transform.rotation = rotation;
+		this.gameObject.SetActive(true);
+		timer = secondsActive;
+	}
+
+	public void Despawn()
+	{
+		this.gameObject.SetActive(false);
+	}
+
+	public bool AvailableToSpawn()
+	{
+		return !gameObject.activeInHierarchy;
+	}
 }

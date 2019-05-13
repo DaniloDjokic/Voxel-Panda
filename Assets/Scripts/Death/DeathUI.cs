@@ -11,20 +11,20 @@ namespace VoxelPanda.Flow
 {
 	public class DeathUI : MonoBehaviour
 	{
-        public TextMeshProUGUI restartButtonText;
-        //Get Ready panel
-        public GameObject getReadyPanel;
-        public TextMeshProUGUI countdownTimer;
-
         //Death screen
-        public GameObject deathScreen;
+		public GameObject deathScreen;
 		public GameObject deathOptionsPanel;
 		public ScoreCalculator scoreCalculator;
         public TextMeshProUGUI scoreText;
 		public TextMeshProUGUI scoreNumberText;
 		//Revival prompt
 		public GameObject revivalPrompt;
-		public string countdownPreText = "Starting in:\n";
+		public TextMeshProUGUI restartButtonText;
+		//Get Ready panel
+		public GameObject getReadyPanel;
+		public TextMeshProUGUI countdownTimer;
+        public UISFX uiSFX;
+
 		public string restartText = "Try Again";
 		public string reviveText = "Revive!";
 		public string regularScorePrefix = "High score: ";
@@ -51,12 +51,12 @@ namespace VoxelPanda.Flow
 		{
 			if(isCountingDown)
 			{
-				if (currentTime < 0.5f)
+				if (currentTime < 0.2f)
 				{
 					countdownText = getReadyText;
 				} else
 				{
-					countdownText = currentTime.ToString("0");
+					countdownText = Mathf.Ceil(currentTime).ToString("0");
 				}
 				countdownTimer.text = countdownText;
 				currentTime -= Time.deltaTime;
@@ -90,11 +90,13 @@ namespace VoxelPanda.Flow
 
 		public void StartAgain()
 		{
-			StartCountDown();
+            uiSFX.PlayUIClick();
+            StartCountDown();
 		}
 
 		public void Quit()
 		{
+            uiSFX.PlayUIClick();
 			deathController.Quit();
 		}
 
@@ -104,7 +106,9 @@ namespace VoxelPanda.Flow
 			getReadyPanel.SetActive(true);
 			isCountingDown = true;
 			currentTime = countdownTime;
-		}
+            uiSFX.PlayCountdown();
+
+        }
 
 		private void TimerCountOut()
 		{
@@ -126,6 +130,7 @@ namespace VoxelPanda.Flow
 
 		public void OnRevivalPromptClick()
 		{
+            uiSFX.PlayUIClick(true);
 			deathController.TryToRevive();
 			revivalPrompt.SetActive(false);
 		}

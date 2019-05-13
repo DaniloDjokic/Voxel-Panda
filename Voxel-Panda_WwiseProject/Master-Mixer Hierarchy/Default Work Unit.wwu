@@ -4,11 +4,128 @@
 		<WorkUnit Name="Default Work Unit" ID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{A96C98E0-D0C1-48DB-B5FF-F25119578646}" WorkUnitID="{89235492-EEDB-440B-A8E7-2546E6989A3E}"/>
 						</Reference>
+						<Reference Name="Effect0">
+							<Custom CreatedFrom="{D3F1F88E-4123-4C05-946B-1B036BAC2DFD}">
+								<Effect Name="Gentle_Program_Compressor_Minus_20dB_RMS (Custom)" ID="{B1E79D72-E3C3-43A2-A494-9BCE31AE7731}" ShortID="861746751" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+									<PropertyList>
+										<Property Name="OutputGain" Type="Real32" Value="2"/>
+										<Property Name="Ratio" Type="Real32" Value="3"/>
+										<Property Name="Threshold" Type="Real32" Value="-30.4"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="Effect1">
+							<Custom CreatedFrom="{3666D3C9-8FC9-478A-9C9B-9DB725D8845A}">
+								<Effect Name="New_Wwise_Parametric_EQ (Custom)" ID="{545F381F-043E-4398-8F46-0284E2B49D93}" ShortID="414462996" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+										<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="117"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="490"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="3656"/>
+										<Property Name="GainBand1" Type="Real32" Value="1"/>
+										<Property Name="GainBand2" Type="Real32" Value="-2"/>
+										<Property Name="GainBand3" Type="Real32" Value="-2"/>
+										<Property Name="OutputLevel" Type="Real32" Value="1.5"/>
+										<Property Name="QFactorBand1" Type="Real32" Value="19.9"/>
+										<Property Name="QFactorBand2" Type="Real32" Value="16.2"/>
+										<Property Name="QFactorBand3" Type="Real32" Value="20.9"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="Effect3" CompanyID="4095" PluginID="65535" PluginType="15">
+							<ObjectRef Name="Brick_Wall_Minus_6dB_Peak_Slow_Release" ID="{E0BA4DE6-A10C-49AF-A3E4-C5F71BA79EE6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Music" ID="{C58B4873-97BB-4CD2-81C8-F7205DC79567}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{E8B30E7D-D565-4654-B0F2-57F4EF7CE69C}" ShortID="1063598950">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Side_Chain" ID="{2421908A-D56B-4B21-94C0-D87BA0943011}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{E11F7728-8EFB-463F-BCBE-65A2BFE4B92A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>-48</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>-42.4683</XPos>
+														<YPos>-0.05171</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>-21.15888</XPos>
+														<YPos>-15.89442</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="0"/>
+								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Wwise Parametric EQ (Custom)" ID="{D7BDE346-E3F7-4082-9CDC-37F1D9C5C5CF}" ShortID="28715757" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<PropertyList>
+												<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+												<Property Name="FrequencyBand1" Type="Real32" Value="734"/>
+												<Property Name="GainBand1" Type="Real32" Value="4"/>
+												<Property Name="QFactorBand1" Type="Real32" Value="27.2"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<Bus Name="Character" ID="{26596965-5073-47CA-9AD2-6D34DC10176A}"/>
+						<Bus Name="SFX" ID="{FFBB9734-05BA-4A14-83AD-188A3183F12E}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+									<ObjectRef Name="New_Wwise_Meter" ID="{1DB6BEDD-A6EE-411F-9DC6-02A8F2517BD4}" WorkUnitID="{531A9A5D-51D8-451F-BE06-C4C5BFCDCE92}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
+						<Bus Name="UI" ID="{2276D87E-36C1-4945-ADA6-9BFBE375108C}"/>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

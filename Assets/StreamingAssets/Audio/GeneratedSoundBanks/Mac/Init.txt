@@ -1,5 +1,27 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\PlayerLife	
+
+State	ID	Name	State Group			Notes
+	0	None	PlayerLife			
+	655265632	Alive	PlayerLife			
+	2044049779	Dead	PlayerLife			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	479396230	Side_Chain			\Default Work Unit\Side_Chain	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	436743010	Character			\Default Work Unit\Master Audio Bus\Character	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Effect plug-ins	ID	Name	Type				Notes
+	28715757	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	414462996	New_Wwise_Parametric_EQ (Custom)	Wwise Parametric EQ			
+	780838069	New_Wwise_Meter	Wwise Meter			
+	861746751	Gentle_Program_Compressor_Minus_20dB_RMS (Custom)	Wwise Compressor			
+	2781261543	Brick_Wall_Minus_6dB_Peak_Slow_Release	Wwise Peak Limiter			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

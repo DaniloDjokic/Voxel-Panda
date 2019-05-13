@@ -5,14 +5,21 @@ using VoxelPanda.ProcGen.Elements;
 
 public class CannonBehaviour : ObsBehaviour
 {
-    public GameObject bullet;
+    public BulletBehaviour bulletModel;
+	public int poolSize = 4;
     public float secondsBetweenShots;
     public float phaseStart = 0f;
     private float timer = 0f;
+    private const string launchBulletSFX = "Play_CanonLaunch";
 
-    BulletBehaviour activeBullet;
+	BulletPooler bulletPooler;
 
-    private void Start() {
+	private void Awake()
+	{
+		bulletPooler = new BulletPooler(bulletModel, poolSize);
+	}
+
+	private void Start() {
     	timer = phaseStart;
     }
 
@@ -25,14 +32,17 @@ public class CannonBehaviour : ObsBehaviour
     {
         if(timer > secondsBetweenShots)
         {
+            AkSoundEngine.PostEvent(launchBulletSFX, gameObject);
             Quaternion rot = Quaternion.LookRotation(transform.right, Vector3.up);
 
-            activeBullet = Instantiate(bullet, transform.position, rot).GetComponent<BulletBehaviour>();
-            if (activeBullet == null)
+            var activeBullet = bulletPooler.GetBullet();
+
+			if (activeBullet == null)
             {
                 Debug.LogError("No bullet behaviour script on prefab");
             }
-            timer = 0f;
+			activeBullet.Spawn(this.transform.position, rot);
+			timer = 0f;
         }
         else
         {

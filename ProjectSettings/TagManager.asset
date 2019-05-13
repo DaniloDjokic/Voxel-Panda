@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Wall
+  - PhysicsDecoration
   layers:
   - Default
   - TransparentFX
@@ -17,10 +18,10 @@ TagManager:
   - 
   - PostProcessing
   - Obstacle
-  - 
-  - 
-  - 
-  - 
+  - DynamicObstacle
+  - Player
+  - Crusher
+  - Coin
   - 
   - 
   - 

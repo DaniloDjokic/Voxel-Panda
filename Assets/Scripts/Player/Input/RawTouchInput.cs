@@ -96,7 +96,7 @@ public class RawTouchInput : MonoBehaviour
 
     Vector3 ConstructVector(Vector3 touchStart, Vector3 touchEnd)
     {
-       Vector3 temp = touchStart - touchEnd;
+       Vector3 temp = touchEnd - touchStart;
        temp.y = ConstMoveData.universalY;
        return temp;
     }

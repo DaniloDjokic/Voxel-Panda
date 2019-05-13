@@ -14,8 +14,13 @@ namespace VoxelPanda.Flow
 		private bool playerShouldRevive;
 		private AdManager adManager;
 		private bool playerRevivedThisRun = false;
+        private const string musicStateName = "PlayerLife";
+        private const string musicAliveState = "Alive";
+        private const string musicDeadState = "Dead";
+        private const string playDeathEvent = "Play_Death";
+        private const string playAliveEvent = "Play_GameplayMusic";
 
-		public DeathController(ScoreCalculator scoreCalculator, DeathUI deathUI, AdManager adManager)
+        public DeathController(ScoreCalculator scoreCalculator, DeathUI deathUI, AdManager adManager)
 		{
 			this.scoreCalculator = scoreCalculator;
 			this.deathUI = deathUI;
@@ -26,7 +31,8 @@ namespace VoxelPanda.Flow
 
 		public void RaiseScreen()
 		{
-			deathUI.RaiseScreen();
+            AkSoundEngine.PostEvent(playDeathEvent, Camera.main.transform.GetChild(0).gameObject);
+            deathUI.RaiseScreen();
 			if (scoreCalculator.HighScoreReached() && !playerRevivedThisRun)
 			{
 				deathUI.EnableRevivalPrompt();
@@ -44,11 +50,13 @@ namespace VoxelPanda.Flow
 			LowerScreen();
 			if (playerShouldRevive)
 			{
-				playerRevivedThisRun = true;
+                AkSoundEngine.PostEvent(playAliveEvent, Camera.main.transform.GetChild(0).gameObject);
+                playerRevivedThisRun = true;
 				gameManager.RestartLevel();
 			} else
 			{
-				playerRevivedThisRun = false;
+                AkSoundEngine.PostEvent(playAliveEvent, Camera.main.transform.GetChild(0).gameObject);
+                playerRevivedThisRun = false;
 				gameManager.StartLevel();
 			}
 			playerShouldRevive = false;

@@ -139,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224704742404611032}
   - component: {fileID: 114305202641871266}
+  - component: {fileID: 114059156703599058}
   m_Layer: 5
   m_Name: DeathUI
   m_TagString: Untagged
@@ -399,6 +400,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114059156703599058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453760091506814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fcb60727ac77478b3de35450fad1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIClickEvent: Play_UI_Click
+  UIClickPitchedEvent: Play_UI_Click_Pitched
 --- !u!114 &114080834745239238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -673,9 +687,10 @@ MonoBehaviour:
   scoreText: {fileID: 114476109473806296}
   scoreNumberText: {fileID: 114105239326978566}
   revivalPrompt: {fileID: 1411261201269864}
-  countdownPreText: 'Starting in:
-
-'
+  restartButtonText: {fileID: 114404483053987212}
+  getReadyPanel: {fileID: 1737608480142834}
+  countdownTimer: {fileID: 114173096975261048}
+  uiSFX: {fileID: 114059156703599058}
   restartText: Restart
   reviveText: Revive!
   regularScorePrefix: Your Score

@@ -49,7 +49,7 @@ namespace VoxelPanda.Flow
 			//curveCalculator.Subscribe(playerElements.particles);
 			//Subscribe move events listeners
 			moveEvents.Subscribe(playerElements.animationManager);
-			//moveEvents.Subscribe(playerElements.particles);
+			moveEvents.Subscribe(playerElements.particles);
 			moveEvents.Subscribe(playerElements.sfx);
 			//Bind Dynamic Move Data to physics Applier
 			playerElements.physicsController.Bind(dynMoveData);
@@ -58,6 +58,7 @@ namespace VoxelPanda.Flow
 
 			//Bind specific
 			playerElements.camBehaviour.Rebind(playerElements.playerTransform, crusher.transform);
+            playerElements.sfx.Bind(dynMoveData, constMoveData);
 		}
 	}
 }

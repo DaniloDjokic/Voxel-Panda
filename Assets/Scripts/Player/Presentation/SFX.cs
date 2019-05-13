@@ -7,13 +7,22 @@ namespace VoxelPanda.Player.Presentation
 {
 	public class SFX : MonoBehaviour, IFlingListener, ICurveListener, IMoveListener
 	{
-        public string swipePullEvent = "Play_Swipe_Pull";
+        public string staminaLowEvent = "Play_Stamina_Low";
         public string swipeReleaseEvent = "Play_Swipe_Release";
         public string movingEvent = "Play_Skate";
         public string moveEventVelocityValue = "Skate_Speed";
         public string wallKickEvent = "Play_WallKick";
 
-		public void OnCurveChanged(CurveData curveData)
+        private DynamicMoveData dynamicMoveData;
+        private ConstMoveData constMoveData;
+        
+        public void Bind(DynamicMoveData dynMoveData, ConstMoveData constMoveData)
+        {
+            this.dynamicMoveData = dynMoveData;
+            this.constMoveData = constMoveData;
+        }
+
+        public void OnCurveChanged(CurveData curveData)
 		{
 			//throw new System.NotImplementedException();
 		}
@@ -26,12 +35,13 @@ namespace VoxelPanda.Player.Presentation
 
 		public void OnFlingRunning(FlingData flingData)
 		{
-			//throw new System.NotImplementedException();
-		}
+            CheckForStaminaEvent();
+            //throw new System.NotImplementedException();
+        }
 
 		public void OnFlingStarted(FlingData flingData)
 		{
-            AkSoundEngine.PostEvent(swipePullEvent, gameObject);
+            //AkSoundEngine.PostEvent(swipePullEvent, gameObject);
 			//throw new System.NotImplementedException();
 		}
 
@@ -57,6 +67,18 @@ namespace VoxelPanda.Player.Presentation
             {
                 AkSoundEngine.PostEvent(wallKickEvent, gameObject);
             }
+        }
+        private void CheckForStaminaEvent()
+        {
+            if (IsStaminaLow())
+            {
+                AkSoundEngine.PostEvent(staminaLowEvent, gameObject);
+
+            }
+        }
+        private bool IsStaminaLow()
+        {
+            return dynamicMoveData.currentStamina < constMoveData.staminaPerFling;
         }
     }
 }

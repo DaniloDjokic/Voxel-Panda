@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135512813562092}
   - component: {fileID: 114945545337998986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4166421008234714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4432068746068716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4377865135516060}
   - component: {fileID: 114224902711813356}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon Left
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -82,9 +82,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4058427062095002}
   - component: {fileID: 65275883219888144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4490390972885646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,9 +113,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4991526338597108}
   - component: {fileID: 65036852470706214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4343037667448664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pivot
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4644792429259318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4062809386604434}
   - component: {fileID: 114968233390613752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2 (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4661451934077588}
   - component: {fileID: 65707671716232736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 4942704588142322}
   - component: {fileID: 33464850760828576}
   - component: {fileID: 23224201084089752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,9 +208,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4328861056027020}
   - component: {fileID: 65411634531521056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 4
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,9 +225,9 @@ GameObject:
   - component: {fileID: 4621132662078480}
   - component: {fileID: 65863587199454268}
   - component: {fileID: 114009803830646132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4633458521339348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4641842715695852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4212200507549346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 4284887095519936}
   - component: {fileID: 33655904298952840}
   - component: {fileID: 23551756344026374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 4921560675184866}
   - component: {fileID: 33268323908051524}
   - component: {fileID: 23213662378247974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 4378930334386036}
   - component: {fileID: 33859383570080924}
   - component: {fileID: 23115332797489300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 4543964826735806}
   - component: {fileID: 33018253608567188}
   - component: {fileID: 23356920921326766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4675577971909060}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4083501391378278}
   - component: {fileID: 114730008712394012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1 (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4475033793977384}
   - component: {fileID: 114765304657984220}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon Right
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4253786447586406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000477747710348}
   - component: {fileID: 114352906410344578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Double Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4595476999681684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4094449560608334}
   - component: {fileID: 114810658513620626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 4
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 4571360592264822}
   - component: {fileID: 33554217949017132}
   - component: {fileID: 23265097615317352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 4596024552744922}
   - component: {fileID: 33079886058725614}
   - component: {fileID: 23916293362727704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4953671677228236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 4537816636328514}
   - component: {fileID: 33792324856261932}
   - component: {fileID: 23969229810693578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 4590760415082452}
   - component: {fileID: 33628392127873892}
   - component: {fileID: 23013151614856438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 4740945270907462}
   - component: {fileID: 33098665551188818}
   - component: {fileID: 23698924627080882}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   - component: {fileID: 4533992975702256}
   - component: {fileID: 33992959935779352}
   - component: {fileID: 23755225603169864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4001814749612728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4176543649109230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pivot
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4789302913991570}
   - component: {fileID: 65447188754347182}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 4246371796090224}
   - component: {fileID: 33421828076415150}
   - component: {fileID: 23841061547298136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,9 +644,9 @@ GameObject:
   - component: {fileID: 4891153151530174}
   - component: {fileID: 65885163038859926}
   - component: {fileID: 114352233532106794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cannon
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -660,7 +660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4759638190775956}
   - component: {fileID: 114652768617376002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1248,7 +1248,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1731544077940162}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1283,7 +1283,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1422695041554454}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1318,7 +1318,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1389551655101284}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1353,7 +1353,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1191962840268092}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1388,7 +1388,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1652733169815294}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1423,7 +1423,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1526254405682484}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1458,7 +1458,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1385235642135892}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1493,7 +1493,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1754868590030830}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1528,7 +1528,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1780520170976694}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1563,7 +1563,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1869128673345604}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1598,7 +1598,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1674238356665262}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1633,7 +1633,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1712439792221782}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1840,7 +1840,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114765304657984220}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114224902711813356
@@ -1870,7 +1872,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114224902711813356}
-  bullet: {fileID: 1603141323391236, guid: 98166d13ca4d1ab4e919d980fb62d7f1, type: 2}
+  bulletModel: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
+    type: 2}
+  poolSize: 4
   secondsBetweenShots: 2
   phaseStart: 0
 --- !u!114 &114352906410344578

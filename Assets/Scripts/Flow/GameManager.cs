@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using VoxelPanda.Player.Events;
 using VoxelPanda.Player.Input;
 using VoxelPanda.ProcGen;
@@ -23,6 +24,7 @@ namespace VoxelPanda.Flow
         private SpawnData spawnData;
         private GameObject movementUIComponents;
 
+
 		public GameManager(PlayerElements playerElements, DeathController deathController, Crusher crusher, ProcEvents procEvents, ScoreCalculator scoreCalculator, ProcGenInjector procGenInjector)
 		{
             this.scoreCalculator = scoreCalculator;
@@ -44,12 +46,12 @@ namespace VoxelPanda.Flow
 
 		public void StartLevel()
 		{
-            scoreCalculator.Reset();
+			procEvents.ResetAll();
+			scoreCalculator.Reset();
 			crusher.ResetPosition();
 			player.ResetPlayer();
-			procEvents.GenerateInitial(player.transform.position);
             movementUIComponents.SetActive(true);
-			procEvents.OnPositionChanged(player.transform.position);
+			procEvents.GenerateInitial(player.transform.position);
 			accInput.SetInputDetection(true);
             touchInput.SetInputDetection(true);
 
@@ -89,7 +91,6 @@ namespace VoxelPanda.Flow
 
 		public void EndRun()
 		{
-			procEvents.ResetAll();
 			deathController.RaiseScreen();
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);
@@ -117,7 +118,8 @@ namespace VoxelPanda.Flow
 
 		public void Quit()
 		{
-			Application.Quit();
+			AkSoundEngine.StopAll();
+			SceneManager.LoadScene(0);
 		}
 	}
 	public enum GameState { Start, Running, Paused, Stopped }

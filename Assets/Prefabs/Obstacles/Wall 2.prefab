@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4299029882112858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4278344191285016}
   - component: {fileID: 65948472384225972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4080447355308972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4146463429445186}
   - component: {fileID: 33411779662335022}
   - component: {fileID: 23546810569743712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 4784880464516522}
   - component: {fileID: 33506175855735832}
   - component: {fileID: 23940016006072146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4007883904371400}
   - component: {fileID: 114284398148146730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1662773926437552}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -233,7 +233,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1843606679366764}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1

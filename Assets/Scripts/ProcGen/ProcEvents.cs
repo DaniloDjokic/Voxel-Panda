@@ -39,6 +39,7 @@ namespace VoxelPanda.ProcGen
 	{
 		public List<SpawnerData> spawners = new List<SpawnerData>();
 		public List<IPooling> poolers = new List<IPooling>();
+		private bool canStartListeningToEvents = false;
 
 		public ProcEvents(MoveEvents moveEvents)
 		{
@@ -58,15 +59,17 @@ namespace VoxelPanda.ProcGen
 
 		public void OnPositionChanged(Vector3 position)
 		{
-			int ZPosition = (int)position.z;
-			for (int i = 0; i < spawners.Count; i++)
-			{
-				spawners[i].TryToSpawn(ZPosition);
+			if (canStartListeningToEvents) {
+				int ZPosition = (int)position.z;
+				for (int i = 0; i < spawners.Count; i++)
+				{
+					spawners[i].TryToSpawn(ZPosition);
 
-			}
-			for (int i = 0; i < poolers.Count; i++)
-			{
-				poolers[i].TryDespawning(position);
+				}
+				for (int i = 0; i < poolers.Count; i++)
+				{
+					poolers[i].TryDespawning(position);
+				}
 			}
 		}
 
@@ -87,6 +90,7 @@ namespace VoxelPanda.ProcGen
 			{
 				poolers[i].TryDespawning(position);
 			}
+			canStartListeningToEvents = true;
 		}
 
 		public void OnVelocityChanged(Vector3 velocity)
@@ -109,6 +113,7 @@ namespace VoxelPanda.ProcGen
 
 		public void ResetAll()
 		{
+			canStartListeningToEvents = false;
 			for (int i = 0; i < spawners.Count; i++)
 			{
 				spawners[i].lastZGenerated = 0;

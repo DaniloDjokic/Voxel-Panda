@@ -17,8 +17,8 @@ namespace VoxelPanda.Flow
 		public PlayerElements playerElements;
 		public Crusher crusher;
 		public AdManager adManager;
-        public OptionsController optionsController;
 		public Tutorial tutorial;
+        public OptionsController optionsController;
 		public string randomSeed;
 
 		private MoveEvents moveEvents;
@@ -26,6 +26,13 @@ namespace VoxelPanda.Flow
 		private ScoreCalculator scoreCalculator;
 		private DeathController deathController;
 		private GameManager gameManager;
+
+		private const string playAliveEvent = "Play_GameplayMusic";
+
+		private void Start()
+		{
+			AkSoundEngine.PostEvent(playAliveEvent, Camera.main.transform.GetChild(0).gameObject);
+		}
 
 		private void Awake()
 		{
