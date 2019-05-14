@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{531A9A5D-51D8-451F-BE06-C4C5BFCDCE92}" SchemaVersion="89">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{531A9A5D-51D8-451F-BE06-C4C5BFCDCE92}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{531A9A5D-51D8-451F-BE06-C4C5BFCDCE92}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Parametric_EQ" ID="{3666D3C9-8FC9-478A-9C9B-9DB725D8845A}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+						<Property Name="FrequencyBand1" Type="Real32" Value="548"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="964"/>
+						<Property Name="GainBand1" Type="Real32" Value="-24"/>
+						<Property Name="GainBand2" Type="Real32" Value="3.5"/>
+						<Property Name="QFactorBand2" Type="Real32" Value="22.5"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Meter" ID="{1DB6BEDD-A6EE-411F-9DC6-02A8F2517BD4}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.1"/>
+						<Property Name="MeterMode" Type="int32" Value="1"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.16"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="Side_Chain" ID="{2421908A-D56B-4B21-94C0-D87BA0943011}"/>
+</PluginData>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

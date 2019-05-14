@@ -1,16 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.ProcGen.Elements;
 
-public class BackdropPooler : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+namespace VoxelPanda.ProcGen.Poolers
+{
+	public class BackdropPooler : Pooler
+	{
 	}
 }
+

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.ProcGen.Mappers;
 
 namespace VoxelPanda.ProcGen.Spawners 
 	{
 	public interface ISpawning
 	{
-		void SpawnGrid(int width, int length);
+		void SetMapper(IMapping mapper);
+		int SpawnGrid(int startZ, int width, int length);
 	}
 }

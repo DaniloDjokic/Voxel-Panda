@@ -15,51 +15,374 @@ MonoBehaviour:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 7fe422ee6d8f3847840161dd1aa0fb55
-    m_lastTime: -8586532637304164139
+    m_lastTime: -8586519073068318617
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586532637305484078
+    m_lastTime: -8586441158734855724
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586532637304584107
-    List: []
+    m_lastTime: -8586441195967253013
+    List:
+    - name: New_SoundBank
+      guid: a29ea482dc41e94fb6325f61341eee7f
+      id: 4072029455
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_SoundBank
+        ObjectType: 7
+      Path: Default Work Unit\New_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586532637305854098
-    List: []
+    m_lastTime: -8586441075176496459
+    List:
+    - name: Mute_All
+      guid: 90a2631f64ae3a4cba1decf923ee66c6
+      id: 1739713018
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Mute_All
+        ObjectType: 3
+      Path: Default Work Unit\Mute_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_CanonExplosion
+      guid: d02fff549001384ca360d241d35a8f1d
+      id: 2685623696
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_CanonExplosion
+        ObjectType: 3
+      Path: Default Work Unit\Play_CanonExplosion
+      maxAttenuation: 10
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_CanonLaunch
+      guid: 62cfbcad6e31804fa74211bc1f40b107
+      id: 317442834
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_CanonLaunch
+        ObjectType: 3
+      Path: Default Work Unit\Play_CanonLaunch
+      maxAttenuation: 10
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Coin
+      guid: 91cb8a3525aa5747a7c31a697fece811
+      id: 3114179205
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Coin
+        ObjectType: 3
+      Path: Default Work Unit\Play_Coin
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Countdown
+      guid: 4d952998f8a87145b4a49808cd689dda
+      id: 2175797879
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Countdown
+        ObjectType: 3
+      Path: Default Work Unit\Play_Countdown
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Crusher
+      guid: 5f2eb4516e42cf4eabb531aa3fd63a3e
+      id: 2458249826
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Crusher
+        ObjectType: 3
+      Path: Default Work Unit\Play_Crusher
+      maxAttenuation: 15
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Death
+      guid: 30f026c1457cee4d92f24d7bf14900bb
+      id: 1172822028
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Death
+        ObjectType: 3
+      Path: Default Work Unit\Play_Death
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_GameplayMusic
+      guid: b1e247bf895d5f4a81029149a6246732
+      id: 2481433679
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_GameplayMusic
+        ObjectType: 3
+      Path: Default Work Unit\Play_GameplayMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_MenuMusic
+      guid: ef7653884d0ae249a6be1e1d6d825031
+      id: 2570041344
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_MenuMusic
+        ObjectType: 3
+      Path: Default Work Unit\Play_MenuMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Robot_Arm_Start
+      guid: 7354b89cdfc6124f8b4d86989062792a
+      id: 1111717060
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Robot_Arm_Start
+        ObjectType: 3
+      Path: Default Work Unit\Play_Robot_Arm_Start
+      maxAttenuation: 15
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Robot_Arm_Stop
+      guid: e3b8102eb721a241bc0978e5aebf5e0d
+      id: 2534828664
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Robot_Arm_Stop
+        ObjectType: 3
+      Path: Default Work Unit\Play_Robot_Arm_Stop
+      maxAttenuation: 15
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Skate
+      guid: d290f37d490f834a873b0fd7b5a762cd
+      id: 1618563948
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Skate
+        ObjectType: 3
+      Path: Default Work Unit\Play_Skate
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Swipe_Low_Stamina
+      guid: 18f54a891b040548800e04fe07a586fe
+      id: 2608897773
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Swipe_Low_Stamina
+        ObjectType: 3
+      Path: Default Work Unit\Play_Swipe_Low_Stamina
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Swipe_Release
+      guid: 5ff5e208539c83458f8a066c90963c72
+      id: 2803607158
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Swipe_Release
+        ObjectType: 3
+      Path: Default Work Unit\Play_Swipe_Release
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Train
+      guid: a3a0ecdb0e74474bbcf7ca0394dd2813
+      id: 163991396
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Train
+        ObjectType: 3
+      Path: Default Work Unit\Play_Train
+      maxAttenuation: 15
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_UI_Click
+      guid: 18fefab5d7ae2c4480c2569504fea62a
+      id: 1749424733
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_UI_Click
+        ObjectType: 3
+      Path: Default Work Unit\Play_UI_Click
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_UI_Click_Pitched
+      guid: d70c8804832fcb4caa9a0b23cedb4b36
+      id: 1911738069
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_UI_Click_Pitched
+        ObjectType: 3
+      Path: Default Work Unit\Play_UI_Click_Pitched
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_WallKick
+      guid: b48009f6a89b67439bb70e756907be1b
+      id: 2567365808
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_WallKick
+        ObjectType: 3
+      Path: Default Work Unit\Play_WallKick
+      maxAttenuation: 15
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_MenuMusic
+      guid: 076635dc672f5e438f617a8d2912adb3
+      id: 2753202630
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_MenuMusic
+        ObjectType: 3
+      Path: Default Work Unit\Stop_MenuMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Train
+      guid: 739568cd368b48438756b419cb7ec2a0
+      id: 3191503118
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Train
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Train
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Unmute_All
+      guid: 0c9c36b358c3554ebdbc51197232bdd7
+      id: 4003578643
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Unmute_All
+        ObjectType: 3
+      Path: Default Work Unit\Unmute_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4204f4678e24ab43ae48f3b1e3b5608a
-    m_lastTime: -8586532637305744112
-    List: []
+    m_lastTime: -8586459167820732030
+    List:
+    - name: Side_Chain
+      guid: 8a9021246bd5214b94c0d87ba0943011
+      id: 479396230
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Side_Chain
+        ObjectType: 13
+      Path: Default Work Unit\Side_Chain
+    - name: Skate_Speed
+      guid: 209eba2d89cb164a979b25878058b30e
+      id: 3490328425
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Skate_Speed
+        ObjectType: 13
+      Path: Default Work Unit\Skate_Speed
+    - name: Sound_Pitch
+      guid: 33ad02ceb13a144db3d4d62bb338d525
+      id: 2100146717
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sound_Pitch
+        ObjectType: 13
+      Path: Default Work Unit\Sound_Pitch
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: c206041e42c6bc4793974387cff8923c
-    m_lastTime: -8586532637304454134
-    List: []
+    m_lastTime: -8586459167819171997
+    List:
+    - name: PlayerLife
+      guid: 1f18aa2ed7b06447a6255f0d2608c987
+      id: 444815956
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlayerLife
+        ObjectType: 9
+      Path: Default Work Unit\PlayerLife
+      values:
+      - name: Alive
+        guid: e79789c316ebff498b6ebc877e57e8ea
+        id: 655265632
+        PathAndIcons:
+        - ElementName: Alive
+          ObjectType: 8
+      - name: Dead
+        guid: 23df2288910ad74da0f7b9c5d04a59ae
+        id: 2044049779
+        PathAndIcons:
+        - ElementName: Dead
+          ObjectType: 8
+      - name: None
+        guid: 89876af488590345b1401c25412655b3
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: a9f8a499c71c234f82a674654487d3aa
-    m_lastTime: -8586532637304304134
+    m_lastTime: -8586519073068340661
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4b8865ff21934044b392b2e09ada67ac
-    m_lastTime: -8586532637304114124
+    m_lastTime: -8586519073068329256
     List: []
   ExpandedItems:
   - /Voxel-Panda_WwiseProject
+  - /Voxel-Panda_WwiseProject/Events
+  - /Voxel-Panda_WwiseProject/Events/Default Work Unit
+  - /Voxel-Panda_WwiseProject/SoundBanks
+  - /Voxel-Panda_WwiseProject/SoundBanks/Default Work Unit
+  - /Voxel-Panda_WwiseProject/States
+  - /Voxel-Panda_WwiseProject/States/Default Work Unit
+  - /Voxel-Panda_WwiseProject/States/Default Work Unit/PlayerLife
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

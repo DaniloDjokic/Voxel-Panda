@@ -1,16 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.ProcGen.Mappers;
 
-public class ObsSpawner : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+namespace VoxelPanda.ProcGen.Spawners
+{
+	public class ObsSpawner : Spawner
+	{
 	}
 }

@@ -1,6 +1,1878 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}" SchemaVersion="89">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6AF17DCC-F571-4299-BF17-1B08909A91A5}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Music" ID="{F6535ACD-1295-497F-A6F6-B6BC0961F5CC}" ShortID="464545258">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{E75FC155-CA98-4842-8644-A042CF3156AE}" ShortID="1055395172">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Sound_Pitch" ID="{CE02AD33-3AB1-4D14-B3D4-D62BB338D525}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{8B890FDF-89CC-4FFC-9EB0-7257ADA26146}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>50</XPos>
+												<YPos>38</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="PlaybackSpeed" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{BD967E85-BBEB-4E9A-9E04-DC1646E37AED}" ShortID="101433864">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Sound_Pitch" ID="{CE02AD33-3AB1-4D14-B3D4-D62BB338D525}" WorkUnitID="{67F40442-248E-43AB-AE48-F3B1E3B5608A}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{644BE3FC-12B8-4F7F-B096-D1A56F48B910}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="1"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>1</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>50</XPos>
+												<YPos>0.83594</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Tempo" Type="Real64" Value="158"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-16</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{C58B4873-97BB-4CD2-81C8-F7205DC79567}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="VoxelPanda_Loop4" ID="{A20BC859-9CD7-4F71-9443-86B184F6442F}" ShortID="1068117106">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12151.8987341772"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop4" ID="{80860FCE-A49D-4CA5-8AD6-71CCF9DE6A4B}" ShortID="168173353">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop4" ID="{62AB53B5-8CCD-4105-855C-4FB60221E450}" ShortID="717490860">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{D95768F6-6CEC-49CA-A993-AAB5EAD7ED1D}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{2503548B-CD6B-459D-8517-448B883C33D0}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop4" ID="{6A86E007-44B6-4078-90CE-DCE4752C6B10}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop4" ID="{62AB53B5-8CCD-4105-855C-4FB60221E450}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{9BCDA36F-E837-4623-9885-78A041CE6E05}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{B8610F2A-83BC-42F8-96B0-2AEF513978AF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{3B14EB50-328F-410C-A691-D5BFDF3BF6F7}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{B49DD90E-2893-4441-9835-0DC76C29AB88}"/>
+								<MusicCue Name="Exit Cue" ID="{C898CD87-6C22-4115-922A-8F12B3DD2CE8}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop5" ID="{0A42B682-DFF7-4A28-92D9-C7605511CD70}" ShortID="211561374">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12157.0359785052"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop5" ID="{2162A643-942C-4D3B-9302-BA7BD744CD00}" ShortID="1060810811">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop5" ID="{97A573C5-8B9C-46F1-BF9E-778AA75A99C8}" ShortID="380212301">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{233B9A90-4A0C-4363-A2EC-52D59EE86D5D}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{9D875320-A9DC-4C2D-84E9-034811E425D5}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop5" ID="{D178BB6F-8E0C-4764-9754-75DC4A387D50}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop5" ID="{97A573C5-8B9C-46F1-BF9E-778AA75A99C8}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{A5299F13-9BD7-4A73-AD23-821B365D6C70}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{8DBB12F0-A94A-4F45-8310-65E40DF96CA3}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{B3CA898A-FDE8-4270-8722-EE04670C763B}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{3B65ED9F-8F4A-4B8B-B6BE-B37C92BFADAA}"/>
+								<MusicCue Name="Exit Cue" ID="{1223CEE6-25DC-4D08-8740-3B718EBE0168}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop6" ID="{E4068120-2EAB-4279-A5A4-B45B13F502FD}" ShortID="908175471">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="24303.7974683544"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop6" ID="{F658C4CA-DCCC-4235-8BC2-704B3840BCEB}" ShortID="723066291">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop6" ID="{F5446CBD-83F8-42F9-B5B4-B5CAC8859821}" ShortID="325845651">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{D3563B3E-51E7-40AB-9354-C3A93E931EC9}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{E860E46A-B753-412E-84CC-8F82CD00D44D}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop6" ID="{B8A2B9E4-90D2-4626-9733-5A214410848E}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="24303.7974683544"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop6" ID="{F5446CBD-83F8-42F9-B5B4-B5CAC8859821}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{E1EDB0EB-86E9-40F7-9DF4-88B84F8F2C85}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{82A4B70E-E033-43E4-8213-FDC17BEE57B4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{C8B67D31-0ABE-4381-B5C7-7F35CDD1DF6C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{38C58985-785C-4D48-B517-8C8BD2C348AA}"/>
+								<MusicCue Name="Exit Cue" ID="{9B2DF25E-3E0B-43AF-8800-5BD8AC9F98A6}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="24303.7974683544"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop7" ID="{37423A63-75F2-4128-813A-6E502585F9E5}" ShortID="711767028">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12151.8987341772"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop7" ID="{E254782E-CA40-412F-8C28-83D95277E377}" ShortID="554254907">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop7" ID="{7A56C0A9-845D-4302-8477-AD14AE3FAA4E}" ShortID="930236180">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{56B0BDD8-B549-40D1-8ED4-EAB4835DA575}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{61400357-94A7-46E5-94CF-072E621B7AD3}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop7" ID="{180C6A1B-3349-4409-9498-87C44EDD2C0F}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop7" ID="{7A56C0A9-845D-4302-8477-AD14AE3FAA4E}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{5CF39DDC-1361-44AF-A439-228460B65B91}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{15C83E66-2F59-4268-B6EA-87B60D052CDF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{0A63CCE2-725F-46DB-82D6-B4BB177FCECC}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{2CE9F269-1F1B-4B5A-998D-9236E9278D2A}"/>
+								<MusicCue Name="Exit Cue" ID="{33D7A99B-CD90-4D24-9445-B98DB9126BE0}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPandaTheme_Loop1" ID="{C9392051-DC59-4FE1-904C-AAC462D488ED}" ShortID="769120397">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12152.4787554758"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPandaTheme_Loop1" ID="{5CEE70E0-7EEC-4AC1-9153-2EC5E4F57C06}" ShortID="120801188">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPandaTheme_Loop1" ID="{96180BB8-9A7E-42B8-9A1C-1A4424BD6CFF}" ShortID="534643346">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPandaTheme_Loop1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{42D2C161-7E42-4E83-BEEC-87994441E51C}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{461160E3-6261-4D34-89A2-C568599FF97C}">
+											<ClipList>
+												<MusicClip Name="VoxelPandaTheme_Loop1" ID="{FE6C47F1-BA34-4D91-BB9A-8F1C88A7B00B}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPandaTheme_Loop1" ID="{96180BB8-9A7E-42B8-9A1C-1A4424BD6CFF}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{0966410A-8BED-4BEF-8A95-6B2AE6B4453F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{A7F9F65C-CB2E-4B24-8E82-6982B30B3DFD}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{CD6CCCCE-728A-4DBA-9448-6B6DC201C1CE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{C9AD672B-D46B-4317-89B3-E70BD90AA862}"/>
+								<MusicCue Name="Exit Cue" ID="{D6BD952A-1C93-43B9-9E7C-1532ABA6BA58}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_PreStart_Fx" ID="{4EBC49BD-F944-4E3B-815F-DA50E34E9678}" ShortID="979617245">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="6075.94936708861"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_PreStart_Fx" ID="{2B8A0A0F-8F9F-44A4-AB9F-5F2018C61EF4}" ShortID="306715134">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_PreStart_Fx" ID="{E60D18CB-2285-4D60-9748-D5B35D1C91C9}" ShortID="481497763">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_PreStart_Fx.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{2EA96CD5-05C3-4A4A-9A9A-8BEEBD2B1CBF}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{F65E938A-4DAB-467D-8E54-D4019225518F}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_PreStart_Fx" ID="{FD8DCE12-277B-43C9-AADA-D0F6BDF55FDD}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="6075.94936708861"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="644.82328306961"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="106.362603392925"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_PreStart_Fx" ID="{E60D18CB-2285-4D60-9748-D5B35D1C91C9}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{F3402E5A-55E3-43DA-97A4-2CE88840D917}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6.07595</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{DE86FCFE-14D2-47DD-8103-662D1B46BAD2}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6.07595</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{DFD7208D-FC6A-4240-888F-D83A3F0C3862}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6.07595</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{17CD5481-9EA4-4DED-B0EE-A1B5A7E3A9AE}"/>
+								<MusicCue Name="Exit Cue" ID="{162B1BE6-C004-4ABE-947E-93F91E274974}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="3037.9746835443"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop4_01" ID="{82555565-15DC-4E59-B043-5B7FA21B2BC3}" ShortID="820126552">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12151.8987341772"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop4" ID="{32E640EF-DEC7-4AC6-861B-A8A6E2C80D3E}" ShortID="494018189">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop4" ID="{AF953486-F505-4286-BE98-8A0618B0D971}" ShortID="516665353">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop4.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="717490860"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{7AE6E82B-49BD-43E5-A6F1-78645374A032}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{A81B3E7E-3867-45C8-BC9F-EA554C1BBAF0}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop4" ID="{03EA5CBE-25F8-44D8-BDF6-51AE89A52AF1}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="24303.7974683544"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-12151.8987341772"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop4" ID="{AF953486-F505-4286-BE98-8A0618B0D971}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{8BB8651C-053F-4F4F-B933-D93C6A726214}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{6B096B33-A655-4825-B1F9-CB626189E497}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{0845A2D6-8495-4BEE-853F-5FF761E1E3DE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{F6683B18-3200-49B9-8AB8-484C3528DB17}"/>
+								<MusicCue Name="Exit Cue" ID="{FD841565-0431-46A6-BCA9-CABE040AD0F3}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop5_01" ID="{4526607B-AD29-45E4-B813-7320A7A035BF}" ShortID="341379803">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12170.343369189"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop5" ID="{FD5DF724-97FC-4ED3-B996-C094F00C0C66}" ShortID="162250652">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop5" ID="{06166D08-96EC-47C6-A843-0EACB3323CE9}" ShortID="664396836">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop5.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="380212301"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{110B1287-4950-42FC-A04F-B38E729E3012}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{9306F93D-B752-4666-AB2B-A935C7FA7112}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop5" ID="{F7917FFA-7C9D-4755-B52B-A55431BFBBB4}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="24303.7974683544"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-12133.4540991654"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop5" ID="{06166D08-96EC-47C6-A843-0EACB3323CE9}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{F25D8D2A-EF02-43F6-96CE-54E283C28EBA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{9924014E-B79C-4E92-9E67-9CA95D454C19}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{CFD9EADF-35A7-4890-89C1-14DB21AF8993}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{57D0DA1B-5718-4894-89F3-C7193EFFB5BB}">
+									<PropertyList>
+										<Property Name="TimeMs" Type="Real64" Value="18.4446350117923"/>
+									</PropertyList>
+								</MusicCue>
+								<MusicCue Name="Exit Cue" ID="{8E7E0872-B598-43BB-9EAF-1BA4B9169008}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12170.343369189"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop2" ID="{7587E9F7-C3C0-4C8D-96ED-F0AEF0F46644}" ShortID="921419033">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12151.8987341772"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop2" ID="{18D1FB2F-D20C-4ADA-95E1-AEE669FA00D5}" ShortID="174454995">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop2" ID="{B6D76350-0CD3-4654-B036-08260AF8F780}" ShortID="227641372">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{A45B0BD4-0C23-45E0-BE3B-198B7EF6413B}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{79C2D956-690B-4AEE-8DD3-21EDB9E15E18}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop2" ID="{5276A2E8-FB4F-4DCA-9305-FCC161F76E71}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="30.1406329668824"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="12182.0393671441"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-30.1406329668824"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop2" ID="{B6D76350-0CD3-4654-B036-08260AF8F780}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{15AF6CF0-F9F1-4336-9271-30C990FD65DA}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0.03014</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.18204</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{55605785-7D47-457E-9D36-3DC934E794C4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0.03014</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.18204</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{B683D8AD-9C31-4B3F-B6FC-E2AD5DAF4CB1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0.03014</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.18204</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{27AEC593-836D-41BA-90EF-1C1EBDBEADDF}">
+									<PropertyList>
+										<Property Name="TimeMs" Type="Real64" Value="3.28626015289046E-14"/>
+									</PropertyList>
+								</MusicCue>
+								<MusicCue Name="Exit Cue" ID="{7B52F0F6-DCF8-4006-8646-BEB43F5ED45A}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop3" ID="{0A990DD1-01E5-4701-85BF-7AF180E9EC4B}" ShortID="794861875">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12151.8987341772"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop3" ID="{5144D22C-FDF2-4143-8F58-ADB2F474A32D}" ShortID="261010209">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop3" ID="{0FD6E1A4-6111-48D9-8E75-81B18B85B6C3}" ShortID="824757086">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{2E9C82F7-1C0D-4556-96AB-A544758C8655}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{7838749F-27A3-4625-B276-DB428A2EE1A0}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop3" ID="{9D8CEB49-5C32-4563-82C0-1165EEF78CA0}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop3" ID="{0FD6E1A4-6111-48D9-8E75-81B18B85B6C3}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{F7B4F0F0-1153-4AF9-B68A-424333B1B27F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{A106C79D-E133-454B-842C-56CE50DD23F4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{D4D11AB5-D1B6-4899-97DA-A5D2FC455D62}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{5DC00F1A-FA8C-45C8-A4E8-3C8FA94B7C6F}"/>
+								<MusicCue Name="Exit Cue" ID="{06F83319-48B0-4FF8-8945-23686ECA9373}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPanda_Loop3_01" ID="{D81C86C1-9F70-4751-81C1-A0FAFAE464E2}" ShortID="192067410">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12151.9107896323"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPanda_Loop3" ID="{94AA1ED6-AD17-4E57-B8AD-DDFF98F6FE61}" ShortID="499313624">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPanda_Loop3" ID="{2BB83555-5AA3-4A17-9117-8F5E7894B043}" ShortID="426906507">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPanda_Loop3.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="824757086"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{B104B1CE-C56F-4333-AC0B-9391F43A9E96}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{BAFCACB9-410B-4BCE-BCAD-52DD4919BBD8}">
+											<ClipList>
+												<MusicClip Name="VoxelPanda_Loop3" ID="{054AE8CF-4F0C-482E-967E-164A20A64871}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="12151.8987341772"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="24303.8095238095"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="PlayAt" Type="Real64" Value="-12151.8987341772"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPanda_Loop3" ID="{2BB83555-5AA3-4A17-9117-8F5E7894B043}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{785F25FA-B438-43F5-8DC7-CBF781DBFBC2}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038095238095</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{A0502580-AC15-4847-99FC-78BA974899E4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038095238095</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{FD17B05E-6C65-46DC-96D0-C6958A8B7E9C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>12.1519</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.3038095238095</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{4D551F6E-D148-41F3-A22B-21930DD2E605}"/>
+								<MusicCue Name="Exit Cue" ID="{BA9502DE-712A-47CE-8C35-7E96CD4A6CCA}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerLife" ID="{2EAA181F-B0D7-4764-A625-5F0D2608C987}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{C38997E7-EB16-49FF-8B6E-BC877E57E8EA}"/>
+								<State Name="" ID="{74AFBEA5-5169-4AAD-AE72-0C418DE2B2A9}" ShortID="1013716380"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{8822DF23-0A91-4DD7-A0F7-B9C5D04A59AE}"/>
+								<State Name="" ID="{84BA365F-7579-4605-931F-3C28D2F76DEB}" ShortID="904463320">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="17"/>
+										<Property Name="Volume" Type="Real64" Value="-10"/>
+									</PropertyList>
+								</State>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{7858F621-9DA1-4E0B-8150-3E3D9CBC9E44}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{6295DB67-2875-4BE2-93D8-9425367C9B34}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{AEE3EBE6-EEFD-41AA-ADD3-2CFE78557564}" ShortID="958514803">
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{3189B64A-EFFF-4650-8DDC-E1A0E1A541F4}" ShortID="744714770">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="VoxelPanda_PreStart_Fx" ID="{4EBC49BD-F944-4E3B-815F-DA50E34E9678}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{25337108-52F4-44F9-AEB9-E531573FA60D}" ShortID="279081316">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="VoxelPandaTheme_Loop1" ID="{C9392051-DC59-4FE1-904C-AAC462D488ED}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{FAF8BB64-6BFA-435C-81F4-F3CED567F874}" ShortID="10199541">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{1C4C1528-172B-47D3-B21A-7A70F18E1199}" ShortID="346643718">
+											<PropertyList>
+												<Property Name="PlayMode" Type="int16" Value="3"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{8B89E0BD-EEAB-453D-BC19-2BB75F89B523}" ShortID="41586099">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop2" ID="{7587E9F7-C3C0-4C8D-96ED-F0AEF0F46644}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{0885CEF7-0A59-46B3-8D69-B0AFD8819226}" ShortID="693035441">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop3" ID="{0A990DD1-01E5-4701-85BF-7AF180E9EC4B}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{0A218165-3C7D-4CAB-98B1-3955177B6225}" ShortID="782118232">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop3_01" ID="{D81C86C1-9F70-4751-81C1-A0FAFAE464E2}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{563D2571-FBD0-4407-8AA1-32CB28459772}" ShortID="897385365">
+											<PropertyList>
+												<Property Name="PlayMode" Type="int16" Value="3"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{440140B8-9182-4874-A50F-3E5343673ADF}" ShortID="740013585">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop5" ID="{0A42B682-DFF7-4A28-92D9-C7605511CD70}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{19BD6B08-F7CD-4788-8DEB-FFE0F825FE65}" ShortID="27591456">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop5_01" ID="{4526607B-AD29-45E4-B813-7320A7A035BF}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{A5CB46EF-95D5-4A00-A283-00C652C61C7A}" ShortID="145082498">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+														<Property Name="Weight" Type="Real64">
+															<ValueList>
+																<Value>55</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop6" ID="{E4068120-2EAB-4279-A5A4-B45B13F502FD}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{7ECB2695-3C79-483D-83E0-9C6BE086196E}" ShortID="974484085">
+											<PropertyList>
+												<Property Name="PlayMode" Type="int16" Value="3"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{309EA332-FA35-4FCD-B813-27A9E65F944B}" ShortID="466351536">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop4" ID="{A20BC859-9CD7-4F71-9443-86B184F6442F}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{275A4951-93CB-4876-AB8F-29A6EFF17EE7}" ShortID="82003336">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop4_01" ID="{82555565-15DC-4E59-B043-5B7FA21B2BC3}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{48D49BFC-D39F-4ABD-B881-70F6177361AD}" ShortID="893617074">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="VoxelPanda_Loop7" ID="{37423A63-75F2-4128-813A-6E502585F9E5}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="MenuMusic" ID="{B87A4D8C-5422-4A16-AC30-9D60E1FB8B43}" ShortID="817940013">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="158"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Auto Detect Medium" ID="{C2242190-EA66-4EC8-A876-8713CEEBAAC8}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise Parametric EQ (Custom)" ID="{8C092092-414D-4B73-A92D-D450ABBFA04D}" ShortID="540475399" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="1646"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="3656"/>
+										<Property Name="GainBand2" Type="Real32" Value="-10"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{C58B4873-97BB-4CD2-81C8-F7205DC79567}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="VoxelPandaMenu" ID="{E8FF1D69-5D79-4C02-8F98-2438BA6865E1}" ShortID="457181218">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="14197.9899133388"/>
+								<Property Name="Tempo" Type="Real64" Value="158"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPandaMenu" ID="{129FFD69-79EC-4420-BD5F-2A7B18CC9593}" ShortID="684826848">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPandaMenu" ID="{B0CF4A1C-6DB5-4E75-AB4C-CBF4FD79D9A7}" ShortID="728904219">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPandaMenu.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{78F9D9BD-192F-4769-B5E8-5AF7EFB390EF}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{C22ABA6A-1F52-4387-BFF8-5337CC57E81F}">
+											<ClipList>
+												<MusicClip Name="VoxelPandaMenu" ID="{A0B1A5A6-6EE5-4BA0-91B8-B0C9B6E6A3EC}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="6075.9493670886"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="18987.3417721519"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="1051.80600419112"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1453.61953388211"/>
+														<Property Name="PlayAt" Type="Real64" Value="-6075.9493670886"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPandaMenu" ID="{B0CF4A1C-6DB5-4E75-AB4C-CBF4FD79D9A7}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{12309E8A-D171-403C-A0E5-96EAA3B7CB20}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>6.07595</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.98734</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{1406087A-26C3-4905-A9F1-2AD8E3A168C4}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>6.07595</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.98734</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{A0767EA9-6BDE-4C23-8CDF-633C33AC53C1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>6.07595</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.98734</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{5141000F-2BE3-4EA3-943D-966FE68D8F21}">
+									<PropertyList>
+										<Property Name="TimeMs" Type="Real64" Value="759.493670886077"/>
+									</PropertyList>
+								</MusicCue>
+								<MusicCue Name="Exit Cue" ID="{CC241310-B934-4C3C-80CD-FFA52BAED2CA}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12151.8987341772"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+						<MusicSegment Name="VoxelPandaMenu_01" ID="{167ABC48-127E-4386-B2C4-FA75373D074C}" ShortID="434627484">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="12911.3924050633"/>
+								<Property Name="Tempo" Type="Real64" Value="158"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{23951C7C-2BA9-4635-91F9-0ED350D1A0DD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="VoxelPandaMenu" ID="{476B1EA6-B651-4009-B1E8-27C9FEBD9287}" ShortID="388178948">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0BC6BFF2-A8DB-4AD1-AECA-2692BDB61A24}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VoxelPandaMenu" ID="{228C5B6C-1C42-4346-9D92-6BB24C60E805}" ShortID="850851109">
+											<Language>SFX</Language>
+											<AudioFile>VoxelPandaMenu.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="728904219"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{39BDE722-4010-4872-A540-F3C8F7EB196A}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{535AF6E3-E65B-48BF-A925-99917303E577}">
+											<ClipList>
+												<MusicClip Name="VoxelPandaMenu" ID="{EADA9D81-453F-4F58-8C03-6BC15C53E62B}">
+													<PropertyList>
+														<Property Name="BeginTrimOffset" Type="Real64" Value="17873.417721519"/>
+														<Property Name="EndTrimOffset" Type="Real64" Value="30784.8101265823"/>
+														<Property Name="FadeInDuration" Type="Real64" Value="1989.17683830421"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="796.210852277205"/>
+														<Property Name="PlayAt" Type="Real64" Value="-17873.417721519"/>
+													</PropertyList>
+													<AudioSourceRef Name="VoxelPandaMenu" ID="{228C5B6C-1C42-4346-9D92-6BB24C60E805}"/>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="Highpass">
+															<Curve Name="" ID="{A322CC07-E2DF-4A2D-B8B5-F4C35B3A25C1}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>17.87342</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30.78481</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Lowpass">
+															<Curve Name="" ID="{89E77F81-6A59-4B3C-BABD-8F826D2BB687}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>17.87342</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30.78481</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+														<PropertyCurve PropertyName="Volume">
+															<Curve Name="" ID="{6EE8621A-93A1-4921-9866-8DEB17A0E4E3}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>17.87342</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>30.78481</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{0EFA6597-23D5-41EC-B3DA-87F70F8C1F21}">
+									<PropertyList>
+										<Property Name="TimeMs" Type="Real64" Value="379.746835443054"/>
+									</PropertyList>
+								</MusicCue>
+								<MusicCue Name="Exit Cue" ID="{2E65B69D-4746-49C6-A32A-9D9D9C1F1B1C}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="12531.6455696203"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{0945B72F-EE80-4C8E-8AC5-3B3049C4AB7C}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{C4440809-BBA0-4603-9652-D48A1589697B}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{C8507EE9-257F-4DAF-BB59-D5938A2DCBC1}" ShortID="938175037">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+								<Property Name="PlayMode" Type="int16" Value="2"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{A68A4BF1-EE9E-4F05-8B18-A247750175FE}" ShortID="743592330">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="VoxelPandaMenu" ID="{E8FF1D69-5D79-4C02-8F98-2438BA6865E1}"/>
+								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{83BDFB68-DC18-4AC6-A9A5-E035CA8965B4}" ShortID="73253137">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="VoxelPandaMenu_01" ID="{167ABC48-127E-4386-B2C4-FA75373D074C}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+				<Folder Name="Stingers" ID="{8442D977-2814-4413-983F-5C2EFDA23A53}" ShortID="1072915340"/>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

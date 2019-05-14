@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Score;
 
-public class Pickup : MonoBehaviour {
+namespace VoxelPanda.ProcGen.Elements
+{
+	public class Pickup : GridData
+	{
+        public ScoreCalculator scoreCalculator;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        public void SetScoreCalculator(ScoreCalculator scoreCalculator)
+        {
+            this.scoreCalculator = scoreCalculator;
+        }
 	}
 }

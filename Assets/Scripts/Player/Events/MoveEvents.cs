@@ -2,15 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveEvents : MonoBehaviour {
+namespace VoxelPanda.Player.Events
+{
+	public class MoveEvents
+	{
+		private List<IMoveListener> listeners = new List<IMoveListener>();
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        public MoveEvents(DynamicMoveData dMoveData)
+        {
+            dMoveData.moveEvents = this;
+        }
+
+		public void Subscribe(IMoveListener listener)
+		{
+			if (!listeners.Contains(listener))
+			{
+				listeners.Add(listener);
+			}
+		}
+
+		public void NotifyPositionChanged(Vector3 newPosition)
+		{
+			foreach (var listener in listeners)
+			{
+				listener.OnPositionChanged(newPosition);
+			}
+		}
+
+		public void NotifyVelocityChanged(Vector3 newVelocity)
+		{
+			foreach(var listener in listeners)
+			{
+				listener.OnVelocityChanged(newVelocity);
+			}
+		}
 	}
 }
+

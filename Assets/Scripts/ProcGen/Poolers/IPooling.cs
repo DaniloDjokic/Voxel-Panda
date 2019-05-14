@@ -7,8 +7,12 @@ namespace VoxelPanda.ProcGen.Poolers
 {
 	public interface IPooling
 	{
-		ISpawnable GetPoolable();
-		void CreatePoolables();
-		void ReturnPoolable(ISpawnable poolable);
+		void SetSpawnable(ISpawnable spawnable);
+		ISpawnable GetSpawnable(int maxHeight);
+		void CreateSpawnables(int size);
+		int GetAvailableWeightSum(int maxHeight);
+		int CurrentlyAvailable(int maxHeight);
+		void TryDespawning(Vector3 despawnReferentPosition);
+		void DespawnAll();
 	}
 }
