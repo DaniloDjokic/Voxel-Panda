@@ -54,6 +54,11 @@ public class AdManager : MonoBehaviour
 		return false;
 	}
 
+	public bool IsRewardVideoAvailable()
+	{
+		return rewardBasedVideo != null && rewardBasedVideo.IsLoaded();
+	}
+
 	public void TryToShowDeathAd()
 	{
 		int random = UnityEngine.Random.Range(minplaySessionWithoutAd, maxPlaySessionsWithoutAd);
