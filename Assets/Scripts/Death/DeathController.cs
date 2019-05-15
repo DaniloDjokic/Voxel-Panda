@@ -33,7 +33,7 @@ namespace VoxelPanda.Flow
 		{
             AkSoundEngine.PostEvent(playDeathEvent, Camera.main.transform.GetChild(0).gameObject);
             deathUI.RaiseScreen();
-			if (scoreCalculator.HighScoreReached() && !playerRevivedThisRun)
+			if (scoreCalculator.HighScoreReached() && !playerRevivedThisRun && adManager.IsRewardVideoAvailable())
 			{
 				deathUI.EnableRevivalPrompt();
 			} else
