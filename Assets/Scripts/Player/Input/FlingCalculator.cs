@@ -17,8 +17,7 @@ namespace VoxelPanda.Player.Input
         private void Start()
         {
             Init();
-            flingData = new FlingData();
-            
+            flingData = new FlingData();           
         }
 
         private void Update()
@@ -29,8 +28,8 @@ namespace VoxelPanda.Player.Input
 
         public void StartFlingCalculation(Vector3 initialTouchPosition)
         {
-            //TODO: Sync with options setting vector stamina cost
-            flingData.MaxFlingVector = Vector3.forward * (GetUsableMaxStamina() / constMoveData.vectorStaminaCost);
+            flingData.MaxFlingVector = Vector3.forward * (GetUsableMaxStamina() / constMoveData.vectorStaminaCost) / constMoveData.vectorComprassionFactor;
+            
 
             flingData.unmodifiedTouchStartingPosition = initialTouchPosition;
             flingData.PlayerPosition = dynamicMoveData.currentPosition;
@@ -46,7 +45,7 @@ namespace VoxelPanda.Player.Input
             flingData.TransposedVectorEndPosition = dynamicMoveData.currentPosition + rawVector;
 
             flingData.ModifiedFlingVector = CompressVector(rawVector);
-            flingData.MaxCurrentFlingVector = Vector3.forward * (GetUsableStamina() / constMoveData.vectorStaminaCost);
+            flingData.MaxCurrentFlingVector = Vector3.forward * (GetUsableStamina() / constMoveData.vectorStaminaCost) / constMoveData.vectorComprassionFactor;
 
             FlingRunning(flingData);
         }
@@ -57,6 +56,8 @@ namespace VoxelPanda.Player.Input
             {
                 SpendStamina(flingData.ModifiedFlingVector);
                 physicsController.ApplyFlingForce(flingData.ModifiedFlingVector * constMoveData.flingForce);
+                Debug.Log("max: " + flingData.MaxCurrentFlingVector.magnitude);
+                Debug.Log("flicked: " + flingData.ModifiedFlingVector.magnitude);
                 FlingEnded(flingData);
             }         
         }
@@ -68,10 +69,9 @@ namespace VoxelPanda.Player.Input
 
         private Vector3 CompressVector(Vector3 vector)
         {
-                Vector3 temp;
-                temp = Vector3.ClampMagnitude(vector, GetUsableStamina() / constMoveData.vectorStaminaCost);
-                return temp;
-            
+            Vector3 temp;
+            temp = Vector3.ClampMagnitude(vector, (GetUsableStamina() / constMoveData.vectorStaminaCost) / constMoveData.vectorComprassionFactor);
+            return temp;            
         }
 
         private void SpendStamina(Vector3 flingVector)
