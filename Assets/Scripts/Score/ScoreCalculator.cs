@@ -8,7 +8,7 @@ namespace VoxelPanda.Score
 	public class ScoreCalculator : IMoveListener
 	{
         public float scorePerMeterMultiplier = 1;
-        public float coinValue = 20f;
+        public float coinValue = 45f;
 
 		private List<IScoreListener> listeners = new List<IScoreListener>();
 
@@ -29,6 +29,11 @@ namespace VoxelPanda.Score
 			PlayerPrefs.SetFloat(highScoreKey, 0);
 		}
 
+        public static int GetHighScore()
+        {
+            return (int)Mathf.Round(PlayerPrefs.GetFloat(highScoreKey, 0));
+        }
+
         public int GetScore()
         {
             return (int)Mathf.Round(currentScore);
@@ -36,7 +41,7 @@ namespace VoxelPanda.Score
 
         public void Reset()
         {
-			UpdateHighScore();
+			//UpdateHighScore();
             currentScore = bestZ = coinScore = 0f;
             NotifyScoreChanged(Mathf.Round(currentScore));
         }
@@ -76,7 +81,7 @@ namespace VoxelPanda.Score
 		}
 
 
-		public int GetHighScore()
+		public int GetCurrentHighScore()
 		{
 			return (int)Mathf.Round(currentHighScore);
 		}
@@ -86,11 +91,16 @@ namespace VoxelPanda.Score
 			return currentScore >= currentHighScore;
 		}
 
+        public bool PercentOfHighScoreReached(float percent)
+        {
+            return currentScore >= (percent * currentHighScore);
+        }
+
 		private void LoadHighScore()
 		{
 			currentHighScore = PlayerPrefs.GetFloat(highScoreKey);
 		}
-		private void UpdateHighScore()
+		public void UpdateHighScore()
 		{
 			if(currentScore > currentHighScore)
 			{

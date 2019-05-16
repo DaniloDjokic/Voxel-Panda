@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657904, g: 0.49641293, b: 0.5748184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: ae6f36dccdf8e4f4eaab6dd267bc08f3,
+  m_LightingDataAsset: {fileID: 112000002, guid: 77e00877d754c4042803f3979a8253f6,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -237,6 +237,10 @@ Prefab:
       value: 
       objectReference: {fileID: 114403197629152362, guid: 98166d13ca4d1ab4e919d980fb62d7f1,
         type: 2}
+    - target: {fileID: 1249870047160954, guid: 161bea96aafbfb5459312295e1fa0e81, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 161bea96aafbfb5459312295e1fa0e81, type: 2}
   m_IsPrefabAsset: 0
@@ -900,6 +904,10 @@ Prefab:
       propertyPath: m_fontSizeMax
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1453760091506814, guid: fa308d9dd6f6be34193a4d1fb031d9c2, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa308d9dd6f6be34193a4d1fb031d9c2, type: 2}
   m_IsPrefabAsset: 0
@@ -1031,7 +1039,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4432780974443086, guid: 05b281523051b9c45961fd31fb5bb4e4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4432780974443086, guid: 05b281523051b9c45961fd31fb5bb4e4, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1391,12 +1399,22 @@ Prefab:
     - target: {fileID: 114071625102404052, guid: 8d6fa35f5309126438118041fd71fcf0,
         type: 2}
       propertyPath: visualModifier
-      value: 25
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114206625117611550, guid: 8d6fa35f5309126438118041fd71fcf0,
         type: 2}
       propertyPath: visualModLimit
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071625102404052, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: constMoveData
+      value: 
+      objectReference: {fileID: 1922089237}
+    - target: {fileID: 65359399493282360, guid: 8d6fa35f5309126438118041fd71fcf0,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d6fa35f5309126438118041fd71fcf0, type: 2}
@@ -1449,6 +1467,16 @@ Prefab:
         type: 2}
       propertyPath: maxPlaySessionsWithoutAd
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114686790852724152, guid: 885010797c90ec740a184daa02b29089,
+        type: 2}
+      propertyPath: interstitialAdUnitID
+      value: ca-app-pub-4430923652609758/1794110741
+      objectReference: {fileID: 0}
+    - target: {fileID: 114686790852724152, guid: 885010797c90ec740a184daa02b29089,
+        type: 2}
+      propertyPath: rewardAdUnitID
+      value: ca-app-pub-4430923652609758/3653987329
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 885010797c90ec740a184daa02b29089, type: 2}
@@ -1785,22 +1813,47 @@ Prefab:
     - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: flingForce
-      value: 125
+      value: 4.1666665
       objectReference: {fileID: 0}
     - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: coinSpawnCriticalChance
-      value: 0.05
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: coinSpawnRiskyChance
-      value: 0.2
+      value: 0.00025
       objectReference: {fileID: 0}
     - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
         type: 2}
       propertyPath: vectorComprassionFactor
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: staminaPerFling
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: curveForce
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: accelerationFunctionModifier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114460060984618992, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: coinSpawnDangerousChance
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114198266438603112, guid: 44eb4199898336d42a633281478e7b99,
+        type: 2}
+      propertyPath: staminaRegenPerSecond
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44eb4199898336d42a633281478e7b99, type: 2}
@@ -1926,7 +1979,7 @@ Prefab:
     - target: {fileID: 114880105951344206, guid: bec19c4e679a93848bd64de50d197851,
         type: 2}
       propertyPath: speed
-      value: 4.3
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 114880105951344206, guid: bec19c4e679a93848bd64de50d197851,
         type: 2}
@@ -1936,7 +1989,16 @@ Prefab:
     - target: {fileID: 114880105951344206, guid: bec19c4e679a93848bd64de50d197851,
         type: 2}
       propertyPath: catchUpSpeed
-      value: 8
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085151165524746, guid: bec19c4e679a93848bd64de50d197851, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114880105951344206, guid: bec19c4e679a93848bd64de50d197851,
+        type: 2}
+      propertyPath: catchUpDistance
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec19c4e679a93848bd64de50d197851, type: 2}
@@ -2363,6 +2425,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001118652058602, guid: b0e7d219ff6df174899c6fdfc5a78d41, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0e7d219ff6df174899c6fdfc5a78d41, type: 2}

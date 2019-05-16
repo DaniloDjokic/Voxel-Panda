@@ -17,25 +17,27 @@ public class MainMenu : MonoBehaviour {
 	private const string shadowStateKey = "Shadow_State";
 	private int currentShadowState = 0;
 	public TextMeshProUGUI shadowButtonText;
+    public TextMeshProUGUI highScoreNumberText;
 
 	private Dictionary<int, string> shadowStateNames = new Dictionary<int, string>();
 
     private void Start()
     {
-		shadowStateNames[0] = "No shadows";
-		shadowStateNames[1] = "Low detail";
+		shadowStateNames[0] = "Low detail";
+		shadowStateNames[1] = "Mid detail";
 		shadowStateNames[2] = "High detail";
+        Input.backButtonLeavesApp = true;
 
 		ChangeSound(GetSoundOn());
 		GetShadowState();
-
-	}
+        highScoreNumberText.text = ScoreCalculator.GetHighScore().ToString();
+    }
 
     public void StartGame() {
 		AkSoundEngine.PostEvent(stopMenuMusic, Camera.main.gameObject);
         uiSFX.PlayUIClick();
 
-		SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
 	}
 
 	public void ToggleSound() {
@@ -72,17 +74,20 @@ public class MainMenu : MonoBehaviour {
 	{
         uiSFX.PlayUIClick();
         ScoreCalculator.ResetHighScore();
-	}
+        highScoreNumberText.text = ScoreCalculator.GetHighScore().ToString();
+    }
+    
 
 	private void GetShadowState()
 	{
-		currentShadowState = PlayerPrefs.GetInt(shadowStateKey, 0);
+		currentShadowState = PlayerPrefs.GetInt(shadowStateKey, 1);
 		SetShadowState();
 	}
 
 	public void ChangeShadowState()
 	{
-		currentShadowState = ( currentShadowState < 2 )? currentShadowState + 1 : 0;
+        uiSFX.PlayUIClick();
+        currentShadowState = ( currentShadowState < 2 )? currentShadowState + 1 : 0;
 		SetShadowState();
 	}
 

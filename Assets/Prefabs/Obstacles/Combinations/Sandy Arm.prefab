@@ -3734,7 +3734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114667263044807290}
-  slowdownMultiplier: 5
+  slowdownMultiplier: 2.5
   sandVFX: {fileID: 198277134670357112}
 --- !u!114 &114330155376349054
 MonoBehaviour:
@@ -3808,7 +3808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114891405544531476}
-  speed: 350
+  speed: 50
 --- !u!114 &114603304785152016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3835,7 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 7
   gridMatrix: {fileID: 11400000, guid: 939aad4b9a77cb14495f263fc8d31eda, type: 2}
   orientation: 1
   rotationPivot: {fileID: 0}

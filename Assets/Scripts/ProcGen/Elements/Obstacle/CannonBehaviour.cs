@@ -19,8 +19,13 @@ public class CannonBehaviour : ObsBehaviour
 		bulletPooler = new BulletPooler(bulletModel, poolSize);
 	}
 
-	private void Start() {
+	private void Start()
+    {
     	timer = phaseStart;
+    }
+    private void OnEnable()
+    {
+        timer = phaseStart;
     }
 
     private void Update()

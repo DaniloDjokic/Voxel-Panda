@@ -91,7 +91,8 @@ namespace VoxelPanda.Flow
 
 		public void EndRun()
 		{
-			deathController.RaiseScreen();
+            scoreCalculator.UpdateHighScore();
+            deathController.RaiseScreen();
             accInput.SetInputDetection(false);
             touchInput.SetInputDetection(false);
             crusher.SetShouldMove(false);
@@ -118,7 +119,8 @@ namespace VoxelPanda.Flow
 
 		public void Quit()
 		{
-			AkSoundEngine.StopAll();
+            scoreCalculator.Reset();
+            AkSoundEngine.StopAll();
 			SceneManager.LoadScene(0);
 		}
 	}

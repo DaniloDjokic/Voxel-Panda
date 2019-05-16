@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 10
   gridMatrix: {fileID: 11400000, guid: 1524cef2c11b4754bb33bdfd9262fba8, type: 2}
   orientation: 1
   rotationPivot: {fileID: 4304846655761620}
@@ -668,4 +668,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridData: {fileID: 114271322130863934}
-  speed: 350
+  speed: 60

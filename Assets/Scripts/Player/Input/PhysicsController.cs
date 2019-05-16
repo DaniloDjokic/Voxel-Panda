@@ -29,7 +29,7 @@ public class PhysicsController : MonoBehaviour
 
     public void ApplyFlingForce(Vector3 flingForceVector)
     {
-        playerRigidBody.AddForce(flingForceVector * Time.deltaTime, ForceMode.VelocityChange);
+        playerRigidBody.AddForce(flingForceVector, ForceMode.VelocityChange);
     }
 
     public void ApplyCurveForce(Vector3 curveForceVector)

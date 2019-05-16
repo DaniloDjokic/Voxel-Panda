@@ -56,8 +56,8 @@ namespace VoxelPanda.Player.Input
             {
                 SpendStamina(flingData.ModifiedFlingVector);
                 physicsController.ApplyFlingForce(flingData.ModifiedFlingVector * constMoveData.flingForce);
-                Debug.Log("max: " + flingData.MaxCurrentFlingVector.magnitude);
-                Debug.Log("flicked: " + flingData.ModifiedFlingVector.magnitude);
+               // Debug.Log("max: " + flingData.MaxCurrentFlingVector.magnitude);
+               // Debug.Log("flicked: " + flingData.ModifiedFlingVector.magnitude);
                 FlingEnded(flingData);
             }         
         }

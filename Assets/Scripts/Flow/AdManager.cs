@@ -27,16 +27,16 @@ public class AdManager : MonoBehaviour
 		{
 			instance = this;
 			DontDestroyOnLoad(gameObject);
-			MobileAds.Initialize(appID);
-			this.rewardBasedVideo = RewardBasedVideoAd.Instance;
-			OpenRewardVideo();
-			RegisterRewardEvents();
-			InitInterstitial();
 		} else
 		{
 			Destroy (this.gameObject);
 		}
-	}
+        MobileAds.Initialize(appID);
+        this.rewardBasedVideo = RewardBasedVideoAd.Instance;
+        OpenRewardVideo();
+        RegisterRewardEvents();
+        InitInterstitial();
+    }
 
 	public void OpenRewardVideo()
 	{
