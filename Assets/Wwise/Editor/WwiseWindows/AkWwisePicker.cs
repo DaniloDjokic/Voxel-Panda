@@ -17,6 +17,11 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 		PopulateTreeview();
 	}
 
+	public void OnEnable()
+	{
+		PopulateTreeview();
+	}
+
 	public void OnGUI()
 	{
 		using (new UnityEngine.GUILayout.HorizontalScope("box"))

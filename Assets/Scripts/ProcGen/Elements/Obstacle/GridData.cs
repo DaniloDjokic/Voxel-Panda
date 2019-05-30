@@ -1,17 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Score;
 
 namespace VoxelPanda.ProcGen.Elements
 {
-	public class GridData : MonoBehaviour, ISpawnable
+    [System.Serializable]
+    public class DifficultyController
+    {
+        private static int[] zones = new int[5] { 0, 200, 500, 1000, 2000 };
+        [SerializeField]
+        public float[] difficultyValues = new float[5];
+
+        public DifficultyController() { }
+
+        public float GetValue(float score)
+        {
+            for (int i = zones.Length - 1; i >= 0; i--)
+            {
+                if (score > zones[i])
+                {
+                    return difficultyValues[i];
+                }
+            }
+            return 0;
+        }
+    }
+    public class GridData : MonoBehaviour, ISpawnable
 	{
+        public bool usesProgressiveWeight = true;
 		public int weight = 1;
+        public DifficultyController weightController = new DifficultyController();
 		public GridMatrix gridMatrix;
 		private bool isAvailableToSpawn = true;
 		public bool IsAvailableToSpawn() { return isAvailableToSpawn; }
 		public Orientation orientation = Orientation.RIGHT;
 		public Transform rotationPivot;
+        public ScoreCalculator scoreCalculator; 
+
+        public void Bind(ScoreCalculator scoreCalculator)
+        {
+            this.scoreCalculator = scoreCalculator;
+        }
 
 		public void Despawn()
 		{
@@ -36,7 +66,12 @@ namespace VoxelPanda.ProcGen.Elements
 
 		public int GetWeight()
 		{
-			return weight;
+            if (usesProgressiveWeight)
+            {
+                return (int)weightController.GetValue(scoreCalculator.GetScore());
+
+            }
+            return weight;
 		}
 
 		public void Spawn(Vector3 position)

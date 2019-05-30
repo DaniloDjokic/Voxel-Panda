@@ -33,6 +33,18 @@ public class AkEventTrack : UnityEngine.Timeline.TrackAsset
 		return playable;
 	}
 
+#if UNITY_EDITOR
+	public void Awake()
+	{
+		AkWwiseXMLWatcher.Instance.XMLUpdated += OnXMLUpdated;
+	}
+
+	public void OnDestroy()
+	{
+		AkWwiseXMLWatcher.Instance.XMLUpdated -= OnXMLUpdated;
+	}
+#endif
+
 	public void setFadeTimes()
 	{
 		var clips = GetClips();
@@ -103,6 +115,18 @@ public class AkEventTrack : UnityEngine.Timeline.TrackAsset
 
 		return 0.0;
 	}
+
+#if UNITY_EDITOR
+	private void OnXMLUpdated()
+	{
+		var clips = GetClips();
+		foreach (var clip in clips)
+		{
+			// The setter of OwningClip call Refresh() in Editor mode
+			((AkEventPlayable)clip.asset).OwningClip = clip;
+		}
+	}
+#endif
 }
 
 #endif //UNITY_2017_1_OR_NEWER

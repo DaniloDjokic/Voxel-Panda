@@ -95,28 +95,16 @@ public class AkWwiseWWUBuilder
 
 			AkUtilities.IsWwiseProjectAvailable = System.IO.File.Exists(fullWwiseProjectPath);
 			if (!AkUtilities.IsWwiseProjectAvailable || UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || string.IsNullOrEmpty(s_wwiseProjectPath) ||
-			    UnityEditor.EditorApplication.isCompiling)
+			    (UnityEditor.EditorApplication.isCompiling && !AkUtilities.IsMigrating))
 				return false;
 
 			AkPluginActivator.Update();
 
 			var builder = new AkWwiseWWUBuilder();
-			if (WwiseObjectReference.migrate == null && !builder.GatherModifiedFiles())
+			if (!builder.GatherModifiedFiles())
 				return false;
 
 			builder.UpdateFiles();
-
-			if (WwiseObjectReference.migrate != null)
-			{
-				UpdateWwiseObjectReferenceData();
-				PopulateWwiseObjectReferences();
-
-				UnityEditor.AssetDatabase.SaveAssets();
-
-				var currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-				UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(currentScene);
-			}
-
 			return true;
 		}
 		catch (System.Exception e)
@@ -140,35 +128,6 @@ public class AkWwiseWWUBuilder
 		UpdateWwiseObjectReference(WwiseObjectType.AcousticTexture, AkWwiseProjectInfo.GetData().AcousticTextureWwu);
 		UpdateWwiseObjectReference(WwiseObjectType.StateGroup, WwiseObjectType.State, AkWwiseProjectInfo.GetData().StateWwu);
 		UpdateWwiseObjectReference(WwiseObjectType.SwitchGroup, WwiseObjectType.Switch, AkWwiseProjectInfo.GetData().SwitchWwu);
-	}
-
-	public static void PopulateWwiseObjectReferences()
-	{
-		if (WwiseObjectReference.migrate == null)
-			return;
-
-		UnityEngine.Debug.Log("WwiseUnity: Migrating Wwise objects in current scene");
-
-		UpdateProgressBar(0);
-
-		var delegates = WwiseObjectReference.migrate.GetInvocationList();
-		var count = delegates.Length;
-		for (var i = 0; i < count; ++i)
-		{
-			UpdateProgressBar((float)i / count);
-			var d = delegates[i] as UnityEditor.EditorApplication.CallbackFunction;
-			d();
-		}
-
-		foreach (var d in delegates)
-			WwiseObjectReference.migrate -= (UnityEditor.EditorApplication.CallbackFunction)d;
-		WwiseObjectReference.migrate = null;
-
-		UpdateProgressBar(1);
-
-		UnityEngine.Debug.Log("WwiseUnity: Migrated <" + count + "> Wwise objects in current scene");
-
-		UnityEditor.EditorUtility.ClearProgressBar();
 	}
 
 	private int RecurseWorkUnit(AssetType in_type, System.IO.FileInfo in_workUnit, string in_currentPathInProj,
@@ -584,14 +543,7 @@ public class AkWwiseWWUBuilder
 			}
 		}
 
-		UnityEditor.AssetDatabase.SaveAssets();
-		UnityEditor.AssetDatabase.Refresh();
 		UnityEditor.EditorUtility.ClearProgressBar();
-	}
-
-	private static void UpdateProgressBar(float progress)
-	{
-		UnityEditor.EditorUtility.DisplayProgressBar("Wwise Object References", "Update in progress - Please wait...", progress);
 	}
 
 	private static void UpdateWwiseObjectReference(WwiseObjectType type, System.Collections.Generic.List<AkWwiseProjectData.AkInfoWorkUnit> infoWwus)

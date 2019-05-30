@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -14,20 +15,23 @@ MonoBehaviour:
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 7fe422ee6d8f3847840161dd1aa0fb55
-    m_lastTime: -8586519073068318617
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586436601437216493
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: f2bfc60bdba8d14aaeca2692bdb61a24
-    m_lastTime: -8586441158734855724
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586437561448257367
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: af240c439b3efd43a14ac64b5d636dd3
-    m_lastTime: -8586441195967253013
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586437561445358053
     List:
     - name: New_SoundBank
       guid: a29ea482dc41e94fb6325f61341eee7f
@@ -41,8 +45,9 @@ MonoBehaviour:
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 793a09e91db4204a9437f1bf150c56cc
-    m_lastTime: -8586441075176496459
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586437561449037428
     List:
     - name: Mute_All
       guid: 90a2631f64ae3a4cba1decf923ee66c6
@@ -113,7 +118,7 @@ MonoBehaviour:
       - ElementName: Play_Crusher
         ObjectType: 3
       Path: Default Work Unit\Play_Crusher
-      maxAttenuation: 15
+      maxAttenuation: 22
       maxDuration: 0
       minDuration: 0
     - name: Play_Death
@@ -161,7 +166,7 @@ MonoBehaviour:
       - ElementName: Play_Robot_Arm_Start
         ObjectType: 3
       Path: Default Work Unit\Play_Robot_Arm_Start
-      maxAttenuation: 15
+      maxAttenuation: 18
       maxDuration: 0
       minDuration: 0
     - name: Play_Robot_Arm_Stop
@@ -173,7 +178,7 @@ MonoBehaviour:
       - ElementName: Play_Robot_Arm_Stop
         ObjectType: 3
       Path: Default Work Unit\Play_Robot_Arm_Stop
-      maxAttenuation: 15
+      maxAttenuation: 18
       maxDuration: 0
       minDuration: 0
     - name: Play_Skate
@@ -221,7 +226,7 @@ MonoBehaviour:
       - ElementName: Play_Train
         ObjectType: 3
       Path: Default Work Unit\Play_Train
-      maxAttenuation: 15
+      maxAttenuation: 18
       maxDuration: 0
       minDuration: 0
     - name: Play_UI_Click
@@ -257,7 +262,7 @@ MonoBehaviour:
       - ElementName: Play_WallKick
         ObjectType: 3
       Path: Default Work Unit\Play_WallKick
-      maxAttenuation: 15
+      maxAttenuation: 18
       maxDuration: 0
       minDuration: 0
     - name: Stop_MenuMusic
@@ -299,8 +304,9 @@ MonoBehaviour:
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 4204f4678e24ab43ae48f3b1e3b5608a
-    m_lastTime: -8586459167820732030
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586437561449027462
     List:
     - name: Side_Chain
       guid: 8a9021246bd5214b94c0d87ba0943011
@@ -332,8 +338,9 @@ MonoBehaviour:
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: c206041e42c6bc4793974387cff8923c
-    m_lastTime: -8586459167819171997
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586437561445248347
     List:
     - name: PlayerLife
       guid: 1f18aa2ed7b06447a6255f0d2608c987
@@ -363,26 +370,26 @@ MonoBehaviour:
         PathAndIcons:
         - ElementName: None
           ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal:
+      - 
+      - 
+      - 
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: a9f8a499c71c234f82a674654487d3aa
-    m_lastTime: -8586519073068340661
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586436601437286310
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
-    guid: 4b8865ff21934044b392b2e09ada67ac
-    m_lastTime: -8586519073068329256
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586436601437236444
     List: []
-  ExpandedItems:
-  - /Voxel-Panda_WwiseProject
-  - /Voxel-Panda_WwiseProject/Events
-  - /Voxel-Panda_WwiseProject/Events/Default Work Unit
-  - /Voxel-Panda_WwiseProject/SoundBanks
-  - /Voxel-Panda_WwiseProject/SoundBanks/Default Work Unit
-  - /Voxel-Panda_WwiseProject/States
-  - /Voxel-Panda_WwiseProject/States/Default Work Unit
-  - /Voxel-Panda_WwiseProject/States/Default Work Unit/PlayerLife
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

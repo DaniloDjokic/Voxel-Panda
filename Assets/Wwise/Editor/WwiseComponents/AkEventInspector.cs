@@ -15,6 +15,7 @@ public class AkEventInspector : AkBaseInspector
 	private UnityEditor.SerializedProperty curveInterpolation;
 	private UnityEditor.SerializedProperty enableActionOnEvent;
 	private UnityEditor.SerializedProperty transitionDuration;
+	private UnityEditor.SerializedProperty useCallbacks;
 
 	public void OnEnable()
 	{
@@ -24,8 +25,21 @@ public class AkEventInspector : AkBaseInspector
 		actionOnEventType = serializedObject.FindProperty("actionOnEventType");
 		curveInterpolation = serializedObject.FindProperty("curveInterpolation");
 		transitionDuration = serializedObject.FindProperty("transitionDuration");
+		useCallbacks = serializedObject.FindProperty("useCallbacks");
 
-		callbackData = serializedObject.FindProperty("m_callbackData");
+		callbackData = serializedObject.FindProperty("Callbacks");
+
+		AkEditorEventPlayer.Instance.RefreshGUI += RefreshGUI;
+	}
+
+	public void OnDisable()
+	{
+		AkEditorEventPlayer.Instance.RefreshGUI -= RefreshGUI;
+	}
+
+	private void RefreshGUI()
+	{
+		Repaint();
 	}
 
 	public override void OnChildInspectorGUI()
@@ -42,8 +56,7 @@ public class AkEventInspector : AkBaseInspector
 			{
 				UnityEditor.EditorGUILayout.PropertyField(actionOnEventType, new UnityEngine.GUIContent("Action On EventType: "));
 				UnityEditor.EditorGUILayout.PropertyField(curveInterpolation, new UnityEngine.GUIContent("Curve Interpolation: "));
-				UnityEditor.EditorGUILayout.Slider(transitionDuration, 0.0f, 60.0f,
-					new UnityEngine.GUIContent("Fade Time (secs): "));
+				UnityEditor.EditorGUILayout.Slider(transitionDuration, 0.0f, 60.0f, new UnityEngine.GUIContent("Fade Time (secs): "));
 			}
 		}
 
@@ -51,10 +64,66 @@ public class AkEventInspector : AkBaseInspector
 
 		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 		{
-			UnityEditor.EditorGUI.BeginChangeCheck();
-			UnityEditor.EditorGUILayout.PropertyField(callbackData);
-			if (UnityEditor.EditorGUI.EndChangeCheck())
-				serializedObject.ApplyModifiedProperties();
+			UnityEditor.EditorGUILayout.PropertyField(useCallbacks, new UnityEngine.GUIContent("Use Callback: "));
+
+			if (useCallbacks.boolValue)
+			{
+				var emptyContent = new UnityEngine.GUIContent("");
+
+				// ensure that there is always at least one entry since we are "using" callbacks
+				if (callbackData.arraySize == 0)
+					callbackData.arraySize = 1;
+
+				const float callbackSpacerWidth = 4;
+				const float removeButtonWidth = 20;
+				var rect = UnityEditor.EditorGUILayout.GetControlRect();
+				var callbackFieldWidth = (rect.width - removeButtonWidth) / 3;
+				rect.width = callbackFieldWidth - callbackSpacerWidth;
+
+				UnityEngine.GUI.Label(rect, "Game Object");
+
+				rect.x += callbackFieldWidth;
+				UnityEngine.GUI.Label(rect, "Callback Function");
+
+				rect.x += callbackFieldWidth;
+				UnityEngine.GUI.Label(rect, "Callback Flags");
+
+				for (var i = 0; i < callbackData.arraySize; ++i)
+				{
+					var data = callbackData.GetArrayElementAtIndex(i);
+					rect = UnityEditor.EditorGUILayout.GetControlRect();
+					rect.width = callbackFieldWidth - callbackSpacerWidth;
+					UnityEditor.EditorGUI.PropertyField(rect, data.FindPropertyRelative("GameObject"), emptyContent);
+
+					rect.x += callbackFieldWidth;
+					UnityEditor.EditorGUI.PropertyField(rect, data.FindPropertyRelative("FunctionName"), emptyContent);
+
+					rect.x += callbackFieldWidth;
+					UnityEditor.EditorGUI.PropertyField(rect, data.FindPropertyRelative("Flags"), emptyContent);
+
+					rect.x += callbackFieldWidth;
+					rect.width = removeButtonWidth;
+					if (UnityEngine.GUI.Button(rect, "X"))
+						callbackData.DeleteArrayElementAtIndex(i);
+				}
+
+				if (UnityEngine.GUI.Button(UnityEditor.EditorGUILayout.GetControlRect(), "Add"))
+				{
+					var i = callbackData.arraySize++;
+					var data = callbackData.GetArrayElementAtIndex(i);
+					data.FindPropertyRelative("GameObject").objectReferenceValue = null;
+					data.FindPropertyRelative("FunctionName").stringValue = string.Empty;
+					data.FindPropertyRelative("Flags.value").intValue = 0;
+				}
+			}
+			else if (callbackData.arraySize == 1)
+			{
+				var data = callbackData.GetArrayElementAtIndex(0);
+				if (data.FindPropertyRelative("GameObject").objectReferenceValue == null)
+					if (string.IsNullOrEmpty(data.FindPropertyRelative("FunctionName").stringValue))
+						if (data.FindPropertyRelative("Flags.value").intValue == 0)
+							callbackData.arraySize = 0;
+			}
 		}
 
 		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
@@ -94,11 +163,18 @@ public class AkEventInspector : AkBaseInspector
 					if (akEventTarget != null)
 					{
 						if (AkEditorEventPlayer.Instance.IsEventPlaying(akEventTarget))
+						{
 							playingEventsSelected = true;
+						}
 						else
+						{
 							stoppedEventsSelected = true;
+						}
+
 						if (playingEventsSelected && stoppedEventsSelected)
+						{
 							break;
+						}
 					}
 				}
 
@@ -109,7 +185,9 @@ public class AkEventInspector : AkBaseInspector
 					{
 						var akEventTarget = targets[i] as AkEvent;
 						if (akEventTarget != null)
+						{
 							AkEditorEventPlayer.Instance.PlayEvent(akEventTarget);
+						}
 					}
 				}
 
@@ -120,7 +198,9 @@ public class AkEventInspector : AkBaseInspector
 					{
 						var akEventTarget = targets[i] as AkEvent;
 						if (akEventTarget != null)
+						{
 							AkEditorEventPlayer.Instance.StopEvent(akEventTarget);
+						}
 					}
 				}
 			}
@@ -139,12 +219,17 @@ public class AkEventInspector : AkBaseInspector
 
 		private readonly System.Collections.Generic.List<AkEvent> akEvents = new System.Collections.Generic.List<AkEvent>();
 
+		public event System.Action RefreshGUI;
+
 		public static AkEditorEventPlayer Instance
 		{
 			get
 			{
 				if (ms_Instance == null)
+				{
 					ms_Instance = new AkEditorEventPlayer();
+				}
+
 				return ms_Instance;
 			}
 		}
@@ -152,25 +237,41 @@ public class AkEventInspector : AkBaseInspector
 		private void CallbackHandler(object in_cookie, AkCallbackType in_type, AkCallbackInfo in_info)
 		{
 			if (in_type == AkCallbackType.AK_EndOfEvent)
+			{
 				RemoveAkEvent(in_cookie as AkEvent);
+
+				var refreshGUI = RefreshGUI;
+				if (refreshGUI != null)
+				{
+					refreshGUI.Invoke();
+				}
+			}
 		}
 
 		public void PlayEvent(AkEvent akEvent)
 		{
 			if (IsEventPlaying(akEvent))
+			{
 				return;
+			}
 
-			var playingID = akEvent.data.Post(akEvent.gameObject, (uint)AkCallbackType.AK_EndOfEvent, CallbackHandler);
+			var playingID = akEvent.data.Post(akEvent.gameObject, (uint)AkCallbackType.AK_EndOfEvent, CallbackHandler, akEvent);
 			if (playingID != AkSoundEngine.AK_INVALID_PLAYING_ID)
+			{
 				AddAkEvent(akEvent);
+			}
 		}
 
 		public void StopEvent(AkEvent akEvent)
 		{
 			if (!IsEventPlaying(akEvent))
+			{
 				return;
+			}
 
 			akEvent.data.Stop(akEvent.gameObject);
+
+			RemoveAkEvent(akEvent);
 		}
 
 		private void AddAkEvent(AkEvent akEvent)
@@ -184,7 +285,9 @@ public class AkEventInspector : AkBaseInspector
 		private void RemoveAkEvent(AkEvent akEvent)
 		{
 			if (akEvent != null)
+			{
 				akEvents.Remove(akEvent);
+			}
 		}
 
 		public bool IsEventPlaying(AkEvent akEvent)
@@ -194,6 +297,8 @@ public class AkEventInspector : AkBaseInspector
 
 		public void StopAll()
 		{
+			akEvents.Clear();
+
 			AkSoundEngine.StopAll();
 		}
 	}

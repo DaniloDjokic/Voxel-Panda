@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using VoxelPanda.Flow;
 using VoxelPanda.ProcGen.Elements;
+using VoxelPanda.Score;
 
 namespace VoxelPanda.Flow
 {
@@ -12,6 +13,7 @@ namespace VoxelPanda.Flow
 	{
 		//Movement
 		public float speed;
+        public DifficultyController speedController;
 		public float catchUpSpeed;
 		public float catchUpDistance;
 
@@ -21,14 +23,16 @@ namespace VoxelPanda.Flow
 		private string playerTag;
 		private const string obstacleTag = "Obstacle";
 		private GameManager gameManager;
+        private ScoreCalculator scoreCalculator;
 		private Transform player;
 		public float reviveDistanceOffset;
 
 		public Vector3 startingPosition;
 
-		public void Bind(GameManager gameManager, Transform player)
+		public void Bind(GameManager gameManager, Transform player, ScoreCalculator scoreCalculator)
 		{
 			this.gameManager = gameManager;
+            this.scoreCalculator = scoreCalculator;
 			this.player = player;
 			playerTag = this.player.tag;
 		}
@@ -61,10 +65,15 @@ namespace VoxelPanda.Flow
 				this.transform.position = this.transform.position + direction * catchUpSpeed * Time.deltaTime;
 			} else
 			{
-				this.transform.position = this.transform.position + direction * speed * Time.deltaTime;
+				this.transform.position = this.transform.position + direction * GetSpeed() * Time.deltaTime;
 			}
 			
 		}
+
+        private float GetSpeed()
+        {
+            return speedController.GetValue(scoreCalculator.GetScore());
+        }
 
 		private bool ShouldCatchUp()
 		{

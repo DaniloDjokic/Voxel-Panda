@@ -294,14 +294,18 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		var basePathToSet = AkBasePathGetter.GetSoundbankBasePath();
 		if (string.IsNullOrEmpty(basePathToSet))
 		{
-			UnityEngine.Debug.LogError("WwiseUnity: Couldn't find soundbanks base path. Terminate sound engine.");
+			UnityEngine.Debug.LogError("WwiseUnity: Couldn't find soundbanks base path. Terminating sound engine.");
 			AkSoundEngine.Term();
 			return false;
 		}
 
 		if (AkSoundEngine.SetBasePath(basePathToSet) != AKRESULT.AK_Success)
 		{
-			UnityEngine.Debug.LogError("WwiseUnity: Failed to set soundbanks base path. Terminate sound engine.");
+#if UNITY_EDITOR
+			UnityEngine.Debug.LogError("WwiseUnity: Failed to set soundbanks base path to <" + basePathToSet + ">. Make sure soundbank path is correctly set under Edit > Wwise Setting... > Asset Management.");
+#else
+			UnityEngine.Debug.LogError("WwiseUnity: Failed to set soundbanks base path to <" + basePathToSet + ">. Make sure soundbank path is correctly set under Edit > Project Settings > Wwise Initialization Settings.");
+#endif
 			AkSoundEngine.Term();
 			return false;
 		}
@@ -395,7 +399,7 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		using (var tmpEvent = new System.Threading.ManualResetEvent(false))
 			tmpEvent.WaitOne(System.TimeSpan.FromMilliseconds(milliseconds));
 	}
-	#endregion
+#endregion
 
 #if UNITY_EDITOR
 	[UnityEditor.MenuItem("Edit/Project Settings/Wwise Initialization Settings")]
@@ -567,7 +571,7 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		}
 	}
 
-	#region Custom Editor
+#region Custom Editor
 	[UnityEditor.CustomEditor(typeof(AkWwiseInitializationSettings))]
 	public class Editor : UnityEditor.Editor
 	{
@@ -1210,6 +1214,6 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 			}
 		}
 	}
-	#endregion
+#endregion
 #endif
 }

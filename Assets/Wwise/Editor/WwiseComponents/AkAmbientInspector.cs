@@ -28,7 +28,7 @@ public class AkAmbientInspector : AkEventInspector
 
 	private System.Collections.Generic.List<int> triggerList;
 
-	private new void OnEnable()
+	public new void OnEnable()
 	{
 		base.OnEnable();
 
@@ -45,8 +45,10 @@ public class AkAmbientInspector : AkEventInspector
 		AkWwiseXMLWatcher.Instance.XMLUpdated += PopulateMaxAttenuation;
 	}
 
-	private void OnDisable()
+	public new void OnDisable()
 	{
+		base.OnDisable();
+
 		DefaultHandles.Hidden = false;
 
 		AkWwiseXMLWatcher.Instance.XMLUpdated -= PopulateMaxAttenuation;

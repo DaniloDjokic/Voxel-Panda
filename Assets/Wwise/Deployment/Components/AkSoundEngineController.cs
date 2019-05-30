@@ -114,7 +114,14 @@ public class AkSoundEngineController
 		{
 #if UNITY_EDITOR
 			if (AkWwiseInitializationSettings.ResetSoundEngine(UnityEngine.Application.isPlaying || UnityEditor.BuildPipeline.isBuildingPlayer))
+			{
 				UnityEditor.EditorApplication.update += LateUpdate;
+			}
+
+			if (UnityEditor.EditorApplication.isPaused && UnityEngine.Application.isPlaying)
+			{
+				AkSoundEngine.Suspend(true);
+			}
 #else
 			UnityEngine.Debug.LogError("WwiseUnity: Sound engine is already initialized.");
 #endif
@@ -186,7 +193,10 @@ public class AkSoundEngineController
 #if UNITY_2017_2_OR_NEWER
 	private void OnPauseStateChanged(UnityEditor.PauseState pauseState)
 	{
-		ActivateAudio(pauseState != UnityEditor.PauseState.Paused);
+		if (UnityEngine.Application.isPlaying)
+		{
+			ActivateAudio(pauseState != UnityEditor.PauseState.Paused);
+		}
 	}
 #else
 	private void OnEditorPlaymodeStateChanged()

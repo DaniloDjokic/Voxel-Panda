@@ -861,6 +861,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Countdown" ID="{C323966A-A90F-4540-955B-E1AA13A1933A}" ShortID="571536977">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="2.45183887915937E-02"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.161120840630473"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.96672504378284"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Countdown.wav</AudioFile>
 								</AudioFileSource>
