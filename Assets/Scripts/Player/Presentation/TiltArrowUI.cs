@@ -34,7 +34,6 @@ public class TiltArrowUI : MonoBehaviour, ICurveListener
 
         if(curve < 0.25f && curve > -0.25f)
         {
-            Debug.Log("KDSA");
             SetInvisible();
             return;
         }

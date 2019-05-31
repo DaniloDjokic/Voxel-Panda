@@ -5,7 +5,7 @@ using UnityEngine;
 public class ConveyorBehaviour : LocalUpdater<Rigidbody>
 {
     public float speed;
-
+    public float decorationSpeed = 0.000006f;
     private void FixedUpdate()
     {
         AddForceToRBs();
@@ -15,7 +15,14 @@ public class ConveyorBehaviour : LocalUpdater<Rigidbody>
     {
         foreach(Rigidbody rb in currentlyContained)
         {
-            rb.AddForce(transform.right * speed * Time.deltaTime, ForceMode.Impulse);
+            if (rb.CompareTag("Player"))
+            {
+                rb.AddForce(transform.right * speed * Time.deltaTime, ForceMode.Impulse);
+            } else
+            {
+                rb.AddForce(transform.right * decorationSpeed * Time.deltaTime, ForceMode.Impulse);
+
+            }
         }
     }
 

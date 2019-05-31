@@ -32,22 +32,29 @@ public class LocalUpdater<T> : ObsBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("PhysicsDecoration"))
         {
-            PlayerEnters(other.gameObject);
+            if (other.CompareTag("Player"))
+            {
+                PlayerEnters(other.gameObject);
+            }
             T component = other.GetComponent<T>();
             if(!currentlyContained.Contains(component))
             {
                 currentlyContained.Add(component);
             }
         }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("PhysicsDecoration"))
         {
-            PlayerExits(other.gameObject);
+            if (other.CompareTag("Player"))
+            {
+                PlayerExits(other.gameObject);
+            }
             T component = other.GetComponent<T>();
             if (component != null)
             {

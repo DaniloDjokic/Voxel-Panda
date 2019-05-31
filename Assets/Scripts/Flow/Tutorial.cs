@@ -64,23 +64,29 @@ namespace VoxelPanda.Flow
 			if (timer <= 0f && currentTutorialFinished)
 			{
 				currentTutorialFinished = false;
-				MovementTutorialAnimation.SetActive(false);
-				CurveTutorialAnimation.SetActive(false);
+
 				if(tutorialState == TutorialState.Movement)
 				{
 					MovementTutorialAnimation.SetActive(true);
-					timer = minTimeToShowAnimation;
+                    CurveTutorialAnimation.SetActive(false);
+                    timer = minTimeToShowAnimation;
 				} else if (tutorialState == TutorialState.Curve)
 				{
-					CurveTutorialAnimation.SetActive(true);
+                    MovementTutorialAnimation.SetActive(false);
+                    CurveTutorialAnimation.SetActive(true);
 					timer = minTimeToShowAnimation;
-				}
+				} else if (tutorialState == TutorialState.Finished)
+                {
+                    MovementTutorialAnimation.SetActive(false);
+                    CurveTutorialAnimation.SetActive(false);
+                    this.gameObject.SetActive(false);
+                }
 			}
 		}
 
 		public void OnCurveChanged(CurveData curveData)
 		{
-			if(tutorialState == TutorialState.Curve)
+			if(timer <= 0f && tutorialState == TutorialState.Curve)
 			{
 				currentTutorialFinished = true;
 				SetState(TutorialState.Finished);

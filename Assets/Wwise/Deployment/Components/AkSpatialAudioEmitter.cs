@@ -7,7 +7,7 @@ public class AkSpatialAudioEmitter : AkSpatialAudioBase
 	[UnityEngine.Header("Early Reflections")]
 	[UnityEngine.Tooltip("The Auxiliary Bus with a Reflect plug-in Effect applied.")]
 	/// The Auxiliary Bus with a Reflect plug-in Effect applied.
-	public AK.Wwise.AuxBus reflectAuxBus;
+	public AK.Wwise.AuxBus reflectAuxBus = new AK.Wwise.AuxBus();
 
 	[UnityEngine.Tooltip("A heuristic to stop the computation of reflections. Should be no longer (and possibly shorter for less CPU usage) than the maximum attenuation of the sound emitter.")]
 	/// A heuristic to stop the computation of reflections. Should be no longer (and possibly shorter for less CPU usage) than the maximum attenuation of the sound emitter.
@@ -50,13 +50,12 @@ public class AkSpatialAudioEmitter : AkSpatialAudioBase
 		emitterSettings.reflectionMaxPathLength = reflectionMaxPathLength;
 		emitterSettings.reflectionsAuxBusGain = reflectionsAuxBusGain;
 		emitterSettings.reflectionsOrder = reflectionsOrder;
-		emitterSettings.reflectorFilterMask = unchecked((uint) -1);
+		emitterSettings.reflectorFilterMask = unchecked((uint)-1);
 		emitterSettings.roomReverbAuxBusGain = roomReverbAuxBusGain;
 		emitterSettings.useImageSources = 0;
 		emitterSettings.diffractionMaxEdges = diffractionMaxEdges;
 		emitterSettings.diffractionMaxPaths = diffractionMaxPaths;
 		emitterSettings.diffractionMaxPathLength = diffractionMaxPathLength;
-
 
 		if (AkSoundEngine.RegisterEmitter(gameObject, emitterSettings) == AKRESULT.AK_Success)
 			SetGameObjectInRoom();
@@ -85,188 +84,161 @@ public class AkSpatialAudioEmitter : AkSpatialAudioBase
 	/// This allows you to visualize sound propagation paths through portals.
 	public bool drawSoundPropagation = false;
 
-	private const uint kMaxIndirectPaths = 64;
-	private readonly AkReflectionPathInfoArray indirectPathInfoArray = new AkReflectionPathInfoArray((int) kMaxIndirectPaths);
-
-	private readonly AkPropagationPathInfoArray propagationPathInfoArray =
-		new AkPropagationPathInfoArray((int)AkPropagationPathInfo.kMaxNodes);
-
-	private readonly AkDiffractionPathInfoArray diffractionPathInfoArray =
-		new AkDiffractionPathInfoArray((int)AkDiffractionPathInfo.kMaxNodes);
-
-	private readonly AkPathParams pathsParams = new AkPathParams();
-
-	private readonly UnityEngine.Color32 colorLightBlue = new UnityEngine.Color32(157, 235, 243, 255);
-	private readonly UnityEngine.Color32 colorDarkBlue = new UnityEngine.Color32(24, 96, 103, 255);
-
-	private readonly UnityEngine.Color32 colorLightYellow = new UnityEngine.Color32(252, 219, 162, 255);
-	private readonly UnityEngine.Color32 colorDarkYellow = new UnityEngine.Color32(169, 123, 39, 255);
-
-	private readonly UnityEngine.Color32 colorLightRed = new UnityEngine.Color32(252, 177, 162, 255);
-	private readonly UnityEngine.Color32 colorDarkRed = new UnityEngine.Color32(169, 62, 39, 255);
-
-	private readonly UnityEngine.Color32 colorLightGrey = new UnityEngine.Color32(75, 75, 75, 255);
-	private readonly UnityEngine.Color32 colorDarkGrey = new UnityEngine.Color32(35, 35, 35, 255);
-
-	private readonly UnityEngine.Color32 colorPurple = new UnityEngine.Color32(73, 46, 116, 255);
-	private readonly UnityEngine.Color32 colorGreen = new UnityEngine.Color32(38, 113, 88, 255);
-	private readonly UnityEngine.Color32 colorRed = new UnityEngine.Color32(170, 67, 57, 255);
-
-	private readonly float radiusSphere = 0.25f;
-	private readonly float radiusSphereMin = 0.1f;
-	private readonly float radiusSphereMax = 0.4f;
-
 	private void OnDrawGizmos()
 	{
-		if (UnityEngine.Application.isPlaying && AkSoundEngine.IsInitialized())
-		{
-			if (drawFirstOrderReflections || drawSecondOrderReflections || drawHigherOrderReflections)
-				DebugDrawEarlyReflections();
+		if (!UnityEngine.Application.isPlaying || !AkSoundEngine.IsInitialized())
+			return;
 
-			if (drawGeometricDiffraction)
-				DebugDrawDiffraction();
+		if (debugDrawData == null)
+			debugDrawData = new DebugDrawData();
 
-			if (drawSoundPropagation)
-				DebugDrawSoundPropagation();
-		}
+		if (drawFirstOrderReflections || drawSecondOrderReflections || drawHigherOrderReflections)
+			debugDrawData.DebugDrawEarlyReflections(gameObject, drawFirstOrderReflections, drawSecondOrderReflections, drawHigherOrderReflections);
+
+		if (drawGeometricDiffraction)
+			debugDrawData.DebugDrawDiffraction(gameObject);
+
+		if (drawSoundPropagation)
+			debugDrawData.DebugDrawSoundPropagation(gameObject);
 	}
 
-	private UnityEngine.Vector3 ConvertVector(AkVector vec)
+	private class DebugDrawData
 	{
-		return new UnityEngine.Vector3(vec.X, vec.Y, vec.Z);
-	}
+		// Constants
+		private const uint kMaxIndirectPaths = 64;
+		private readonly UnityEngine.Color32 colorLightYellow = new UnityEngine.Color32(252, 219, 162, 255);
+		private readonly UnityEngine.Color32 colorDarkYellow = new UnityEngine.Color32(169, 123, 39, 255);
+		private readonly UnityEngine.Color32 colorLightOrange = new UnityEngine.Color32(255, 202, 79, 255);
+		private readonly UnityEngine.Color32 colorDarkOrange = new UnityEngine.Color32(164, 115, 0, 255);
+		private readonly UnityEngine.Color32 colorLightRed = new UnityEngine.Color32(252, 177, 162, 255);
+		private readonly UnityEngine.Color32 colorDarkRed = new UnityEngine.Color32(169, 62, 39, 255);
+		private readonly UnityEngine.Color32 colorLightGrey = new UnityEngine.Color32(75, 75, 75, 255);
+		private readonly UnityEngine.Color32 colorDarkGrey = new UnityEngine.Color32(35, 35, 35, 255);
+		private readonly UnityEngine.Color32 colorPurple = new UnityEngine.Color32(73, 46, 116, 255);
+		private readonly UnityEngine.Color32 colorGreen = new UnityEngine.Color32(38, 113, 88, 255);
+		private readonly UnityEngine.Color32 colorRed = new UnityEngine.Color32(170, 67, 57, 255);
+		private const float radiusSphere = 0.25f;
+		private const float radiusSphereMin = 0.1f;
+		private const float radiusSphereMax = 0.4f;
 
-	private static void DrawLabelInFrontOfCam(UnityEngine.Vector3 position, string name, float distance,
-		UnityEngine.Color c)
-	{
-		var style = new UnityEngine.GUIStyle();
-		var oncam = UnityEngine.Camera.current.WorldToScreenPoint(position);
+		// Calculated path info
+		private readonly AkReflectionPathInfoArray indirectPathInfoArray = new AkReflectionPathInfoArray((int)kMaxIndirectPaths);
+		private readonly AkPropagationPathInfoArray propagationPathInfoArray = new AkPropagationPathInfoArray((int)AkPropagationPathInfo.kMaxNodes);
+		private readonly AkDiffractionPathInfoArray diffractionPathInfoArray = new AkDiffractionPathInfoArray((int)AkDiffractionPathInfo.kMaxNodes);
+		private readonly AkPathParams pathsParams = new AkPathParams();
 
-		if (oncam.x >= 0 && oncam.x <= UnityEngine.Camera.current.pixelWidth && oncam.y >= 0 &&
-			oncam.y <= UnityEngine.Camera.current.pixelHeight && oncam.z > 0 && oncam.z < distance)
+		public void DebugDrawEarlyReflections(UnityEngine.GameObject gameObject, bool firstOrder, bool secondOrder, bool higherOrder)
 		{
-			style.normal.textColor = c;
-			UnityEditor.Handles.Label(position, name, style);
-		}
-	}
+			if (AkSoundEngine.QueryIndirectPaths(gameObject, pathsParams, indirectPathInfoArray, (uint)indirectPathInfoArray.Count()) != AKRESULT.AK_Success)
+				return;
 
-	private void DebugDrawEarlyReflections()
-	{
-		if (AkSoundEngine.QueryIndirectPaths(gameObject, pathsParams, indirectPathInfoArray,
-				(uint) indirectPathInfoArray.Count()) == AKRESULT.AK_Success)
-		{
 			for (var idxPath = (int)pathsParams.numValidPaths - 1; idxPath >= 0; --idxPath)
 			{
 				var path = indirectPathInfoArray[idxPath];
 				var order = path.numReflections;
 
-				if (drawFirstOrderReflections && order == 1 || drawSecondOrderReflections && order == 2 ||
-					drawHigherOrderReflections && order > 2)
+				var colorLight = colorLightRed;
+				var colorDark = colorDarkRed;
+
+				if (order == 1)
 				{
-					UnityEngine.Color32 colorLight;
-					UnityEngine.Color32 colorDark;
+					if (!firstOrder)
+						continue;
 
-					switch (order - 1)
-					{
-						case 0:
-							colorLight = colorLightBlue;
-							colorDark = colorDarkBlue;
-							break;
-						case 1:
-							colorLight = colorLightYellow;
-							colorDark = colorDarkYellow;
-							break;
-						case 2:
-						default:
-							colorLight = colorLightRed;
-							colorDark = colorDarkRed;
-							break;
-					}
+					colorLight = colorLightYellow;
+					colorDark = colorDarkYellow;
+				}
+				else if (order == 2)
+				{
+					if (!secondOrder)
+						continue;
 
-					var emitterPos = ConvertVector(pathsParams.emitterPos);
-					var listenerPt = ConvertVector(pathsParams.listenerPos);
+					colorLight = colorLightOrange;
+					colorDark = colorDarkOrange;
+				}
+				else if (order > 2 && !higherOrder)
+					continue;
 
-					for (var idxSeg = (int) path.numPathPoints - 1; idxSeg >= 0; --idxSeg)
-					{
-						var pt = ConvertVector(path.GetPathPoint((uint) idxSeg));
+				var emitterPos = ConvertVector(pathsParams.emitterPos);
+				var listenerPt = ConvertVector(pathsParams.listenerPos);
 
-						UnityEngine.Debug.DrawLine(listenerPt, pt, path.isOccluded ? colorLightGrey : colorLight);
+				for (var idxSeg = (int)path.numPathPoints - 1; idxSeg >= 0; --idxSeg)
+				{
+					var pt = ConvertVector(path.GetPathPoint((uint)idxSeg));
 
-						UnityEngine.Gizmos.color = path.isOccluded ? colorLightGrey : colorLight;
-						UnityEngine.Gizmos.DrawWireSphere(pt, radiusSphere / 2 / order);
+					UnityEngine.Debug.DrawLine(listenerPt, pt, path.isOccluded ? colorLightGrey : colorLight);
 
-						if (!path.isOccluded)
-						{
-							var surface = path.GetAcousticSurface((uint) idxSeg);
-							DrawLabelInFrontOfCam(pt, surface.strName, 100000, colorDark);
-						}
-
-						float dfrnAmount = path.GetDiffraction((uint)idxSeg);
-						if (dfrnAmount > 0)
-						{
-							string dfrnAmountStr = dfrnAmount.ToString("0.#%");
-							DrawLabelInFrontOfCam(pt, dfrnAmountStr, 100000, colorDark);
-						}
-
-						listenerPt = pt;
-					}
+					UnityEngine.Gizmos.color = path.isOccluded ? colorLightGrey : colorLight;
+					UnityEngine.Gizmos.DrawWireSphere(pt, radiusSphere / 2 / order);
 
 					if (!path.isOccluded)
 					{
-						// Finally the last path segment towards the emitter.
-						UnityEngine.Debug.DrawLine(listenerPt, emitterPos, path.isOccluded ? colorLightGrey : colorLight);
+						var surface = path.GetAcousticSurface((uint)idxSeg);
+						DrawLabelInFrontOfCam(pt, surface.strName, 100000, colorDark);
 					}
-					else
+
+					float dfrnAmount = path.GetDiffraction((uint)idxSeg);
+					if (dfrnAmount > 0)
 					{
-						var occlusionPt = ConvertVector(path.occlusionPoint);
-						UnityEngine.Gizmos.color = colorDarkGrey;
-						UnityEngine.Gizmos.DrawWireSphere(occlusionPt, radiusSphere / order);
+						string dfrnAmountStr = dfrnAmount.ToString("0.#%");
+						DrawLabelInFrontOfCam(pt, dfrnAmountStr, 100000, colorDark);
 					}
+
+					listenerPt = pt;
+				}
+
+				if (!path.isOccluded)
+				{
+					// Finally the last path segment towards the emitter.
+					UnityEngine.Debug.DrawLine(listenerPt, emitterPos, path.isOccluded ? colorLightGrey : colorLight);
+				}
+				else
+				{
+					var occlusionPt = ConvertVector(path.occlusionPoint);
+					UnityEngine.Gizmos.color = colorDarkGrey;
+					UnityEngine.Gizmos.DrawWireSphere(occlusionPt, radiusSphere / order);
 				}
 			}
 		}
-	}
 
-	private void DebugDrawDiffraction()
-	{
-		if (AkSoundEngine.QueryDiffractionPaths(gameObject, pathsParams, diffractionPathInfoArray,
-		(uint)diffractionPathInfoArray.Count()) == AKRESULT.AK_Success)
+		public void DebugDrawDiffraction(UnityEngine.GameObject gameObject)
 		{
+			if (AkSoundEngine.QueryDiffractionPaths(gameObject, pathsParams, diffractionPathInfoArray, (uint)diffractionPathInfoArray.Count()) != AKRESULT.AK_Success)
+				return;
+
 			for (var idxPath = (int)pathsParams.numValidPaths - 1; idxPath >= 0; --idxPath)
 			{
 				var path = diffractionPathInfoArray[idxPath];
+				if (path.nodeCount <= 0)
+					continue;
+
 				var emitterPos = ConvertVector(pathsParams.emitterPos);
 				var prevPt = ConvertVector(pathsParams.listenerPos);
 
-				if (path.nodeCount > 0)
+				for (var idxSeg = 0; idxSeg < (int)path.nodeCount; ++idxSeg)
 				{
-					for (var idxSeg = 0; idxSeg < (int)path.nodeCount; ++idxSeg)
+					var pt = ConvertVector(path.GetNodes((uint)idxSeg));
+					UnityEngine.Debug.DrawLine(prevPt, pt, colorGreen);
+
+					float angle = path.GetAngles((uint)idxSeg) / UnityEngine.Mathf.PI;
+					if (angle > 0)
 					{
-						var pt = ConvertVector(path.GetNodes((uint)idxSeg));
-
-						UnityEngine.Debug.DrawLine(prevPt, pt, colorGreen);
-
-						float angle = path.GetAngles((uint)idxSeg) / UnityEngine.Mathf.PI;
-						if (angle > 0)
-						{
-							string angleStr = angle.ToString("0.#%");
-							DrawLabelInFrontOfCam(pt, angleStr, 100000, colorGreen);
-						}
-
-						prevPt = pt;
+						string angleStr = angle.ToString("0.#%");
+						DrawLabelInFrontOfCam(pt, angleStr, 100000, colorGreen);
 					}
 
-					UnityEngine.Debug.DrawLine(prevPt, emitterPos, colorGreen);
+					prevPt = pt;
 				}
+
+				UnityEngine.Debug.DrawLine(prevPt, emitterPos, colorGreen);
 			}
 		}
-	}
 
-	private void DebugDrawSoundPropagation()
-	{
-		if (AkSoundEngine.QuerySoundPropagationPaths(gameObject, pathsParams, propagationPathInfoArray,
-				(uint)propagationPathInfoArray.Count()) == AKRESULT.AK_Success)
+		public void DebugDrawSoundPropagation(UnityEngine.GameObject gameObject)
 		{
+			if (AkSoundEngine.QuerySoundPropagationPaths(gameObject, pathsParams, propagationPathInfoArray, (uint)propagationPathInfoArray.Count()) != AKRESULT.AK_Success)
+				return;
+
 			for (var idxPath = (int)pathsParams.numValidPaths - 1; idxPath >= 0; --idxPath)
 			{
 				var path = propagationPathInfoArray[idxPath];
@@ -292,6 +264,26 @@ public class AkSpatialAudioEmitter : AkSpatialAudioBase
 
 				UnityEngine.Debug.DrawLine(prevPt, emitterPos, colorPurple);
 			}
+		}
+	}
+
+	private static DebugDrawData debugDrawData = null;
+
+	private static UnityEngine.Vector3 ConvertVector(AkVector vec)
+	{
+		return new UnityEngine.Vector3(vec.X, vec.Y, vec.Z);
+	}
+
+	private static void DrawLabelInFrontOfCam(UnityEngine.Vector3 position, string name, float distance, UnityEngine.Color c)
+	{
+		var style = new UnityEngine.GUIStyle();
+		var oncam = UnityEngine.Camera.current.WorldToScreenPoint(position);
+
+		if (oncam.x >= 0 && oncam.x <= UnityEngine.Camera.current.pixelWidth && oncam.y >= 0 &&
+			oncam.y <= UnityEngine.Camera.current.pixelHeight && oncam.z > 0 && oncam.z < distance)
+		{
+			style.normal.textColor = c;
+			UnityEditor.Handles.Label(position, name, style);
 		}
 	}
 #endif

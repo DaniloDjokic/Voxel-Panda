@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VoxelPanda.Score;
 
 namespace VoxelPanda.ProcGen.Elements
 { 
@@ -18,6 +19,8 @@ namespace VoxelPanda.ProcGen.Elements
 		void ReserveForSpawning();
 		void SetOrientation(Orientation orientation);
 		void RandomizeOrientation();
+
+        void Bind(ScoreCalculator scoreCalculator);
 	}
 	public enum Orientation {LEFT, RIGHT}
 }

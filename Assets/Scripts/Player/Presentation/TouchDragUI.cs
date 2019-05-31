@@ -10,12 +10,16 @@ namespace VoxelPanda.Player.Presentation
 	{
         public Image touchStart;
         public Image touchEnd;
+        public ConstMoveData constMoveData;
+        private int baseScreenHeight = 1920;
+        private float screenFactor;
 
         public float visualModifier;
 
         void Start()
         {
             ToggleImages(false);
+            screenFactor = ((float)Screen.height) / baseScreenHeight;
         }
 
         public void ToggleImages(bool showing)
@@ -34,7 +38,7 @@ namespace VoxelPanda.Player.Presentation
             Vector3 newPos = flingData.unmodifiedTouchEndPosition;
 
             Vector3 offset = (newPos - touchStart.transform.position);
-            touchEnd.transform.position = touchStart.transform.position + Vector3.ClampMagnitude(offset, flingData.MaxFlingVector.magnitude * visualModifier);
+            touchEnd.transform.position = touchStart.transform.position + Vector3.ClampMagnitude(offset, flingData.MaxFlingVector.magnitude * visualModifier * constMoveData.vectorStaminaCost * screenFactor);
         }
         
 		public void OnFlingStarted(FlingData flingData)

@@ -7,7 +7,7 @@ public class RawTouchInput : MonoBehaviour
 {
     public FlingCalculator flingCalculator;
 
-    private bool detectingInput = true;
+    public bool detectingInput = true;
 
     private Vector3 initialTouchPosition;
     private Vector3 touchStartingPosition;

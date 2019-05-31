@@ -4,10 +4,11 @@
 PhysicMaterial:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Wall Bounce
-  dynamicFriction: 0.24
-  staticFriction: 0.51
-  bounciness: 0.58
+  dynamicFriction: 0
+  staticFriction: 0
+  bounciness: 1
   frictionCombine: 0
   bounceCombine: 0

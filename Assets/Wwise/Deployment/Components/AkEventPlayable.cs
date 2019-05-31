@@ -47,9 +47,9 @@ public class AkEventPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.
 	private float easeOutDuration;
 	public UnityEngine.ExposedReference<UnityEngine.GameObject> emitterObjectRef;
 
-	[UnityEngine.SerializeField] private float eventDurationMax = -1.0f;
+	[UnityEngine.SerializeField] private float eventDurationMax = -1f;
 
-	[UnityEngine.SerializeField] private float eventDurationMin = -1.0f;
+	[UnityEngine.SerializeField] private float eventDurationMin = -1f;
 
 	public bool overrideTrackEmitterObject = false;
 
@@ -60,7 +60,14 @@ public class AkEventPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.
 	public UnityEngine.Timeline.TimelineClip OwningClip
 	{
 		get { return owningClip; }
-		set { owningClip = value; }
+		set
+		{
+			owningClip = value;
+
+#if UNITY_EDITOR
+			Refresh();
+#endif
+		}
 	}
 
 	public override double duration
@@ -171,6 +178,21 @@ public class AkEventPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.
 		if (callback != null)
 		{
 			callback();
+		}
+	}
+
+	public void Refresh()
+	{
+		if (owningClip != null && akEvent != null)
+		{
+			owningClip.displayName = akEvent.Name;
+
+			var newMaxDuration = AkWwiseXMLWatcher.Instance.GetEventMaxDuration(akEvent.Id);
+			if (newMaxDuration.HasValue)
+			{
+				EventDurationMax = newMaxDuration.Value;
+				owningClip.duration = EventDurationMax;
+			}
 		}
 	}
 #endif

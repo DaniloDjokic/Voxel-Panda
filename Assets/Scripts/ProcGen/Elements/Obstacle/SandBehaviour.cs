@@ -5,6 +5,7 @@ using UnityEngine;
 public class SandBehaviour : LocalUpdater<Rigidbody>
 {
     public float slowdownMultiplier;
+    public float decorationSlowdownMultiplier = 0.003f;
     private const string sandRTPC = "Sound_Pitch";
     private int maxSandRTPCValue = 50, minSandRTPCValue = 0;
     private Transform player;
@@ -32,7 +33,14 @@ public class SandBehaviour : LocalUpdater<Rigidbody>
     {
         foreach (Rigidbody rb in currentlyContained)
         {
-            rb.AddForce(rb.velocity * -1 * slowdownMultiplier);
+            if (rb.CompareTag("Player"))
+            {
+                rb.AddForce(rb.velocity * -1 * slowdownMultiplier);
+            }
+            else
+            {
+                rb.AddForce(rb.velocity * -1 * decorationSlowdownMultiplier);
+            }
         }
     }
 

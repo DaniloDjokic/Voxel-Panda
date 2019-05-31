@@ -1,14 +1,15 @@
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
 [UnityEngine.AddComponentMenu("Wwise/AkSurfaceReflector")]
 [UnityEngine.DisallowMultipleComponent]
+[UnityEngine.RequireComponent(typeof(UnityEngine.MeshFilter))]
+[UnityEngine.ExecuteInEditMode]
 ///@brief This component will convert the triangles of the GameObject's geometry into sound reflective surfaces.
 ///@details This component requires a Mesh Filter component. The triangles of the mesh will be sent to the Spatial Audio wrapper by calling SpatialAudio::AddGeometrySet(). The triangles will reflect the sound emitted from AkSpatialAudioEmitter components.
-[UnityEngine.RequireComponent(typeof(UnityEngine.MeshFilter))]
 public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 {
 	[UnityEngine.Tooltip("All triangles of the component's mesh will be applied with this texture. The texture will change the filter parameters of the sound reflected from this component.")]
 	/// All triangles of the component's mesh will be applied with this texture. The texture will change the filter parameters of the sound reflected from this component.
-	public AK.Wwise.AcousticTexture AcousticTexture;
+	public AK.Wwise.AcousticTexture AcousticTexture = new AK.Wwise.AcousticTexture();
 
 	[UnityEngine.Header("Geometric Diffraction (Experimental)")]
 	[UnityEngine.Tooltip("Enable or disable geometric diffraction for this mesh.")]
@@ -57,12 +58,8 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 					vertIdx = uniqueVerts.Count;
 					uniqueVerts.Add(vertices[v]);
 					vertDict.Add(vertices[v], vertIdx);
-					vertRemap[v] = vertIdx;
 				}
-				else
-				{
-					vertRemap[v] = vertIdx;
-				}
+				vertRemap[v] = vertIdx;
 			}
 
 			int vertexCount = uniqueVerts.Count;
@@ -101,7 +98,6 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 							}
 						}
 
-					   
 						AkSoundEngine.SetGeometry(GetAkGeometrySetID(meshFilter), triangleArray, (uint)triangleArray.Count(), vertexArray, (uint)vertexArray.Count(), surfaceArray, (uint)surfaceArray.Count(), enableDiffraction, enableDiffractionOnBoundaryEdges);
 					}
 				}
@@ -121,19 +117,43 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 
 	private void Awake()
 	{
+#if UNITY_EDITOR
+		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+			return;
+
+		var reference = AkUtilities.DragAndDropObjectReference;
+		if (reference)
+		{
+			UnityEngine.GUIUtility.hotControl = 0;
+			AcousticTexture.ObjectReference = reference;
+		}
+
+		if (!UnityEditor.EditorApplication.isPlaying)
+			return;
+#endif
+
 		MeshFilter = GetComponent<UnityEngine.MeshFilter>();
 	}
 
 	private void OnEnable()
 	{
+#if UNITY_EDITOR
+		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating || !UnityEditor.EditorApplication.isPlaying)
+			return;
+#endif
+
 		AddGeometrySet(AcousticTexture, MeshFilter, EnableDiffraction, EnableDiffractionOnBoundaryEdges);
 	}
 
 	private void OnDisable()
 	{
+#if UNITY_EDITOR
+		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating || !UnityEditor.EditorApplication.isPlaying)
+			return;
+#endif
+
 		RemoveGeometrySet(MeshFilter);
 	}
-
 
 #if UNITY_EDITOR
 	[UnityEditor.CustomEditor(typeof(AkSurfaceReflector))]
@@ -165,6 +185,5 @@ public class AkSurfaceReflector : UnityEngine.MonoBehaviour
 		}
 	}
 #endif
-
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

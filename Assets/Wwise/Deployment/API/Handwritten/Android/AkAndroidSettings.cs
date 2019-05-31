@@ -36,7 +36,7 @@
 		[UnityEngine.Tooltip("Used when hardware-preferred frame size and user-preferred frame size are not compatible. If true (default), the sound engine will initialize to a multiple of the HW setting, close to the user setting. If false, the user setting is used as is, regardless of the HW preference (might incur a performance hit).")]
 		public bool m_RoundFrameSizeToHardwareSize = true;
 
-		public void CopyTo(AkPlatformInitSettings settings)
+		public override void CopyTo(AkPlatformInitSettings settings)
 		{
 #if UNITY_ANDROID && !UNITY_EDITOR
 			settings.bRoundFrameSizeToHWSize = m_RoundFrameSizeToHardwareSize;

@@ -9,24 +9,14 @@
 public class AkRTPCPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.Timeline.ITimelineClipAsset
 {
 	public bool overrideTrackObject = false;
-	private UnityEngine.Timeline.TimelineClip owningClip;
-	private AK.Wwise.RTPC RTPC;
 	public UnityEngine.ExposedReference<UnityEngine.GameObject> RTPCObject;
 
 	public bool setRTPCGlobally = false;
 	public AkRTPCPlayableBehaviour template = new AkRTPCPlayableBehaviour();
 
-	public AK.Wwise.RTPC Parameter
-	{
-		get { return RTPC; }
-		set { RTPC = value; }
-	}
+	public AK.Wwise.RTPC Parameter { get; set; }
 
-	public UnityEngine.Timeline.TimelineClip OwningClip
-	{
-		get { return owningClip; }
-		set { owningClip = value; }
-	}
+	public UnityEngine.Timeline.TimelineClip OwningClip { get; set; }
 
 	public UnityEngine.Timeline.ClipCaps clipCaps
 	{
@@ -57,7 +47,7 @@ public class AkRTPCPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.T
 		else
 			b.rtpcObject = owner;
 
-		b.parameter = RTPC;
+		b.parameter = Parameter;
 	}
 }
 

@@ -1203,6 +1203,8 @@ public partial class AkSoundEngine {
 
   public static uint GetNumNonZeroBits(uint in_uWord) { return AkSoundEnginePINVOKE.CSharp_GetNumNonZeroBits(in_uWord); }
 
+  public static void AkGetDefaultHighPriorityThreadProperties(AkThreadProperties out_threadProperties) { AkSoundEnginePINVOKE.CSharp_AkGetDefaultHighPriorityThreadProperties(AkThreadProperties.getCPtr(out_threadProperties)); }
+
   public static uint ResolveDialogueEvent(uint in_eventID, uint[] in_aArgumentValues, uint in_uNumArguments, uint in_idSequence) { return AkSoundEnginePINVOKE.CSharp_ResolveDialogueEvent__SWIG_0(in_eventID, in_aArgumentValues, in_uNumArguments, in_idSequence); }
 
   public static uint ResolveDialogueEvent(uint in_eventID, uint[] in_aArgumentValues, uint in_uNumArguments) { return AkSoundEnginePINVOKE.CSharp_ResolveDialogueEvent__SWIG_1(in_eventID, in_aArgumentValues, in_uNumArguments); }

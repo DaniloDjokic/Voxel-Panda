@@ -35,8 +35,9 @@ namespace VoxelPanda.Flow
 
 			//Obstacles
 			var obstacleRandomizer = new PoolRandomizer();
-			foreach (var gridData in spawnData.Obstacles)
+			foreach (GridData gridData in spawnData.Obstacles)
 			{
+                gridData.Bind(scoreCalculator);
 				var obstaclePooler = new ObsPooler();
 				obstaclePooler.DespawnDistanceFromPlayer = spawnData.despawnDistanceFromPlayer;
 				procEvents.AddPoolingListener(obstaclePooler);

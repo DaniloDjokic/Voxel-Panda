@@ -51,13 +51,13 @@ namespace VoxelPanda.Flow
 		{
 			if(isCountingDown)
 			{
-				if (currentTime < 0.2f)
-				{
-					countdownText = getReadyText;
-				} else
-				{
-					countdownText = Mathf.Ceil(currentTime).ToString("0");
-				}
+                //if (currentTime < 0.2f)
+                //{
+                countdownText = getReadyText;
+				//} //else
+				//{
+				//	countdownText = Mathf.Ceil(currentTime).ToString("0");
+				//}
 				countdownTimer.text = countdownText;
 				currentTime -= Time.deltaTime;
 				if(currentTime < 0)

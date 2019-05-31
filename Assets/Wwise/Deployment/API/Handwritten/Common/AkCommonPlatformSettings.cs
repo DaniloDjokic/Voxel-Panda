@@ -341,6 +341,10 @@ public class AkCommonUserSettings : AkSettingsValidationHandler
 		settings.uDiffractionFlags = (uint)m_SpatialAudioSettings.m_DiffractionFlags;
 	}
 
+	public virtual void CopyTo(AkUnityPlatformSpecificSettings settings)
+	{
+	}
+
 	public override void Validate()
 	{
 		if (m_PreparePoolSize > 0 && m_PreparePoolSize < 8096)
@@ -401,14 +405,20 @@ public class AkCommonAdvancedSettings : AkSettingsValidationHandler
 		settings.uMaxHardwareTimeoutMs = m_MaximumHardwareTimeoutMs;
 	}
 
+	public virtual void CopyTo(AkPlatformInitSettings settings)
+	{
+	}
+
 	[System.Serializable]
 	public class SpatialAudioSettings
 	{
 		[UnityEngine.Tooltip("Multiplier that is applied to the distance attenuation of diffracted sounds (sounds that are in the 'shadow region') to simulate the phenomenon where by diffracted sound waves decay faster than incident sound waves.")]
-		public float m_DiffractionShadowAttenuationFactor;
+        [UnityEngine.Range(1.0f, 3.0f)]
+        public float m_DiffractionShadowAttenuationFactor = 2.0f;
 
 		[UnityEngine.Tooltip("Interpolation angle, in degrees, over which the \"Diffraction Shadow Attenuation Factor\" is applied.")]
-		public float m_DiffractionShadowDegrees;
+        [UnityEngine.Range(0.1f, 90.0f)]
+        public float m_DiffractionShadowDegrees = 30.0f;
 	}
 
 	[UnityEngine.Tooltip("Spatial audio advanced settings.")]
@@ -419,6 +429,25 @@ public class AkCommonAdvancedSettings : AkSettingsValidationHandler
 		settings.fDiffractionShadowAttenFactor = m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor;
 		settings.fDiffractionShadowDegrees = m_SpatialAudioSettings.m_DiffractionShadowDegrees;
 	}
+
+	public virtual void CopyTo(AkUnityPlatformSpecificSettings settings)
+	{
+	}
+
+    public override void Validate()
+    {
+        if (m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor <= 0.0f)
+        {
+            UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor must be greater than zero. Value was reset to the default (2.0)");
+            m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor = 2.0f;
+        }
+
+        if (m_SpatialAudioSettings.m_DiffractionShadowDegrees <= 0.0f)
+        {
+            UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowDegrees must be greater than zero. Value was reset to the default (30.0)");
+            m_SpatialAudioSettings.m_DiffractionShadowDegrees = 30.0f;
+        }
+    }
 }
 
 [System.Serializable]
@@ -477,7 +506,6 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 		get
 		{
 			var settings = base.AkInitializationSettings;
-
 			var userSettings = GetUserSettings();
 			userSettings.CopyTo(settings.memSettings);
 			userSettings.CopyTo(settings.deviceSettings);
@@ -485,12 +513,14 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 			userSettings.CopyTo(settings.initSettings);
 			userSettings.CopyTo(settings.platformSettings);
 			userSettings.CopyTo(settings.musicSettings);
+			userSettings.CopyTo(settings.unityPlatformSpecificSettings);
 			settings.preparePoolSize = userSettings.m_PreparePoolSize;
 
 			var advancedSettings = GetAdvancedSettings();
 			advancedSettings.CopyTo(settings.deviceSettings);
 			advancedSettings.CopyTo(settings.initSettings);
-
+			advancedSettings.CopyTo(settings.platformSettings);
+			advancedSettings.CopyTo(settings.unityPlatformSpecificSettings);
 			return settings;
 		}
 	}

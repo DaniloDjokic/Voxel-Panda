@@ -19,6 +19,7 @@ namespace VoxelPanda.Flow
         private const string musicDeadState = "Dead";
         private const string playDeathEvent = "Play_Death";
         private const string playAliveEvent = "Play_GameplayMusic";
+        private const float highScorePercentageForRevival = 0.8f;
 
         public DeathController(ScoreCalculator scoreCalculator, DeathUI deathUI, AdManager adManager)
 		{
@@ -33,7 +34,7 @@ namespace VoxelPanda.Flow
 		{
             AkSoundEngine.PostEvent(playDeathEvent, Camera.main.transform.GetChild(0).gameObject);
             deathUI.RaiseScreen();
-			if (scoreCalculator.HighScoreReached() && !playerRevivedThisRun)
+			if (scoreCalculator.PercentOfHighScoreReached(highScorePercentageForRevival) && !playerRevivedThisRun && adManager.IsRewardVideoAvailable())
 			{
 				deathUI.EnableRevivalPrompt();
 			} else

@@ -42,7 +42,8 @@ public class RoboticArmBehaviour : ObsBehaviour
 				AkSoundEngine.PostEvent(roboticArmSFXStart, this.gameObject);
 			}
 
-			float currentAngle = (counterClockwise ? -speed : speed) * Time.deltaTime;            
+			float currentAngle = (counterClockwise ? -speed : speed) * Time.deltaTime;     
+			float previousAngleSinceLastCheckpoint = angleSinceLastCheckpoint;
             angleSinceLastCheckpoint += currentAngle;
 
             if(CheckpointReached())
@@ -51,8 +52,7 @@ public class RoboticArmBehaviour : ObsBehaviour
                 if (counterClockwise)
                     currentAngle = -rotationBase.eulerAngles.y % angleAmountCheckpoint;
                 else
-                    currentAngle = angleAmountCheckpoint - (rotationBase.eulerAngles.y % angleAmountCheckpoint);
-
+                    currentAngle = angleAmountCheckpoint - previousAngleSinceLastCheckpoint;
                 PauseRotation();
             } 
             UpdateBrakingVFX(rotationBase.eulerAngles.y);
@@ -96,6 +96,6 @@ public class RoboticArmBehaviour : ObsBehaviour
 
     bool CheckpointReached()
     {
-        return Mathf.Abs(angleSinceLastCheckpoint) > angleAmountCheckpoint;
+        return Mathf.Abs(angleSinceLastCheckpoint) >= angleAmountCheckpoint;
     }
 }

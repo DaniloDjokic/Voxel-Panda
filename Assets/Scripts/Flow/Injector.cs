@@ -55,7 +55,7 @@ namespace VoxelPanda.Flow
 			if (!string.IsNullOrEmpty(randomSeed)) { gameManager.SetRandomSeed(randomSeed); } else {
 				randomSeed = Random.seed.ToString();
 			}
-			crusher.Bind(gameManager, playerElements.physicsController.transform);
+			crusher.Bind(gameManager, playerElements.physicsController.transform, scoreCalculator);
             optionsController.SetGameManager(gameManager);
 
 			InputInjector inputInjector = new InputInjector(constMoveData, dMoveData, moveEvents, playerElements, crusher, tutorial);

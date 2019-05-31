@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Projects\Voxel-Panda\Voxel-Panda_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Projects\Voxel-Panda\Voxel-Panda_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Projects\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\GameDev\dharmagames\Voxel Panda\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Projects\Voxel-Panda\Voxel-Panda_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -106,7 +106,7 @@
 				</File>
 				<File Id="571536977" Language="SFX">
 					<ShortName>Countdown.wav</ShortName>
-					<Path>SFX\Countdown_4F00D835.wem</Path>
+					<Path>SFX\Countdown_F3E2D0AF.wem</Path>
 				</File>
 				<File Id="587656586" Language="SFX">
 					<ShortName>SkateLoop.wav</ShortName>
