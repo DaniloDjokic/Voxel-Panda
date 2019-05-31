@@ -244,8 +244,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/DaniloDJokic/Documents/keystores/Voxel Panda/user.keystore
-  AndroidKeyaliasName: voxel panda
+  AndroidKeystoreName: C:/DharmaGames/VoxelPanda/Voxel-Panda/user.keystore
+  AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

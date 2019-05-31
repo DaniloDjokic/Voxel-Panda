@@ -8,9 +8,12 @@ using VoxelPanda.Flow;
 
 public class AdManager : MonoBehaviour
 {
+	public bool testMode = true;
 	public string appID = "ca-app-pub-4430923652609758~6882662181";
 	public string interstitialAdUnitID = "ca-app-pub-4430923652609758/1794110741";
 	public string rewardAdUnitID = "ca-app-pub-4430923652609758/3653987329";
+	public string testInterstitialAdUnitID = "ca-app-pub-3940256099942544/1033173712";
+	public string testRewardAdUnitID = "ca-app-pub-3940256099942544/5224354917";
 	public string testDeviceID = "D3E3C92E3D91C65EF00DD3BB74883BB9";
 	public int minplaySessionWithoutAd = 3;
 	public int maxPlaySessionsWithoutAd = 5;
@@ -38,10 +41,20 @@ public class AdManager : MonoBehaviour
         InitInterstitial();
     }
 
+	private string GetInterstitialAdUnitID()
+	{
+		return (testMode) ? testInterstitialAdUnitID : interstitialAdUnitID;
+	}
+
+	private string GetRewardAdUnitID()
+	{
+		return (testMode) ? testRewardAdUnitID : rewardAdUnitID;
+	}
+
 	public void OpenRewardVideo()
 	{
 		AdRequest request = new AdRequest.Builder().AddTestDevice(testDeviceID).Build();
-		this.rewardBasedVideo.LoadAd(request, rewardAdUnitID);
+		this.rewardBasedVideo.LoadAd(request, this.GetRewardAdUnitID());
 	}
 
 	public bool TryToShowRewardVideo()
@@ -94,7 +107,7 @@ public class AdManager : MonoBehaviour
 		{
 			this.interstitial.Destroy();
 		}
-		this.interstitial = new InterstitialAd(interstitialAdUnitID);
+		this.interstitial = new InterstitialAd(this.GetInterstitialAdUnitID());
 		AdRequest request = new AdRequest.Builder().AddTestDevice(testDeviceID).Build();
 		this.interstitial.LoadAd(request);
 	}
