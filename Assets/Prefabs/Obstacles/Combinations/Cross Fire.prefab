@@ -47,6 +47,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -351,6 +352,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -586,6 +588,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -883,6 +886,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1016,6 +1020,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1244,6 +1249,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 7
   weightController:
+    remoteSettingsKey: DIFF_CROSSFIRE
     difficultyValues:
     - 0
     - 0
@@ -1362,6 +1368,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -6086,6 +6093,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -6173,6 +6181,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -6432,6 +6441,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0

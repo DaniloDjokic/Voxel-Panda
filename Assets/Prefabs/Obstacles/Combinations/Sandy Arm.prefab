@@ -234,6 +234,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -846,6 +847,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1226,6 +1228,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1282,6 +1285,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -5851,6 +5855,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -6138,6 +6143,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -6333,6 +6339,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -6434,6 +6441,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 7
   weightController:
+    remoteSettingsKey: DIFF_SANDYARM
     difficultyValues:
     - 0
     - 0
@@ -6752,6 +6760,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -7054,6 +7063,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -12469,6 +12479,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -12618,6 +12629,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -12842,6 +12854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridData: {fileID: 114891405544531476}
   speed: 50
+  decorationSpeed: 0.000006
 --- !u!1 &1940426119494062
 GameObject:
   m_ObjectHideFlags: 0
@@ -13195,6 +13208,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0

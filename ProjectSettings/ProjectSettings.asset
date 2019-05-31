@@ -244,8 +244,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/DharmaGames/VoxelPanda/Voxel-Panda/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: D:/GameDev/dharmagames/Voxel Panda/Voxel-Panda/user.keystore
+  AndroidKeyaliasName: dharma games
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -755,10 +755,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 3
-  cloudProjectId: 
+  cloudProjectId: 44d8be8f-5f32-4b1e-a116-6e8634ef9fe7
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Pixel 3D Panda Runner - Factory Escape
+  organizationId: dharma-games
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

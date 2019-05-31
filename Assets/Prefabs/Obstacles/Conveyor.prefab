@@ -201,6 +201,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 10
   weightController:
+    remoteSettingsKey: DIFF_CONVEYOR
     difficultyValues:
     - 50
     - 50
@@ -583,6 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridData: {fileID: 114271322130863934}
   speed: 60
+  decorationSpeed: 0.000006
 --- !u!1 &1979161235980092
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,11 +721,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4587339231150522}
     m_Modifications:
-    - target: {fileID: 5557853417673633826, guid: 90aac47a9dbe0444281c4b6daee7e2c1,
-        type: 3}
-      propertyPath: m_Name
-      value: duck
-      objectReference: {fileID: 0}
     - target: {fileID: 6003121614956437459, guid: 90aac47a9dbe0444281c4b6daee7e2c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -778,6 +775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5557853417673633826, guid: 90aac47a9dbe0444281c4b6daee7e2c1,
+        type: 3}
+      propertyPath: m_Name
+      value: duck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90aac47a9dbe0444281c4b6daee7e2c1, type: 3}
