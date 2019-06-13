@@ -1549,6 +1549,11 @@ PrefabInstance:
       propertyPath: rewardAdUnitID
       value: ca-app-pub-4430923652609758/3653987329
       objectReference: {fileID: 0}
+    - target: {fileID: 114686790852724152, guid: 885010797c90ec740a184daa02b29089,
+        type: 3}
+      propertyPath: testMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4295838564262068, guid: 885010797c90ec740a184daa02b29089, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2174,6 +2179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speedController.difficultyValues.Array.data[4]
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114880105951344206, guid: bec19c4e679a93848bd64de50d197851,
+        type: 3}
+      propertyPath: speedController.remoteSettingsKey
+      value: DIFF_CRUSHERSPD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec19c4e679a93848bd64de50d197851, type: 3}

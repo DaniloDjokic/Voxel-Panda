@@ -4732,6 +4732,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 9
   weightController:
+    remoteSettingsKey: DIFF_SAND
     difficultyValues:
     - 50
     - 50

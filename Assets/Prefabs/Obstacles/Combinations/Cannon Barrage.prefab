@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -207,8 +209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesProgressiveWeight: 1
   weight: 7
   weightController:
+    remoteSettingsKey: DIFF_CANNONBARRAGE
     difficultyValues:
     - 0
     - 10
@@ -498,8 +502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -679,8 +685,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1140,8 +1148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1369,8 +1379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f875fa6334fc16e41a9344824291f410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0

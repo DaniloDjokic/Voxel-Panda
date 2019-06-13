@@ -904,6 +904,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1113,6 +1114,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1169,6 +1171,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1225,6 +1228,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -1897,6 +1901,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -2123,6 +2128,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 8
   weightController:
+    remoteSettingsKey: DIFF_ARMSOLO
     difficultyValues:
     - 0
     - 30
@@ -2256,6 +2262,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -2312,6 +2319,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -2476,6 +2484,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -7367,6 +7376,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -7547,6 +7557,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -8030,6 +8041,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0
@@ -8240,6 +8252,7 @@ MonoBehaviour:
   usesProgressiveWeight: 1
   weight: 1
   weightController:
+    remoteSettingsKey: 
     difficultyValues:
     - 0
     - 0

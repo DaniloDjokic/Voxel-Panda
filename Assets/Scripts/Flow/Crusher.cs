@@ -13,7 +13,7 @@ namespace VoxelPanda.Flow
 	{
 		//Movement
 		public float speed;
-        public DifficultyController speedController;
+        public DifficultyCurve speedController;
 		public float catchUpSpeed;
 		public float catchUpDistance;
 
@@ -28,6 +28,11 @@ namespace VoxelPanda.Flow
 		public float reviveDistanceOffset;
 
 		public Vector3 startingPosition;
+
+		private void Start()
+		{
+			speedController.CheckForRemoteUpdates();
+		}
 
 		public void Bind(GameManager gameManager, Transform player, ScoreCalculator scoreCalculator)
 		{
